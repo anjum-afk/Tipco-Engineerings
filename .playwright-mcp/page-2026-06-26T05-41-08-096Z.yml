@@ -1,0 +1,351 @@
+- generic [ref=e2]:
+  - banner [ref=e3]:
+    - generic [ref=e4]:
+      - link "Tipco Engineering" [ref=e5] [cursor=pointer]:
+        - /url: /
+        - img "Tipco Engineering" [ref=e6]
+      - button "Open menu" [ref=e7] [cursor=pointer]:
+        - img [ref=e8]
+    - complementary [ref=e9]:
+      - generic [ref=e10]:
+        - generic [ref=e11]:
+          - generic [ref=e12]: Guest
+          - generic [ref=e13]:
+            - link "Login" [ref=e14] [cursor=pointer]:
+              - /url: /login
+            - text: /
+            - link "SignUp" [ref=e15] [cursor=pointer]:
+              - /url: /register
+        - button "Close menu" [ref=e16] [cursor=pointer]:
+          - img [ref=e17]
+      - navigation [ref=e20]:
+        - list [ref=e21]:
+          - listitem [ref=e22]:
+            - link "About Tipco" [ref=e23] [cursor=pointer]:
+              - /url: /about-us
+          - listitem [ref=e24]:
+            - button "Product" [ref=e25] [cursor=pointer]:
+              - text: Product
+              - img [ref=e26]
+          - listitem [ref=e28]:
+            - button "Application" [ref=e29] [cursor=pointer]:
+              - text: Application
+              - img [ref=e30]
+          - listitem [ref=e32]:
+            - link "Investors" [ref=e33] [cursor=pointer]:
+              - /url: /investors/board-of-directors
+          - listitem [ref=e34]:
+            - link "Events" [ref=e35] [cursor=pointer]:
+              - /url: /event
+          - listitem [ref=e36]:
+            - link "Our Clients" [ref=e37] [cursor=pointer]:
+              - /url: /client
+          - listitem [ref=e38]:
+            - link "Contact US" [ref=e39] [cursor=pointer]:
+              - /url: /contact-us
+          - listitem [ref=e40]:
+            - link "Login" [ref=e41] [cursor=pointer]:
+              - /url: /login
+        - generic [ref=e42]:
+          - link "mail@tipcoengineering.com" [ref=e43] [cursor=pointer]:
+            - /url: mailto:mail@tipcoengineering.com
+            - img [ref=e44]
+            - text: mail@tipcoengineering.com
+          - generic [ref=e46]:
+            - link "Facebook" [ref=e47] [cursor=pointer]:
+              - /url: https://www.facebook.com/TipcoEngineeringIndia/
+              - img [ref=e48]
+            - link "Twitter" [ref=e50] [cursor=pointer]:
+              - /url: https://twitter.com/tipcoengineer
+              - img [ref=e51]
+            - link "LinkedIn" [ref=e53] [cursor=pointer]:
+              - /url: https://www.linkedin.com/company/tipcoengineering/
+              - img [ref=e54]
+            - link "YouTube" [ref=e56] [cursor=pointer]:
+              - /url: https://www.youtube.com/@tipcoengineering
+              - img [ref=e57]
+            - link "Instagram" [ref=e59] [cursor=pointer]:
+              - /url: https://www.instagram.com/tipcoengineering/
+              - img [ref=e60]
+            - link "WhatsApp" [ref=e62] [cursor=pointer]:
+              - /url: https://api.whatsapp.com/send/?phone=+918826176988
+              - img [ref=e63]
+            - link "Email" [ref=e65] [cursor=pointer]:
+              - /url: mailto:mail@tipcoengineering.com
+              - img [ref=e66]
+          - generic [ref=e68]: For any Help
+          - link "1800 1020 229" [ref=e69] [cursor=pointer]:
+            - /url: tel:18001020229
+            - img [ref=e70]
+            - text: 1800 1020 229
+  - main [ref=e72]:
+    - generic [ref=e75]:
+      - heading "Board of Directors" [level=1] [ref=e76]
+      - navigation [ref=e77]:
+        - link "Home" [ref=e78] [cursor=pointer]:
+          - /url: /
+        - generic [ref=e79]:
+          - img [ref=e80]
+          - generic [ref=e82]: Investors
+        - generic [ref=e83]:
+          - img [ref=e84]
+          - generic [ref=e86]: Board of Directors
+    - generic [ref=e89]:
+      - complementary [ref=e90]:
+        - generic [ref=e91]:
+          - heading "Investors" [level=3] [ref=e92]
+          - list [ref=e93]:
+            - listitem [ref=e94]:
+              - link "Corporate Announcements" [ref=e95] [cursor=pointer]:
+                - /url: /investors/corporate-announcements
+            - listitem [ref=e96]:
+              - link "Board of Directors" [ref=e97] [cursor=pointer]:
+                - /url: /investors/board-of-directors
+            - listitem [ref=e98]:
+              - link "Committee Board" [ref=e99] [cursor=pointer]:
+                - /url: /investors/committee-board
+            - listitem [ref=e100]:
+              - link "List of Key Managerial Personnel" [ref=e101] [cursor=pointer]:
+                - /url: /investors/list-of-key-managerial-personnel
+            - listitem [ref=e102]:
+              - link "Group & Subsidiary Companies" [ref=e103] [cursor=pointer]:
+                - /url: /investors/group---subsidiary-companies
+            - listitem [ref=e104]:
+              - link "Corporate Policies" [ref=e105] [cursor=pointer]:
+                - /url: /investors/corporate-policies
+            - listitem [ref=e106]:
+              - link "IPO" [ref=e107] [cursor=pointer]:
+                - /url: /investors/ipo
+            - listitem [ref=e108]:
+              - link "Investor Presentation" [ref=e109] [cursor=pointer]:
+                - /url: /investors/investor-presentation
+            - listitem [ref=e110]:
+              - link "Annual Reports" [ref=e111] [cursor=pointer]:
+                - /url: /investors/annual-reports
+            - listitem [ref=e112]:
+              - link "Annual Returns" [ref=e113] [cursor=pointer]:
+                - /url: /investors/annual-returns
+            - listitem [ref=e114]:
+              - link "Shareholding Patterns" [ref=e115] [cursor=pointer]:
+                - /url: /investors/shareholding-patterns
+            - listitem [ref=e116]:
+              - link "Corporate Information" [ref=e117] [cursor=pointer]:
+                - /url: /investors/corporate-information
+            - listitem [ref=e118]:
+              - link "Investors Grievance" [ref=e119] [cursor=pointer]:
+                - /url: /investors/investors-grievance
+            - listitem [ref=e120]:
+              - link "Material Contracts" [ref=e121] [cursor=pointer]:
+                - /url: /investors/material-contracts
+            - listitem [ref=e122]:
+              - link "Material Creditors" [ref=e123] [cursor=pointer]:
+                - /url: /investors/material-creditors
+            - listitem [ref=e124]:
+              - link "Material Documents" [ref=e125] [cursor=pointer]:
+                - /url: /investors/material-documents
+      - generic [ref=e126]:
+        - generic [ref=e127]:
+          - heading "Mr. Ritesh Sharma" [level=2] [ref=e129]
+          - generic [ref=e130]: Chairman and Managing Director
+          - paragraph [ref=e131]: Mr. Ritesh Sharma, aged 37 years, is one of the Promoter, Chairman and Managing Director of our Company. In his previous stint, he was associated with Ritesh Engineers, partnership firm as a partner from August 2007 to June 2019 and has handled production and design department in manufacturing of machines and other related engineering good. He was also associated with Tipco Engineering Works, partnership firm as a partner from November 2017 to January 2019 and subsequently re-admitted as a partner on December 2020 and still is in association and is responsible for managing production operations, business development and strategic decision making in machine manufacturing and other related engineering goods. Currently, he is also associated with RGVY Enterprise, partnership firm as a partner since March 31, 2018. He is also associated as a partner in Hanutech Engineering Solutions, partnership firm since December 2020 and is responsible for business development, vendor and client management, supply chain coordination and operational planning in the trading and distribution of machines, pumps and valves. He was also associated with M/s. KR Industries (Partnership Firm) from February 2024 to April 2024, the partnership firm was engaged in trading, supplying of paints and polish materials. He was also associated with M/s. HRS07 Buildcon (Partnership Firm) as a Partner from April 2024 to December 2024, the partnership firm was engaged in business of real estate agents, builders and developers.
+        - generic [ref=e132]:
+          - heading "Ms. Sonia Sharma" [level=2] [ref=e134]
+          - generic [ref=e135]: Whole-time Director
+          - paragraph [ref=e136]: Ms. Sonia Sharma, aged 35 years, is one of the Promoter and Whole Time Director of our company. She is associated with Tipco Engineering Works, partnership firm as a partner since November 2017 and is responsible for production management, operations and overall business administration in machine manufacturing and other related engineering goods. She is also associated with RGVY Enterprises, partnership firm as a partner since March 31, 2018. She is also associated with Ritesh Engineers, partnership firm as a partner since June 01, 2019 and is responsible for handling the HR Department and Operations Management which is involved in manufacturing of machines and other related engineering good. She is associated with Polish Pro Private Limited since December 2021 as the First Director and Subscriber to Memorandum of Association of the Company (Polish Pro Private Limited is in the process of voluntary Striking off from MCA). She was appointed as the first Director (Executive Director) of our Company from the time of Company’s Incorporation since September 30, 2021 and subsequently was re-designated as the Whole Time Director with effect from August 07, 2025 and she is the subscriber to memorandum of association in our Company. She has total 7 years of experience in the Machine Manufacturing industry in which our company operates. In our Company she is responsible for overseeing the company’s Human Resource management and Operations management.
+        - generic [ref=e137]:
+          - heading "Mr. Anup Kumar Singh" [level=2] [ref=e139]
+          - generic [ref=e140]: Non- Executive Director
+          - paragraph [ref=e141]: Mr. Anup Kumar Singh, aged 43 years, is one of the Non- Executive Director of our Company since July 16, 2025. He holds a Provisional Degree Certificate in B.Tech. Electronics & Communication Engineering from Allahabad Agricultural Institute-Deemed University. He also holds Post Graduate Degree in Management (Entrepreneurship Development) from Symbiosis Centre for Distance Learning. In his previous stint, he was associated with Aksh Technologies Limited as Process Member-Engg. Services from June 2008 to May 01, 2010. He was also associated with Ross Process Equipment Private Limited as National Sales Manager from October 2014 to September 2024 He is responsible for overall growth of proprietorship in chemical sector and is responsible for business expansion, strategic growth, quality check and operational management. He has a total of 12 years of work experience in Engineering field.
+        - generic [ref=e142]:
+          - heading "Mr. Jeewan Chandra" [level=2] [ref=e144]
+          - generic [ref=e145]: Non-Executive Independent Director
+          - paragraph [ref=e146]: Mr. Jeewan Chandra, aged 50 years, is the Non-Executive Independent Director of our Company. He holds a bachelor’s degree in Commerce. He is a Practicing Fellow member of Cost and Works Accountants of India. He also holds a Certificate of passing Intermediate Examination of the Institute of Chartered Accountants of India. He was associated with Vodafone Digilink Limited as Deputy Manager-Finance & Accounts from January 2005 to March 2012. He was also associated with Telesuprecon Group of Companies as Chief of Finance & Accounting/ Audits Officer (CAFO) as a consultant from July 2015 to December 2016. Currently he is associated with J Chandra & Associates as a managing partner since September 2012 and still is in association and is responsible for overseeing cost accounting, cost audits, management accounting services, managing taxation vertical including direct and indirect tax compliance, advisory and representation before tax authorities. He is also been appointed as an Independent Director in PAN HR Solution Limited since July 2025 and is still in association. He has been appointed as the Non-Executive Independent Director in our Company w.e.f. July 16, 2025 for a term of 3 years. He has a total experience of 20 years in the fields of Finance & Accounts.
+        - generic [ref=e147]:
+          - heading "Mr. Patterson Thomas" [level=2] [ref=e149]
+          - generic [ref=e150]: Non-Executive Independent Director
+          - paragraph [ref=e151]: Mr. Patterson Thomas, aged 34 years, is the Non-Executive Independent Director of our Company. He holds Bachelor of Commerce and Bachelor of Law from Dr. Bhimrao Ambedkar University Agra. He has also completed Company Secretary Course from Institute of Company Secretaries of India and is an associate member of Institute of Company Secretaries of India. In his previous stint he was associated with Bloomm Inn Private Limited as Company Secretary from February 2018 to July 2020 and was also associated with SGS Infratech Limited as Company Secretary from September 2020 to September 2021. He is currently associated with Luxmi Shoes Private Limited since April 2022. He has a total experience of 7 years in Secretarial field. He has been appointed as the Non-Executive Independent Director in our Company w.e.f. July 16, 2025 for a term of 3 years.
+    - generic [ref=e153]:
+      - generic [ref=e154]:
+        - heading "Get Quote Now" [level=2] [ref=e155]
+        - paragraph [ref=e158]: We provide best solution for your business
+      - generic [ref=e159]:
+        - generic [ref=e160]:
+          - textbox "Full Name" [ref=e161]
+          - textbox "Email Address" [ref=e162]
+          - textbox "Company Name" [ref=e163]
+          - generic [ref=e164]:
+            - combobox [ref=e166]:
+              - option "🇮🇳 +91" [selected]
+              - option "🇺🇸 +1"
+              - option "🇬🇧 +44"
+            - textbox "Mobile Number" [ref=e167]
+        - textbox "Message" [ref=e168]
+        - generic [ref=e170]:
+          - checkbox "I'm not a robot" [ref=e171]
+          - generic [ref=e172]: I'm not a robot
+          - generic [ref=e173]:
+            - generic [ref=e174]: reCAPTCHA
+            - generic [ref=e175]: Privacy · Terms
+        - button "Get Quote" [ref=e176] [cursor=pointer]
+  - contentinfo [ref=e177]:
+    - generic [ref=e179]:
+      - generic [ref=e180]:
+        - img "Tipco Engineering" [ref=e181]
+        - paragraph [ref=e182]: Tipco Engineering India Pvt. Ltd. was incorporated in 2021 primarily manufacturers of process plants and machinery required by the Chemical, Polyester Button and related Industries.
+        - generic [ref=e183]:
+          - link "Facebook" [ref=e184] [cursor=pointer]:
+            - /url: https://www.facebook.com/TipcoEngineeringIndia/
+            - img [ref=e185]
+          - link "Twitter" [ref=e187] [cursor=pointer]:
+            - /url: https://twitter.com/tipcoengineer
+            - img [ref=e188]
+          - link "LinkedIn" [ref=e190] [cursor=pointer]:
+            - /url: https://www.linkedin.com/company/tipcoengineering/
+            - img [ref=e191]
+          - link "YouTube" [ref=e193] [cursor=pointer]:
+            - /url: https://www.youtube.com/@tipcoengineering
+            - img [ref=e194]
+          - link "Instagram" [ref=e196] [cursor=pointer]:
+            - /url: https://www.instagram.com/tipcoengineering/
+            - img [ref=e197]
+          - link "WhatsApp" [ref=e199] [cursor=pointer]:
+            - /url: https://api.whatsapp.com/send/?phone=+918826176988
+            - img [ref=e200]
+          - link "Email" [ref=e202] [cursor=pointer]:
+            - /url: mailto:mail@tipcoengineering.com
+            - img [ref=e203]
+      - generic [ref=e205]:
+        - heading "Information" [level=3] [ref=e206]
+        - list [ref=e207]:
+          - listitem [ref=e208]:
+            - link "Blog" [ref=e209] [cursor=pointer]:
+              - /url: /blog
+              - img [ref=e210]
+              - text: Blog
+          - listitem [ref=e212]:
+            - link "Videos" [ref=e213] [cursor=pointer]:
+              - /url: /video-gallery
+              - img [ref=e214]
+              - text: Videos
+          - listitem [ref=e216]:
+            - link "Catalogue" [ref=e217] [cursor=pointer]:
+              - /url: /catalogue
+              - img [ref=e218]
+              - text: Catalogue
+          - listitem [ref=e220]:
+            - link "Events" [ref=e221] [cursor=pointer]:
+              - /url: /event
+              - img [ref=e222]
+              - text: Events
+          - listitem [ref=e224]:
+            - link "Company Gallery" [ref=e225] [cursor=pointer]:
+              - /url: /photo-gallery
+              - img [ref=e226]
+              - text: Company Gallery
+      - generic [ref=e228]:
+        - heading "Quick Link" [level=3] [ref=e229]
+        - list [ref=e230]:
+          - listitem [ref=e231]:
+            - link "About Us" [ref=e232] [cursor=pointer]:
+              - /url: /about-us
+              - img [ref=e233]
+              - text: About Us
+          - listitem [ref=e235]:
+            - link "Contact Us" [ref=e236] [cursor=pointer]:
+              - /url: /contact-us
+              - img [ref=e237]
+              - text: Contact Us
+          - listitem [ref=e239]:
+            - link "Service" [ref=e240] [cursor=pointer]:
+              - /url: /service
+              - img [ref=e241]
+              - text: Service
+          - listitem [ref=e243]:
+            - link "Career" [ref=e244] [cursor=pointer]:
+              - /url: /career
+              - img [ref=e245]
+              - text: Career
+          - listitem [ref=e247]:
+            - link "Partner With US" [ref=e248] [cursor=pointer]:
+              - /url: /partner
+              - img [ref=e249]
+              - text: Partner With US
+      - generic [ref=e251]:
+        - heading "Products" [level=3] [ref=e252]
+        - list [ref=e253]:
+          - listitem [ref=e254]:
+            - link "Mill Series" [ref=e255] [cursor=pointer]:
+              - /url: /application/mill-series
+              - img [ref=e256]
+              - text: Mill Series
+          - listitem [ref=e258]:
+            - link "Production Line" [ref=e259] [cursor=pointer]:
+              - /url: /application/production-line
+              - img [ref=e260]
+              - text: Production Line
+          - listitem [ref=e262]:
+            - link "Laboratory Machines" [ref=e263] [cursor=pointer]:
+              - /url: /application/laboratory-machines
+              - img [ref=e264]
+              - text: Laboratory Machines
+          - listitem [ref=e266]:
+            - link "Homogenizers" [ref=e267] [cursor=pointer]:
+              - /url: /application/homogenizers
+              - img [ref=e268]
+              - text: Homogenizers
+      - generic [ref=e270]:
+        - heading "Machine Series" [level=3] [ref=e271]
+        - list [ref=e272]:
+          - listitem [ref=e273]:
+            - link "C- Series" [ref=e274] [cursor=pointer]:
+              - /url: /
+              - img [ref=e275]
+              - text: C- Series
+          - listitem [ref=e277]:
+            - link "HS- Disperser Series" [ref=e278] [cursor=pointer]:
+              - /url: /
+              - img [ref=e279]
+              - text: HS- Disperser Series
+          - listitem [ref=e281]:
+            - link "HS- Homogenizers Series" [ref=e282] [cursor=pointer]:
+              - /url: /
+              - img [ref=e283]
+              - text: HS- Homogenizers Series
+          - listitem [ref=e285]:
+            - link "THM Series" [ref=e286] [cursor=pointer]:
+              - /url: /
+              - img [ref=e287]
+              - text: THM Series
+          - listitem [ref=e289]:
+            - link "Lab Series" [ref=e290] [cursor=pointer]:
+              - /url: /
+              - img [ref=e291]
+              - text: Lab Series
+      - generic [ref=e293]:
+        - heading "Contact Us" [level=3] [ref=e294]
+        - list [ref=e295]:
+          - listitem [ref=e296]:
+            - img [ref=e297]
+            - generic [ref=e300]: Plot No. 1689, 1658 SECTOR-38, PHASE-1, RAI, INDUSTRIAL AERA, Sonipat, Haryana 131029
+          - listitem [ref=e301]:
+            - img [ref=e302]
+            - link "1800 1020 229" [ref=e304] [cursor=pointer]:
+              - /url: tel:18001020229
+          - listitem [ref=e305]:
+            - img [ref=e306]
+            - link "mail@tipcoengineering.com" [ref=e309] [cursor=pointer]:
+              - /url: mailto:mail@tipcoengineering.com
+    - generic [ref=e311]:
+      - generic [ref=e312]:
+        - link "Privacy Policy" [ref=e313] [cursor=pointer]:
+          - /url: /privacy-policy
+        - link "Certificate" [ref=e314] [cursor=pointer]:
+          - /url: /certificates
+        - link "Term & conditions" [ref=e315] [cursor=pointer]:
+          - /url: /term-condition
+        - link "Faqs" [ref=e316] [cursor=pointer]:
+          - /url: /faq
+      - generic [ref=e317]: © 2026 Tipco Engineering.
+  - link "Chat on WhatsApp" [ref=e318] [cursor=pointer]:
+    - /url: https://api.whatsapp.com/send/?phone=+918826176988&text=Hello I have a question about tipco engineering&app_absent=0
+    - img [ref=e319]

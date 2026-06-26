@@ -1,0 +1,618 @@
+- generic [active] [ref=e1]:
+  - link "" [ref=e2] [cursor=pointer]:
+    - /url: https://api.whatsapp.com/send/?phone=+918826176988&text=Hello I have a question about tipco engineering&app_absent=0
+    - generic [ref=e3]: 
+  - generic [ref=e5]:
+    - generic [ref=e7]:
+      - link "" [ref=e9] [cursor=pointer]:
+        - /url: https://www.facebook.com/TipcoEngineeringIndia/
+        - generic [ref=e10]: 
+      - link "" [ref=e12] [cursor=pointer]:
+        - /url: https://twitter.com/tipcoengineer
+        - generic [ref=e13]: 
+      - link "" [ref=e15] [cursor=pointer]:
+        - /url: https://www.linkedin.com/company/tipcoengineering/
+        - generic [ref=e16]: 
+      - link "" [ref=e18] [cursor=pointer]:
+        - /url: https://www.youtube.com/@tipcoengineering
+        - generic [ref=e19]: 
+      - link "" [ref=e21] [cursor=pointer]:
+        - /url: https://www.instagram.com/tipcoengineering/
+        - generic [ref=e22]: 
+      - link "" [ref=e24] [cursor=pointer]:
+        - /url: https://api.whatsapp.com/send/?phone=+918826176988&text=Hello I have Question about Tipco&app_absent=0
+        - generic [ref=e25]: 
+      - link "" [ref=e27] [cursor=pointer]:
+        - /url: mailto:mail@tipcoengineering.com
+        - generic [ref=e28]: 
+    - generic [ref=e30]:
+      - generic [ref=e31]:
+        - generic [ref=e32]: 
+        - link "Login" [ref=e33] [cursor=pointer]:
+          - /url: https://tipcoengineering.com/login
+        - text: /
+        - link "SignUp" [ref=e34] [cursor=pointer]:
+          - /url: https://tipcoengineering.com/register
+      - generic [ref=e35]:
+        - generic [ref=e36]: 
+        - link "mail@tipcoengineering.com" [ref=e37] [cursor=pointer]:
+          - /url: mailto:mail@tipcoengineering.com
+      - generic [ref=e38]:
+        - generic [ref=e39]: 
+        - text: 1800 1020 229
+  - banner [ref=e40]:
+    - generic [ref=e42]:
+      - link "Logo" [ref=e45] [cursor=pointer]:
+        - /url: https://tipcoengineering.com/
+        - img "Logo" [ref=e46]
+      - generic [ref=e47]:
+        - generic [ref=e48]:
+          - list [ref=e49]:
+            - listitem [ref=e50]:
+              - link "About Tipco" [ref=e51] [cursor=pointer]:
+                - /url: https://tipcoengineering.com/about-us
+            - listitem [ref=e52]:
+              - link "Product" [ref=e53] [cursor=pointer]:
+                - /url: https://tipcoengineering.com/product
+            - listitem [ref=e54]:
+              - link "Application" [ref=e55] [cursor=pointer]:
+                - /url: "#"
+            - listitem [ref=e56]:
+              - link "Investors" [ref=e57] [cursor=pointer]:
+                - /url: https://tipcoengineering.com/investors/board-of-directors
+            - listitem [ref=e58]:
+              - link "Events" [ref=e59] [cursor=pointer]:
+                - /url: https://tipcoengineering.com/event
+            - listitem [ref=e60]:
+              - link "Our Clients" [ref=e61] [cursor=pointer]:
+                - /url: https://tipcoengineering.com/client
+            - listitem [ref=e62]:
+              - link "Contact US" [ref=e63] [cursor=pointer]:
+                - /url: https://tipcoengineering.com/contact-us
+            - listitem [ref=e64]:
+              - link "Get Quote" [ref=e65] [cursor=pointer]:
+                - /url: "#"
+                - button "Get Quote" [ref=e66]
+            - listitem:         
+          - text: 
+        - text: 
+  - img "Logo" [ref=e71]
+  - generic [ref=e74]:
+    - generic [ref=e76]:
+      - link "Home /" [ref=e77] [cursor=pointer]:
+        - /url: https://tipcoengineering.com/
+      - link "Dyno Mill" [ref=e78] [cursor=pointer]:
+        - /url: "#"
+    - generic [ref=e79]:
+      - generic [ref=e80]:
+        - generic [ref=e81]:
+          - generic [ref=e82]:
+            - generic [ref=e83]:
+              - generic [ref=e85]:
+                - link [ref=e89] [cursor=pointer]:
+                  - /url: https://tipcoengineering.com/public/productwork/Dyno Mill.png
+                - link [ref=e93] [cursor=pointer]:
+                  - /url: https://tipcoengineering.com/public/productwork/Dyno Mill for Paint Manufacturing.png
+              - generic:
+                - button "" [ref=e94] [cursor=pointer]:
+                  - generic [ref=e95]: 
+                - button "" [ref=e96] [cursor=pointer]:
+                  - generic [ref=e97]: 
+              - generic [ref=e98]:
+                - button [ref=e99] [cursor=pointer]
+                - button [ref=e100] [cursor=pointer]
+            - link "Gallery" [ref=e102] [cursor=pointer]:
+              - /url: "#"
+              - generic [ref=e103]: 
+              - text: Gallery
+            - link " Add to Wishlist" [ref=e105] [cursor=pointer]:
+              - /url: https://tipcoengineering.com/login
+              - generic [ref=e106]: 
+              - generic:
+                - generic: Add to Wishlist
+          - generic [ref=e107]:
+            - generic [ref=e108]: Dyno Mill
+            - paragraph
+            - paragraph [ref=e109]: Dyno Mill is an agitator bead mill with a horizontal grinding container for dispersion and finest wet grinding in a completely enclosed system. The dyno mill is appropriate for a wide range of items from low to exceptionally gooey pumpable items. Uniquely composed instigator circles, mounted symmetrically on a pole, exchange the vitality required for scattering and wet granulating to the round crushing globules. An outside pump feeds the product into the mill.
+            - paragraph [ref=e110]: Dyno mill is available in different designs and sizes, from small laboratory model up to huge factories for creation plants, offering the ideal size for each application. The mill equipment, material, and grinding bead separation system can be adapted to the individual needs of each application.
+            - paragraph
+            - paragraph [ref=e111]:
+              - button "Get Quote" [ref=e112] [cursor=pointer]
+              - button "Download Brochure" [ref=e113] [cursor=pointer]
+        - generic [ref=e114]:
+          - navigation [ref=e116]:
+            - list [ref=e118]:
+              - listitem [ref=e119]:
+                - link "Features" [ref=e120] [cursor=pointer]:
+                  - /url: "#feature"
+              - listitem [ref=e121]:
+                - link "Benefits" [ref=e122] [cursor=pointer]:
+                  - /url: "#benefit"
+              - listitem [ref=e123]:
+                - link "Application" [ref=e124] [cursor=pointer]:
+                  - /url: "#application"
+              - listitem [ref=e125]:
+                - link "Technical Info" [ref=e126] [cursor=pointer]:
+                  - /url: "#technicalinfo"
+              - listitem [ref=e127]:
+                - link "THM -Series" [ref=e128] [cursor=pointer]:
+                  - /url: "#optionsandtools1"
+          - generic [ref=e130]:
+            - generic [ref=e131]:
+              - heading "Major Feature" [level=2] [ref=e132]
+              - separator [ref=e133]
+            - generic [ref=e135]:
+              - paragraph
+              - list [ref=e136]:
+                - listitem [ref=e137]:
+                  - generic [ref=e138]: Higher Flow Rate
+                - listitem [ref=e139]:
+                  - generic [ref=e140]: Faster Grinding Process
+                - listitem [ref=e141]:
+                  - generic [ref=e142]: Comes with Pressure and Temperature Measurement
+                - listitem [ref=e143]:
+                  - generic [ref=e144]: Minimum Maintenance Cost
+                - listitem [ref=e145]:
+                  - generic [ref=e146]: A larger Screen Diameter to reduce the pressure in the Chamber
+                - listitem [ref=e147]:
+                  - generic [ref=e148]: For Low and Medium Viscosity Material
+                - listitem [ref=e149]:
+                  - generic [ref=e150]: Machine Can Be Used in Paint, Ink & Pigment Grinding
+              - paragraph
+          - generic [ref=e152]:
+            - generic [ref=e153]:
+              - heading "Benefits" [level=2] [ref=e154]
+              - separator [ref=e155]
+            - generic [ref=e157]:
+              - paragraph
+              - list [ref=e158]:
+                - listitem [ref=e159]: Easy Operationally Machines
+                - listitem [ref=e160]: High Flow rates even with High Viscous Products
+                - listitem [ref=e161]: Appropriate for High Pressure and Temperature Product
+                - listitem [ref=e162]: Less Maintenance Required
+                - listitem [ref=e163]: The machine is Specially designed for Accelerated wet-grading operation
+                - listitem [ref=e164]: Less Energy Consumption with High Performance
+                - listitem [ref=e165]: Comes with a narrow particle size reduction and distribution.
+              - paragraph
+          - generic [ref=e167]:
+            - heading "Dyno Mill Applications" [level=2] [ref=e169]: Dyno Mill Applications
+            - generic [ref=e171]:
+              - heading "Applications" [level=2] [ref=e172]
+              - separator [ref=e173]
+            - generic [ref=e175]:
+              - link "Paint " [ref=e178] [cursor=pointer]:
+                - /url: https://tipcoengineering.com/application/paint
+                - generic [ref=e179]: Paint
+                - generic [ref=e181]: 
+              - link "Powder Adhesive " [ref=e184] [cursor=pointer]:
+                - /url: "#application"
+                - generic [ref=e185]: Powder Adhesive
+                - generic [ref=e187]: 
+              - link "Epoxy Paint " [ref=e190] [cursor=pointer]:
+                - /url: "#application"
+                - generic [ref=e191]: Epoxy Paint
+                - generic [ref=e193]: 
+              - link "Water Based Ink " [ref=e196] [cursor=pointer]:
+                - /url: "#application"
+                - generic [ref=e197]: Water Based Ink
+                - generic [ref=e199]: 
+              - link "cosmetic " [ref=e202] [cursor=pointer]:
+                - /url: "#application"
+                - generic [ref=e203]: cosmetic
+                - generic [ref=e205]: 
+          - generic [ref=e207]:
+            - generic [ref=e208]:
+              - heading "Technical Information" [level=2] [ref=e209]
+              - separator [ref=e210]
+            - table [ref=e212]:
+              - rowgroup [ref=e218]:
+                - 'row "TIPCO THM Series: THM-10 THM-15 THM-25" [ref=e219]':
+                  - cell "TIPCO THM Series:" [ref=e220]
+                  - cell "THM-10" [ref=e221]
+                  - cell "THM-15" [ref=e222]
+                  - cell "THM-25" [ref=e223]
+                - 'row "Material Output Capacity: 1-3 Liter Per Min 2-6 Liter Per Min 4-10 Liter Per Min" [ref=e224]':
+                  - cell "Material Output Capacity:" [ref=e225]
+                  - cell "1-3 Liter Per Min" [ref=e226]
+                  - cell "2-6 Liter Per Min" [ref=e227]
+                  - cell "4-10 Liter Per Min" [ref=e228]
+                - 'row "Diameter of Beads: 0.8 -2 mm 0.8 -2 mm 0.8 - 2.2 mm" [ref=e229]':
+                  - cell "Diameter of Beads:" [ref=e230]
+                  - cell "0.8 -2 mm" [ref=e231]
+                  - cell "0.8 -2 mm" [ref=e232]
+                  - cell "0.8 - 2.2 mm" [ref=e233]
+                - 'row "Disk Material Type: SS, TC, HCHC (High Carbon High Chromium) SS, TC, HCHC (High Carbon High Chromium) SS, TC, HCHC (High Carbon High Chromium)" [ref=e234]':
+                  - cell "Disk Material Type:" [ref=e235]
+                  - cell "SS, TC, HCHC (High Carbon High Chromium)" [ref=e236]
+                  - cell "SS, TC, HCHC (High Carbon High Chromium)" [ref=e237]
+                  - cell "SS, TC, HCHC (High Carbon High Chromium)" [ref=e238]
+                - 'row "Actual Volume of Process Chamber: 6.5 L 14.5 L 25 L" [ref=e239]':
+                  - cell "Actual Volume of Process Chamber:" [ref=e240]
+                  - cell "6.5 L" [ref=e241]
+                  - cell "14.5 L" [ref=e242]
+                  - cell "25 L" [ref=e243]
+                - 'row "Tip Speed: 0-13 m/s 0-13 m/s 0-13 m/s" [ref=e244]':
+                  - cell "Tip Speed:" [ref=e245]
+                  - cell "0-13 m/s" [ref=e246]
+                  - cell "0-13 m/s" [ref=e247]
+                  - cell "0-13 m/s" [ref=e248]
+                - 'row "Gap Separator Rings: Tungsten Carbide Tungsten Carbide Tungsten Carbide" [ref=e249]':
+                  - cell "Gap Separator Rings:" [ref=e250]
+                  - cell "Tungsten Carbide" [ref=e251]
+                  - cell "Tungsten Carbide" [ref=e252]
+                  - cell "Tungsten Carbide" [ref=e253]
+                - 'row "Main Motor Details*: 10 HP 15 HP 25 HP" [ref=e254]':
+                  - cell "Main Motor Details*:" [ref=e255]
+                  - cell "10 HP" [ref=e256]
+                  - cell "15 HP" [ref=e257]
+                  - cell "25 HP" [ref=e258]
+                - 'row "Weight: 700 900 1200" [ref=e259]':
+                  - cell "Weight:" [ref=e260]
+                  - cell "700" [ref=e261]
+                  - cell "900" [ref=e262]
+                  - cell "1200" [ref=e263]
+                - 'row "Application: Solvent Printing Ink, Solvent Wood Lacquer, Water Based Ink, Solvent Based Paint Same Same" [ref=e264]':
+                  - cell "Application:" [ref=e265]
+                  - cell "Solvent Printing Ink, Solvent Wood Lacquer, Water Based Ink, Solvent Based Paint" [ref=e266]
+                  - cell "Same" [ref=e267]
+                  - cell "Same" [ref=e268]
+          - generic [ref=e270]:
+            - generic [ref=e271]:
+              - heading "THM -Series" [level=2] [ref=e272]
+              - separator [ref=e273]
+            - generic [ref=e275]:
+              - list [ref=e276]:
+                - listitem [ref=e277]:
+                  - link "THM-10" [ref=e278]:
+                    - /url: "#typehome"
+                - listitem [ref=e279]:
+                  - link "THM-15" [ref=e280] [cursor=pointer]:
+                    - /url: "#type2"
+                - listitem [ref=e281]:
+                  - link "THM-25" [ref=e282] [cursor=pointer]:
+                    - /url: "#type3"
+              - generic [ref=e285]:
+                - img [ref=e288]
+                - generic [ref=e289]:
+                  - heading "THM-10" [level=4] [ref=e290]
+                  - paragraph [ref=e291]: In order to fit every need, our horizontal bead Mill in available in 3 different size. With THM-10 Machine, Inside the Chamber 10l raw material can be processed in continuous way and it will provide 2l-3l output of the fine material every minute after grinding process
+      - generic [ref=e295]:
+        - generic [ref=e297]: Enquiry Now
+        - textbox "Full Name" [ref=e299]
+        - textbox "Email Address" [ref=e301]
+        - textbox "Company Name" [ref=e303]
+        - combobox [ref=e305]:
+          - option "09 AM - 12 PM"
+          - option "12 PM - 04 PM"
+          - option "04 PM - 08 PM"
+        - generic [ref=e307]:
+          - 'combobox "India (भारत): +91" [ref=e309]'
+          - textbox "Mobile Number" [ref=e312]
+        - textbox "Send a message" [ref=e314]
+        - button "Submit" [ref=e316] [cursor=pointer]
+    - generic [ref=e317]:
+      - heading "Related Products" [level=1] [ref=e319]
+      - generic [ref=e321]:
+        - generic [ref=e323]:
+          - generic [ref=e329]:
+            - link "Paint Sludge to Primer Process Production Setup" [ref=e331] [cursor=pointer]:
+              - /url: https://tipcoengineering.com//production-line/paint-sludge-to-primer-process-production-setup
+            - link "The production line consists of additive storage and batching system v..." [ref=e332] [cursor=pointer]:
+              - /url: https://tipcoengineering.com//production-line/paint-sludge-to-primer-process-production-setup
+              - paragraph [ref=e333]: The production line consists of additive storage and batching system v...
+            - button "Get Quote" [ref=e335] [cursor=pointer]
+          - generic [ref=e341]:
+            - link "Horizontal Bead Mill" [ref=e343] [cursor=pointer]:
+              - /url: https://tipcoengineering.com//mill-series/horizontal-bead-mill
+            - link "Horizontal Bead Mill is suitable for grinding, milling, and dispersion..." [ref=e344] [cursor=pointer]:
+              - /url: https://tipcoengineering.com//mill-series/horizontal-bead-mill
+              - paragraph [ref=e345]: Horizontal Bead Mill is suitable for grinding, milling, and dispersion...
+            - button "Get Quote" [ref=e347] [cursor=pointer]
+          - generic [ref=e353]:
+            - link "Attritor Mill Machine" [ref=e355] [cursor=pointer]:
+              - /url: https://tipcoengineering.com//mill-series/attritor-mill-machine
+            - link "Tipco Engineering Attritor Mill Machine is used for high output fine g..." [ref=e356] [cursor=pointer]:
+              - /url: https://tipcoengineering.com//mill-series/attritor-mill-machine
+              - paragraph [ref=e357]: Tipco Engineering Attritor Mill Machine is used for high output fine g...
+            - button "Get Quote" [ref=e359] [cursor=pointer]
+          - generic [ref=e365]:
+            - link "Lab Sigma Mixer Machine" [ref=e367] [cursor=pointer]:
+              - /url: https://tipcoengineering.com//mixing/lab-sigma-mixer-machine
+            - link "Lab Sigma Mixer is used for managing very viscous materials, it is ess..." [ref=e368] [cursor=pointer]:
+              - /url: https://tipcoengineering.com//mixing/lab-sigma-mixer-machine
+              - paragraph [ref=e369]: Lab Sigma Mixer is used for managing very viscous materials, it is ess...
+            - button "Get Quote" [ref=e371] [cursor=pointer]
+          - generic [ref=e377]:
+            - link "Lab High Speed Disperser" [ref=e379] [cursor=pointer]:
+              - /url: https://tipcoengineering.com//paint/lab-high-speed-disperser
+            - link "Lab High Speed Disperser is mainly used in industrial department and s..." [ref=e380] [cursor=pointer]:
+              - /url: https://tipcoengineering.com//paint/lab-high-speed-disperser
+              - paragraph [ref=e381]: Lab High Speed Disperser is mainly used in industrial department and s...
+            - button "Get Quote" [ref=e383] [cursor=pointer]
+          - generic [ref=e389]:
+            - link "Vertical Bead Mill" [ref=e391] [cursor=pointer]:
+              - /url: https://tipcoengineering.com//mill-series/vertical-bead-mill
+            - link "Suitable for the grind and dispersing of liquid – haze particulate m..." [ref=e392] [cursor=pointer]:
+              - /url: https://tipcoengineering.com//mill-series/vertical-bead-mill
+              - paragraph [ref=e393]: Suitable for the grind and dispersing of liquid – haze particulate m...
+            - button "Get Quote" [ref=e395] [cursor=pointer]
+          - generic [ref=e401]:
+            - link "Basket Mill" [ref=e403] [cursor=pointer]:
+              - /url: https://tipcoengineering.com//mill-series/basket-mill
+            - link "Basket Mill (Hydraulic Lifting) is a wet grinding machine applicable f..." [ref=e404] [cursor=pointer]:
+              - /url: https://tipcoengineering.com//mill-series/basket-mill
+              - paragraph [ref=e405]: Basket Mill (Hydraulic Lifting) is a wet grinding machine applicable f...
+            - button "Get Quote" [ref=e407] [cursor=pointer]
+          - generic [ref=e413]:
+            - link "Paint Sludge to Primer Process Production Setup" [ref=e415] [cursor=pointer]:
+              - /url: https://tipcoengineering.com//production-line/paint-sludge-to-primer-process-production-setup
+            - link "The production line consists of additive storage and batching system v..." [ref=e416] [cursor=pointer]:
+              - /url: https://tipcoengineering.com//production-line/paint-sludge-to-primer-process-production-setup
+              - paragraph [ref=e417]: The production line consists of additive storage and batching system v...
+            - button "Get Quote" [ref=e419] [cursor=pointer]
+          - generic [ref=e425]:
+            - link "Horizontal Bead Mill" [ref=e427] [cursor=pointer]:
+              - /url: https://tipcoengineering.com//mill-series/horizontal-bead-mill
+            - link "Horizontal Bead Mill is suitable for grinding, milling, and dispersion..." [ref=e428] [cursor=pointer]:
+              - /url: https://tipcoengineering.com//mill-series/horizontal-bead-mill
+              - paragraph [ref=e429]: Horizontal Bead Mill is suitable for grinding, milling, and dispersion...
+            - button "Get Quote" [ref=e431] [cursor=pointer]
+          - generic [ref=e437]:
+            - link "Attritor Mill Machine" [ref=e439] [cursor=pointer]:
+              - /url: https://tipcoengineering.com//mill-series/attritor-mill-machine
+            - link "Tipco Engineering Attritor Mill Machine is used for high output fine g..." [ref=e440] [cursor=pointer]:
+              - /url: https://tipcoengineering.com//mill-series/attritor-mill-machine
+              - paragraph [ref=e441]: Tipco Engineering Attritor Mill Machine is used for high output fine g...
+            - button "Get Quote" [ref=e443] [cursor=pointer]
+          - generic [ref=e449]:
+            - link "Lab Sigma Mixer Machine" [ref=e451] [cursor=pointer]:
+              - /url: https://tipcoengineering.com//mixing/lab-sigma-mixer-machine
+            - link "Lab Sigma Mixer is used for managing very viscous materials, it is ess..." [ref=e452] [cursor=pointer]:
+              - /url: https://tipcoengineering.com//mixing/lab-sigma-mixer-machine
+              - paragraph [ref=e453]: Lab Sigma Mixer is used for managing very viscous materials, it is ess...
+            - button "Get Quote" [ref=e455] [cursor=pointer]
+          - generic [ref=e461]:
+            - link "Lab High Speed Disperser" [ref=e463] [cursor=pointer]:
+              - /url: https://tipcoengineering.com//paint/lab-high-speed-disperser
+            - link "Lab High Speed Disperser is mainly used in industrial department and s..." [ref=e464] [cursor=pointer]:
+              - /url: https://tipcoengineering.com//paint/lab-high-speed-disperser
+              - paragraph [ref=e465]: Lab High Speed Disperser is mainly used in industrial department and s...
+            - button "Get Quote" [ref=e467] [cursor=pointer]
+          - generic [ref=e473]:
+            - link "Vertical Bead Mill" [ref=e475] [cursor=pointer]:
+              - /url: https://tipcoengineering.com//mill-series/vertical-bead-mill
+            - link "Suitable for the grind and dispersing of liquid – haze particulate m..." [ref=e476] [cursor=pointer]:
+              - /url: https://tipcoengineering.com//mill-series/vertical-bead-mill
+              - paragraph [ref=e477]: Suitable for the grind and dispersing of liquid – haze particulate m...
+            - button "Get Quote" [ref=e479] [cursor=pointer]
+          - generic [ref=e485]:
+            - link "Basket Mill" [ref=e487] [cursor=pointer]:
+              - /url: https://tipcoengineering.com//mill-series/basket-mill
+            - link "Basket Mill (Hydraulic Lifting) is a wet grinding machine applicable f..." [ref=e488] [cursor=pointer]:
+              - /url: https://tipcoengineering.com//mill-series/basket-mill
+              - paragraph [ref=e489]: Basket Mill (Hydraulic Lifting) is a wet grinding machine applicable f...
+            - button "Get Quote" [ref=e491] [cursor=pointer]
+          - generic [ref=e497]:
+            - link "Paint Sludge to Primer Process Production Setup" [ref=e499] [cursor=pointer]:
+              - /url: https://tipcoengineering.com//production-line/paint-sludge-to-primer-process-production-setup
+            - link "The production line consists of additive storage and batching system v..." [ref=e500] [cursor=pointer]:
+              - /url: https://tipcoengineering.com//production-line/paint-sludge-to-primer-process-production-setup
+              - paragraph [ref=e501]: The production line consists of additive storage and batching system v...
+            - button "Get Quote" [ref=e503] [cursor=pointer]
+        - generic [ref=e504]:
+          - button [ref=e505] [cursor=pointer]
+          - button [ref=e506] [cursor=pointer]
+  - navigation [ref=e509]:
+    - list [ref=e511]:
+      - listitem [ref=e512]:
+        - link "Features" [ref=e513] [cursor=pointer]:
+          - /url: "#feature"
+      - listitem [ref=e514]:
+        - link "Benefits" [ref=e515] [cursor=pointer]:
+          - /url: "#benefit"
+      - listitem [ref=e516]:
+        - link "Application" [ref=e517] [cursor=pointer]:
+          - /url: "#application"
+      - listitem [ref=e518]:
+        - link "Technical Info" [ref=e519] [cursor=pointer]:
+          - /url: "#technicalinfo"
+      - listitem [ref=e520]:
+        - link "THM -Series" [ref=e521] [cursor=pointer]:
+          - /url: "#optionsandtools1"
+    - link "Get Quote" [ref=e522] [cursor=pointer]:
+      - /url: "#"
+      - button "Get Quote" [ref=e523]
+  - generic [ref=e527]:
+    - generic [ref=e528]:
+      - heading "Get Quote Now" [level=2] [ref=e529]
+      - paragraph [ref=e530]: We provide best solution for your business
+    - generic [ref=e531]:
+      - generic:
+        - textbox "Full Name" [ref=e533]
+        - textbox "Email Address" [ref=e535]
+        - textbox "Company Name" [ref=e537]
+        - generic [ref=e539]:
+          - 'combobox "India (भारत): +91" [ref=e541]'
+          - textbox "Mobile Number" [ref=e544]
+        - textbox "Message" [ref=e546]
+    - iframe [ref=e551]:
+      - generic [ref=f72e2]:
+        - generic [ref=f72e3]:
+          - checkbox "I'm not a robot" [ref=f72e7]
+          - generic [ref=f72e11]: I'm not a robot
+        - generic [ref=f72e15]: reCAPTCHA
+    - button "Get Quote" [ref=e554] [cursor=pointer]
+  - contentinfo [ref=e555]:
+    - generic [ref=e558]:
+      - generic [ref=e560]:
+        - heading "About Us" [level=3] [ref=e561]: About Us
+        - paragraph [ref=e563]: Tipco Engineering India Pvt. Ltd. was incorporated in 2021 primarily manufacturers of process plants and machinery required by the Chemical,Polyester Button and related Industries.
+        - generic [ref=e564]:
+          - link "" [ref=e566] [cursor=pointer]:
+            - /url: https://www.facebook.com/TipcoEngineeringIndia/
+            - generic [ref=e567]: 
+          - link "" [ref=e569] [cursor=pointer]:
+            - /url: https://twitter.com/tipcoengineer
+            - generic [ref=e570]: 
+          - link "" [ref=e572] [cursor=pointer]:
+            - /url: https://www.linkedin.com/company/tipcoengineering/
+            - generic [ref=e573]: 
+          - link "" [ref=e575] [cursor=pointer]:
+            - /url: https://www.youtube.com/@tipcoengineering
+            - generic [ref=e576]: 
+          - link "" [ref=e578] [cursor=pointer]:
+            - /url: https://www.instagram.com/tipcoengineering/
+            - generic [ref=e579]: 
+          - link "" [ref=e581] [cursor=pointer]:
+            - /url: https://api.whatsapp.com/send/?phone=+918826176988&text=Hello I have Question about Tipco&app_absent=0
+            - generic [ref=e582]: 
+          - link "" [ref=e584] [cursor=pointer]:
+            - /url: mailto:mail@tipcoengineering.com
+            - generic [ref=e585]: 
+      - generic [ref=e587]:
+        - heading "Information" [level=3] [ref=e588]: Information
+        - list [ref=e590]:
+          - listitem [ref=e591]:
+            - link " Blog" [ref=e592] [cursor=pointer]:
+              - /url: https://tipcoengineering.com/blog
+              - generic [ref=e593]: 
+              - text: Blog
+          - listitem [ref=e594]:
+            - link " Videos" [ref=e595] [cursor=pointer]:
+              - /url: https://tipcoengineering.com/video-gallery
+              - generic [ref=e596]: 
+              - text: Videos
+          - listitem [ref=e597]:
+            - link " Catalogue" [ref=e598] [cursor=pointer]:
+              - /url: https://tipcoengineering.com/catalogue
+              - generic [ref=e599]: 
+              - text: Catalogue
+          - listitem [ref=e600]:
+            - link " Events" [ref=e601] [cursor=pointer]:
+              - /url: https://tipcoengineering.com/event
+              - generic [ref=e602]: 
+              - text: Events
+          - listitem [ref=e603]:
+            - link " Company Gallery" [ref=e604] [cursor=pointer]:
+              - /url: https://tipcoengineering.com/photo-gallery
+              - generic [ref=e605]: 
+              - text: Company Gallery
+      - generic [ref=e607]:
+        - heading "Quick Link" [level=3] [ref=e608]: Quick Link
+        - list [ref=e610]:
+          - listitem [ref=e611]:
+            - link " About Us" [ref=e612] [cursor=pointer]:
+              - /url: https://tipcoengineering.com/about-us
+              - generic [ref=e613]: 
+              - text: About Us
+          - listitem [ref=e614]:
+            - link " Contact Us" [ref=e615] [cursor=pointer]:
+              - /url: https://tipcoengineering.com/contact-us
+              - generic [ref=e616]: 
+              - text: Contact Us
+          - listitem [ref=e617]:
+            - link " Service" [ref=e618] [cursor=pointer]:
+              - /url: https://tipcoengineering.com/service
+              - generic [ref=e619]: 
+              - text: Service
+          - listitem [ref=e620]:
+            - link " Career" [ref=e621] [cursor=pointer]:
+              - /url: https://tipcoengineering.com/career
+              - generic [ref=e622]: 
+              - text: Career
+          - listitem [ref=e623]:
+            - link " Partner With US" [ref=e624] [cursor=pointer]:
+              - /url: https://tipcoengineering.com/partner
+              - generic [ref=e625]: 
+              - text: Partner With US
+      - generic [ref=e627]:
+        - heading "Products" [level=3] [ref=e628]: Products
+        - list [ref=e630]:
+          - listitem [ref=e631]:
+            - link " Mill Series" [ref=e632] [cursor=pointer]:
+              - /url: https://tipcoengineering.com/application/mill-series
+              - generic [ref=e633]: 
+              - text: Mill Series
+          - listitem [ref=e634]:
+            - link " Production Line" [ref=e635] [cursor=pointer]:
+              - /url: https://tipcoengineering.com/application/production-line
+              - generic [ref=e636]: 
+              - text: Production Line
+          - listitem [ref=e637]:
+            - link " laboratory Machines" [ref=e638] [cursor=pointer]:
+              - /url: https://tipcoengineering.com/application/laboratory-machines
+              - generic [ref=e639]: 
+              - text: laboratory Machines
+          - listitem [ref=e640]:
+            - link " Homogenizers" [ref=e641] [cursor=pointer]:
+              - /url: https://tipcoengineering.com/application/homogenizers
+              - generic [ref=e642]: 
+              - text: Homogenizers
+      - generic [ref=e644]:
+        - heading "Machine Series" [level=3] [ref=e645]: Machine Series
+        - list [ref=e647]:
+          - listitem [ref=e648]:
+            - link " C- Series" [ref=e649] [cursor=pointer]:
+              - /url: https://tipcoengineering.com/
+              - generic [ref=e650]: 
+              - text: C- Series
+          - listitem [ref=e651]:
+            - link " HS- Disperser Series" [ref=e652] [cursor=pointer]:
+              - /url: https://tipcoengineering.com/
+              - generic [ref=e653]: 
+              - text: HS- Disperser Series
+          - listitem [ref=e654]:
+            - link " HS- Homogenizers Series" [ref=e655] [cursor=pointer]:
+              - /url: https://tipcoengineering.com/
+              - generic [ref=e656]: 
+              - text: HS- Homogenizers Series
+          - listitem [ref=e657]:
+            - link " THM Series" [ref=e658] [cursor=pointer]:
+              - /url: https://tipcoengineering.com/
+              - generic [ref=e659]: 
+              - text: THM Series
+          - listitem [ref=e660]:
+            - link " Lab Series" [ref=e661] [cursor=pointer]:
+              - /url: https://tipcoengineering.com/
+              - generic [ref=e662]: 
+              - text: Lab Series
+      - generic [ref=e664]:
+        - heading "Contact Us" [level=3] [ref=e665]: Contact Us
+        - list [ref=e667]:
+          - listitem [ref=e668]:
+            - generic [ref=e669]: 
+            - paragraph [ref=e670]:
+              - text: Office 1
+              - text: Plot No. 1689, 1658 SECTOR-38, PHASE-1, RAI, INDUSTRIAL AERA, Sonipat, Haryana 131029
+          - listitem [ref=e671]:
+            - generic [ref=e672]: 
+            - paragraph [ref=e673]:
+              - link "1800 1020 229" [ref=e674] [cursor=pointer]:
+                - /url: tel:1800 1020 229
+          - listitem [ref=e675]:
+            - generic [ref=e676]: 
+            - paragraph [ref=e677]:
+              - link "mail@tipcoengineering.com" [ref=e678] [cursor=pointer]:
+                - /url: mailto:mail@tipcoengineering.com
+    - generic [ref=e680]:
+      - separator [ref=e681]
+      - generic [ref=e686]:
+        - list:
+          - listitem [ref=e687]:
+            - link "Privacy Policy" [ref=e688] [cursor=pointer]:
+              - /url: https://tipcoengineering.com/privacy-policy
+            - text: "|"
+          - listitem [ref=e689]:
+            - link "Certificate" [ref=e690] [cursor=pointer]:
+              - /url: https://tipcoengineering.com/certificates
+            - text: "|"
+          - listitem [ref=e691]:
+            - link "Term & conditions" [ref=e692] [cursor=pointer]:
+              - /url: https://tipcoengineering.com/term-condition
+            - text: "|"
+          - listitem [ref=e693]:
+            - link "Faqs" [ref=e694] [cursor=pointer]:
+              - /url: https://tipcoengineering.com/faq
+      - generic [ref=e699]: © 2026 Tipco Engineering.
+  - button "ENQUIRY" [ref=e701] [cursor=pointer]
+  - text:   

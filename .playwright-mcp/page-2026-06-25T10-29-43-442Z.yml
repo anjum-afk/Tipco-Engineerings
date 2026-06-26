@@ -1,0 +1,586 @@
+- generic [active] [ref=e1]:
+  - link "Skip to content" [ref=e2] [cursor=pointer]:
+    - /url: "#content"
+  - generic [ref=e3]:
+    - generic [ref=e7]:
+      - link [ref=e10] [cursor=pointer]:
+        - /url: https://mecworksinnovation.com/
+      - navigation [ref=e13]:
+        - list [ref=e15]:
+          - listitem [ref=e16]:
+            - link "HOME" [ref=e17] [cursor=pointer]:
+              - /url: https://mecworksinnovation.com
+          - listitem [ref=e18]:
+            - link "MACHINES" [ref=e19] [cursor=pointer]:
+              - /url: https://mecworksinnovation.com/machines/
+              - text: MACHINES
+              - generic [ref=e20]: 
+          - listitem [ref=e21]:
+            - link "PLANTS" [ref=e22] [cursor=pointer]:
+              - /url: https://mecworksinnovation.com/plant/
+              - text: PLANTS
+              - generic [ref=e23]: 
+          - listitem [ref=e24]:
+            - link "ABOUT US" [ref=e25] [cursor=pointer]:
+              - /url: https://mecworksinnovation.com/about/
+          - listitem [ref=e26]:
+            - link "CONTACT" [ref=e27] [cursor=pointer]:
+              - /url: https://mecworksinnovation.com/contact/
+          - listitem [ref=e28]:
+            - link "BLOG" [ref=e29] [cursor=pointer]:
+              - /url: https://mecworksinnovation.com/blog/
+      - link "Get A Quote" [ref=e33] [cursor=pointer]:
+        - /url: https://api.whatsapp.com/send/?phone=919773762449&text=Hello+Mecworks+Innovation%2C+could+I+please+get+a+quote%3F&type=phone_number&app_absent=0
+        - generic [ref=e35]: Get A Quote
+    - generic [ref=e38]:
+      - generic [ref=e45]:
+        - heading "WET MIXING MACHINERY SOLUTIONS FOR EVERY Industry" [level=1] [ref=e48]
+        - paragraph [ref=e51]: Providing Durable Equipment with Unmatched Expert Support for All Your Industrial Needs
+        - link "Explore Our Products" [ref=e55] [cursor=pointer]:
+          - /url: https://mecworksinnovation.com/machines/
+          - generic [ref=e56]:
+            - generic [ref=e58]: 
+            - generic [ref=e59]: Explore Our Products
+      - region "Image Carousel" [ref=e64]:
+        - generic [ref=e65]:
+          - group [ref=e66]:
+            - figure [ref=e67]:
+              - img [ref=e68]
+          - group [ref=e69]:
+            - figure [ref=e70]:
+              - img [ref=e71]
+          - group [ref=e72]:
+            - figure [ref=e73]:
+              - img [ref=e74]
+          - group [ref=e75]:
+            - figure [ref=e76]:
+              - img [ref=e77]
+          - group [ref=e78]:
+            - figure [ref=e79]:
+              - img [ref=e80]
+          - group [ref=e81]:
+            - figure [ref=e82]:
+              - img [ref=e83]
+          - group [ref=e84]:
+            - figure [ref=e85]:
+              - img [ref=e86]
+          - group [ref=e87]:
+            - figure [ref=e88]:
+              - img [ref=e89]
+          - group "3 / 11" [ref=e90]:
+            - figure [ref=e91]:
+              - img "Sundown-Emulsions-Logo" [ref=e92]
+          - group "4 / 11" [ref=e93]:
+            - figure [ref=e94]:
+              - img "ce_logo" [ref=e95]
+          - group "5 / 11" [ref=e96]:
+            - figure [ref=e97]:
+              - img "rnz_logo" [ref=e98]
+          - group "6 / 11" [ref=e99]:
+            - figure [ref=e100]:
+              - img "Adobe Express - file" [ref=e101]
+          - group "7 / 11" [ref=e102]:
+            - figure [ref=e103]:
+              - img "fainvet_logo" [ref=e104]
+          - group "8 / 11" [ref=e105]:
+            - figure [ref=e106]:
+              - img "Zerem Indhan" [ref=e107]
+          - group [ref=e108]:
+            - figure [ref=e109]:
+              - img [ref=e110]
+          - group [ref=e111]:
+            - figure [ref=e112]:
+              - img [ref=e113]
+          - group [ref=e114]:
+            - figure [ref=e115]:
+              - img [ref=e116]
+          - group [ref=e117]:
+            - figure [ref=e118]:
+              - img [ref=e119]
+          - group [ref=e120]:
+            - figure [ref=e121]:
+              - img [ref=e122]
+          - group [ref=e123]:
+            - figure [ref=e124]:
+              - img [ref=e125]
+          - group [ref=e126]:
+            - figure [ref=e127]:
+              - img [ref=e128]
+          - group [ref=e129]:
+            - figure [ref=e130]:
+              - img [ref=e131]
+          - group [ref=e132]:
+            - figure [ref=e133]:
+              - img [ref=e134]
+      - generic [ref=e136]:
+        - heading "Find You The Right Equipment" [level=6] [ref=e139]: Find You The Right Equipment
+        - heading "Browse Machinery" [level=2] [ref=e142]
+        - generic [ref=e149]:
+          - generic [ref=e150]: slide 6 to 9 of 12
+          - generic [ref=e153]:
+            - generic [ref=e155]:
+              - link [ref=e156] [cursor=pointer]:
+                - /url: https://mecworksinnovation.com/product/powder-liquid-mixer/
+                - heading [level=2] [ref=e157]: POWDER LIQUID MIXER
+                - img [ref=e159]
+              - link [ref=e160] [cursor=pointer]:
+                - /url: https://mecworksinnovation.com/product/powder-liquid-mixer/
+                - generic [ref=e161]: 
+                - text: Read more
+            - generic [ref=e163]:
+              - link [ref=e164] [cursor=pointer]:
+                - /url: https://mecworksinnovation.com/product/intank-homogenizer/
+                - heading [level=2] [ref=e165]: INTANK HOMOGENIZER
+                - img [ref=e167]
+              - link [ref=e168] [cursor=pointer]:
+                - /url: https://mecworksinnovation.com/product/intank-homogenizer/
+                - generic [ref=e169]: 
+                - text: Read more
+            - generic [ref=e171]:
+              - link [ref=e172] [cursor=pointer]:
+                - /url: https://mecworksinnovation.com/product/high-shear-mixer-machine/
+                - heading [level=2] [ref=e173]: HIGH SHEAR MIXER MACHINE
+                - img [ref=e175]
+              - link [ref=e176] [cursor=pointer]:
+                - /url: https://mecworksinnovation.com/product/high-shear-mixer-machine/
+                - generic [ref=e177]: 
+                - text: Read more
+            - generic [ref=e179]:
+              - link [ref=e180] [cursor=pointer]:
+                - /url: https://mecworksinnovation.com/product/high-speed-disperser/
+                - heading [level=2] [ref=e181]: HIGH SPEED DISPERSER
+                - img [ref=e183]
+              - link [ref=e184] [cursor=pointer]:
+                - /url: https://mecworksinnovation.com/product/high-speed-disperser/
+                - generic [ref=e185]: 
+                - text: Read more
+            - generic [ref=e187]:
+              - link [ref=e188] [cursor=pointer]:
+                - /url: https://mecworksinnovation.com/product/industrial-mixing-tank/
+                - heading [level=2] [ref=e189]: MIXING TANK
+                - img [ref=e191]
+              - link [ref=e192] [cursor=pointer]:
+                - /url: https://mecworksinnovation.com/product/industrial-mixing-tank/
+                - generic [ref=e193]: 
+                - text: Read more
+            - generic [ref=e195]:
+              - link "STORAGE TANK STORAGE TANK" [ref=e196] [cursor=pointer]:
+                - /url: https://mecworksinnovation.com/product/storage-tank/
+                - heading "STORAGE TANK" [level=2] [ref=e197]
+                - img "STORAGE TANK" [ref=e199]
+              - link "Read more about “STORAGE TANK”" [ref=e200] [cursor=pointer]:
+                - /url: https://mecworksinnovation.com/product/storage-tank/
+                - generic [ref=e201]: 
+                - text: Read more
+            - generic [ref=e203]:
+              - link "IN LINE HOMOGENIZER High Shear Homogenizer Manufacturers in Chile for Pharma & Food" [ref=e204] [cursor=pointer]:
+                - /url: https://mecworksinnovation.com/product/in-line-homogenizer/
+                - heading "IN LINE HOMOGENIZER" [level=2] [ref=e205]
+                - img "High Shear Homogenizer Manufacturers in Chile for Pharma & Food" [ref=e207]
+              - link "Read more about “IN LINE HOMOGENIZER”" [ref=e208] [cursor=pointer]:
+                - /url: https://mecworksinnovation.com/product/in-line-homogenizer/
+                - generic [ref=e209]: 
+                - text: Read more
+            - generic [ref=e211]:
+              - link "BOTTOM-DRIVE HOMOGENIZER BOTTOM-DRIVE HOMOGENIZER" [ref=e212] [cursor=pointer]:
+                - /url: https://mecworksinnovation.com/product/bottom-drive-homogenizer/
+                - heading "BOTTOM-DRIVE HOMOGENIZER" [level=2] [ref=e213]
+                - img "BOTTOM-DRIVE HOMOGENIZER" [ref=e215]
+              - link "Read more about “BOTTOM-DRIVE HOMOGENIZER”" [ref=e216] [cursor=pointer]:
+                - /url: https://mecworksinnovation.com/product/bottom-drive-homogenizer/
+                - generic [ref=e217]: 
+                - text: Read more
+            - generic [ref=e219]:
+              - link "REACTOR VESSEL REACTOR VESSEL" [ref=e220] [cursor=pointer]:
+                - /url: https://mecworksinnovation.com/product/reactor-vessel/
+                - heading "REACTOR VESSEL" [level=2] [ref=e221]
+                - img "REACTOR VESSEL" [ref=e223]
+              - link "Read more about “REACTOR VESSEL”" [ref=e224] [cursor=pointer]:
+                - /url: https://mecworksinnovation.com/product/reactor-vessel/
+                - generic [ref=e225]: 
+                - text: Read more
+            - generic [ref=e227]:
+              - link [ref=e228] [cursor=pointer]:
+                - /url: https://mecworksinnovation.com/product/colloidal-mill/
+                - heading [level=2] [ref=e229]: COLLOIDAL MILL
+                - img [ref=e231]
+              - link [ref=e232] [cursor=pointer]:
+                - /url: https://mecworksinnovation.com/product/colloidal-mill/
+                - generic [ref=e233]: 
+                - text: Read more
+            - generic [ref=e235]:
+              - link [ref=e236] [cursor=pointer]:
+                - /url: https://mecworksinnovation.com/product/ribbon-blender/
+                - heading [level=2] [ref=e237]: RIBBON BLENDER
+                - img [ref=e239]
+              - link [ref=e240] [cursor=pointer]:
+                - /url: https://mecworksinnovation.com/product/ribbon-blender/
+                - generic [ref=e241]: 
+                - text: Read more
+            - generic [ref=e243]:
+              - link [ref=e244] [cursor=pointer]:
+                - /url: https://mecworksinnovation.com/product/bead-mill/
+                - heading [level=2] [ref=e245]: DYNO MILL
+                - img [ref=e247]
+              - link [ref=e248] [cursor=pointer]:
+                - /url: https://mecworksinnovation.com/product/bead-mill/
+                - generic [ref=e249]: 
+                - text: Read more
+            - generic [ref=e251]:
+              - link [ref=e252] [cursor=pointer]:
+                - /url: https://mecworksinnovation.com/product/powder-liquid-mixer/
+                - heading [level=2] [ref=e253]: POWDER LIQUID MIXER
+                - img [ref=e255]
+              - link [ref=e256] [cursor=pointer]:
+                - /url: https://mecworksinnovation.com/product/powder-liquid-mixer/
+                - generic [ref=e257]: 
+                - text: Read more
+            - generic [ref=e259]:
+              - link [ref=e260] [cursor=pointer]:
+                - /url: https://mecworksinnovation.com/product/intank-homogenizer/
+                - heading [level=2] [ref=e261]: INTANK HOMOGENIZER
+                - img [ref=e263]
+              - link [ref=e264] [cursor=pointer]:
+                - /url: https://mecworksinnovation.com/product/intank-homogenizer/
+                - generic [ref=e265]: 
+                - text: Read more
+            - generic [ref=e267]:
+              - link [ref=e268] [cursor=pointer]:
+                - /url: https://mecworksinnovation.com/product/high-shear-mixer-machine/
+                - heading [level=2] [ref=e269]: HIGH SHEAR MIXER MACHINE
+                - img [ref=e271]
+              - link [ref=e272] [cursor=pointer]:
+                - /url: https://mecworksinnovation.com/product/high-shear-mixer-machine/
+                - generic [ref=e273]: 
+                - text: Read more
+            - generic [ref=e275]:
+              - link [ref=e276] [cursor=pointer]:
+                - /url: https://mecworksinnovation.com/product/high-speed-disperser/
+                - heading [level=2] [ref=e277]: HIGH SPEED DISPERSER
+                - img [ref=e279]
+              - link [ref=e280] [cursor=pointer]:
+                - /url: https://mecworksinnovation.com/product/high-speed-disperser/
+                - generic [ref=e281]: 
+                - text: Read more
+            - generic [ref=e283]:
+              - link [ref=e284] [cursor=pointer]:
+                - /url: https://mecworksinnovation.com/product/industrial-mixing-tank/
+                - heading [level=2] [ref=e285]: MIXING TANK
+                - img [ref=e287]
+              - link [ref=e288] [cursor=pointer]:
+                - /url: https://mecworksinnovation.com/product/industrial-mixing-tank/
+                - generic [ref=e289]: 
+                - text: Read more
+            - generic [ref=e291]:
+              - link [ref=e292] [cursor=pointer]:
+                - /url: https://mecworksinnovation.com/product/storage-tank/
+                - heading [level=2] [ref=e293]: STORAGE TANK
+                - img [ref=e295]
+              - link [ref=e296] [cursor=pointer]:
+                - /url: https://mecworksinnovation.com/product/storage-tank/
+                - generic [ref=e297]: 
+                - text: Read more
+            - generic [ref=e299]:
+              - link [ref=e300] [cursor=pointer]:
+                - /url: https://mecworksinnovation.com/product/in-line-homogenizer/
+                - heading [level=2] [ref=e301]: IN LINE HOMOGENIZER
+                - img [ref=e303]
+              - link [ref=e304] [cursor=pointer]:
+                - /url: https://mecworksinnovation.com/product/in-line-homogenizer/
+                - generic [ref=e305]: 
+                - text: Read more
+            - generic [ref=e307]:
+              - link [ref=e308] [cursor=pointer]:
+                - /url: https://mecworksinnovation.com/product/bottom-drive-homogenizer/
+                - heading [level=2] [ref=e309]: BOTTOM-DRIVE HOMOGENIZER
+                - img [ref=e311]
+              - link [ref=e312] [cursor=pointer]:
+                - /url: https://mecworksinnovation.com/product/bottom-drive-homogenizer/
+                - generic [ref=e313]: 
+                - text: Read more
+          - generic "Carousel Pagination" [ref=e314]:
+            - button "Carousel Page 1 (Current Slide)" [ref=e315] [cursor=pointer]
+            - button "Carousel Page 2" [ref=e316] [cursor=pointer]
+            - button "Carousel Page 3" [ref=e317] [cursor=pointer]
+          - generic "Carousel Navigation":
+            - button [ref=e318] [cursor=pointer]:
+              - generic [ref=e319]: 
+            - button [ref=e320] [cursor=pointer]:
+              - generic [ref=e321]: 
+      - generic [ref=e324]:
+        - heading "We Help The Heavy Equipment Work Better" [level=2] [ref=e328]
+        - generic [ref=e329]:
+          - link "Get A Quote" [ref=e333] [cursor=pointer]:
+            - /url: https://api.whatsapp.com/send/?phone=919773762449&text=Hello+Mecworks+Innovation%2C+could+I+please+get+a+quote%3F&type=phone_number&app_absent=0
+            - generic [ref=e335]: Get A Quote
+          - link "+91 9773762449" [ref=e339] [cursor=pointer]:
+            - /url: https://api.whatsapp.com/send/?phone=919773762449&text=Hello+Mecworks+Innovation%2C+could+I+please+get+a+quote%3F&type=phone_number&app_absent=0
+            - generic [ref=e340]:
+              - generic [ref=e342]: 
+              - generic [ref=e343]: +91 9773762449
+      - generic [ref=e346]:
+        - heading "Why Choose Us" [level=6] [ref=e349]
+        - heading "Buy Best Equipment with Maintainence" [level=2] [ref=e352]: Buy Best Equipment with Maintainence
+        - generic [ref=e353]:
+          - generic [ref=e357]:
+            - generic [ref=e360]: 
+            - generic [ref=e361]:
+              - heading "Durability" [level=3] [ref=e362]
+              - paragraph [ref=e363]: Don’t hesitate to reach out with any product inquiries or support requests—we’re here to help! If you can’t find the right product, contact us today!
+          - generic [ref=e367]:
+            - generic [ref=e370]: 
+            - generic [ref=e371]:
+              - heading "Engineered Excellence" [level=3] [ref=e372]
+              - paragraph [ref=e373]: Don’t hesitate to reach out with any product inquiries or support requests—we’re here to help! If you can’t find the right product, contact us today!
+          - generic [ref=e377]:
+            - generic [ref=e380]: 﫣
+            - generic [ref=e381]:
+              - heading "Innovative Service" [level=3] [ref=e382]
+              - paragraph [ref=e383]: Don’t hesitate to reach out with any product inquiries or support requests—we’re here to help! If you can’t find the right product, contact us today!
+          - generic [ref=e387]:
+            - generic [ref=e390]: 
+            - generic [ref=e391]:
+              - heading "Customer Support" [level=3] [ref=e392]
+              - paragraph [ref=e393]: Don’t hesitate to reach out with any product inquiries or support requests—we’re here to help! If you can’t find the right product, contact us today!
+          - generic [ref=e397]:
+            - generic [ref=e400]: 
+            - generic [ref=e401]:
+              - heading "Worldwide Shipment" [level=3] [ref=e402]
+              - paragraph [ref=e403]: Don’t hesitate to reach out with any product inquiries or support requests—we’re here to help! If you can’t find the right product, contact us today!
+          - generic [ref=e407]:
+            - generic [ref=e410]: 
+            - generic [ref=e411]:
+              - heading "Genuine Pricing" [level=3] [ref=e412]
+              - paragraph [ref=e413]: Don’t hesitate to reach out with any product inquiries or support requests—we’re here to help! If you can’t find the right product, contact us today!
+        - link "Contact Us" [ref=e417] [cursor=pointer]:
+          - /url: https://api.whatsapp.com/send/?phone=919773762449&text=Hello+Mecworks+Innovation%2C+could+I+please+get+a+quote%3F&type=phone_number&app_absent=0
+          - generic [ref=e418]:
+            - generic [ref=e420]: צּ
+            - generic [ref=e421]: Contact Us
+      - generic [ref=e425]:
+        - generic [ref=e426]:
+          - heading "About MecWorks Innovation" [level=2] [ref=e429]
+          - heading "We Offer Smarter Equipment" [level=2] [ref=e432]
+          - paragraph [ref=e435]: Mecworks Innovation, founded in 2024, is committed to revolutionizing wet mixing machinery across a range of industries. As an emerging leader, we specialize in delivering high-performance, precision-engineered equipment tailored to the specific needs of sectors such as pharmaceuticals, food and beverage, chemicals, cosmetics, and more. Our innovative wet mixing systems are designed to optimize efficiency, improve consistency, and ensure reliability in complex manufacturing processes.
+          - link "Explore More" [ref=e439] [cursor=pointer]:
+            - /url: https://mecworksinnovation.com/about/
+            - generic [ref=e440]:
+              - generic [ref=e442]: 
+              - generic [ref=e443]: Explore More
+        - iframe [ref=e448]:
+          - generic [active] [ref=f5e1]:
+            - generic "YouTube Video Player" [ref=f5e3]
+            - generic [ref=f5e5]:
+              - generic:
+                - generic:
+                  - button "Play video" [ref=f5e10] [cursor=pointer]
+                  - button "Hide player controls" [ref=f5e12] [cursor=pointer]
+                  - generic [ref=f5e14]:
+                    - generic [ref=f5e19]:
+                      - generic [ref=f5e20]:
+                        - 'link "Lab Homogenizer & Mixer I Contact: +919773762449 I Mail: sales@mecworksinnovation.com I" [ref=f5e21] [cursor=pointer]':
+                          - /url: https://www.youtube.com/watch?v=LfGDQnHRcqg
+                        - link "MECWORKS INNOVATION" [ref=f5e22] [cursor=pointer]:
+                          - /url: /channel/UCs1lxGrZa0KlBTeXZNA-_bQ
+                          - generic [ref=f5e23]: MECWORKS INNOVATION
+                      - generic [ref=f5e24]:
+                        - button [ref=f5e25] [cursor=pointer]
+                        - generic [ref=f5e27]:
+                          - generic: MECWORKS INNOVATION
+                          - generic: 25 subscribers
+                    - generic [ref=f5e28]:
+                      - button "Share" [ref=f5e31] [cursor=pointer]:
+                        - generic [ref=f5e35]:
+                          - img
+                      - link "Watch on YouTube" [ref=f5e42] [cursor=pointer]:
+                        - /url: https://www.youtube.com/watch?v=LfGDQnHRcqg
+                        - generic [ref=f5e45]:
+                          - text: Watch on
+                          - img [ref=f5e47]:
+                            - generic [ref=f5e49]:
+                              - img
+      - generic [ref=e451]:
+        - heading "Client Feedback" [level=6] [ref=e454]
+        - heading "Words From Loyal Customer" [level=2] [ref=e457]: Words From Loyal Customer
+        - generic [ref=e463]:
+          - generic [ref=e464]:
+            - group "5 / 7" [ref=e465]:
+              - generic [ref=e467]:
+                - generic [ref=e469]:
+                  - strong [ref=e470]: S. Patel
+                  - text: Manager
+                - generic [ref=e471]:
+                  - img [ref=e473]
+                  - paragraph [ref=e475]: “Our peanut butter throughput has doubled, and the quality is more consistent than ever. The support from MECWORKS has been exceptional.”
+            - group "6 / 7" [ref=e476]:
+              - generic [ref=e478]:
+                - generic [ref=e480]:
+                  - strong [ref=e481]: Rinku
+                  - text: Manager
+                - generic [ref=e482]:
+                  - img [ref=e484]
+                  - paragraph [ref=e486]: “Our peanut butter throughput has doubled, and the quality is more consistent than ever. The support from MECWORKS has been exceptional.”
+            - group "7 / 7" [ref=e487]:
+              - generic [ref=e489]:
+                - generic [ref=e491]:
+                  - strong [ref=e492]: N.Akhilesh
+                  - text: Manager
+                - generic [ref=e493]:
+                  - img [ref=e495]
+                  - paragraph [ref=e497]: “The high-speed disperser delivers excellent dispersion quality and handles our 500 Ltr chemical batches effortlessly. It’s powerful, reliable, and built for industry”
+            - group "1 / 7" [ref=e498]:
+              - generic [ref=e500]:
+                - generic [ref=e502]:
+                  - strong [ref=e503]: K. Verma
+                  - text: Manager
+                - generic [ref=e504]:
+                  - img [ref=e506]
+                  - paragraph [ref=e508]: “We set up a complete garlic processing unit with them. What stood out was their support during installation and trial runs—always just a call away.”
+            - group "2 / 7" [ref=e509]:
+              - generic [ref=e511]:
+                - generic [ref=e513]:
+                  - strong [ref=e514]: V. Thomas
+                  - text: Manager
+                - generic [ref=e515]:
+                  - img [ref=e517]
+                  - paragraph [ref=e519]: "\"Very happy with the results from the bead mill. The fineness and dispersion in our pigment line is much better now. MECWORKS knows what they’re doing.\""
+            - group "3 / 7" [ref=e520]:
+              - generic [ref=e522]:
+                - generic [ref=e524]:
+                  - strong [ref=e525]: F. Khan
+                  - text: F. Khan
+                - generic [ref=e526]:
+                  - img [ref=e528]
+                  - paragraph [ref=e530]: “The ginger-garlic paste line delivered by MECWORKS exceeded our expectations. From peeling to grinding to packing, it’s fully integrated and efficient.”
+            - group "4 / 7" [ref=e531]:
+              - generic [ref=e533]:
+                - generic [ref=e535]:
+                  - strong [ref=e536]: Dr. M. Desai
+                  - text: Manager
+                - generic [ref=e537]:
+                  - img [ref=e539]
+                  - paragraph [ref=e541]: “We installed MECWORKS' wet grinding unit for our ayurvedic formulations—output consistency improved, and cleaning downtime reduced drastically.”
+            - group "5 / 7" [ref=e542]:
+              - generic [ref=e544]:
+                - generic [ref=e546]:
+                  - strong [ref=e547]: S. Patel
+                  - text: Manager
+                - generic [ref=e548]:
+                  - img [ref=e550]
+                  - paragraph [ref=e552]: “Our peanut butter throughput has doubled, and the quality is more consistent than ever. The support from MECWORKS has been exceptional.”
+            - group "6 / 7" [ref=e553]:
+              - generic [ref=e555]:
+                - generic [ref=e557]:
+                  - strong [ref=e558]: Rinku
+                  - text: Manager
+                - generic [ref=e559]:
+                  - img [ref=e561]
+                  - paragraph [ref=e563]: “Our peanut butter throughput has doubled, and the quality is more consistent than ever. The support from MECWORKS has been exceptional.”
+            - group "7 / 7" [ref=e564]:
+              - generic [ref=e566]:
+                - generic [ref=e568]:
+                  - strong [ref=e569]: N.Akhilesh
+                  - text: Manager
+                - generic [ref=e570]:
+                  - img [ref=e572]
+                  - paragraph [ref=e574]: “The high-speed disperser delivers excellent dispersion quality and handles our 500 Ltr chemical batches effortlessly. It’s powerful, reliable, and built for industry”
+            - group "1 / 7" [ref=e575]:
+              - generic [ref=e577]:
+                - generic [ref=e579]:
+                  - strong [ref=e580]: K. Verma
+                  - text: Manager
+                - generic [ref=e581]:
+                  - img [ref=e583]
+                  - paragraph [ref=e585]: “We set up a complete garlic processing unit with them. What stood out was their support during installation and trial runs—always just a call away.”
+            - group "2 / 7" [ref=e586]:
+              - generic [ref=e588]:
+                - generic [ref=e590]:
+                  - strong [ref=e591]: V. Thomas
+                  - text: Manager
+                - generic [ref=e592]:
+                  - img [ref=e594]
+                  - paragraph [ref=e596]: "\"Very happy with the results from the bead mill. The fineness and dispersion in our pigment line is much better now. MECWORKS knows what they’re doing.\""
+            - group "3 / 7" [ref=e597]:
+              - generic [ref=e599]:
+                - generic [ref=e601]:
+                  - strong [ref=e602]: F. Khan
+                  - text: F. Khan
+                - generic [ref=e603]:
+                  - img [ref=e605]
+                  - paragraph [ref=e607]: “The ginger-garlic paste line delivered by MECWORKS exceeded our expectations. From peeling to grinding to packing, it’s fully integrated and efficient.”
+          - generic [ref=e608]:
+            - button "Go to slide 1" [ref=e609] [cursor=pointer]
+            - button "Go to slide 2" [ref=e610] [cursor=pointer]
+            - button "Go to slide 3" [ref=e611] [cursor=pointer]
+            - button "Go to slide 4" [ref=e612] [cursor=pointer]
+            - button "Go to slide 5" [ref=e613] [cursor=pointer]
+            - button "Go to slide 6" [ref=e614] [cursor=pointer]
+            - button "Go to slide 7" [ref=e615] [cursor=pointer]
+    - generic [ref=e619]:
+      - generic [ref=e620]:
+        - generic [ref=e621]:
+          - link [ref=e624] [cursor=pointer]:
+            - /url: https://mecworksinnovation.com/
+          - paragraph [ref=e627]: MecWorks Innovation provides high-performance machinery solutions, ensuring reliability and efficiently for your industrial needs.
+        - generic [ref=e628]:
+          - generic [ref=e629]:
+            - heading "Quick Links" [level=2] [ref=e632]
+            - list [ref=e635]:
+              - listitem [ref=e636]:
+                - link "Home" [ref=e637] [cursor=pointer]:
+                  - /url: https://mecworksinnovation.com/
+                  - generic [ref=e638]: Home
+              - listitem [ref=e639]:
+                - link "Machines" [ref=e640] [cursor=pointer]:
+                  - /url: https://mecworksinnovation.com/shop/
+                  - generic [ref=e641]: Machines
+              - listitem [ref=e642]:
+                - link "Plants" [ref=e643] [cursor=pointer]:
+                  - /url: https://mecworksinnovation.com/plant/
+                  - generic [ref=e644]: Plants
+              - listitem [ref=e645]:
+                - link "About Us" [ref=e646] [cursor=pointer]:
+                  - /url: https://mecworksinnovation.com/about/
+                  - generic [ref=e647]: About Us
+              - listitem [ref=e648]:
+                - link "Contact" [ref=e649] [cursor=pointer]:
+                  - /url: https://mecworksinnovation.com/contact/
+                  - generic [ref=e650]: Contact
+              - listitem [ref=e651]:
+                - link "Blog" [ref=e652] [cursor=pointer]:
+                  - /url: https://mecworksinnovation.com/blog/
+                  - generic [ref=e653]: Blog
+          - generic [ref=e654]:
+            - heading "Visit Us" [level=2] [ref=e657]
+            - list [ref=e660]:
+              - listitem [ref=e661]:
+                - generic [ref=e663]: 
+                - generic [ref=e664]: +91 9773762449
+              - listitem [ref=e665]:
+                - generic [ref=e667]: 
+                - generic [ref=e668]: mecworksinnovation@gmail.com
+              - listitem [ref=e669]:
+                - img [ref=e671]
+                - generic [ref=e673]: 192, Yadav Mohalla, Bhalswa Village, New Delhi - 110033
+      - generic [ref=e674]:
+        - paragraph [ref=e677]:
+          - text: Copyright c 2025
+          - strong [ref=e678]: MecWorks Innovation
+          - text: ", All Rights Reserved"
+        - list [ref=e681]:
+          - listitem [ref=e682]:
+            - link [ref=e683] [cursor=pointer]:
+              - /url: https://api.whatsapp.com/send/?phone=919773762449&text=Hello+Mecworks+Innovation%2C+could+I+please+get+a+quote%3F&type=phone_number&app_absent=0
+              - generic [ref=e685]: 
+          - listitem [ref=e686]:
+            - link [ref=e687] [cursor=pointer]:
+              - /url: https://youtube.com/shorts/LfGDQnHRcqg?si=xVSotZ7iqaQrlQ0N
+              - img [ref=e689]
+          - listitem [ref=e691]:
+            - link [ref=e692] [cursor=pointer]:
+              - /url: https://www.linkedin.com/company/mecworks-innovation/
+              - img [ref=e694]
+  - generic [ref=e696]: desktop
+  - status [ref=e697]
+  - button "Menu button" [ref=e698] [cursor=pointer]:
+    - generic [ref=e699]: 

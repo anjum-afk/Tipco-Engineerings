@@ -1,0 +1,1097 @@
+- generic [active] [ref=e1]:
+  - navigation "Skip links":
+    - link "Skip to main content" [ref=e2] [cursor=pointer]:
+      - /url: "#ajax-content-wrap"
+  - generic [ref=e4]:
+    - generic [ref=e6]:
+      - navigation "Secondary Navigation" [ref=e9]:
+        - list [ref=e10]:
+          - listitem [ref=e11]:
+            - link "facebook" [ref=e12] [cursor=pointer]:
+              - /url: https://www.facebook.com/wahalengineers/
+              - generic [ref=e13]: facebook
+              - generic [ref=e14]: 
+          - listitem [ref=e15]:
+            - link "linkedin" [ref=e16] [cursor=pointer]:
+              - /url: https://in.linkedin.com/company/wahal-engineers-
+              - generic [ref=e17]: linkedin
+              - generic [ref=e18]: 
+          - listitem [ref=e19]:
+            - link "youtube" [ref=e20] [cursor=pointer]:
+              - /url: https://www.youtube.com/channel/UCVuWG2weaf40w4iGn_DwPqw
+              - generic [ref=e21]: youtube
+              - generic [ref=e22]: 
+          - listitem [ref=e23]:
+            - link "whatsapp" [ref=e24] [cursor=pointer]:
+              - /url: https://wa.me/+919899387031
+              - generic [ref=e25]: whatsapp
+              - generic [ref=e26]: 
+          - listitem [ref=e27]:
+            - link "phone" [ref=e28] [cursor=pointer]:
+              - /url: tel:+919899387031
+              - generic [ref=e29]: phone
+              - generic [ref=e30]: 
+          - listitem [ref=e31]:
+            - link "email" [ref=e32] [cursor=pointer]:
+              - /url: mailto:shubham@wahalengineers.com
+              - generic [ref=e33]: email
+              - generic [ref=e34]: 
+      - generic:
+        - generic:
+          - generic:
+            - generic:
+              - generic:
+                - generic:
+                  - search:
+                    - textbox "Search"
+                    - generic: Hit enter to search or ESC to close
+                    - button "Search"
+            - generic:
+              - button "Close Search":
+                - generic: Close Search
+      - banner "Main Menu" [ref=e35]:
+        - generic [ref=e36]:
+          - generic [ref=e37]:
+            - link "Wahal Engineers" [ref=e39] [cursor=pointer]:
+              - /url: https://wahalengineers.com
+              - img "Wahal Engineers" [ref=e40]
+            - generic [ref=e41]:
+              - text: 
+              - button "Navigation Menu" [ref=e44] [cursor=pointer]:
+                - generic [ref=e45]: Menu
+              - navigation "Main Menu" [ref=e52]:
+                - list:
+                  - list:
+                    - listitem:
+                      - link "INLINE HIGH SHEAR MIXERS":
+                        - /url: https://wahalengineers.com/high-shear-homogenizer-mixers/inline-high-shear-mixers/
+                      - list:
+                        - listitem:
+                          - link " Single Stage Inline Homogenizer":
+                            - /url: https://wahalengineers.com/single-stage-inline-homogenizer/
+                            - text: 
+                            - generic: Single Stage Inline Homogenizer
+                        - listitem:
+                          - link " Two Stage Inline Homogenizer":
+                            - /url: https://wahalengineers.com/two-stage-inline-homogenizer/
+                            - text: 
+                            - generic: Two Stage Inline Homogenizer
+                        - listitem:
+                          - link " Four Stage Inline Homogenizer":
+                            - /url: https://wahalengineers.com/four-stage-inline-homogenizer/
+                            - text: 
+                            - generic: Four Stage Inline Homogenizer
+                        - listitem:
+                          - link "LIQUID POWDER MIXER":
+                            - /url: https://wahalengineers.com/powder-induction-mixer/
+                    - listitem:
+                      - link "BATCH HOMOGENIZER":
+                        - /url: "#"
+                      - list:
+                        - listitem:
+                          - link " In-tank Batch Homogenizer":
+                            - /url: https://wahalengineers.com/high-shear-homogenizer-mixers/batch-homogenizers/in-tank-batch-homogenizer/
+                            - text: 
+                            - generic: In-tank Batch Homogenizer
+                        - listitem:
+                          - link " Enclosed Shaft Homogenizer":
+                            - /url: https://wahalengineers.com/high-shear-homogenizer-mixers/batch-homogenizers/enclosed-shaft-homogenizer/
+                            - text: 
+                            - generic: Enclosed Shaft Homogenizer
+                    - listitem:
+                      - link "BOTTOM MOUNTED HOMOGENIZERS":
+                        - /url: https://wahalengineers.com/bottom-mounted-homogenizers/
+                    - listitem:
+                      - link "Duplex Disintegrator Dissolvers":
+                        - /url: https://wahalengineers.com/duplex-disintegrator-dissolvers/
+                    - listitem:
+                      - link "SHEAR PUMP MIXER":
+                        - /url: https://wahalengineers.com/shear-pump-mixers/
+                    - listitem:
+                      - link "HIGH PRESSURE HOMOGENIZER PUMP":
+                        - /url: https://wahalengineers.com/high-pressure-homogenizer-pump/
+                    - listitem:
+                      - link "DIS-INTEGRATED DISSOLVER":
+                        - /url: https://wahalengineers.com/dis-integrated-dissolver/
+                    - listitem:
+                      - link "VACUUM PROCESSING PLANT":
+                        - /url: https://wahalengineers.com/vacuum-processing-plant/
+                  - list:
+                    - listitem:
+                      - link "MULTIPROCESSOR":
+                        - /url: https://wahalengineers.com/multiprocessor/
+                    - listitem:
+                      - link "BEAD MILLS":
+                        - /url: https://wahalengineers.com/bead-mills/
+                      - list:
+                        - listitem:
+                          - link " Dyno Mill":
+                            - /url: https://wahalengineers.com/bead-mills/dyno-mill/
+                            - text: 
+                            - generic: Dyno Mill
+                        - listitem:
+                          - link " Sand Mill":
+                            - /url: https://wahalengineers.com/bead-mills/sand-mill/
+                            - text: 
+                            - generic: Sand Mill
+                        - listitem:
+                          - link "Basket Mill":
+                            - /url: https://wahalengineers.com/bead-mills/basket-mill/
+                        - listitem:
+                          - link " Dyna Mill":
+                            - /url: https://wahalengineers.com/bead-mills/dyna-mill/
+                            - text: 
+                            - generic: Dyna Mill
+                    - listitem:
+                      - link "WET GRINDING MACHINE":
+                        - /url: https://wahalengineers.com/wet-grinding-machine/
+                      - list:
+                        - listitem:
+                          - link "Colloid Mill Preparation":
+                            - /url: https://wahalengineers.com/homogenizers/colloid-mill/
+                  - list:
+                    - listitem:
+                      - link "High Speed Disperser Dissolver":
+                        - /url: https://wahalengineers.com/high-speed-disperser-dissolver/
+                    - listitem:
+                      - link "High Speed Disperser HSD":
+                        - /url: https://wahalengineers.com/high-speed-disperser-hsd/
+                    - listitem:
+                      - link " Twin/Dual Shaft Dispersers":
+                        - /url: https://wahalengineers.com/twin-dual-shaft-dispersers/
+                        - text: 
+                        - generic: Twin/Dual Shaft Dispersers
+                    - listitem:
+                      - link " Triple/Multi Shaft Dispersers":
+                        - /url: https://wahalengineers.com/triple-multi-shaft-dispersers/
+                        - text: 
+                        - generic: Triple/Multi Shaft Dispersers
+                    - listitem:
+                      - link "Sigma Mixers":
+                        - /url: https://wahalengineers.com/sigma-mixers/
+                    - listitem:
+                      - link "Ribbon Blenders Mixers":
+                        - /url: https://wahalengineers.com/ribbon-blenders-mixers/
+                    - listitem:
+                      - link "Planetary Mixer":
+                        - /url: https://wahalengineers.com/planetary-mixer/
+                    - listitem:
+                      - link "Powder Induction Mixer":
+                        - /url: https://wahalengineers.com/powder-induction-mixer/
+                    - listitem:
+                      - link "Agitator Mixer":
+                        - /url: https://wahalengineers.com/mixer-agitator/
+                    - listitem:
+                      - link "Industrial Agitator":
+                        - /url: https://wahalengineers.com/industrial-agitator/
+                    - listitem:
+                      - link "IBC Tank Mixers":
+                        - /url: https://wahalengineers.com/ibc-tank-mixers/
+                    - listitem:
+                      - link "Plough shear mixers":
+                        - /url: https://wahalengineers.com/wet-grinding-machine/plough-shear-mixers/
+                  - list:
+                    - listitem:
+                      - link "Laboratory Mixing Equipment":
+                        - /url: https://wahalengineers.com/laboratory-mixing-equipment/
+                    - listitem:
+                      - link "Laboratory Inline Homogenizer":
+                        - /url: https://wahalengineers.com/laboratory-equipment/laboratory-inline-homogenizer/
+                    - listitem:
+                      - link "Laboratory Batch Homogenizer":
+                        - /url: https://wahalengineers.com/laboratory-equipment/laboratory-batch-homogenizer/
+                    - listitem:
+                      - link "Laboratory Bead Mill Machine":
+                        - /url: https://wahalengineers.com/laboratory-equipment/laboratory-bead-mill/
+                    - listitem:
+                      - link "Laboratory Batch Mixer":
+                        - /url: "#"
+                    - listitem:
+                      - link "Tissue Homogenizer":
+                        - /url: https://wahalengineers.com/laboratory-equipment/tissue-homogenizer/
+                    - listitem:
+                      - link "Bottom Entry Agitator":
+                        - /url: https://wahalengineers.com/laboratory-equipment/bottom-entry-agitator/
+                    - listitem:
+                      - link "LPM Homogenizers":
+                        - /url: https://wahalengineers.com/lpm-homogenizers/
+                    - listitem:
+                      - link "Side Entry Agitator":
+                        - /url: https://wahalengineers.com/laboratory-equipment/side-entry-agitator/
+                  - list:
+                    - listitem:
+                      - link "SLES Dilution":
+                        - /url: https://wahalengineers.com/plants/sles-processing/
+                    - listitem:
+                      - link "Cosmetics-Processing":
+                        - /url: https://wahalengineers.com/plants/cosmetics-processing/
+                    - listitem:
+                      - link "Shampoo":
+                        - /url: https://wahalengineers.com/plants/sles-processing/
+                    - listitem:
+                      - link "Creams":
+                        - /url: https://wahalengineers.com/plants/sles-processing/
+                    - listitem:
+                      - link "Conditioner":
+                        - /url: https://wahalengineers.com/plants/sles-processing/
+                  - list:
+                    - listitem:
+                      - link "Tomato Ketchup":
+                        - /url: https://wahalengineers.com/plants/food-processing/tomato-ketchup/
+                    - listitem:
+                      - link "Tomato Processing":
+                        - /url: https://wahalengineers.com/plants/food-processing/tomato-processing/
+                    - listitem:
+                      - link "Peanut Butter Plant":
+                        - /url: https://wahalengineers.com/plants/food-processing/peanut-butter-plant/
+                    - listitem:
+                      - link "Dough Kneading Plant":
+                        - /url: https://wahalengineers.com/plants/food-processing/dough-kneading-plant/
+                    - listitem:
+                      - link "Mayonnaise Processing Plant":
+                        - /url: https://wahalengineers.com/plants/food-processing/mayonnaise-processing-plant/
+                    - listitem:
+                      - link "Rutf Processing Plant":
+                        - /url: https://wahalengineers.com/plants/food-processing/rutf-processing-plant/
+                    - listitem:
+                      - link "Vegetable Paste Processing Plant":
+                        - /url: https://wahalengineers.com/plants/food-processing/vegetable-paste-processing-plant/
+                    - listitem:
+                      - link "Confectionery Processing Plant":
+                        - /url: https://wahalengineers.com/plants/food-processing/confectionery-processing-plant/
+                    - listitem:
+                      - link "Chocolates Processing Plant":
+                        - /url: https://wahalengineers.com/plants/food-processing/chocolates-processing-plant/
+                    - listitem:
+                      - link "Ready to eat foods instant mixes":
+                        - /url: https://wahalengineers.com/foods-millet-based-foods/
+                    - listitem:
+                      - link "Protein Based Drinks Plant":
+                        - /url: https://wahalengineers.com/plants/food-processing/protein-based-drinks-plant/
+                    - listitem:
+                      - link "Idli Dosa Batter Production":
+                        - /url: https://wahalengineers.com/plants/food-processing/idli-dosa-batter-production/
+                  - list:
+                    - listitem:
+                      - link "Bitumen Emulsion Plant":
+                        - /url: https://wahalengineers.com/plants/bitumen-processing/bitumen-emulsion-plant/
+                    - listitem:
+                      - link "Bitumen Emulsion Process":
+                        - /url: https://wahalengineers.com/plants/bitumen-processing/bitumen-emulsion-process/
+                    - listitem:
+                      - link "Polymer Modified Bitumen Plants":
+                        - /url: https://wahalengineers.com/plants/bitumen-processing/polymer-modified-bitumen-plants/
+                    - listitem:
+                      - link "PMP Modified Bitumen Machine":
+                        - /url: https://wahalengineers.com/plants/bitumen-processing/pmb-modified-bitumen-machine/
+                    - listitem:
+                      - link "Cutback Emulsion":
+                        - /url: https://wahalengineers.com/plants/bitumen-processing/cutback-emulsion/
+                    - listitem:
+                      - link "Bitumen Decanting Unit":
+                        - /url: https://wahalengineers.com/plants/bitumen-processing/bitumen-decanting-unit/
+                  - list:
+                    - listitem:
+                      - link "Suspension Concentrate Plants":
+                        - /url: https://wahalengineers.com/plants/chemical-processing/suspension-concentrate-plants/
+                    - listitem:
+                      - link "Ink Manufacturing Plant":
+                        - /url: https://wahalengineers.com/plants/chemical-processing/ink-manufacturing-plant/
+                    - listitem:
+                      - link "Automotive Coatings/Paints Plant":
+                        - /url: https://wahalengineers.com/plants/chemical-processing/automotive-coatings-paints-plant/
+                    - listitem:
+                      - link "Pesticide Manufacturing Plant":
+                        - /url: https://wahalengineers.com/plants/chemical-processing/pesticide-manufacturing-plant/
+                    - listitem:
+                      - link "Polyester Resin Plant":
+                        - /url: https://wahalengineers.com/plants/chemical-processing/polyester-resin-plant/
+                    - listitem:
+                      - link "Settingup Manufacturing unit India":
+                        - /url: https://wahalengineers.com/plants/chemical-processing/manufacturing-unit-in-india/
+                    - listitem:
+                      - link "Lube oil blending plant":
+                        - /url: https://wahalengineers.com/plants/chemical-processing/lube-oil-blending-plant/
+                    - listitem:
+                      - link "Emulsion Paint coatings plant setup":
+                        - /url: https://wahalengineers.com/plants/chemical-processing/emulsion-paint-coatings-plant-setup/
+                    - listitem:
+                      - link "Precision Vertical Ribbon Blenders":
+                        - /url: https://wahalengineers.com/precision-vertical-ribbon-blenders/
+                    - listitem:
+                      - link "VOC-Coatings for packaging plant":
+                        - /url: https://wahalengineers.com/plants/chemical-processing/voc-coatings-for-packaging-plant/
+                    - listitem:
+                      - link "Paint manufacturing plant":
+                        - /url: https://wahalengineers.com/plants/chemical-processing/paint-manufacturing-plant/
+                    - listitem:
+                      - link "Pesticide Herbicide Plants":
+                        - /url: https://wahalengineers.com/plants/chemical-processing/pesticide-herbicide-plants/
+                    - listitem:
+                      - link "Glyphosate Plants":
+                        - /url: https://wahalengineers.com/plants/chemical-processing/glyphosate-plants/
+                  - list:
+                    - listitem:
+                      - link "Chemical":
+                        - /url: https://wahalengineers.com/industries/chemical/
+                    - listitem:
+                      - link "Cosmetic":
+                        - /url: https://wahalengineers.com/industries/cosmetic/
+                    - listitem:
+                      - link "Inks Paints & Coatings":
+                        - /url: https://wahalengineers.com/industries/inks-paints-coatings/
+                    - listitem:
+                      - link "High Shear Mixer-Sterile manufacturing":
+                        - /url: https://wahalengineers.com/plants/chemical-processing/high-shear-mixers-for-sterile-manufacturing/
+                    - listitem:
+                      - link "Pharmaceuticals":
+                        - /url: https://wahalengineers.com/industries/pharmaceuticals/
+                    - listitem:
+                      - link "PCC Wet milling":
+                        - /url: https://wahalengineers.com/industries/pcc-wet-milling/
+                    - listitem:
+                      - link "Healthcare":
+                        - /url: https://wahalengineers.com/industries/healthcare/
+                    - listitem:
+                      - link "Pesticides":
+                        - /url: https://wahalengineers.com/industries/pesticides/
+                    - listitem:
+                      - link "Food, Dairy & Beverage":
+                        - /url: https://wahalengineers.com/industries/food-dairy-beverage/
+                    - listitem:
+                      - link "Bead mills for API Wet milling":
+                        - /url: https://wahalengineers.com/processes/bead-milling-wet-milling-of-api/
+                    - listitem:
+                      - link "Road Construction":
+                        - /url: https://wahalengineers.com/industries/road-construction/
+                    - listitem:
+                      - link "Bead Mills for Algae Cell":
+                        - /url: https://wahalengineers.com/industries/bead-mills-for-algae-cell-disruption/
+                    - listitem:
+                      - link "Bead Milling for Cell Disruption":
+                        - /url: https://wahalengineers.com/processes/bead-milling-for-cell-disruption/
+                    - listitem:
+                      - link "Zirconium Beads Mill":
+                        - /url: https://wahalengineers.com/processes/zirconium-beads-mill/
+                    - listitem:
+                      - link "Wet milling in API -Jet milling":
+                        - /url: https://wahalengineers.com/processes/wet-milling-in-api-differ-from-jet-milling/
+                    - listitem:
+                      - link "Wet Milling for Micronization API":
+                        - /url: https://wahalengineers.com/processes/wet-milling-for-micronization-api/
+                    - listitem:
+                      - link "Silicone emulsion":
+                        - /url: https://wahalengineers.com/silicone-emulsion-manufacturing/
+                    - listitem:
+                      - link "Automatic Bitumen emulsion plants":
+                        - /url: https://wahalengineers.com/industries/automatic-bitumen-emulsion-plants/
+                  - list:
+                    - listitem:
+                      - link "Pharmaceutical Vessels":
+                        - /url: https://wahalengineers.com/processes/pharmaceutical-vessels/
+                    - listitem:
+                      - link "Hydrating/De-agglomeration":
+                        - /url: https://wahalengineers.com/processes/hydrating-de-agglomeration/
+                    - listitem:
+                      - link "Particle Size Reduction":
+                        - /url: https://wahalengineers.com/processes/particle-size-reduction/
+                    - listitem:
+                      - link "Wet Dispersion & Grinding":
+                        - /url: https://wahalengineers.com/processes/wet-dispersion-grinding/
+                    - listitem:
+                      - link "Dissolving":
+                        - /url: https://wahalengineers.com/processes/dissolving/
+                    - listitem:
+                      - link "Paper Coatings Preparation":
+                        - /url: https://wahalengineers.com/high-shear-mixers-in-paper-coatings/
+                    - listitem:
+                      - link "Powder/Liquid Mixing":
+                        - /url: https://wahalengineers.com/processes/powder-liquid-mixing/
+                    - listitem:
+                      - link "Emulsification":
+                        - /url: https://wahalengineers.com/processes/emulsification/
+                    - listitem:
+                      - link "Blending":
+                        - /url: https://wahalengineers.com/processes/blending/
+                    - listitem:
+                      - link "Mayonnaise":
+                        - /url: https://wahalengineers.com/processes/mayonnaise/
+                    - listitem:
+                      - link "Vacuum sauce production":
+                        - /url: https://wahalengineers.com/processes/vacuum-sauce-production/
+                    - listitem:
+                      - link "Bead mills for Oleoresins":
+                        - /url: https://wahalengineers.com/processes/oleoresins/
+                    - listitem:
+                      - link "LPM Dispersion of paints lacquers":
+                        - /url: https://wahalengineers.com/dispersion-of-paints-lacquers/
+                    - listitem:
+                      - link "Fruits and vegetable washing line":
+                        - /url: https://wahalengineers.com/fruits-and-vegetable-washing-line/
+                    - listitem:
+                      - link "Automation-Water Based Paints":
+                        - /url: https://wahalengineers.com/automation-water-based-paints/
+                    - listitem:
+                      - link "Industrial waterborne coatings":
+                        - /url: https://wahalengineers.com/industries/industrial-waterborne-coatings/
+                    - listitem:
+                      - link "LPM in Water Based Paints":
+                        - /url: https://wahalengineers.com/lpm-in-water-based-paints/
+                    - listitem:
+                      - link "LPM in Textiles Pigment Dispersion":
+                        - /url: https://wahalengineers.com/textiles-pigment-dispersion/
+                    - listitem:
+                      - link "Homogenizing":
+                        - /url: https://wahalengineers.com/processes/homogenizing/
+                    - listitem:
+                      - link "Fruit vegetables processing":
+                        - /url: https://wahalengineers.com/plants/food-processing/fruit-vegetables-processing/
+                    - listitem:
+                      - link "Fruits and vegetable washing line":
+                        - /url: https://wahalengineers.com/fruits-and-vegetable-washing-line/
+                    - listitem:
+                      - link "RTE Food Plant Production":
+                        - /url: https://wahalengineers.com/plants/food-processing/rte-food-plant-production/
+                    - listitem:
+                      - link "Commercial Grinders":
+                        - /url: https://wahalengineers.com/industries/commercial-idli-dosa-batter-grinders/
+                    - listitem:
+                      - link "Liquid Oral Making Plants function":
+                        - /url: https://wahalengineers.com/liquid-oral-making-plants-function/
+                  - list:
+                    - listitem:
+                      - link "Drilling Fluids":
+                        - /url: https://wahalengineers.com/applications/drilling-fluids/
+                    - listitem:
+                      - link "Drilling Mud Shear pump":
+                        - /url: https://wahalengineers.com/laboratory-equipment/wahal-shear-mixers/
+                    - listitem:
+                      - link "LPM Drilling fluids manufacturer":
+                        - /url: https://wahalengineers.com/lpm-drilling-fluids-manufacturer/
+                    - listitem:
+                      - link "Jet Shear Mixers":
+                        - /url: https://wahalengineers.com/jet-shear-mixers/
+                    - listitem:
+                      - link "Fumed Silica mixing":
+                        - /url: https://wahalengineers.com/fumed-silica-mixing/
+                    - listitem:
+                      - link "Refined Edible oils":
+                        - /url: https://wahalengineers.com/applications/refined-edible-oils/
+                    - listitem:
+                      - link "Ice Cream Process":
+                        - /url: https://wahalengineers.com/applications/ice-cream-process/
+                    - listitem:
+                      - link "Fruit Juice Plant":
+                        - /url: https://wahalengineers.com/applications/fruit-juice-plant/
+                    - listitem:
+                      - link "Cosmetics Products Process":
+                        - /url: https://wahalengineers.com/applications/cosmetics-products-process/
+                    - listitem:
+                      - link "Coatings Decorative Paint Process":
+                        - /url: https://wahalengineers.com/plants/chemical-processing/coatings-decorative-paint-plant-process/
+                    - listitem:
+                      - link "FFS Pouch Machine":
+                        - /url: https://wahalengineers.com/ffs-pouch/
+                    - listitem:
+                      - link "Piston filling sealing":
+                        - /url: https://wahalengineers.com/piston-filling-sealing/
+                    - listitem:
+                      - link "Battery manufacturing process":
+                        - /url: https://wahalengineers.com/battery-manufacturing-process/
+                    - listitem:
+                      - link "Homogenizer- Battery production":
+                        - /url: https://wahalengineers.com/processes/homogenizer-battery-production/
+                    - listitem:
+                      - link "CMC Carbopol mixing":
+                        - /url: https://wahalengineers.com/plants/chemical-processing/cmc-carbopol-mixing/
+                    - listitem:
+                      - link "Grinder in Chitin & Chitosan":
+                        - /url: https://wahalengineers.com/industries/grinder-in-chitin-chitosan/
+                    - listitem:
+                      - link "Solventfree paracetamol synthesis":
+                        - /url: https://wahalengineers.com/industries/solvent-free-paracetamol-synthesis/
+                    - listitem:
+                      - link "High Shear Mixing of Bentonite":
+                        - /url: https://wahalengineers.com/plants/chemical-processing/high-shear-mixing-of-bentonite/
+                    - listitem:
+                      - link "High shear mixers for Sunscreen":
+                        - /url: https://wahalengineers.com/high-shear-mixers-for-sunscreen/
+                    - listitem:
+                      - link "Multiprocessor for Superior Food Processing":
+                        - /url: https://wahalengineers.com/industries/multiprocessor-superior-food-processing/
+                    - listitem:
+                      - link "Multiprocessor-Industrial Grinders":
+                        - /url: https://wahalengineers.com/industries/multiprocessor-traditional-stone-grinders/
+                    - listitem:
+                      - link "Synthetic Oil Based Mud":
+                        - /url: https://wahalengineers.com/industries/synthetic-oil-based-mud/
+                    - listitem:
+                      - link "Rava Batter production line":
+                        - /url: https://wahalengineers.com/industries/rava-batter-production-line/
+                    - listitem:
+                      - link "BIS-ASTM Standards Bitumen Emulsion":
+                        - /url: https://wahalengineers.com/plants/bitumen-processing/bis-astm-standards-bitumen-emulsion/
+                    - listitem:
+                      - link "Modern Seaweed processing":
+                        - /url: https://wahalengineers.com/processes/modern-seaweed-processing/
+                    - listitem:
+                      - link "Flexible Packaging Inks":
+                        - /url: https://wahalengineers.com/industries/flexible-packaging-inks/
+                    - listitem:
+                      - link "Vacuum cooking vs vacuum mixing":
+                        - /url: https://wahalengineers.com/industries/vacuum-cooking-vs-vacuum-mixing/
+                    - listitem:
+                      - link "Advanced Vacuum Cooking Machines":
+                        - /url: https://wahalengineers.com/industries/advanced-vacuum-cooking-machines/
+                  - list:
+                    - listitem:
+                      - link "GCC Milling Solutions":
+                        - /url: https://wahalengineers.com/processes/g-c-c-milling-solutions/
+                    - listitem:
+                      - link "Caustic Lye Preparation":
+                        - /url: https://wahalengineers.com/caustic-lye-preparation/
+                    - listitem:
+                      - link "Mineral & Chemical Salt Dissolution Systems":
+                        - /url: https://wahalengineers.com/mineral-chemical-salt-dissolution-systems/
+                    - listitem:
+                      - link "Battery Material Slurry Mixing":
+                        - /url: https://wahalengineers.com/battery-baterial/
+                    - listitem:
+                      - link "Pharmaceutical API Slurry Preparation":
+                        - /url: https://wahalengineers.com/pharmaceutical-api/
+                    - listitem:
+                      - link "Detergent- Surfactant":
+                        - /url: https://wahalengineers.com/detergent-surfactant/
+                    - listitem:
+                      - link "Adhesives & Resin Powder Induction":
+                        - /url: https://wahalengineers.com/adhesives-resin/
+                    - listitem:
+                      - link "Latex & Emulsion Polymer Slurry Preparation":
+                        - /url: https://wahalengineers.com/latex-emulsion/
+                    - listitem:
+                      - link "Polymer Hydration":
+                        - /url: https://wahalengineers.com/polymer-hydration/
+                    - listitem:
+                      - link "Pigment-Filler Wetting":
+                        - /url: https://wahalengineers.com/pigment-filler-wetting/
+                    - listitem:
+                      - link "Carbonate slurry grinding":
+                        - /url: https://wahalengineers.com/carbonate-slurry-grinding/
+                    - listitem:
+                      - link "Aseptic Magnetic Coupling Mixers":
+                        - /url: https://wahalengineers.com/aseptic-magnetic-coupling-mixers/
+                    - listitem:
+                      - link "Rice Bran Oil Jute Batching Emulsion Plant":
+                        - /url: https://wahalengineers.com/rice-bran-oil-jute-batching-emulsion-plant/
+                    - listitem:
+                      - link "LNS MQ Production Lines":
+                        - /url: https://wahalengineers.com/lns-mq-professional-lines-peanut-dates-chickpeas/
+                    - listitem:
+                      - link "Food-Beverage Powder Reconstitution":
+                        - /url: https://wahalengineers.com/food-beverage-powder-reconstitution/
+                    - listitem:
+                      - link "Disruption of Microalgae-Bead Mills":
+                        - /url: https://wahalengineers.com/processes/disruption-of-microalgae/
+                    - listitem:
+                      - link "Microalgae Biostimulant Processing Plants":
+                        - /url: https://wahalengineers.com/microalgae-biostimulant-processing-plants/
+                - list [ref=e53]:
+                  - listitem [ref=e54]:
+                    - link "search" [ref=e56] [cursor=pointer]:
+                      - /url: "#search-box"
+                      - generic [ref=e57]: 
+                      - generic [ref=e58]: search
+          - text:                                     
+    - generic [ref=e59]:
+      - main [ref=e61]:
+        - generic [ref=e62]:
+          - generic [ref=e63]:
+            - img [ref=e68]
+            - generic [ref=e73]:
+              - heading "Products & Solutions" [level=2] [ref=e74]
+              - generic [ref=e80]:
+                - generic [ref=e84]:
+                  - heading "Homogenizer" [level=3] [ref=e87]
+                  - link "Learn more" [ref=e88] [cursor=pointer]:
+                    - /url: https://wahalengineers.com/homogenizers/
+                    - generic [ref=e89]: Learn more
+                - generic [ref=e93]:
+                  - heading "Liquid Powder Mixer" [level=3] [ref=e96]
+                  - link "Learn more" [ref=e97] [cursor=pointer]:
+                    - /url: https://wahalengineers.com/powder-induction-mixer/
+                    - generic [ref=e98]: Learn more
+                - generic [ref=e102]:
+                  - heading "Bead Mill" [level=3] [ref=e105]
+                  - link "Learn more" [ref=e106] [cursor=pointer]:
+                    - /url: https://wahalengineers.com/bead-mills/
+                    - generic [ref=e107]: Learn more
+              - generic [ref=e113]:
+                - generic [ref=e117]:
+                  - heading "Lab Model Homogenizer" [level=3] [ref=e120]
+                  - link "Learn more" [ref=e121] [cursor=pointer]:
+                    - /url: https://wahalengineers.com/laboratory-equipment/
+                    - generic [ref=e122]: Learn more
+                - generic [ref=e126]:
+                  - heading "Multiprocessor" [level=3] [ref=e129]
+                  - link "Learn more" [ref=e130] [cursor=pointer]:
+                    - /url: https://wahalengineers.com/multiprocessor/
+                    - generic [ref=e131]: Learn more
+                - generic [ref=e135]:
+                  - heading "High Speed Disperser" [level=3] [ref=e138]
+                  - link "Learn more" [ref=e139] [cursor=pointer]:
+                    - /url: https://wahalengineers.com/high-speed-disperser-dissolver/
+                    - generic [ref=e140]: Learn more
+              - heading "All Products" [level=6] [ref=e151]:
+                - button "All Products" [ref=e153] [cursor=pointer]:
+                  - generic [ref=e154]: All Products
+                  - img [ref=e155]
+          - generic [ref=e158]:
+            - img [ref=e163]
+            - generic [ref=e165]:
+              - generic [ref=e183]:
+                - generic [ref=e190]:
+                  - heading "About Wahal Engineers" [level=2] [ref=e192]
+                  - generic [ref=e195]:
+                    - paragraph [ref=e196]: WAHAL ENGINEERS was founded in 1980’s by Mr. Praveen Wahal, having accumulated experience in the areas of liquid and semi-solids processing. We developed a completely new generation of wet processing equipment using the latest technology working on the principle of shear force.
+                    - paragraph [ref=e197]: Our range is widely acknowledged for low power consumption, high performance, durability, and easy operation. Thus, our range finds extensive application in numerous industries such as chemicals, cosmetics and toiletries, food and beverage, pharmaceutical, paints and printing inks, paper, and dairy.
+                - generic [ref=e201]:
+                  - list [ref=e206]:
+                    - listitem [ref=e207]: • In-house R&D
+                    - listitem [ref=e208]: • 24×7 Availability
+                    - listitem [ref=e209]: • Innovative Processing Solutions
+                    - listitem [ref=e210]: • Cutting Edge Technologies
+                  - list [ref=e215]:
+                    - listitem [ref=e216]: • We take responsibility for our work and results.
+                    - listitem [ref=e217]: • Dedication describes the shine in our eyes.
+                - heading "Know More" [level=6] [ref=e221]:
+                  - button "Know More" [ref=e223] [cursor=pointer]:
+                    - generic [ref=e224]: Know More
+                    - img [ref=e225]
+              - generic [ref=e236]:
+                - img "client" [ref=e238]
+                - img "client" [ref=e240]
+                - img "client" [ref=e242]
+                - img "client" [ref=e244]
+                - link "client" [ref=e246] [cursor=pointer]:
+                  - /url: http://localhost/work/alcobrew/golfers-shot/
+                  - img "client" [ref=e247]
+                - link "client" [ref=e249] [cursor=pointer]:
+                  - /url: http://localhost/work/alcobrew/white-hills/
+                  - img "client" [ref=e250]
+                - link "client" [ref=e252] [cursor=pointer]:
+                  - /url: http://localhost/work/alcobrew/old-smuggler-scotch/
+                  - img "client" [ref=e253]
+                - link "client" [ref=e255] [cursor=pointer]:
+                  - /url: http://localhost/work/alcobrew/alcobrew-london-oak/
+                  - img "client" [ref=e256]
+                - link "client" [ref=e258] [cursor=pointer]:
+                  - /url: http://localhost/work/alcobrew/one-more/
+                  - img "client" [ref=e259]
+                - link "client" [ref=e261] [cursor=pointer]:
+                  - /url: http://localhost/work/alcobrew/lion-daddy-cafe-rum/
+                  - img "client" [ref=e262]
+          - generic [ref=e272]:
+            - heading "Processing Plants" [level=2] [ref=e275]
+            - generic [ref=e281]:
+              - generic [ref=e285]:
+                - heading "Cosmetics Processing" [level=3] [ref=e288]
+                - link "Learn more" [ref=e289] [cursor=pointer]:
+                  - /url: https://wahalengineers.com/industries/cosmetic/
+                  - generic [ref=e290]: Learn more
+              - generic [ref=e294]:
+                - heading "Food Processing" [level=3] [ref=e297]
+                - link "Learn more" [ref=e298] [cursor=pointer]:
+                  - /url: https://wahalengineers.com/plants/food-processing
+                  - generic [ref=e299]: Learn more
+              - generic [ref=e303]:
+                - heading "Bitumen Processing" [level=3] [ref=e306]
+                - link "Learn more" [ref=e307] [cursor=pointer]:
+                  - /url: https://wahalengineers.com/plants/bitumen-processing
+                  - generic [ref=e308]: Learn more
+              - generic [ref=e312]:
+                - heading "Chemical Processing" [level=3] [ref=e315]
+                - link "Learn more" [ref=e316] [cursor=pointer]:
+                  - /url: https://wahalengineers.com/plants/chemical-processing
+                  - generic [ref=e317]: Learn more
+          - generic [ref=e318]:
+            - iframe [ref=e326]:
+              - generic [active] [ref=f1e1]:
+                - generic "YouTube Video Player" [ref=f1e3]
+                - generic [ref=f1e6]:
+                  - generic:
+                    - generic:
+                      - button "Hide player controls" [ref=f1e7] [cursor=pointer]
+                      - generic [ref=f1e9]:
+                        - generic:
+                          - generic [ref=f1e14]:
+                            - generic [ref=f1e15]:
+                              - link "Homogenizer ( high shear mixer )" [ref=f1e16] [cursor=pointer]:
+                                - /url: https://www.youtube.com/watch?v=jJJeOVM6Tfo
+                              - link "Wahal Engineers" [ref=f1e17] [cursor=pointer]:
+                                - /url: /channel/UCVuWG2weaf40w4iGn_DwPqw
+                                - generic [ref=f1e18]: Wahal Engineers
+                            - generic [ref=f1e19]:
+                              - button [ref=f1e20] [cursor=pointer]
+                              - generic [ref=f1e22]:
+                                - generic: Wahal Engineers
+                                - generic: 2.54K subscribers
+                          - generic [ref=f1e23]:
+                            - generic:
+                              - button "Rewind 10 seconds"
+                              - generic:
+                                - button "Play video":
+                                  - generic:
+                                    - generic:
+                                      - generic:
+                                        - img
+                              - button "Fast forward 10 seconds"
+                        - generic [ref=f1e26]:
+                          - button "Share" [ref=f1e29] [cursor=pointer]:
+                            - generic [ref=f1e33]:
+                              - img
+                          - link "Watch on YouTube" [ref=f1e40] [cursor=pointer]:
+                            - /url: https://www.youtube.com/watch?v=jJJeOVM6Tfo
+                            - img [ref=f1e44]:
+                              - generic [ref=f1e46]:
+                                - img
+            - generic [ref=e330]:
+              - heading "INNOVATIVE PROCESSING SOLUTIONS" [level=6] [ref=e331]
+              - heading "PROCESSING PLANTS" [level=2] [ref=e332]
+          - generic [ref=e342]:
+            - heading "INNOVATIVE PROCESSING SOLUTIONS" [level=6] [ref=e343]
+            - heading "Industries" [level=2] [ref=e344]
+            - generic [ref=e347]:
+              - generic [ref=e349]:
+                - generic [ref=e352]:
+                  - heading "Road Construction" [level=3] [ref=e355]
+                  - link "Learn more" [ref=e356] [cursor=pointer]:
+                    - /url: https://wahalengineers.com/industries/road-construction/
+                    - generic [ref=e357]: Learn more
+                - generic [ref=e360]:
+                  - heading "Food, Dairy & Beverage" [level=3] [ref=e363]
+                  - link "Learn more" [ref=e364] [cursor=pointer]:
+                    - /url: https://wahalengineers.com/industries/food-dairy-beverage/
+                    - generic [ref=e365]: Learn more
+                - generic [ref=e368]:
+                  - heading "Pesticides" [level=3] [ref=e371]
+                  - link "Learn more" [ref=e372] [cursor=pointer]:
+                    - /url: https://wahalengineers.com/industries/pesticides/
+                    - generic [ref=e373]: Learn more
+                - generic [ref=e376]:
+                  - heading "Healthcare Products" [level=3] [ref=e379]
+                  - link "Learn more" [ref=e380] [cursor=pointer]:
+                    - /url: https://wahalengineers.com/industries/healthcare/
+                    - generic [ref=e381]: Learn more
+                - generic [ref=e384]:
+                  - heading "Cosmetics" [level=3] [ref=e387]
+                  - link "Learn more" [ref=e388] [cursor=pointer]:
+                    - /url: https://wahalengineers.com/industries/cosmetic/
+                    - generic [ref=e389]: Learn more
+                - generic [ref=e392]:
+                  - heading "Chemicals" [level=3] [ref=e395]
+                  - link "Learn more" [ref=e396] [cursor=pointer]:
+                    - /url: https://wahalengineers.com/industries/chemical/
+                    - generic [ref=e397]: Learn more
+                - generic [ref=e400]:
+                  - heading "Pharmaceuticals" [level=3] [ref=e403]
+                  - link "Learn more" [ref=e404] [cursor=pointer]:
+                    - /url: https://wahalengineers.com/industries/pharmaceuticals/
+                    - generic [ref=e405]: Learn more
+                - generic [ref=e408]:
+                  - heading "Inks Paints & Coatings" [level=3] [ref=e411]
+                  - link "Learn more" [ref=e412] [cursor=pointer]:
+                    - /url: https://wahalengineers.com/industries/inks-paints-coatings/
+                    - generic [ref=e413]: Learn more
+              - generic [ref=e414]:
+                - button [ref=e415] [cursor=pointer]
+                - button [ref=e417] [cursor=pointer]
+                - button [ref=e419] [cursor=pointer]
+          - generic [ref=e429]:
+            - img [ref=e434]
+            - generic [ref=e439]:
+              - heading "WHAT OUR CLIENTS SAY" [level=6] [ref=e440]
+              - heading "Testimonial" [level=2] [ref=e441]
+              - region "Carousel" [ref=e442]:
+                - blockquote [ref=e448]:
+                  - generic [ref=e449]:
+                    - paragraph [ref=e450]: “After pilot testing the ZR splash mill and 4 stage inline homogeniser , and achieving very positive results we are highly satisfied with the production models installed by Wahal . Our company is primarily using the units for wet dispersion & grinding and experiencing significant improvements in batch cycle time, production efficiency and overall product quality. I highly recommend their products and their creative problem solving approach.”
+                    - generic [ref=e451]:
+                      - generic [ref=e452]: Mr. Raman Prasad
+                      - generic [ref=e453]: Manager, Symbiotec Pharmalabs Pvt. Ltd.
+          - generic [ref=e461]:
+            - generic [ref=e462]:
+              - img [ref=e467]
+              - generic [ref=e469]:
+                - generic [ref=e472]:
+                  - paragraph [ref=e473]: Give us a call or drop by anytime, we endeavour to answer all enquiries within 24 hours on business days. We will be happy to answer your questions.
+                  - generic [ref=e476]:
+                    - generic [ref=e477]:
+                      - generic [ref=e479]:
+                        - generic [ref=e480] [cursor=pointer]: Name *
+                        - textbox "Name *" [ref=e481]:
+                          - /placeholder: E.g. John Doe
+                      - generic [ref=e483]:
+                        - generic [ref=e484] [cursor=pointer]: Phone *
+                        - textbox "Phone *" [ref=e485]:
+                          - /placeholder: E.g. +1 300 400 5000
+                    - generic [ref=e486]:
+                      - generic [ref=e488]:
+                        - generic [ref=e489] [cursor=pointer]: Email Address *
+                        - textbox "Email Address *" [ref=e490]:
+                          - /placeholder: E.g. john@doe.com
+                      - generic [ref=e492]:
+                        - generic [ref=e493] [cursor=pointer]: Company Name *
+                        - textbox "Company Name *" [ref=e494]:
+                          - /placeholder: E.g. text placeholder
+                    - generic [ref=e497]:
+                      - generic [ref=e498] [cursor=pointer]: Message *
+                      - textbox "Message *" [ref=e499]:
+                        - /placeholder: E.g. text placeholder You can add new line
+                    - button "Send Message" [ref=e503] [cursor=pointer]
+                - generic [ref=e506]:
+                  - generic [ref=e507]:
+                    - paragraph [ref=e508]:
+                      - strong [ref=e509]: "Contact:"
+                    - paragraph [ref=e510]: +(91)-9315799785
+                  - paragraph [ref=e513]:
+                    - strong [ref=e514]: "Email:"
+                    - link "shubham@wahalengineers.com" [ref=e515] [cursor=pointer]:
+                      - /url: mailto:shubham@wahalengineers.com
+                    - link "wahalparveen@gmail.com" [ref=e516] [cursor=pointer]:
+                      - /url: mailto:wahalparveen@gmail.com
+                  - generic [ref=e518]:
+                    - paragraph [ref=e519]:
+                      - strong [ref=e520]: Head Office
+                      - text: Plot No. G-39, Friends Industries Area, Shahbad, Daulatpur
+                      - text: New Delhi – 110042, Delhi, India
+                    - heading "Factory" [level=3] [ref=e521]:
+                      - strong [ref=e522]: Factory
+                    - paragraph [ref=e523]: Murthal, Sonipat, Haryana 131039
+            - generic [ref=e528]:
+              - generic [ref=e531]:
+                - heading "COMPANY" [level=4] [ref=e533]
+                - list [ref=e537]:
+                  - listitem [ref=e538]:
+                    - link "About Us" [ref=e539] [cursor=pointer]:
+                      - /url: https://wahalengineers.com/about-us/
+                  - listitem [ref=e540]: History & Milestones
+                  - listitem [ref=e541]:
+                    - link "Chairman’s Desk" [ref=e542] [cursor=pointer]:
+                      - /url: https://wahalengineers.com/chairmans-desk/
+                  - listitem [ref=e543]:
+                    - link "Partner With Us" [ref=e544] [cursor=pointer]:
+                      - /url: https://wahalengineers.com/partner-with-us/
+                  - listitem [ref=e545]:
+                    - link "Our Team" [ref=e546] [cursor=pointer]:
+                      - /url: https://wahalengineers.com/our-team/
+                  - listitem [ref=e547]:
+                    - link "Our Clients" [ref=e548] [cursor=pointer]:
+                      - /url: https://wahalengineers.com/our-clients/
+                  - listitem [ref=e549]:
+                    - link "Career" [ref=e550] [cursor=pointer]:
+                      - /url: https://wahalengineers.com/career/
+                  - listitem [ref=e551]:
+                    - link "FAQ" [ref=e552] [cursor=pointer]:
+                      - /url: https://wahalengineers.com/faq/
+              - generic [ref=e555]:
+                - heading "PROCESSES" [level=4] [ref=e557]
+                - list [ref=e561]:
+                  - listitem [ref=e562]:
+                    - link "Pharmaceutical Vessels" [ref=e563] [cursor=pointer]:
+                      - /url: https://wahalengineers.com/processes/pharmaceutical-vessels/
+                  - listitem [ref=e564]:
+                    - link "Hydrating/De-Agglomeration" [ref=e565] [cursor=pointer]:
+                      - /url: https://wahalengineers.com/processes/hydrating-de-agglomeration/
+                  - listitem [ref=e566]:
+                    - link "Particle Size Reduction" [ref=e567] [cursor=pointer]:
+                      - /url: https://wahalengineers.com/processes/particle-size-reduction/
+                  - listitem [ref=e568]:
+                    - link "Wet Dispersion & Grinding" [ref=e569] [cursor=pointer]:
+                      - /url: https://wahalengineers.com/processes/wet-dispersion-grinding/
+                  - listitem [ref=e570]:
+                    - link "Dissolving" [ref=e571] [cursor=pointer]:
+                      - /url: https://wahalengineers.com/processes/dissolving/
+                  - listitem [ref=e572]:
+                    - link "Powder/Liquid Mixing" [ref=e573] [cursor=pointer]:
+                      - /url: https://wahalengineers.com/processes/powder-liquid-mixing/
+                  - listitem [ref=e574]:
+                    - link "Emulsification" [ref=e575] [cursor=pointer]:
+                      - /url: https://wahalengineers.com/processes/emulsification/
+                  - listitem [ref=e576]:
+                    - link "Blending" [ref=e577] [cursor=pointer]:
+                      - /url: https://wahalengineers.com/processes/blending/
+                  - listitem [ref=e578]:
+                    - link "Mayonnaise" [ref=e579] [cursor=pointer]:
+                      - /url: https://wahalengineers.com/processes/mayonnaise/
+                  - listitem [ref=e580]:
+                    - link "Homogenizing" [ref=e581] [cursor=pointer]:
+                      - /url: https://wahalengineers.com/processes/homogenizing/
+              - generic [ref=e584]:
+                - heading "INDUSTRIES" [level=4] [ref=e586]
+                - list [ref=e590]:
+                  - listitem [ref=e591]:
+                    - link "Chemical" [ref=e592] [cursor=pointer]:
+                      - /url: https://wahalengineers.com/industries/chemical/
+                  - listitem [ref=e593]:
+                    - link "Cosmetic" [ref=e594] [cursor=pointer]:
+                      - /url: https://wahalengineers.com/industries/cosmetic/
+                  - listitem [ref=e595]:
+                    - link "Inks Paints & Coatings" [ref=e596] [cursor=pointer]:
+                      - /url: https://wahalengineers.com/industries/inks-paints-coatings/
+                  - listitem [ref=e597]:
+                    - link "Pharmaceuticals" [ref=e598] [cursor=pointer]:
+                      - /url: https://wahalengineers.com/industries/pharmaceuticals/
+                  - listitem [ref=e599]:
+                    - link "Healthcare" [ref=e600] [cursor=pointer]:
+                      - /url: https://wahalengineers.com/industries/healthcare/
+                  - listitem [ref=e601]:
+                    - link "Pesticides" [ref=e602] [cursor=pointer]:
+                      - /url: https://wahalengineers.com/industries/pesticides/
+                  - listitem [ref=e603]:
+                    - link "Food, Dairy & Beverage" [ref=e604] [cursor=pointer]:
+                      - /url: https://wahalengineers.com/industries/food-dairy-beverage/
+                  - listitem [ref=e605]:
+                    - link "Road Construction" [ref=e606] [cursor=pointer]:
+                      - /url: https://wahalengineers.com/industries/road-construction/
+              - generic [ref=e609]:
+                - heading "MACHINE" [level=4] [ref=e611]
+                - generic [ref=e617]:
+                  - list [ref=e622]:
+                    - listitem [ref=e623]: High Shear Homogenizer & Mixers
+                    - listitem [ref=e624]: High Shear Mixers
+                    - listitem [ref=e625]:
+                      - link "High-Pressure Homogenizer" [ref=e626] [cursor=pointer]:
+                        - /url: https://wahalengineers.com/high-pressure-homogenizer-pump/
+                    - listitem [ref=e627]:
+                      - link "Industrial Agitator" [ref=e628] [cursor=pointer]:
+                        - /url: https://wahalengineers.com/industrial-agitator/
+                    - listitem [ref=e629]:
+                      - link "Powder Induction Mixer" [ref=e630] [cursor=pointer]:
+                        - /url: https://wahalengineers.com/powder-induction-mixer/
+                    - listitem [ref=e631]:
+                      - link "Bead Mills" [ref=e632] [cursor=pointer]:
+                        - /url: https://wahalengineers.com/bead-mills/
+                    - listitem [ref=e633]:
+                      - link "Multiprocessor" [ref=e634] [cursor=pointer]:
+                        - /url: https://wahalengineers.com/multiprocessor/
+                    - listitem [ref=e635]:
+                      - link "High-Speed Disperser/Dissolver" [ref=e636] [cursor=pointer]:
+                        - /url: https://wahalengineers.com/high-speed-disperser-dissolver/
+                  - list [ref=e641]:
+                    - listitem [ref=e642]:
+                      - link "Laboratory Mixing Equipment" [ref=e643] [cursor=pointer]:
+                        - /url: https://wahalengineers.com/laboratory-mixing-equipment/
+                    - listitem [ref=e644]:
+                      - link "Laboratory Inline Homogenizer" [ref=e645] [cursor=pointer]:
+                        - /url: https://wahalengineers.com/laboratory-equipment/laboratory-inline-homogenizer/
+                    - listitem [ref=e646]:
+                      - link "Laboratory Batch Homogenizer" [ref=e647] [cursor=pointer]:
+                        - /url: https://wahalengineers.com/laboratory-equipment/laboratory-batch-homogenizer/
+                    - listitem [ref=e648]:
+                      - link "Laboratory Bead Mill Machine" [ref=e649] [cursor=pointer]:
+                        - /url: https://wahalengineers.com/laboratory-equipment/laboratory-bead-mill/
+                    - listitem [ref=e650]:
+                      - link "Planetary Mixer" [ref=e651] [cursor=pointer]:
+                        - /url: https://wahalengineers.com/planetary-mixer/
+                    - listitem [ref=e652]:
+                      - link "Sigma Mixers" [ref=e653] [cursor=pointer]:
+                        - /url: https://wahalengineers.com/sigma-mixers/
+                    - listitem [ref=e654]:
+                      - link "Vacuum Processing Plant" [ref=e655] [cursor=pointer]:
+                        - /url: https://wahalengineers.com/vacuum-processing-plant/
+                    - listitem [ref=e656]:
+                      - link "IBC Tank Mixers" [ref=e657] [cursor=pointer]:
+                        - /url: https://wahalengineers.com/ibc-tank-mixers/
+                  - list [ref=e662]:
+                    - listitem [ref=e663]:
+                      - link "Ribbon Blenders Mixer" [ref=e664] [cursor=pointer]:
+                        - /url: https://wahalengineers.com/ribbon-blenders-mixers/
+                    - listitem [ref=e665]:
+                      - link "Wet Grinding Machine" [ref=e666] [cursor=pointer]:
+                        - /url: https://wahalengineers.com/wet-grinding-machine/
+                    - listitem [ref=e667]: Homogenizers
+            - generic [ref=e672]:
+              - generic [ref=e675]:
+                - heading "PLANTS" [level=4] [ref=e677]
+                - list [ref=e681]:
+                  - listitem [ref=e682]:
+                    - link "Cosmetics Processing" [ref=e683] [cursor=pointer]:
+                      - /url: https://wahalengineers.com/plants/cosmetics-processing/
+                  - listitem [ref=e684]:
+                    - link "Food Processing" [ref=e685] [cursor=pointer]:
+                      - /url: https://wahalengineers.com/plants/food-processing/
+                  - listitem [ref=e686]:
+                    - link "Bitumen Processing" [ref=e687] [cursor=pointer]:
+                      - /url: https://wahalengineers.com/plants/bitumen-processing/
+                  - listitem [ref=e688]:
+                    - link "Chemical Processing" [ref=e689] [cursor=pointer]:
+                      - /url: https://wahalengineers.com/plants/chemical-processing/
+              - generic [ref=e693]:
+                - heading "APPLICATIONS" [level=4] [ref=e695]
+                - list [ref=e699]:
+                  - listitem [ref=e700]:
+                    - link "Drilling Fluids" [ref=e701] [cursor=pointer]:
+                      - /url: https://wahalengineers.com/applications/drilling-fluids/
+                  - listitem [ref=e702]:
+                    - link "Refined Edible oils" [ref=e703] [cursor=pointer]:
+                      - /url: https://wahalengineers.com/applications/refined-edible-oils/
+                  - listitem [ref=e704]:
+                    - link "Ice Cream Process" [ref=e705] [cursor=pointer]:
+                      - /url: https://wahalengineers.com/applications/ice-cream-process/
+                  - listitem [ref=e706]:
+                    - link "Fruit Juice Plant" [ref=e707] [cursor=pointer]:
+                      - /url: https://wahalengineers.com/applications/fruit-juice-plant/
+                  - listitem [ref=e708]:
+                    - link "Cosmetics Products Process" [ref=e709] [cursor=pointer]:
+                      - /url: https://wahalengineers.com/applications/cosmetics-products-process/
+              - generic [ref=e714]:
+                - heading "CONTACT" [level=4] [ref=e716]
+                - list [ref=e720]:
+                  - listitem [ref=e721]:
+                    - link "Contact Us" [ref=e722] [cursor=pointer]:
+                      - /url: https://wahalengineers.com/contact/
+                  - listitem [ref=e723]: Newsletter
+                  - listitem [ref=e724]: Downloads
+                  - listitem [ref=e725]: Locations
+                  - listitem [ref=e726]: Book For Trial
+                  - listitem [ref=e727]:
+                    - link "Partner With Us" [ref=e728] [cursor=pointer]:
+                      - /url: https://wahalengineers.com/partner-with-us/
+      - contentinfo [ref=e729]:
+        - generic [ref=e731]:
+          - paragraph [ref=e733]: © 2026 Wahal Engineers. | Powered by Nitin Pant Design
+          - list [ref=e735]:
+            - listitem [ref=e736]:
+              - link "facebook" [ref=e737] [cursor=pointer]:
+                - /url: https://www.facebook.com/wahalengineers/
+                - generic [ref=e738]: facebook
+                - generic [ref=e739]: 
+            - listitem [ref=e740]:
+              - link "linkedin" [ref=e741] [cursor=pointer]:
+                - /url: https://in.linkedin.com/company/wahal-engineers-
+                - generic [ref=e742]: linkedin
+                - generic [ref=e743]: 
+            - listitem [ref=e744]:
+              - link "youtube" [ref=e745] [cursor=pointer]:
+                - /url: https://www.youtube.com/channel/UCVuWG2weaf40w4iGn_DwPqw
+                - generic [ref=e746]: youtube
+                - generic [ref=e747]: 
+            - listitem [ref=e748]:
+              - link "whatsapp" [ref=e749] [cursor=pointer]:
+                - /url: https://wa.me/+919899387031
+                - generic [ref=e750]: whatsapp
+                - generic [ref=e751]: 
+            - listitem [ref=e752]:
+              - link "phone" [ref=e753] [cursor=pointer]:
+                - /url: tel:+919899387031
+                - generic [ref=e754]: phone
+                - generic [ref=e755]: 
+            - listitem [ref=e756]:
+              - link "email" [ref=e757] [cursor=pointer]:
+                - /url: mailto:shubham@wahalengineers.com
+                - generic [ref=e758]: email
+                - generic [ref=e759]: 
+  - img [ref=e760]
+  - link "Whatsapp" [ref=e762] [cursor=pointer]:
+    - /url: https://web.whatsapp.com/send?phone=919899387031&text=
+    - img [ref=e765]

@@ -1,0 +1,369 @@
+- generic [ref=e2]:
+  - generic [ref=e4]:
+    - generic [ref=e5]:
+      - link "Facebook" [ref=e6] [cursor=pointer]:
+        - /url: https://www.facebook.com/TipcoEngineeringIndia/
+        - img [ref=e7]
+      - link "Twitter" [ref=e9] [cursor=pointer]:
+        - /url: https://twitter.com/tipcoengineer
+        - img [ref=e10]
+      - link "LinkedIn" [ref=e12] [cursor=pointer]:
+        - /url: https://www.linkedin.com/company/tipcoengineering/
+        - img [ref=e13]
+      - link "YouTube" [ref=e15] [cursor=pointer]:
+        - /url: https://www.youtube.com/@tipcoengineering
+        - img [ref=e16]
+      - link "Instagram" [ref=e18] [cursor=pointer]:
+        - /url: https://www.instagram.com/tipcoengineering/
+        - img [ref=e19]
+      - link "WhatsApp" [ref=e21] [cursor=pointer]:
+        - /url: https://api.whatsapp.com/send/?phone=+918826176988
+        - img [ref=e22]
+      - link "Email" [ref=e24] [cursor=pointer]:
+        - /url: mailto:mail@tipcoengineering.com
+        - img [ref=e25]
+    - generic [ref=e27]:
+      - generic [ref=e28]:
+        - img [ref=e29]
+        - link "Login" [ref=e31] [cursor=pointer]:
+          - /url: /login
+        - generic [ref=e32]: /
+        - link "SignUp" [ref=e33] [cursor=pointer]:
+          - /url: /register
+      - link "mail@tipcoengineering.com" [ref=e34] [cursor=pointer]:
+        - /url: mailto:mail@tipcoengineering.com
+        - img [ref=e35]
+        - text: mail@tipcoengineering.com
+      - generic [ref=e37]:
+        - img [ref=e38]
+        - text: 1800 1020 229
+  - banner [ref=e40]:
+    - generic [ref=e41]:
+      - link "Tipco Engineering" [ref=e42] [cursor=pointer]:
+        - /url: /
+        - img "Tipco Engineering" [ref=e43]
+      - button "Open menu" [ref=e44] [cursor=pointer]:
+        - img [ref=e45]
+    - complementary [ref=e46]:
+      - generic [ref=e47]:
+        - generic [ref=e48]:
+          - generic [ref=e49]: Guest
+          - generic [ref=e50]:
+            - link "Login" [ref=e51] [cursor=pointer]:
+              - /url: /login
+            - text: /
+            - link "SignUp" [ref=e52] [cursor=pointer]:
+              - /url: /register
+        - button "Close menu" [ref=e53] [cursor=pointer]:
+          - img [ref=e54]
+      - navigation [ref=e57]:
+        - list [ref=e58]:
+          - listitem [ref=e59]:
+            - link "About Tipco" [ref=e60] [cursor=pointer]:
+              - /url: /about-us
+          - listitem [ref=e61]:
+            - button "Product" [ref=e62] [cursor=pointer]:
+              - text: Product
+              - img [ref=e63]
+          - listitem [ref=e65]:
+            - button "Application" [ref=e66] [cursor=pointer]:
+              - text: Application
+              - img [ref=e67]
+          - listitem [ref=e69]:
+            - link "Investors" [ref=e70] [cursor=pointer]:
+              - /url: /investors/board-of-directors
+          - listitem [ref=e71]:
+            - link "Events" [ref=e72] [cursor=pointer]:
+              - /url: /event
+          - listitem [ref=e73]:
+            - link "Our Clients" [ref=e74] [cursor=pointer]:
+              - /url: /client
+          - listitem [ref=e75]:
+            - link "Contact US" [ref=e76] [cursor=pointer]:
+              - /url: /contact-us
+          - listitem [ref=e77]:
+            - link "Login" [ref=e78] [cursor=pointer]:
+              - /url: /login
+        - generic [ref=e79]:
+          - link "mail@tipcoengineering.com" [ref=e80] [cursor=pointer]:
+            - /url: mailto:mail@tipcoengineering.com
+            - img [ref=e81]
+            - text: mail@tipcoengineering.com
+          - generic [ref=e83]:
+            - link "Facebook" [ref=e84] [cursor=pointer]:
+              - /url: https://www.facebook.com/TipcoEngineeringIndia/
+              - img [ref=e85]
+            - link "Twitter" [ref=e87] [cursor=pointer]:
+              - /url: https://twitter.com/tipcoengineer
+              - img [ref=e88]
+            - link "LinkedIn" [ref=e90] [cursor=pointer]:
+              - /url: https://www.linkedin.com/company/tipcoengineering/
+              - img [ref=e91]
+            - link "YouTube" [ref=e93] [cursor=pointer]:
+              - /url: https://www.youtube.com/@tipcoengineering
+              - img [ref=e94]
+            - link "Instagram" [ref=e96] [cursor=pointer]:
+              - /url: https://www.instagram.com/tipcoengineering/
+              - img [ref=e97]
+            - link "WhatsApp" [ref=e99] [cursor=pointer]:
+              - /url: https://api.whatsapp.com/send/?phone=+918826176988
+              - img [ref=e100]
+            - link "Email" [ref=e102] [cursor=pointer]:
+              - /url: mailto:mail@tipcoengineering.com
+              - img [ref=e103]
+          - generic [ref=e105]: For any Help
+          - link "1800 1020 229" [ref=e106] [cursor=pointer]:
+            - /url: tel:18001020229
+            - img [ref=e107]
+            - text: 1800 1020 229
+  - main [ref=e109]:
+    - generic [ref=e110]:
+      - img "Industry" [ref=e111]
+      - generic [ref=e113]:
+        - heading "Industry" [level=2] [ref=e114]
+        - paragraph [ref=e115]: With over 35 years of experience in Industrial machine manufacturing, Tipco Engineering India high-end products are designed for long life and minimum maintenance, offering a wide range of innovative equipment for numerous applications in Paint, Pharma, Chemicals, Pesticides industries, etc. Tipco has gained a leading position in the Indian market with its innovative mixers, dispersers, homogenizers, mills, laboratory machines, reactors to meeting global industry standards.
+    - generic [ref=e118]:
+      - generic [ref=e119]:
+        - generic [ref=e120]:
+          - img "Paint" [ref=e121]
+          - link "More Details" [ref=e123] [cursor=pointer]:
+            - /url: /application/paint
+        - link "Paint" [ref=e124] [cursor=pointer]:
+          - /url: /application/paint
+          - heading "Paint" [level=3] [ref=e125]
+      - generic [ref=e126]:
+        - generic [ref=e127]:
+          - img "Pharma" [ref=e128]
+          - link "More Details" [ref=e130] [cursor=pointer]:
+            - /url: /application/pharma
+        - link "Pharma" [ref=e131] [cursor=pointer]:
+          - /url: /application/pharma
+          - heading "Pharma" [level=3] [ref=e132]
+      - generic [ref=e133]:
+        - generic [ref=e134]:
+          - img "Chemical" [ref=e135]
+          - link "More Details" [ref=e137] [cursor=pointer]:
+            - /url: /application/chemical
+        - link "Chemical" [ref=e138] [cursor=pointer]:
+          - /url: /application/chemical
+          - heading "Chemical" [level=3] [ref=e139]
+      - generic [ref=e140]:
+        - generic [ref=e141]:
+          - img "Ink" [ref=e142]
+          - link "More Details" [ref=e144] [cursor=pointer]:
+            - /url: /application/ink
+        - link "Ink" [ref=e145] [cursor=pointer]:
+          - /url: /application/ink
+          - heading "Ink" [level=3] [ref=e146]
+      - generic [ref=e147]:
+        - generic [ref=e148]:
+          - img "Pesticides Industry" [ref=e149]
+          - link "More Details" [ref=e151] [cursor=pointer]:
+            - /url: /application/pesticides-industry
+        - link "Pesticides Industry" [ref=e152] [cursor=pointer]:
+          - /url: /application/pesticides-industry
+          - heading "Pesticides Industry" [level=3] [ref=e153]
+      - generic [ref=e154]:
+        - generic [ref=e155]:
+          - img "Lab Machines" [ref=e156]
+          - link "More Details" [ref=e158] [cursor=pointer]:
+            - /url: /application/lab-machines
+        - link "Lab Machines" [ref=e159] [cursor=pointer]:
+          - /url: /application/lab-machines
+          - heading "Lab Machines" [level=3] [ref=e160]
+      - generic [ref=e161]:
+        - generic [ref=e162]:
+          - img "Coating" [ref=e163]
+          - link "More Details" [ref=e165] [cursor=pointer]:
+            - /url: /application/coating
+        - link "Coating" [ref=e166] [cursor=pointer]:
+          - /url: /application/coating
+          - heading "Coating" [level=3] [ref=e167]
+    - generic [ref=e169]:
+      - generic [ref=e170]:
+        - heading "Get Quote Now" [level=2] [ref=e171]
+        - paragraph [ref=e174]: We provide best solution for your business
+      - generic [ref=e175]:
+        - generic [ref=e176]:
+          - textbox "Full Name" [ref=e177]
+          - textbox "Email Address" [ref=e178]
+          - textbox "Company Name" [ref=e179]
+          - generic [ref=e180]:
+            - combobox [ref=e182]:
+              - option "🇮🇳 +91" [selected]
+              - option "🇺🇸 +1"
+              - option "🇬🇧 +44"
+            - textbox "Mobile Number" [ref=e183]
+        - textbox "Message" [ref=e184]
+        - generic [ref=e186]:
+          - checkbox "I'm not a robot" [ref=e187]
+          - generic [ref=e188]: I'm not a robot
+          - generic [ref=e189]:
+            - generic [ref=e190]: reCAPTCHA
+            - generic [ref=e191]: Privacy · Terms
+        - button "Get Quote" [ref=e192] [cursor=pointer]
+  - contentinfo [ref=e193]:
+    - generic [ref=e195]:
+      - generic [ref=e196]:
+        - img "Tipco Engineering" [ref=e197]
+        - paragraph [ref=e198]: Tipco Engineering India Pvt. Ltd. was incorporated in 2021 primarily manufacturers of process plants and machinery required by the Chemical, Polyester Button and related Industries.
+        - generic [ref=e199]:
+          - link "Facebook" [ref=e200] [cursor=pointer]:
+            - /url: https://www.facebook.com/TipcoEngineeringIndia/
+            - img [ref=e201]
+          - link "Twitter" [ref=e203] [cursor=pointer]:
+            - /url: https://twitter.com/tipcoengineer
+            - img [ref=e204]
+          - link "LinkedIn" [ref=e206] [cursor=pointer]:
+            - /url: https://www.linkedin.com/company/tipcoengineering/
+            - img [ref=e207]
+          - link "YouTube" [ref=e209] [cursor=pointer]:
+            - /url: https://www.youtube.com/@tipcoengineering
+            - img [ref=e210]
+          - link "Instagram" [ref=e212] [cursor=pointer]:
+            - /url: https://www.instagram.com/tipcoengineering/
+            - img [ref=e213]
+          - link "WhatsApp" [ref=e215] [cursor=pointer]:
+            - /url: https://api.whatsapp.com/send/?phone=+918826176988
+            - img [ref=e216]
+          - link "Email" [ref=e218] [cursor=pointer]:
+            - /url: mailto:mail@tipcoengineering.com
+            - img [ref=e219]
+      - generic [ref=e221]:
+        - heading "Information" [level=3] [ref=e222]
+        - list [ref=e223]:
+          - listitem [ref=e224]:
+            - link "Blog" [ref=e225] [cursor=pointer]:
+              - /url: /blog
+              - img [ref=e226]
+              - text: Blog
+          - listitem [ref=e228]:
+            - link "Videos" [ref=e229] [cursor=pointer]:
+              - /url: /video-gallery
+              - img [ref=e230]
+              - text: Videos
+          - listitem [ref=e232]:
+            - link "Catalogue" [ref=e233] [cursor=pointer]:
+              - /url: /catalogue
+              - img [ref=e234]
+              - text: Catalogue
+          - listitem [ref=e236]:
+            - link "Events" [ref=e237] [cursor=pointer]:
+              - /url: /event
+              - img [ref=e238]
+              - text: Events
+          - listitem [ref=e240]:
+            - link "Company Gallery" [ref=e241] [cursor=pointer]:
+              - /url: /photo-gallery
+              - img [ref=e242]
+              - text: Company Gallery
+      - generic [ref=e244]:
+        - heading "Quick Link" [level=3] [ref=e245]
+        - list [ref=e246]:
+          - listitem [ref=e247]:
+            - link "About Us" [ref=e248] [cursor=pointer]:
+              - /url: /about-us
+              - img [ref=e249]
+              - text: About Us
+          - listitem [ref=e251]:
+            - link "Contact Us" [ref=e252] [cursor=pointer]:
+              - /url: /contact-us
+              - img [ref=e253]
+              - text: Contact Us
+          - listitem [ref=e255]:
+            - link "Service" [ref=e256] [cursor=pointer]:
+              - /url: /service
+              - img [ref=e257]
+              - text: Service
+          - listitem [ref=e259]:
+            - link "Career" [ref=e260] [cursor=pointer]:
+              - /url: /career
+              - img [ref=e261]
+              - text: Career
+          - listitem [ref=e263]:
+            - link "Partner With US" [ref=e264] [cursor=pointer]:
+              - /url: /partner
+              - img [ref=e265]
+              - text: Partner With US
+      - generic [ref=e267]:
+        - heading "Products" [level=3] [ref=e268]
+        - list [ref=e269]:
+          - listitem [ref=e270]:
+            - link "Mill Series" [ref=e271] [cursor=pointer]:
+              - /url: /application/mill-series
+              - img [ref=e272]
+              - text: Mill Series
+          - listitem [ref=e274]:
+            - link "Production Line" [ref=e275] [cursor=pointer]:
+              - /url: /application/production-line
+              - img [ref=e276]
+              - text: Production Line
+          - listitem [ref=e278]:
+            - link "Laboratory Machines" [ref=e279] [cursor=pointer]:
+              - /url: /application/laboratory-machines
+              - img [ref=e280]
+              - text: Laboratory Machines
+          - listitem [ref=e282]:
+            - link "Homogenizers" [ref=e283] [cursor=pointer]:
+              - /url: /application/homogenizers
+              - img [ref=e284]
+              - text: Homogenizers
+      - generic [ref=e286]:
+        - heading "Machine Series" [level=3] [ref=e287]
+        - list [ref=e288]:
+          - listitem [ref=e289]:
+            - link "C- Series" [ref=e290] [cursor=pointer]:
+              - /url: /
+              - img [ref=e291]
+              - text: C- Series
+          - listitem [ref=e293]:
+            - link "HS- Disperser Series" [ref=e294] [cursor=pointer]:
+              - /url: /
+              - img [ref=e295]
+              - text: HS- Disperser Series
+          - listitem [ref=e297]:
+            - link "HS- Homogenizers Series" [ref=e298] [cursor=pointer]:
+              - /url: /
+              - img [ref=e299]
+              - text: HS- Homogenizers Series
+          - listitem [ref=e301]:
+            - link "THM Series" [ref=e302] [cursor=pointer]:
+              - /url: /
+              - img [ref=e303]
+              - text: THM Series
+          - listitem [ref=e305]:
+            - link "Lab Series" [ref=e306] [cursor=pointer]:
+              - /url: /
+              - img [ref=e307]
+              - text: Lab Series
+      - generic [ref=e309]:
+        - heading "Contact Us" [level=3] [ref=e310]
+        - list [ref=e311]:
+          - listitem [ref=e312]:
+            - img [ref=e313]
+            - generic [ref=e316]: Plot No. 1689, 1658 SECTOR-38, PHASE-1, RAI, INDUSTRIAL AERA, Sonipat, Haryana 131029
+          - listitem [ref=e317]:
+            - img [ref=e318]
+            - link "1800 1020 229" [ref=e320] [cursor=pointer]:
+              - /url: tel:18001020229
+          - listitem [ref=e321]:
+            - img [ref=e322]
+            - link "mail@tipcoengineering.com" [ref=e325] [cursor=pointer]:
+              - /url: mailto:mail@tipcoengineering.com
+    - generic [ref=e327]:
+      - generic [ref=e328]:
+        - link "Privacy Policy" [ref=e329] [cursor=pointer]:
+          - /url: /privacy-policy
+        - link "Certificate" [ref=e330] [cursor=pointer]:
+          - /url: /certificates
+        - link "Term & conditions" [ref=e331] [cursor=pointer]:
+          - /url: /term-condition
+        - link "Faqs" [ref=e332] [cursor=pointer]:
+          - /url: /faq
+      - generic [ref=e333]: © 2026 Tipco Engineering.
+  - link "Chat on WhatsApp" [ref=e334] [cursor=pointer]:
+    - /url: https://api.whatsapp.com/send/?phone=+918826176988&text=Hello I have a question about tipco engineering&app_absent=0
+    - img [ref=e335]
+  - link "Enquiry" [ref=e337] [cursor=pointer]:
+    - /url: "#get-quote"
+    - text: ENQUIRY

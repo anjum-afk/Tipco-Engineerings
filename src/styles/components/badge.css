@@ -1,0 +1,4 @@
+@layer components {
+  .badge { display: inline-flex; align-items: center; padding: 3px 10px; border-radius: 999px; font-size: 12px; font-weight: 600; }
+  .badge-brand { background: var(--brand-light); color: var(--brand); }
+}

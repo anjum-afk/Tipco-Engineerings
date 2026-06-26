@@ -1,0 +1,5 @@
+@layer components {
+  .form-input { width: 100%; padding: 10px 14px; border: 1px solid var(--border); border-radius: var(--radius); font-size: 14px; color: var(--foreground); background: var(--background); transition: border-color var(--transition-fast); outline: none; font-family: var(--font-sans); }
+  .form-input:focus { border-color: var(--brand); box-shadow: 0 0 0 3px rgba(0,120,114,0.12); }
+  .form-input::placeholder { color: var(--foreground-subtle); }
+}

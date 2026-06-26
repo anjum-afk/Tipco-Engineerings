@@ -1,0 +1,9 @@
+@layer components {
+  .btn { display: inline-flex; align-items: center; justify-content: center; gap: 8px; padding: 10px 28px; border-radius: var(--radius); font-weight: 600; font-size: 14px; transition: all var(--transition-base); cursor: pointer; border: 2px solid transparent; }
+  .btn-primary { background: var(--brand); color: #fff; border-color: var(--brand); }
+  .btn-primary:hover { background: var(--brand-hover); border-color: var(--brand-hover); }
+  .btn-outline { background: transparent; color: var(--brand); border-color: var(--brand); }
+  .btn-outline:hover { background: var(--brand); color: #fff; }
+  .btn-white { background: #fff; color: var(--brand); border-color: #fff; }
+  .btn-white:hover { background: var(--brand); color: #fff; border-color: var(--brand); }
+}

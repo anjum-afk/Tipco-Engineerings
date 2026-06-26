@@ -1,0 +1,591 @@
+- generic [active] [ref=e1]:
+  - text: 
+  - generic [ref=e3]:
+    - generic [ref=e4]:       
+    - generic [ref=e6]:
+      - text: 
+      - generic [ref=e7]:
+        - generic [ref=e8]: 
+        - link "mail@tipcoengineering.com" [ref=e9] [cursor=pointer]:
+          - /url: mailto:mail@tipcoengineering.com
+      - text: 
+  - banner [ref=e10]:
+    - generic [ref=e12]:
+      - link "Logo" [ref=e15] [cursor=pointer]:
+        - /url: https://tipcoengineering.com/
+        - img "Logo" [ref=e16]
+      - generic [ref=e17]:
+        - generic:
+          - list:
+            - listitem:
+              - generic:
+                - generic:
+                  - img
+                - generic:
+                  - generic: Guest
+                  - generic:
+                    - link "Login":
+                      - /url: https://tipcoengineering.com/login
+                    - text: /
+                    - link "SignUp":
+                      - /url: https://tipcoengineering.com/register
+            - listitem:
+              - link "About Tipco":
+                - /url: https://tipcoengineering.com/about-us
+            - listitem:
+              - text: 
+              - link "Product":
+                - /url: https://tipcoengineering.com/product
+              - generic [ref=e18]:
+                - generic [ref=e20]:
+                  - list [ref=e22]:
+                    - listitem [ref=e23]:
+                      - text: 
+                      - link "Mill Series" [ref=e24] [cursor=pointer]:
+                        - /url: https://tipcoengineering.com/application/mill-series
+                      - generic [ref=e25]:
+                        - list [ref=e26]:
+                          - listitem [ref=e27]:
+                            - link "Basket Mill" [ref=e28] [cursor=pointer]:
+                              - /url: https://tipcoengineering.com/mill-series/basket-mill
+                          - listitem [ref=e29]:
+                            - link "Bead Mill" [ref=e30] [cursor=pointer]:
+                              - /url: https://tipcoengineering.com/mill-series/bead-mill
+                          - listitem [ref=e31]:
+                            - link "Dyno Mill" [ref=e32] [cursor=pointer]:
+                              - /url: https://tipcoengineering.com/mill-series/dyno-mill
+                          - listitem [ref=e33]:
+                            - link "Horizontal Bead Mill" [ref=e34] [cursor=pointer]:
+                              - /url: https://tipcoengineering.com/mill-series/horizontal-bead-mill
+                          - listitem [ref=e35]:
+                            - link "View More" [ref=e36] [cursor=pointer]:
+                              - /url: https://tipcoengineering.com/application/mill-series
+                        - text: 
+                  - list [ref=e38]:
+                    - listitem [ref=e39]:
+                      - text: 
+                      - link "Production Line" [ref=e40] [cursor=pointer]:
+                        - /url: https://tipcoengineering.com/application/production-line
+                      - generic [ref=e41]:
+                        - list [ref=e42]:
+                          - listitem [ref=e43]:
+                            - link "Ink Production Line" [ref=e44] [cursor=pointer]:
+                              - /url: https://tipcoengineering.com/production-line/ink-production-line
+                          - listitem [ref=e45]:
+                            - link "Paint Production Line Setup" [ref=e46] [cursor=pointer]:
+                              - /url: https://tipcoengineering.com/production-line/paint-production-line-setup
+                          - listitem [ref=e47]:
+                            - link "Paint Sludge to Primer Process Production Setup" [ref=e48] [cursor=pointer]:
+                              - /url: https://tipcoengineering.com/production-line/paint-sludge-to-primer-process-production-setup
+                        - text: 
+                  - list [ref=e50]:
+                    - listitem [ref=e51]:
+                      - text: 
+                      - link "laboratory Machines" [ref=e52] [cursor=pointer]:
+                        - /url: https://tipcoengineering.com/application/laboratory-machines
+                      - generic [ref=e53]:
+                        - list [ref=e54]:
+                          - listitem [ref=e55]:
+                            - link "Lab Attritor Mill" [ref=e56] [cursor=pointer]:
+                              - /url: https://tipcoengineering.com/laboratory-machines/lab-attritor-mill
+                          - listitem [ref=e57]:
+                            - link "Lab Basket Mill" [ref=e58] [cursor=pointer]:
+                              - /url: https://tipcoengineering.com/laboratory-machines/lab-basket-mill
+                          - listitem [ref=e59]:
+                            - link "Lab Ribbon Blender" [ref=e60] [cursor=pointer]:
+                              - /url: https://tipcoengineering.com/laboratory-machines/lab-ribbon-blender
+                          - listitem [ref=e61]:
+                            - link "Lab High Speed Disperser" [ref=e62] [cursor=pointer]:
+                              - /url: https://tipcoengineering.com/laboratory-machines/lab-high-speed-disperser
+                          - listitem [ref=e63]:
+                            - link "View More" [ref=e64] [cursor=pointer]:
+                              - /url: https://tipcoengineering.com/application/laboratory-machines
+                        - text: 
+                  - list [ref=e66]:
+                    - listitem [ref=e67]:
+                      - text: 
+                      - link "Homogenizers" [ref=e68] [cursor=pointer]:
+                        - /url: https://tipcoengineering.com/application/homogenizers
+                      - generic [ref=e69]:
+                        - list [ref=e70]:
+                          - listitem [ref=e71]:
+                            - link "Liquid Powder Mixing Machine" [ref=e72] [cursor=pointer]:
+                              - /url: https://tipcoengineering.com/homogenizers/liquid-powder-mixing-machine
+                          - listitem [ref=e73]:
+                            - link "In-line Homogenizer" [ref=e74] [cursor=pointer]:
+                              - /url: https://tipcoengineering.com/homogenizers/in-line-homogenizer
+                          - listitem [ref=e75]:
+                            - link "In-Tank Homogenizer" [ref=e76] [cursor=pointer]:
+                              - /url: https://tipcoengineering.com/homogenizers/in-tank-homogenizer
+                          - listitem [ref=e77]:
+                            - link "Intank Batch Homogenizer" [ref=e78] [cursor=pointer]:
+                              - /url: https://tipcoengineering.com/homogenizers/intank-batch-homogenizer
+                          - listitem [ref=e79]:
+                            - link "View More" [ref=e80] [cursor=pointer]:
+                              - /url: https://tipcoengineering.com/application/homogenizers
+                        - text: 
+                  - list [ref=e82]:
+                    - listitem [ref=e83]:
+                      - text: 
+                      - link "Disperser Series" [ref=e84] [cursor=pointer]:
+                        - /url: https://tipcoengineering.com/application/disperser-series
+                      - generic [ref=e85]:
+                        - list [ref=e86]:
+                          - listitem [ref=e87]:
+                            - link "High Speed Disperser with Hydraulic Lifting" [ref=e88] [cursor=pointer]:
+                              - /url: https://tipcoengineering.com/disperser-series/high-speed-disperser-with-hydraulic-lifting
+                          - listitem [ref=e89]:
+                            - link "High Speed Disperser with Gripper and Hydraulic" [ref=e90] [cursor=pointer]:
+                              - /url: https://tipcoengineering.com/disperser-series/high-speed-disperser-with-gripper-and-hydraulic
+                          - listitem [ref=e91]:
+                            - link "High Speed Disperser" [ref=e92] [cursor=pointer]:
+                              - /url: https://tipcoengineering.com/disperser-series/high-speed-disperser
+                          - listitem [ref=e93]:
+                            - link "High Speed Disperser with Gripper" [ref=e94] [cursor=pointer]:
+                              - /url: https://tipcoengineering.com/disperser-series/high-speed-disperser-with-gripper
+                          - listitem [ref=e95]:
+                            - link "View More" [ref=e96] [cursor=pointer]:
+                              - /url: https://tipcoengineering.com/application/disperser-series
+                        - text: 
+                - text: 
+            - listitem:
+              - text: 
+              - link "Application":
+                - /url: "#"
+              - generic [ref=e97]:
+                - generic [ref=e99]:
+                  - list [ref=e101]:
+                    - listitem [ref=e102]:
+                      - text: 
+                      - link "Industry" [ref=e103] [cursor=pointer]:
+                        - /url: https://tipcoengineering.com/application/industry
+                      - generic [ref=e104]:
+                        - list [ref=e105]:
+                          - listitem [ref=e106]:
+                            - link "Paint" [ref=e107] [cursor=pointer]:
+                              - /url: https://tipcoengineering.com/application/paint
+                          - listitem [ref=e108]:
+                            - link "Pharma" [ref=e109] [cursor=pointer]:
+                              - /url: https://tipcoengineering.com/application/pharma
+                          - listitem [ref=e110]:
+                            - link "Chemical" [ref=e111] [cursor=pointer]:
+                              - /url: https://tipcoengineering.com/application/chemical
+                          - listitem [ref=e112]:
+                            - link "Ink" [ref=e113] [cursor=pointer]:
+                              - /url: https://tipcoengineering.com/application/ink
+                          - listitem [ref=e114]:
+                            - link "View More" [ref=e115] [cursor=pointer]:
+                              - /url: https://tipcoengineering.com/application/industry
+                        - text: 
+                  - list [ref=e117]:
+                    - listitem [ref=e118]:
+                      - text: 
+                      - link "Process" [ref=e119] [cursor=pointer]:
+                        - /url: https://tipcoengineering.com/application/process
+                      - generic [ref=e120]:
+                        - list [ref=e121]:
+                          - listitem [ref=e122]:
+                            - link "Mixing" [ref=e123] [cursor=pointer]:
+                              - /url: https://tipcoengineering.com/application/mixing
+                          - listitem [ref=e124]:
+                            - link "Milling" [ref=e125] [cursor=pointer]:
+                              - /url: https://tipcoengineering.com/application/milling
+                        - text: 
+                  - list [ref=e127]:
+                    - listitem [ref=e128]:
+                      - text: 
+                      - link "Production Setup" [ref=e129] [cursor=pointer]:
+                        - /url: https://tipcoengineering.com/application/production-setup
+                      - generic [ref=e130]:
+                        - list [ref=e131]:
+                          - listitem [ref=e132]:
+                            - link "Paint Production" [ref=e133] [cursor=pointer]:
+                              - /url: https://tipcoengineering.com/application/paint-production
+                          - listitem [ref=e134]:
+                            - link "Ink Production" [ref=e135] [cursor=pointer]:
+                              - /url: https://tipcoengineering.com/application/ink-production
+                          - listitem [ref=e136]:
+                            - link "Chemical Production" [ref=e137] [cursor=pointer]:
+                              - /url: https://tipcoengineering.com/application/chemical-production
+                          - listitem [ref=e138]:
+                            - link "Powder Production" [ref=e139] [cursor=pointer]:
+                              - /url: https://tipcoengineering.com/application/powder-production
+                          - listitem [ref=e140]:
+                            - link "View More" [ref=e141] [cursor=pointer]:
+                              - /url: https://tipcoengineering.com/application/production-setup
+                        - text: 
+                - text: 
+            - listitem:
+              - link "Investors":
+                - /url: https://tipcoengineering.com/investors/board-of-directors
+            - listitem:
+              - link "Events":
+                - /url: https://tipcoengineering.com/event
+            - listitem:
+              - link "Our Clients":
+                - /url: https://tipcoengineering.com/client
+            - listitem:
+              - link "Contact US":
+                - /url: https://tipcoengineering.com/contact-us
+            - listitem:
+              - generic:
+                - generic:
+                  - generic: 
+                - generic:
+                  - link "Login":
+                    - /url: https://tipcoengineering.com/login
+                - generic:
+                  - link " mail@tipcoengineering.com":
+                    - /url: mailto:mail@tipcoengineering.com
+                    - generic: 
+                    - text: mail@tipcoengineering.com
+                - generic:
+                  - generic:
+                    - link "":
+                      - /url: https://www.facebook.com/TipcoEngineeringIndia/
+                      - generic: 
+                  - generic:
+                    - link "":
+                      - /url: https://twitter.com/tipcoengineer
+                      - generic: 
+                  - generic:
+                    - link "":
+                      - /url: https://www.linkedin.com/company/tipcoengineering/
+                      - generic: 
+                  - generic:
+                    - link "":
+                      - /url: https://www.youtube.com/@tipcoengineering
+                      - generic: 
+                  - generic:
+                    - link "":
+                      - /url: https://www.instagram.com/tipcoengineering/
+                      - generic: 
+                  - generic:
+                    - link "":
+                      - /url: https://api.whatsapp.com/send/?phone=+918826176988&text=Hello I have Question about Tipco&app_absent=0
+                      - generic: 
+                  - generic:
+                    - link "":
+                      - /url: mailto:mail@tipcoengineering.com
+                      - generic: 
+          - link "For any Help  1800 1020 229":
+            - /url: tel:1800 1020 229
+            - generic: For any Help
+            - generic:
+              - generic: 
+              - text: 1800 1020 229
+        - generic [ref=e143] [cursor=pointer]: 
+  - generic [ref=e144]:
+    - img [ref=e146]
+    - button "" [ref=e147] [cursor=pointer]:
+      - generic [ref=e148]: 
+    - button "" [ref=e149] [cursor=pointer]:
+      - generic [ref=e150]: 
+  - generic [ref=e152]:
+    - generic [ref=e153]:
+      - heading "About Tipco Engineerings" [level=2] [ref=e154]
+      - separator [ref=e155]
+    - generic [ref=e159]:
+      - paragraph
+      - paragraph [ref=e160]: Tipco Engineering incorporated in 2021, primarily manufactures process plants and machinery required by the Chemical, Paint, Inks Pharmaceuticals, Minerals, Food, Polyester resins machines, Polyester Button and related Industries. Over the years as the country was aiming towards self-reliance and industrialization, our firm jointly with our clients took up the challenge of finding solutions and developing cost-effective equipment & process for meeting their stringent requirements.
+      - paragraph [ref=e161]: Along with the growth of our clients grew our reputation, experience, and knowledge of the manufacturing process and technologies.
+      - paragraph
+      - link "Read More" [ref=e163] [cursor=pointer]:
+        - /url: https://tipcoengineering.com/about-us
+  - generic [ref=e166]:
+    - generic [ref=e167]:
+      - heading "Our Working Process" [level=2] [ref=e168]
+      - separator [ref=e169]
+      - paragraph [ref=e170]: These are Technology with Tipco Engineerings
+    - generic:
+      - generic [ref=e174]:
+        - generic [ref=e175]:
+          - img [ref=e176]
+          - heading "Understand Organization Requirements" [level=3] [ref=e177]
+        - generic [ref=e178]:
+          - img [ref=e179]
+          - heading "Understand Organization Requirements" [level=3] [ref=e180]
+      - generic [ref=e184]:
+        - generic [ref=e185]:
+          - img [ref=e186]
+          - heading "Planning & Designing" [level=3] [ref=e187]
+        - generic [ref=e188]:
+          - img [ref=e189]
+          - heading "Planning & Designing" [level=3] [ref=e190]
+      - generic [ref=e194]:
+        - generic [ref=e195]:
+          - img [ref=e196]
+          - heading "Production" [level=3] [ref=e197]
+        - generic [ref=e198]:
+          - img [ref=e199]
+          - heading "Production" [level=3] [ref=e200]
+      - generic [ref=e204]:
+        - generic [ref=e205]:
+          - img [ref=e206]
+          - heading "Machine Installation" [level=3] [ref=e207]
+        - generic [ref=e208]:
+          - img [ref=e209]
+          - heading "Machine Installation" [level=3] [ref=e210]
+  - generic [ref=e212]:
+    - generic [ref=e213]:
+      - heading "PRODUCTS & SOLUTIONS" [level=2] [ref=e214]
+      - separator [ref=e215]
+      - paragraph [ref=e216]: We provide the best machines for industrial purposes like Mixing machines, Disperser Machines, Wall Putty Mixture machines, and a wide range of Machines that are required for mixing and milling technology.
+    - generic [ref=e217]:
+      - link "Mill Series" [ref=e224] [cursor=pointer]:
+        - /url: https://tipcoengineering.com/application/mill-series
+        - heading "Mill Series" [level=3] [ref=e225]
+      - link "Production Line" [ref=e232] [cursor=pointer]:
+        - /url: https://tipcoengineering.com/application/production-line
+        - heading "Production Line" [level=3] [ref=e233]
+      - link "laboratory Machines" [ref=e240] [cursor=pointer]:
+        - /url: https://tipcoengineering.com/application/laboratory-machines
+        - heading "laboratory Machines" [level=3] [ref=e241]
+      - link "Homogenizers" [ref=e248] [cursor=pointer]:
+        - /url: https://tipcoengineering.com/application/homogenizers
+        - heading "Homogenizers" [level=3] [ref=e249]
+      - link "View More" [ref=e252] [cursor=pointer]:
+        - /url: https://tipcoengineering.com/all-category
+  - generic [ref=e253]:
+    - generic [ref=e254]:
+      - generic [ref=e255]:
+        - heading "Industry" [level=2] [ref=e256]
+        - separator [ref=e257]
+        - paragraph [ref=e258]: With over 35 years of experience in Industrial machine manufacturing, Tipco Engineering India high-end products are designed for long life and minimum maintenance, offering a wide range of innovative equipment for numerous applications in Paint, Pharma, Chemicals, Pesticides industries, etc. Tipco has gained a leading position in the Indian market with its innovative mixers, dispersers, homogenizers, mills, laboratory machines, reactors to meeting global industry standards.
+      - generic [ref=e259]:
+        - link "Paint" [ref=e266] [cursor=pointer]:
+          - /url: https://tipcoengineering.com/application/paint
+          - heading "Paint" [level=3] [ref=e267]
+        - link "Pharma" [ref=e274] [cursor=pointer]:
+          - /url: https://tipcoengineering.com/application/pharma
+          - heading "Pharma" [level=3] [ref=e275]
+        - link "Chemical" [ref=e282] [cursor=pointer]:
+          - /url: https://tipcoengineering.com/application/chemical
+          - heading "Chemical" [level=3] [ref=e283]
+        - link "Ink" [ref=e290] [cursor=pointer]:
+          - /url: https://tipcoengineering.com/application/ink
+          - heading "Ink" [level=3] [ref=e291]
+        - link "View More" [ref=e294] [cursor=pointer]:
+          - /url: https://tipcoengineering.com/application/industry
+    - generic [ref=e295]:
+      - generic [ref=e296]:
+        - heading "Process" [level=2] [ref=e297]
+        - separator [ref=e298]
+        - paragraph [ref=e299]: Tipco Engineering India has a wide range of products to offer reliable solutions for paint, ink, glue, gel, and many other applications. Our expertise in determining how assembly line balancing problems can affect your system throughput helps prevent sudden production process disruptions. We have high-quality machines, your raw materials become more valuable with the different processes like dispersing, milling, mixing, dissolving in solids into the liquids and liquid to liquid moreover take precautions to prevent time delays in your production process with quality productions.
+      - generic [ref=e300]:
+        - link "Mixing" [ref=e307] [cursor=pointer]:
+          - /url: https://tipcoengineering.com/application/mixing
+          - heading "Mixing" [level=3] [ref=e308]
+        - link "Milling" [ref=e315] [cursor=pointer]:
+          - /url: https://tipcoengineering.com/application/milling
+          - heading "Milling" [level=3] [ref=e316]
+        - link "View More" [ref=e319] [cursor=pointer]:
+          - /url: https://tipcoengineering.com/application/process
+    - generic [ref=e320]:
+      - generic [ref=e321]:
+        - heading "Production Setup" [level=2] [ref=e322]
+        - separator [ref=e323]
+        - paragraph [ref=e324]: Within Tipco Engineering’s portfolio, it is possible to find a wide range of products and solutions not only for the machines but for the entire production line. Tipco Engineering is a leader in automated production line technology and has supplied automated systems across various industries. Following the latest market trends of the industry, we provide the most advanced technologies in automation for maximum performance on the factory floor. At Tipco, our customer’s requirements are at the forefront of our designs to ensure the equipment suits their needs. We pay due consideration to all system components and auxiliary systems with our team. To this end, interfaces are handled by one single source, focusing on cost-effective system performance.
+      - generic [ref=e325]:
+        - link "Paint Production" [ref=e332] [cursor=pointer]:
+          - /url: https://tipcoengineering.com/application/paint-production
+          - heading "Paint Production" [level=3] [ref=e333]
+        - link "Ink Production" [ref=e340] [cursor=pointer]:
+          - /url: https://tipcoengineering.com/application/ink-production
+          - heading "Ink Production" [level=3] [ref=e341]
+        - link "Chemical Production" [ref=e348] [cursor=pointer]:
+          - /url: https://tipcoengineering.com/application/chemical-production
+          - heading "Chemical Production" [level=3] [ref=e349]
+        - link "Powder Production" [ref=e356] [cursor=pointer]:
+          - /url: https://tipcoengineering.com/application/powder-production
+          - heading "Powder Production" [level=3] [ref=e357]
+        - link "View More" [ref=e360] [cursor=pointer]:
+          - /url: https://tipcoengineering.com/application/production-setup
+  - generic [ref=e365]:
+    - generic [ref=e367]:
+      - generic [ref=e369]:
+        - paragraph [ref=e371]: The service and technical assistance offered by Tipco Engineering is excellent. When contacting Tipco Engineering, the service team is quick to respond and very knowledgeable…..
+        - heading "Arya Sahani" [level=3] [ref=e372]
+      - generic [ref=e374]:
+        - paragraph [ref=e376]: It has been a pleasure doing business with you and Tipco Engineering and we look forward to the possibility of another purchase in the future. I would feel quite comfortable in recommending Tipco Engineering equipment..
+        - heading "Rajat Shabharwal" [level=3] [ref=e377]
+      - generic [ref=e379]:
+        - paragraph [ref=e381]: The machine has performs flawlessly since installation and is capable of outperforming the specs that were guaranteed...
+        - heading "Mayank Singh" [level=3] [ref=e382]
+    - generic [ref=e383]:
+      - button [ref=e384] [cursor=pointer]
+      - button [ref=e385] [cursor=pointer]
+      - button [ref=e386] [cursor=pointer]
+  - heading "LATEST NEWS & ARTICLES" [level=2] [ref=e392]
+  - generic [ref=e397]:
+    - heading "Our Clients" [level=2] [ref=e399]
+    - generic [ref=e437]:
+      - button [ref=e438] [cursor=pointer]
+      - button [ref=e439] [cursor=pointer]
+      - button [ref=e440] [cursor=pointer]
+      - button [ref=e441] [cursor=pointer]
+      - button [ref=e442] [cursor=pointer]
+      - button [ref=e443] [cursor=pointer]
+  - generic [ref=e447]:
+    - generic [ref=e448]:
+      - heading "Get Quote Now" [level=2] [ref=e449]
+      - paragraph [ref=e450]: We provide best solution for your business
+    - generic [ref=e452]:
+      - textbox "Full Name" [ref=e454]
+      - textbox "Email Address" [ref=e456]
+      - textbox "Company Name" [ref=e458]
+      - generic [ref=e460]:
+        - 'combobox "India (भारत): +91" [ref=e462]'
+        - textbox "Mobile Number" [ref=e465]
+      - textbox "Message" [ref=e467]
+    - iframe [ref=e472]:
+      - generic [ref=f27e2]:
+        - generic [ref=f27e3]:
+          - checkbox "I'm not a robot" [ref=f27e7]
+          - generic [ref=f27e11]: I'm not a robot
+        - generic [ref=f27e15]: reCAPTCHA
+    - button "Get Quote" [ref=e475] [cursor=pointer]
+  - contentinfo [ref=e476]:
+    - generic [ref=e479]:
+      - generic [ref=e481]:
+        - heading "About Us" [level=3] [ref=e482]: About Us
+        - paragraph [ref=e484]: Tipco Engineering India Pvt. Ltd. was incorporated in 2021 primarily manufacturers of process plants and machinery required by the Chemical,Polyester Button and related Industries.
+        - text:       
+      - generic [ref=e486]:
+        - heading "Information" [level=3] [ref=e487]: Information
+        - list [ref=e489]:
+          - listitem [ref=e490]:
+            - link " Blog" [ref=e491] [cursor=pointer]:
+              - /url: https://tipcoengineering.com/blog
+              - generic [ref=e492]: 
+              - text: Blog
+          - listitem [ref=e493]:
+            - link " Videos" [ref=e494] [cursor=pointer]:
+              - /url: https://tipcoengineering.com/video-gallery
+              - generic [ref=e495]: 
+              - text: Videos
+          - listitem [ref=e496]:
+            - link " Catalogue" [ref=e497] [cursor=pointer]:
+              - /url: https://tipcoengineering.com/catalogue
+              - generic [ref=e498]: 
+              - text: Catalogue
+          - listitem [ref=e499]:
+            - link " Events" [ref=e500] [cursor=pointer]:
+              - /url: https://tipcoengineering.com/event
+              - generic [ref=e501]: 
+              - text: Events
+          - listitem [ref=e502]:
+            - link " Company Gallery" [ref=e503] [cursor=pointer]:
+              - /url: https://tipcoengineering.com/photo-gallery
+              - generic [ref=e504]: 
+              - text: Company Gallery
+      - generic [ref=e506]:
+        - heading "Quick Link" [level=3] [ref=e507]: Quick Link
+        - list [ref=e509]:
+          - listitem [ref=e510]:
+            - link " About Us" [ref=e511] [cursor=pointer]:
+              - /url: https://tipcoengineering.com/about-us
+              - generic [ref=e512]: 
+              - text: About Us
+          - listitem [ref=e513]:
+            - link " Contact Us" [ref=e514] [cursor=pointer]:
+              - /url: https://tipcoengineering.com/contact-us
+              - generic [ref=e515]: 
+              - text: Contact Us
+          - listitem [ref=e516]:
+            - link " Service" [ref=e517] [cursor=pointer]:
+              - /url: https://tipcoengineering.com/service
+              - generic [ref=e518]: 
+              - text: Service
+          - listitem [ref=e519]:
+            - link " Career" [ref=e520] [cursor=pointer]:
+              - /url: https://tipcoengineering.com/career
+              - generic [ref=e521]: 
+              - text: Career
+          - listitem [ref=e522]:
+            - link " Partner With US" [ref=e523] [cursor=pointer]:
+              - /url: https://tipcoengineering.com/partner
+              - generic [ref=e524]: 
+              - text: Partner With US
+      - generic [ref=e526]:
+        - heading "Products" [level=3] [ref=e527]: Products
+        - list [ref=e529]:
+          - listitem [ref=e530]:
+            - link " Mill Series" [ref=e531] [cursor=pointer]:
+              - /url: https://tipcoengineering.com/application/mill-series
+              - generic [ref=e532]: 
+              - text: Mill Series
+          - listitem [ref=e533]:
+            - link " Production Line" [ref=e534] [cursor=pointer]:
+              - /url: https://tipcoengineering.com/application/production-line
+              - generic [ref=e535]: 
+              - text: Production Line
+          - listitem [ref=e536]:
+            - link " laboratory Machines" [ref=e537] [cursor=pointer]:
+              - /url: https://tipcoengineering.com/application/laboratory-machines
+              - generic [ref=e538]: 
+              - text: laboratory Machines
+          - listitem [ref=e539]:
+            - link " Homogenizers" [ref=e540] [cursor=pointer]:
+              - /url: https://tipcoengineering.com/application/homogenizers
+              - generic [ref=e541]: 
+              - text: Homogenizers
+      - generic [ref=e543]:
+        - heading "Machine Series" [level=3] [ref=e544]: Machine Series
+        - list [ref=e546]:
+          - listitem [ref=e547]:
+            - link " C- Series" [ref=e548] [cursor=pointer]:
+              - /url: https://tipcoengineering.com/
+              - generic [ref=e549]: 
+              - text: C- Series
+          - listitem [ref=e550]:
+            - link " HS- Disperser Series" [ref=e551] [cursor=pointer]:
+              - /url: https://tipcoengineering.com/
+              - generic [ref=e552]: 
+              - text: HS- Disperser Series
+          - listitem [ref=e553]:
+            - link " HS- Homogenizers Series" [ref=e554] [cursor=pointer]:
+              - /url: https://tipcoengineering.com/
+              - generic [ref=e555]: 
+              - text: HS- Homogenizers Series
+          - listitem [ref=e556]:
+            - link " THM Series" [ref=e557] [cursor=pointer]:
+              - /url: https://tipcoengineering.com/
+              - generic [ref=e558]: 
+              - text: THM Series
+          - listitem [ref=e559]:
+            - link " Lab Series" [ref=e560] [cursor=pointer]:
+              - /url: https://tipcoengineering.com/
+              - generic [ref=e561]: 
+              - text: Lab Series
+      - generic [ref=e563]:
+        - heading "Contact Us" [level=3] [ref=e564]: Contact Us
+        - list [ref=e566]:
+          - listitem [ref=e567]:
+            - generic [ref=e568]: 
+            - paragraph [ref=e569]:
+              - text: Office 1
+              - text: Plot No. 1689, 1658 SECTOR-38, PHASE-1, RAI, INDUSTRIAL AERA, Sonipat, Haryana 131029
+          - listitem [ref=e570]:
+            - generic [ref=e571]: 
+            - paragraph [ref=e572]:
+              - link "1800 1020 229" [ref=e573] [cursor=pointer]:
+                - /url: tel:1800 1020 229
+          - listitem [ref=e574]:
+            - generic [ref=e575]: 
+            - paragraph [ref=e576]:
+              - link "mail@tipcoengineering.com" [ref=e577] [cursor=pointer]:
+                - /url: mailto:mail@tipcoengineering.com
+    - generic [ref=e579]:
+      - separator [ref=e580]
+      - generic [ref=e589]: © 2026 Tipco Engineering.
+  - list [ref=e590]:
+    - listitem [ref=e591]:
+      - generic [ref=e592]: 
+      - text: Call
+    - listitem [ref=e593]:
+      - generic [ref=e594]: 
+      - text: Enquire
+    - listitem [ref=e595]:
+      - generic [ref=e596]: 
+      - text: WhatsApp

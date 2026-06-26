@@ -1,0 +1,295 @@
+- generic [active]:
+  - banner [ref=e1]:
+    - list [ref=e5]:
+      - listitem [ref=e6]: +91 9879 091 953
+      - listitem [ref=e7]:
+        - link "ambicaboiler@gmail.com" [ref=e8] [cursor=pointer]:
+          - /url: mailto:ambicaboiler@gmail.com
+    - generic [ref=e10]:
+      - link "High Speed disperser" [ref=e12] [cursor=pointer]:
+        - /url: index.html
+        - img "High Speed disperser" [ref=e13]
+      - navigation [ref=e15]:
+        - list [ref=e16]:
+          - listitem [ref=e17]:
+            - link "Home" [ref=e18] [cursor=pointer]:
+              - /url: index.html
+          - listitem [ref=e19]:
+            - link "About" [ref=e20] [cursor=pointer]:
+              - /url: aboutus.html
+          - listitem [ref=e21]:
+            - link "Products" [ref=e22] [cursor=pointer]:
+              - /url: product.html
+          - listitem [ref=e23]:
+            - link "Chemical Machinery" [ref=e24] [cursor=pointer]:
+              - /url: chemical-process-machinery.html
+          - listitem [ref=e25]:
+            - link "Contact" [ref=e26] [cursor=pointer]:
+              - /url: contact.html
+  - generic [ref=e30]:
+    - generic [ref=e31]:
+      - generic:
+        - figure [ref=e32]:
+          - img [ref=e33]
+        - generic [ref=e35]:
+          - heading "We Offers" [level=2] [ref=e36]
+          - strong [ref=e37]: high speed dispersrer
+          - paragraph [ref=e38]: excellent mixing for paint and distemper
+    - generic [ref=e39]:
+      - generic:
+        - figure [ref=e40]:
+          - img "sigma mixer" [ref=e41]
+        - generic [ref=e43]:
+          - heading "We Are." [level=2] [ref=e44]
+          - strong [ref=e45]: Manufacturers of Sigma Mixer
+          - paragraph [ref=e46]: We have wide range of Sigma mixer for Paint, Plastic, Chemical, Agro chem Adheshive
+    - generic [ref=e47]:
+      - generic:
+        - figure [ref=e48]:
+          - img "chemical machinery" [ref=e49]
+        - generic [ref=e51]:
+          - heading "Chemical machinery" [level=2] [ref=e52]
+          - strong [ref=e53]: For Your All process Equipment
+          - paragraph [ref=e54]: We have wide range of product for process equipment
+    - generic [ref=e55]:
+      - generic:
+        - figure [ref=e56]:
+          - img [ref=e57]
+        - generic [ref=e59]:
+          - heading "We Offers" [level=2] [ref=e60]
+          - strong [ref=e61]: high speed dispersrer
+          - paragraph [ref=e62]: excellent mixing for paint and distemper
+    - generic [ref=e63]:
+      - generic:
+        - figure [ref=e64]:
+          - img "sigma mixer" [ref=e65]
+        - generic [ref=e67]:
+          - heading "We Are." [level=2] [ref=e68]
+          - strong [ref=e69]: Manufacturers of Sigma Mixer
+          - paragraph [ref=e70]: We have wide range of Sigma mixer for Paint, Plastic, Chemical, Agro chem Adheshive
+    - generic [ref=e71]:
+      - generic:
+        - figure [ref=e72]:
+          - img "chemical machinery" [ref=e73]
+        - generic [ref=e75]:
+          - heading "Chemical machinery" [level=2] [ref=e76]
+          - strong [ref=e77]: For Your All process Equipment
+          - paragraph [ref=e78]: We have wide range of product for process equipment
+    - generic [ref=e79]:
+      - generic:
+        - figure [ref=e80]:
+          - img [ref=e81]
+        - generic [ref=e83]:
+          - heading "We Offers" [level=2] [ref=e84]
+          - strong [ref=e85]: high speed dispersrer
+          - paragraph [ref=e86]: excellent mixing for paint and distemper
+  - generic [ref=e90]:
+    - heading "Welcome To Abster Equipment" [level=1] [ref=e91]
+    - paragraph [ref=e92]:
+      - text: Abster Equipment is a manufacturer of Process Equipments & Paint Manufacturing Machines, Paint Disperrser, Hydraulic dispersers,
+      - strong [ref=e93]: Hydraulic dissolver
+      - text: ", attritor,"
+      - strong [ref=e94]: sigma kneader
+      - text: ", pug mixer,"
+      - strong [ref=e95]: ribbon blender
+      - text: ", High Speed Disperser, high speed stirrer, double cone blender, Twin shaft Mixer, ribbon blender, ball mill, Liquid Mixing machinery,"
+      - link "Read More" [ref=e96] [cursor=pointer]:
+        - /url: aboutus.html
+  - generic [ref=e97]:
+    - heading "Products & Services" [level=2] [ref=e98]
+    - list [ref=e99]:
+      - listitem [ref=e100]:
+        - img [ref=e101]
+        - generic [ref=e102]:
+          - heading "DISPERSER & MIXERS" [level=3] [ref=e103]
+          - link "View more" [ref=e104] [cursor=pointer]:
+            - /url: high-speed-disperser.html
+      - listitem [ref=e105]:
+        - img "Pug mill for acryclic distemper, wall putty" [ref=e106]
+        - generic [ref=e107]:
+          - heading "PUG MILL AND RIBBON MIXER" [level=3] [ref=e108]
+          - link "View more" [ref=e109] [cursor=pointer]:
+            - /url: pug-mill.html
+      - listitem [ref=e110]:
+        - img "twin shaft ribbon paddle mixer" [ref=e111]
+        - generic [ref=e112]:
+          - heading "Twin Shaft Pug Mill" [level=3] [ref=e113]
+          - link "View more" [ref=e114] [cursor=pointer]:
+            - /url: twin-shaft-mixer.html
+      - listitem [ref=e115]:
+        - img "Ball mill for paint manufactruing" [ref=e116]
+        - generic [ref=e117]:
+          - heading "BALL MILL" [level=3] [ref=e118]
+          - link "View more" [ref=e119] [cursor=pointer]:
+            - /url: ballmill.html
+      - listitem [ref=e120]:
+        - img "sigma mixer machine" [ref=e121]
+        - generic [ref=e122]:
+          - heading "SIGMA MIXER" [level=3] [ref=e123]
+          - link "View more" [ref=e124] [cursor=pointer]:
+            - /url: sigma-mixer.html
+      - listitem [ref=e125]:
+        - img "vertical powder mixer blender" [ref=e126]
+        - generic [ref=e127]:
+          - heading "VERTICAL POWDER MIXER" [level=3] [ref=e128]
+          - link "View more" [ref=e129] [cursor=pointer]:
+            - /url: vertical-powder-mixer.html
+      - listitem [ref=e130]:
+        - img "resin manufacturing vessel" [ref=e131]
+        - generic [ref=e132]:
+          - heading "RESIN PLANT" [level=3] [ref=e133]
+          - link "View more" [ref=e134] [cursor=pointer]:
+            - /url: resin-plants.html
+      - listitem [ref=e135]:
+        - img [ref=e136]
+        - generic [ref=e137]:
+          - heading "HIGH SPEED DISPERSER WITH MIXING TANK" [level=3] [ref=e138]
+          - link "View more" [ref=e139] [cursor=pointer]:
+            - /url: high-speed-disperser.html
+  - generic [ref=e142]:
+    - list [ref=e143]:
+      - tab "Why Choose Us We are 25 years Old Company" [ref=e144] [cursor=pointer]:
+        - text: Why Choose Us
+        - strong [ref=e145]: We are 25 years Old Company
+        - figure [ref=e146]:
+          - img [ref=e147]
+      - tab "Features We manufacture machinery and equipment in wide range" [ref=e148] [cursor=pointer]:
+        - text: Features
+        - strong [ref=e149]: We manufacture machinery and equipment in wide range
+        - figure [ref=e150]:
+          - img [ref=e151]
+    - paragraph [ref=e155]: We are offering a range that is successfully serving the requirements of multinational companies as well as medium and small scale Indian industries. We Abster Equipment, are one of the reputed Company in manufacturing and exporting of high quality resin Plants, paint manufacturing Machinery and chemical machinery. We have vast experiace of 25 years in the filed of the paint, chemical and Pharma Industry. Ttoday we are successfully meeting the machinery requirements of multinational companies as well as medium and small scale Indian industries. With the aim to offer maximum customer satisfaction, we are designing and manufacturing a wide range of industrial machinery and processing accessories that are in sync with the international standards. Our range includes chemical vessels, Resi Plants, Paint Disperser, Condenser, Ribbon Blender, pilot Resin Plant, ball mill, high speed mixture, Storage tank, and jacketed Reaction vessel.
+  - generic [ref=e157]:
+    - heading "Process Equipments" [level=2] [ref=e158]
+    - paragraph [ref=e159]:
+      - text: We are also manufacuring oher process equipment related to paint and resin maufacturing like Dispereser,
+      - strong [ref=e160]: High Speed Stirrer
+      - text: ", Mixer, Agitator, Pug Mill, sigma Mixer, Alkyd resin Plant,"
+      - strong [ref=e161]: Polyester Resin Plant
+      - text: ", Chemical Maufacturing machine, Pharmaceutical machine."
+    - generic [ref=e164]:
+      - generic [ref=e166]:
+        - link "Twin Shaft Pug Mill" [ref=e167] [cursor=pointer]:
+          - /url: twin-shaft-pug-mill.html
+          - img "Twin Shaft Pug Mill" [ref=e168]
+        - link "Twin Shaft Pug Mill" [ref=e169] [cursor=pointer]:
+          - /url: twin-shaft-pug-mill.html
+      - generic [ref=e171]:
+        - link "High Speed Disperser" [ref=e172] [cursor=pointer]:
+          - /url: high-speed-disperser.html
+          - img "High Speed Disperser" [ref=e173]
+        - link "High Speed Disperser" [ref=e174] [cursor=pointer]:
+          - /url: high-speed-disperser.html
+      - generic [ref=e176]:
+        - link "hydraulic dissolver" [ref=e177] [cursor=pointer]:
+          - /url: Hydraulic-High-Speed-Dissolver-Mixer.html
+          - img "hydraulic dissolver" [ref=e178]
+        - link "Hydraulic Dissolver" [ref=e179] [cursor=pointer]:
+          - /url: Hydraulic-High-Speed-Dissolver-Mixer.html
+      - generic [ref=e181]:
+        - link "Ball Mill" [ref=e182] [cursor=pointer]:
+          - /url: ball-mill.html
+          - img "Ball Mill" [ref=e183]
+        - link "Ball Mill" [ref=e184] [cursor=pointer]:
+          - /url: ballmill.html
+      - generic [ref=e186]:
+        - link "High Speed Disperser" [ref=e187] [cursor=pointer]:
+          - /url: high-speed-disperser.html
+          - img "High Speed Disperser" [ref=e188]
+        - link "High Speed Disperser" [ref=e189] [cursor=pointer]:
+          - /url: high-speed-disperser.html
+      - generic [ref=e191]:
+        - link "Ribbon Mixer machine" [ref=e192] [cursor=pointer]:
+          - /url: ribbon-blender.html
+          - img "Ribbon Mixer machine" [ref=e193]
+        - link "Ribbon Mixer machine" [ref=e194] [cursor=pointer]:
+          - /url: ribbon-blender.html
+      - generic [ref=e196]:
+        - link "Sigma Mixer" [ref=e197] [cursor=pointer]:
+          - /url: sigma-mixer.html
+          - img "Sigma Mixer" [ref=e198]
+        - link "Sigma Mixer" [ref=e199] [cursor=pointer]:
+          - /url: sigma-mixer.html
+      - generic [ref=e201]:
+        - link "Rotary Air Lock Valve" [ref=e202] [cursor=pointer]:
+          - /url: resin-plants.html
+          - img "Rotary Air Lock Valve" [ref=e203]
+        - link "Resin Plant" [ref=e204] [cursor=pointer]:
+          - /url: resin-plants.html
+      - generic [ref=e206]:
+        - link "Twin Shaft Pug Mill" [ref=e207] [cursor=pointer]:
+          - /url: twin-shaft-pug-mill.html
+          - img "Twin Shaft Pug Mill" [ref=e208]
+        - link "Twin Shaft Pug Mill" [ref=e209] [cursor=pointer]:
+          - /url: twin-shaft-pug-mill.html
+      - generic [ref=e211]:
+        - link "High Speed Disperser" [ref=e212] [cursor=pointer]:
+          - /url: high-speed-disperser.html
+          - img "High Speed Disperser" [ref=e213]
+        - link "High Speed Disperser" [ref=e214] [cursor=pointer]:
+          - /url: high-speed-disperser.html
+      - generic [ref=e216]:
+        - link "hydraulic dissolver" [ref=e217] [cursor=pointer]:
+          - /url: Hydraulic-High-Speed-Dissolver-Mixer.html
+          - img "hydraulic dissolver" [ref=e218]
+        - link "Hydraulic Dissolver" [ref=e219] [cursor=pointer]:
+          - /url: Hydraulic-High-Speed-Dissolver-Mixer.html
+      - generic [ref=e221]:
+        - link "Ball Mill" [ref=e222] [cursor=pointer]:
+          - /url: ball-mill.html
+          - img "Ball Mill" [ref=e223]
+        - link "Ball Mill" [ref=e224] [cursor=pointer]:
+          - /url: ballmill.html
+      - generic [ref=e226]:
+        - link "High Speed Disperser" [ref=e227] [cursor=pointer]:
+          - /url: high-speed-disperser.html
+          - img "High Speed Disperser" [ref=e228]
+        - link "High Speed Disperser" [ref=e229] [cursor=pointer]:
+          - /url: high-speed-disperser.html
+      - generic [ref=e231]:
+        - link "Ribbon Mixer machine" [ref=e232] [cursor=pointer]:
+          - /url: ribbon-blender.html
+          - img "Ribbon Mixer machine" [ref=e233]
+        - link "Ribbon Mixer machine" [ref=e234] [cursor=pointer]:
+          - /url: ribbon-blender.html
+  - contentinfo [ref=e237]:
+    - generic [ref=e238]:
+      - list [ref=e240]:
+        - listitem [ref=e241]:
+          - link "High Speed Disperser" [ref=e242] [cursor=pointer]:
+            - /url: https://www.paintdisperser.com
+        - listitem [ref=e243]:
+          - link "Ball Mill" [ref=e244] [cursor=pointer]:
+            - /url: https://www.paintdisperser.com/ballmill.html
+        - listitem [ref=e245]:
+          - link "Sigma mixer" [ref=e246] [cursor=pointer]:
+            - /url: https://www.sigmamixermachine.com/
+        - listitem [ref=e247]:
+          - link "Sigma mixer Kneader" [ref=e248] [cursor=pointer]:
+            - /url: https://www.sigmamixerkneader.com/
+        - listitem [ref=e249]:
+          - link "Pug Mill" [ref=e250] [cursor=pointer]:
+            - /url: https://www.paintdisperser.com
+        - listitem [ref=e251]:
+          - link "Plough Shear Mixer" [ref=e252] [cursor=pointer]:
+            - /url: https://www.ploughshearmixer.in/
+        - listitem [ref=e253]:
+          - link "Drum Flaker" [ref=e254] [cursor=pointer]:
+            - /url: https://www.rotarydrumflaker.com/
+        - listitem [ref=e255]:
+          - link "Triple roller mill" [ref=e256] [cursor=pointer]:
+            - /url: https://abfeng.in/three-roller-mill-machine-application-and-working-principle/
+        - listitem [ref=e257]:
+          - link "High Speed Stirrer" [ref=e258] [cursor=pointer]:
+            - /url: https://www.paintdisperser.com
+        - listitem [ref=e259]:
+          - link "Alkyd Resin Plant" [ref=e260] [cursor=pointer]:
+            - /url: https://abfindia.co.in/
+        - listitem [ref=e261]:
+          - link "Ribbon Blender" [ref=e262] [cursor=pointer]:
+            - /url: https://www.ribbonblendermachine.com/
+      - list [ref=e264]:
+        - listitem [ref=e265]: 11D, Shyam Ujjawal Estate, Gate no.3, Opp. SBI Bank, GIDC, Phase - 1, Vatva, Ahmedabad-382445, Gujarat,India
+        - listitem [ref=e266]: +(91)9879091953
+        - listitem [ref=e267]: sales@abfindia.co.in
+      - paragraph [ref=e268]: "© 2026 Abster Equipment, Website Updated on: June 19, 2026"

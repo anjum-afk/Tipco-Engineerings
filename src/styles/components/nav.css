@@ -1,0 +1,6 @@
+@layer components {
+  .nav-link { font-size: 14px; font-weight: 600; color: var(--foreground); padding: 4px 2px; position: relative; transition: color var(--transition-fast); white-space: nowrap; }
+  .nav-link::after { content: ''; position: absolute; bottom: -2px; left: 0; width: 0; height: 2px; background: var(--brand); transition: width var(--transition-base); }
+  .nav-link:hover { color: var(--brand); }
+  .nav-link:hover::after { width: 100%; }
+}
