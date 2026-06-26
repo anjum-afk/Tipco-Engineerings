@@ -13,6 +13,7 @@ import BoardOfDirectors from './pages/BoardOfDirectors'
 import Career from './pages/Career'
 import Service from './pages/Service'
 import InfoPage from './pages/InfoPage'
+import NotFound from './pages/NotFound'
 
 function App() {
   return (
@@ -50,7 +51,7 @@ function App() {
           <Route path="/:category/:slug" element={<ProductPage />} />
 
           {/* 404 */}
-          <Route path="*" element={<InfoPage title="Page Not Found" intro="Sorry, the page you're looking for doesn't exist. Try browsing our products or contact us." />} />
+          <Route path="*" element={<NotFound />} />
         </Route>
       </Routes>
     </BrowserRouter>
