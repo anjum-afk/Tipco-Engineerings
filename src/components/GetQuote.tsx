@@ -23,7 +23,7 @@ export default function GetQuote() {
             <input className="form-input" placeholder="Company Name" value={form.company} onChange={set('company')} />
             <div className="flex gap-2">
               <div className="flex-shrink-0">
-                <select className="form-input h-full pr-2" style={{ width: 90 }}>
+                <select className="form-input h-full pr-2 w-20 sm:w-24">
                   <option value="+91">🇮🇳 +91</option>
                   <option value="+1">🇺🇸 +1</option>
                   <option value="+44">🇬🇧 +44</option>
@@ -39,7 +39,7 @@ export default function GetQuote() {
             value={form.message}
             onChange={set('message')}
           />
-          <div className="mt-4 p-3 bg-gray-50 border border-gray-200 rounded w-fit">
+          <div className="mt-4 p-3 bg-gray-50 border border-gray-200 rounded w-full max-w-[300px]">
             <div className="flex items-center gap-3 text-sm text-gray-600">
               <input type="checkbox" id="robot" className="w-4 h-4" />
               <label htmlFor="robot">I'm not a robot</label>

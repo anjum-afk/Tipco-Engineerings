@@ -11,7 +11,8 @@ export const CONTACT = {
   phasePurchase: '+91 7496962283',
   email: 'mail@tipcoengineering.com',
   whatsapp: 'https://api.whatsapp.com/send/?phone=+918826176988',
-  address: 'Plot No. 1689, 1658 SECTOR-38, PHASE-1, RAI, INDUSTRIAL AREA, Sonipat, Haryana 131029',
+  address: 'Plot No. 1689, 1658, Sector-38, Phase-1, Rai Industrial Area, Sonipat, Haryana 131029',
+  addressPune: 'Bhumkar Chowk, Keystone Altura, near Ginger Hotel, Mulshi, Wakad, Pimpri-Chinchwad, Maharashtra 411033',
   mapEmbed:
     'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d55885.43619134965!2d77.0671381255586!3d28.90310937168003!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390daf8c20439363%3A0x1188369c97ad3053!2sTipco%20Engineering%20India%20Pvt.%20Ltd.%20(Rai)!5e0!3m2!1sen!2sin!4v1643619552622!5m2!1sen!2sin',
 }

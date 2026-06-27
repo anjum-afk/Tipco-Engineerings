@@ -145,3 +145,9 @@
   --container-max: 1280px;
   --container-pad: clamp(16px, 4vw, 40px);
 }
+
+.scrollbar-hide {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+.scrollbar-hide::-webkit-scrollbar { display: none; }

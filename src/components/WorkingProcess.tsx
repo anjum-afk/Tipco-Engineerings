@@ -45,7 +45,7 @@ export default function WorkingProcess() {
               className="bg-white rounded-[10px] px-6 py-8 flex flex-col items-center text-center gap-4 transition-transform hover:-translate-y-1"
             >
               <img src={s.img} alt={s.label} className="w-16 h-16 object-contain" />
-              <h3 className="text-gray-800 font-semibold leading-snug" style={{ fontSize: '19px' }}>{s.label}</h3>
+              <h3 className="text-gray-800 font-semibold leading-snug text-base md:text-[17px]">{s.label}</h3>
             </div>
           ))}
         </div>

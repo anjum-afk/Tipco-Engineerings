@@ -22,13 +22,12 @@ export default function Clients() {
         <div className="flex justify-center mb-8">
           <span className="block h-1 w-10 rounded" style={{ background: '#007872' }} />
         </div>
-        <div className="grid grid-cols-3 sm:grid-cols-4 md:grid-cols-6 lg:grid-cols-8 gap-4">
+        <div className="grid grid-cols-2 sm:grid-cols-4 md:grid-cols-6 lg:grid-cols-8 gap-3 md:gap-4">
           {CLIENTS.map(c => {
             const ext = c.id >= 16 ? 'png' : 'jpg'
             return (
               <div key={c.id}
-                   className="bg-white rounded flex items-center justify-center p-2"
-                   style={{ height: 64 }}>
+                   className="bg-white rounded flex items-center justify-center p-2 h-14 sm:h-16">
                 <img
                   src={`https://tipcoengineering.com/public/uploads/client-${c.id}.${ext}`}
                   alt={`Client ${c.id}`}

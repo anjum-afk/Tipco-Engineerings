@@ -42,7 +42,7 @@ export default function Testimonials() {
     >
       <div className="absolute inset-0" style={{ background: 'rgba(8,30,30,0.84)' }} />
       <div className="relative z-10 max-w-2xl mx-auto px-6 text-center">
-        <div className="text-6xl font-serif leading-none mb-2" style={{ color: '#007872' }}>"</div>
+        <div className="text-4xl md:text-6xl font-serif leading-none mb-2" style={{ color: '#007872' }}>"</div>
         <img
           src={t.img}
           alt={t.name}

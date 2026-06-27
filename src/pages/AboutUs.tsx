@@ -2,13 +2,7 @@ import { Link } from 'react-router-dom'
 import PageBanner from '../components/PageBanner'
 import SectionHeader from '../components/SectionHeader'
 import GetQuote from '../components/GetQuote'
-
-const STATS = [
-  { value: '35+', label: 'Years of Expertise' },
-  { value: '90%', label: 'Jobs Done In-House' },
-  { value: '500+', label: 'Machines Installed' },
-  { value: '100%', label: 'Hassle-Free Commissioning' },
-]
+import StatsBar from '../components/StatsBar'
 
 export default function AboutUs() {
   return (
@@ -63,17 +57,7 @@ export default function AboutUs() {
         </div>
       </section>
 
-      {/* Stats band */}
-      <section className="py-12" style={{ background: '#186b6d' }}>
-        <div className="max-w-[1280px] mx-auto px-6 grid grid-cols-2 md:grid-cols-4 gap-6 text-center text-white">
-          {STATS.map(s => (
-            <div key={s.label}>
-              <div className="text-3xl md:text-4xl font-extrabold">{s.value}</div>
-              <div className="text-sm text-gray-200 mt-1">{s.label}</div>
-            </div>
-          ))}
-        </div>
-      </section>
+      <StatsBar />
 
       {/* Vision / Mission */}
       <section className="py-16 bg-gray-50">

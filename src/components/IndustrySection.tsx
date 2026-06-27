@@ -21,10 +21,13 @@ const PRODUCTION = [
 ]
 
 function CardGrid({ items, cols = 4 }: { items: typeof INDUSTRIES; cols?: number }) {
+  const gridClass = cols === 2
+    ? 'grid-cols-1 sm:grid-cols-2'
+    : 'grid-cols-2 md:grid-cols-4'
   return (
-    <div className={`grid gap-4 mt-4`} style={{ gridTemplateColumns: `repeat(${cols}, minmax(0,1fr))` }}>
+    <div className={`grid gap-3 md:gap-4 mt-4 ${gridClass}`}>
       {items.map(p => (
-        <Link key={p.label} to={p.href} className="img-card block" style={{ height: 160 }}>
+        <Link key={p.label} to={p.href} className="img-card block h-32 md:h-40">
           <img src={p.img} alt={p.label} className="w-full h-full object-cover" />
           <div className="img-card-label">{p.label}</div>
         </Link>
