@@ -732,7 +732,7 @@ function FullscreenMenu({
                       onMouseEnter={e => (e.currentTarget.style.color = '#fff')}
                       onMouseLeave={e => (e.currentTarget.style.color = 'rgba(255,255,255,0.72)')}
                     >
-                      <row.icon size={13} className="flex-shrink-0" style={{ opacity: 0.7 }} />
+                      <span className="flex-shrink-0 opacity-70"><row.icon size={13} /></span>
                       {row.label}
                     </Link>
                   ))}

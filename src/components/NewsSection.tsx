@@ -91,7 +91,7 @@ export default function NewsSection() {
 
           {/* Right stack of 3 smaller cards */}
           <div className="flex flex-col gap-4">
-            {rest.map((article, i) => (
+            {rest.map((article) => (
               <Link
                 key={article.slug}
                 to={article.href}
