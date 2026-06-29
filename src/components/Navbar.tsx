@@ -83,9 +83,12 @@ const SOLUTIONS_COLS: Col[] = [
     startHere: true,
     rows: [
       { icon: FlaskConical, label: 'Try before you buy', sub: 'Free lab trial on your actual product — book a session with our engineers.', to: '/contact-us' },
+      { icon: HelpCircle, label: 'Not sure which process?', sub: "Tell us your raw material and the particle size you need — our engineers will recommend the right machine.", to: '/contact-us' },
       { icon: Wrench, label: 'Talk to an engineer', sub: "Tell us your raw material and the particle size you need — our engineers will recommend the right machine.", to: '/contact-us' },
     ],
+    
   },
+  
 ]
 
 const PRODUCTS_COLS: Col[] = [
@@ -272,6 +275,7 @@ function TwoPanelMegaPanel({
   const cols = entry.cols!
   const [activeCategory, setActiveCategory] = useState(cols[0].heading)
   const activeCol = cols.find(c => c.heading === activeCategory) ?? cols[0]
+  const startHereCol = cols.find(c => c.startHere)
 
   return (
     <div
@@ -282,82 +286,51 @@ function TwoPanelMegaPanel({
     >
       <div className="max-w-[1280px] mx-auto flex" style={{ minHeight: '260px' }}>
         <div className="w-[210px] flex-shrink-0 border-r py-5" style={{ borderColor: 'var(--border)' }}>
-          {cols.map(col => {
-            const isActive = activeCategory === col.heading
+          {cols.filter(c => !c.startHere).map(col => {
+              const isActive = activeCategory === col.heading
 
-            const headingEl = col.sidebarDivider ? (
-              <div className="px-6 pt-4 pb-1 text-[10px] font-bold uppercase tracking-[0.18em]" style={{ color: 'var(--foreground-subtle)' }}>
-                {col.heading}
-              </div>
-            ) : col.headingTo ? (
-              <Link
-                to={col.headingTo}
-                onMouseEnter={() => setActiveCategory(col.heading)}
-                className="flex w-full items-center px-4 py-2.5 text-[13px] font-bold transition-colors border-l-2"
-                style={isActive
-                  ? { borderLeftColor: 'var(--brand)', color: 'var(--brand)', background: 'rgba(0,0,0,0.04)' }
-                  : { borderLeftColor: 'transparent', color: 'var(--foreground)', background: 'transparent' }}
-              >
-                {col.heading}
-              </Link>
-            ) : (
-              <button
-                onMouseEnter={e => {
-                  setActiveCategory(col.heading)
-                  if (!isActive) {
-                    e.currentTarget.style.color = 'var(--brand)'
-                    e.currentTarget.style.background = 'var(--surface)'
-                  }
-                }}
-                onClick={() => setActiveCategory(col.heading)}
-                className="w-full text-left px-6 py-2.5 text-[13.5px] font-medium transition-colors cursor-pointer border-l-2"
-                style={isActive
-                  ? { borderLeftColor: 'var(--brand)', color: 'var(--brand)', background: 'var(--surface)' }
-                  : { borderColor: 'transparent', color: 'var(--foreground-muted)', background: 'transparent' }}
-                onMouseLeave={e => {
-                  if (!isActive) {
-                    e.currentTarget.style.color = 'var(--foreground-muted)'
-                    e.currentTarget.style.background = 'transparent'
-                  }
-                }}
-              >
-                {col.heading}
-              </button>
-            )
+              const headingEl = col.sidebarDivider ? (
+                <div className="px-6 pt-4 pb-1 text-[10px] font-bold uppercase tracking-[0.18em]" style={{ color: 'var(--foreground-subtle)' }}>
+                  {col.heading}
+                </div>
+              ) : col.headingTo ? (
+                <Link
+                  to={col.headingTo}
+                  onMouseEnter={() => setActiveCategory(col.heading)}
+                  className="flex w-full items-center px-4 py-2.5 text-[13px] font-bold transition-colors border-l-2"
+                  style={isActive
+                    ? { borderLeftColor: 'var(--brand)', color: 'var(--brand)', background: 'rgba(0,0,0,0.04)' }
+                    : { borderLeftColor: 'transparent', color: 'var(--foreground)', background: 'transparent' }}
+                >
+                  {col.heading}
+                </Link>
+              ) : (
+                <button
+                  onMouseEnter={e => {
+                    setActiveCategory(col.heading)
+                    if (!isActive) {
+                      e.currentTarget.style.color = 'var(--brand)'
+                      e.currentTarget.style.background = 'var(--surface)'
+                    }
+                  }}
+                  onClick={() => setActiveCategory(col.heading)}
+                  className="w-full text-left px-6 py-2.5 text-[13.5px] font-medium transition-colors cursor-pointer border-l-2"
+                  style={isActive
+                    ? { borderLeftColor: 'var(--brand)', color: 'var(--brand)', background: 'var(--surface)' }
+                    : { borderColor: 'transparent', color: 'var(--foreground-muted)', background: 'transparent' }}
+                  onMouseLeave={e => {
+                    if (!isActive) {
+                      e.currentTarget.style.color = 'var(--foreground-muted)'
+                      e.currentTarget.style.background = 'transparent'
+                    }
+                  }}
+                >
+                  {col.heading}
+                </button>
+              )
 
-            const subLinks = col.sidebarPinned ? col.rows.map(row => (
-              <Link
-                key={row.label}
-                to={row.to}
-                className="flex items-center gap-2 pl-5 pr-4 py-1.5 text-[12px] transition-colors border-l-2"
-                style={{ color: 'var(--foreground-subtle)', borderLeftColor: 'transparent' }}
-                onMouseEnter={e => {
-                  e.currentTarget.style.color = 'var(--brand)'
-                  e.currentTarget.style.borderLeftColor = 'var(--brand)'
-                  e.currentTarget.style.background = 'rgba(0,0,0,0.04)'
-                }}
-                onMouseLeave={e => {
-                  e.currentTarget.style.color = 'var(--foreground-subtle)'
-                  e.currentTarget.style.borderLeftColor = 'transparent'
-                  e.currentTarget.style.background = 'transparent'
-                }}
-              >
-                <row.icon size={12} />
-                {row.label}
-              </Link>
-            )) : null
-
-            return col.sidebarCard ? (
-              <div key={col.heading} className="mx-3 mt-3 rounded-xl overflow-hidden border" style={{ borderColor: 'var(--border)' }}>
-                {headingEl}
-                {subLinks}
-              </div>
-            ) : (
-              <div key={col.heading}>
-                {headingEl}
-              </div>
-            )
-          })}
+              return <div key={col.heading}>{headingEl}</div>
+            })}
         </div>
 
         <div className="flex-1 px-8 py-6 flex flex-col">
@@ -417,47 +390,94 @@ function TwoPanelMegaPanel({
             </div>
             )
           })() : (
-            /* ── Generic card grid ── */
-            <div
-              className="grid gap-2.5 flex-1 content-start"
-              style={{
-                gridTemplateColumns: activeCol.rows.length <= 2
-                  ? '1fr'
-                  : activeCol.rows.length === 3
-                    ? '1fr 1fr 1fr'
-                    : activeCol.rows.length === 4
-                      ? '1fr 1fr'
-                      : '1fr 1fr 1fr',
-              }}
-            >
-              {activeCol.rows.map(row => (
-                <Link
-                  key={row.label}
-                  to={row.to}
-                  className="group block rounded-lg px-4 py-3.5 transition-all"
-                  style={{ border: '1px solid transparent' }}
-                  onMouseEnter={e => {
-                    e.currentTarget.style.borderColor = 'var(--brand)'
-                    e.currentTarget.style.background = 'var(--surface)'
-                    e.currentTarget.style.boxShadow = '0 1px 4px rgba(0,0,0,0.07)'
-                  }}
-                  onMouseLeave={e => {
-                    e.currentTarget.style.borderColor = 'transparent'
-                    e.currentTarget.style.background = 'transparent'
-                    e.currentTarget.style.boxShadow = 'none'
-                  }}
-                >
-                  <div className="text-[13.5px] font-semibold group-hover:text-brand mb-1 leading-tight flex items-center gap-1.5" style={{ color: 'var(--foreground)' }}>
-                    {row.label}
-                    {row.badge && (
-                      <span className="text-[9px] font-bold px-1.5 py-px rounded" style={{ background: 'var(--brand-light)', color: 'var(--brand)' }}>
-                        {row.badge}
-                      </span>
-                    )}
+            /* ── Two columns: options grid + Start Here column ── */
+            <div className="flex gap-6 flex-1">
+              {/* Left part — the options */}
+              <div
+                className="grid gap-2.5 flex-1 content-start"
+                style={{ gridTemplateColumns: activeCol.rows.length <= 2 ? '1fr' : '1fr 1fr' }}
+              >
+                {activeCol.rows.map(row => (
+                  <Link
+                    key={row.label}
+                    to={row.to}
+                    className="group block rounded-lg px-4 py-3.5 transition-all"
+                    style={{ border: '1px solid transparent' }}
+                    onMouseEnter={e => {
+                      e.currentTarget.style.borderColor = 'var(--brand)'
+                      e.currentTarget.style.background = 'var(--surface)'
+                      e.currentTarget.style.boxShadow = '0 1px 4px rgba(0,0,0,0.07)'
+                    }}
+                    onMouseLeave={e => {
+                      e.currentTarget.style.borderColor = 'transparent'
+                      e.currentTarget.style.background = 'transparent'
+                      e.currentTarget.style.boxShadow = 'none'
+                    }}
+                  >
+                    <div className="text-[13.5px] font-semibold group-hover:text-brand mb-1 leading-tight flex items-center gap-1.5" style={{ color: 'var(--foreground)' }}>
+                      {row.label}
+                      {row.badge && (
+                        <span className="text-[9px] font-bold px-1.5 py-px rounded" style={{ background: 'var(--brand-light)', color: 'var(--brand)' }}>
+                          {row.badge}
+                        </span>
+                      )}
+                    </div>
+                    <div className="text-[11.5px] leading-snug" style={{ color: 'var(--foreground-muted)' }}>{row.sub}</div>
+                  </Link>
+                ))}
+              </div>
+
+              {/* Right part — Start Here / start now */}
+              {startHereCol && (() => {
+                const TryIcon = startHereCol.rows[0].icon
+                const r0 = startHereCol.rows[0]
+                const r1 = startHereCol.rows[1]
+                return (
+                  <div className="w-[240px] flex-shrink-0 pl-6 flex flex-col" style={{ borderLeft: '1px solid var(--border)' }}>
+                    <div className="text-[10.5px] font-semibold uppercase tracking-widest mb-3" style={{ color: 'var(--foreground-subtle)' }}>
+                      {startHereCol.heading}
+                    </div>
+
+                    {/* Try before you buy */}
+                    <Link
+                      to={r0.to}
+                      className="group flex items-start gap-3 p-3 rounded-xl border transition-all"
+                      style={{ borderColor: 'var(--border)', background: 'var(--surface)' }}
+                      onMouseEnter={e => { e.currentTarget.style.borderColor = 'var(--brand)'; e.currentTarget.style.boxShadow = '0 1px 6px rgba(0,0,0,0.08)' }}
+                      onMouseLeave={e => { e.currentTarget.style.borderColor = 'var(--border)'; e.currentTarget.style.boxShadow = 'none' }}
+                    >
+                      <div className="w-9 h-9 rounded-lg flex-shrink-0 flex items-center justify-center" style={{ background: 'var(--brand-light)' }}>
+                        <TryIcon size={16} className="text-brand" />
+                      </div>
+                      <div>
+                        <div className="text-[12.5px] font-semibold leading-tight group-hover:text-brand transition-colors" style={{ color: 'var(--foreground)' }}>
+                          {r0.label}
+                        </div>
+                        <div className="text-[11px] leading-snug mt-0.5" style={{ color: 'var(--foreground-muted)' }}>
+                          {r0.sub}
+                        </div>
+                      </div>
+                    </Link>
+
+                    {/* Not sure which process? → Talk to an engineer */}
+                    <div className="mt-4 pt-4" style={{ borderTop: '1px solid var(--border)' }}>
+                      <div className="text-[12px] font-semibold mb-1" style={{ color: 'var(--foreground)' }}>
+                        Not sure which process?
+                      </div>
+                      <div className="text-[11px] leading-snug mb-2.5" style={{ color: 'var(--foreground-muted)' }}>
+                        {r1.sub}
+                      </div>
+                      <Link
+                        to={r1.to}
+                        className="inline-flex items-center gap-1.5 text-[12.5px] font-bold transition-all hover:gap-2.5"
+                        style={{ color: 'var(--brand)' }}
+                      >
+                        Talk to an engineer <ArrowUpRight size={13} />
+                      </Link>
+                    </div>
                   </div>
-                  <div className="text-[11.5px] leading-snug" style={{ color: 'var(--foreground-muted)' }}>{row.sub}</div>
-                </Link>
-              ))}
+                )
+              })()}
             </div>
           )}
 
