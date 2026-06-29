@@ -5,54 +5,77 @@ const CLIENTS = [
   { id: 28 }, { id: 29 },
 ]
 
+const ROW1 = CLIENTS.slice(0, 9)
+const ROW2 = CLIENTS.slice(9)
+
+function Logo({ c }: { c: { id: number } }) {
+  const ext = c.id >= 16 ? 'png' : 'jpg'
+  return (
+    <div
+      className="flex-shrink-0 flex items-center justify-center mx-5"
+      style={{ width: '130px', height: '56px' }}
+    >
+      <img
+        src={`https://tipcoengineering.com/public/uploads/client-${c.id}.${ext}`}
+        alt={`Client ${c.id}`}
+        className="max-h-10 max-w-[110px] w-auto object-contain"
+        style={{ filter: 'grayscale(1) opacity(0.55)', transition: 'filter 0.3s' }}
+        onMouseEnter={e => { (e.currentTarget as HTMLImageElement).style.filter = 'grayscale(0) opacity(1)' }}
+        onMouseLeave={e => { (e.currentTarget as HTMLImageElement).style.filter = 'grayscale(1) opacity(0.55)' }}
+        loading="lazy"
+      />
+    </div>
+  )
+}
+
 export default function Clients() {
   return (
-    <section
-      className="py-14 sm:py-16 relative"
-      style={{
-        backgroundImage: 'url(https://tipcoengineering.com/assets/demos/parallax_03.jpg)',
-        backgroundSize: 'cover',
-        backgroundPosition: 'center',
-        backgroundAttachment: 'fixed',
-      }}
-    >
-      <div className="absolute inset-0" style={{ background: 'rgba(10,22,22,0.86)' }} />
+    <section className="py-14 overflow-hidden" style={{ background: 'var(--background)' }}>
+      <style>{`
+        @keyframes marquee-ltr {
+          0%   { transform: translateX(-50%); }
+          100% { transform: translateX(0); }
+        }
+        @keyframes marquee-rtl {
+          0%   { transform: translateX(0); }
+          100% { transform: translateX(-50%); }
+        }
+        .marquee-track:hover { animation-play-state: paused; }
+      `}</style>
 
-      <div className="relative z-10 max-w-[1280px] mx-auto px-4 sm:px-6">
-        <div className="text-center mb-8 sm:mb-10">
-          <p className="text-[11px] font-bold uppercase tracking-[0.22em] mb-2" style={{ color: 'rgba(255,255,255,0.5)' }}>
-            Trusted Worldwide
-          </p>
-          <h2 className="text-2xl sm:text-3xl font-black text-white mb-3" style={{ letterSpacing: '-0.02em' }}>
-            Our Clients
-          </h2>
-          <div className="flex justify-center">
-            <span className="block h-1 w-10 rounded-full" style={{ background: 'var(--brand)' }} />
-          </div>
+      {/* Header */}
+      <div className="text-center mb-10 px-4">
+        <p className="text-[11px] font-bold uppercase tracking-[0.22em] mb-2" style={{ color: 'var(--brand)' }}>
+          Trusted Worldwide
+        </p>
+        <h2
+          className="font-black mb-3"
+          style={{ fontSize: 'clamp(24px, 3.5vw, 40px)', letterSpacing: '-0.02em', color: 'var(--foreground)' }}
+        >
+          Our Clients
+        </h2>
+        <div className="flex justify-center">
+          <span className="block h-1 w-10 rounded-full" style={{ background: 'var(--brand)' }} />
         </div>
+      </div>
 
-        <div className="grid grid-cols-3 sm:grid-cols-4 md:grid-cols-6 lg:grid-cols-8 xl:grid-cols-9 gap-2 sm:gap-3">
-          {CLIENTS.map(c => {
-            const ext = c.id >= 16 ? 'png' : 'jpg'
-            return (
-              <div
-                key={c.id}
-                className="rounded-xl flex items-center justify-center p-2 sm:p-3 h-14 sm:h-16
-                           transition-all duration-300 hover:scale-105 hover:-translate-y-1"
-                style={{
-                  background: 'rgba(255,255,255,0.92)',
-                  boxShadow: '0 2px 8px rgba(0,0,0,0.2)',
-                }}
-              >
-                <img
-                  src={`https://tipcoengineering.com/public/uploads/client-${c.id}.${ext}`}
-                  alt={`Client ${c.id}`}
-                  className="max-h-9 sm:max-h-10 max-w-full object-contain"
-                  loading="lazy"
-                />
-              </div>
-            )
-          })}
+      {/* Row 1 — left to right */}
+      <div className="overflow-hidden mb-6">
+        <div
+          className="marquee-track flex"
+          style={{ width: 'max-content', animation: 'marquee-ltr 30s linear infinite' }}
+        >
+          {[...ROW1, ...ROW1].map((c, i) => <Logo key={i} c={c} />)}
+        </div>
+      </div>
+
+      {/* Row 2 — right to left */}
+      <div className="overflow-hidden">
+        <div
+          className="marquee-track flex"
+          style={{ width: 'max-content', animation: 'marquee-rtl 24s linear infinite' }}
+        >
+          {[...ROW2, ...ROW2].map((c, i) => <Logo key={i} c={c} />)}
         </div>
       </div>
     </section>
