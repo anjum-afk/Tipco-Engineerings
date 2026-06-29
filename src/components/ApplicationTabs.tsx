@@ -1,8 +1,8 @@
-import { useState, useRef } from 'react'
+import { useState, useRef, useEffect, useLayoutEffect } from 'react'
 import { Link } from 'react-router-dom'
 import {
   ArrowUpRight, Factory, Cog, Layers,
-  Droplet, FlaskConical, Settings, Boxes, Gauge,
+  Droplet, FlaskConical, Settings, Boxes, Gauge, ChevronLeft, ChevronRight,
 } from 'lucide-react'
 import type { ComponentType } from 'react'
 
@@ -25,7 +25,7 @@ interface Tab {
   items: TabItem[]
   viewMore: string
   glow: string
-  accent: string         // active accent colour for badge/icon
+  accent: string
 }
 
 const TABS: Tab[] = [
@@ -56,8 +56,8 @@ const TABS: Tab[] = [
     description:
       'Tipco Engineering offers reliable solutions for paint, ink, glue, gel, and many other applications. Our expertise in assembly line balancing prevents production disruptions and keeps your throughput optimal.',
     items: [
-      { label: 'Mixing',  img: '/img/applicationimg/mixing.jpg',   href: '/application/mixing',  accent: '#f59e0b' },
-      { label: 'Milling', img: '/img/applicationimg/milling.png',  href: '/application/milling', accent: '#ef4444' },
+      { label: 'Mixing',  img: '/img/applicationimg/mixing.jpg',  href: '/application/mixing',  accent: '#f59e0b' },
+      { label: 'Milling', img: '/img/applicationimg/milling.png', href: '/application/milling', accent: '#ef4444' },
     ],
     viewMore: '/application/process',
     glow: 'rgba(124,58,237,0.5)',
@@ -83,37 +83,208 @@ const TABS: Tab[] = [
   },
 ]
 
-// Floating background icons — industry / process / production motifs
-const BG_ICONS: { Icon: LucideIcon; top: string; left: string; size: number; anim: string; delay: string; rot: number }[] = [
-  { Icon: Layers,       top: '6%',  left: '3%',  size: 78, anim: 'app-anim-float',     delay: '0s',   rot: -12 },
-  { Icon: Cog,          top: '14%', left: '90%', size: 104, anim: 'app-anim-spin',     delay: '0s',   rot: 0 },
-  { Icon: Factory,      top: '60%', left: '8%',  size: 92, anim: 'app-anim-drift',     delay: '1.2s', rot: 6 },
-  { Icon: Droplet,      top: '78%', left: '84%', size: 58, anim: 'app-anim-float',     delay: '2s',   rot: 10 },
-  { Icon: FlaskConical, top: '38%', left: '46%', size: 56, anim: 'app-anim-drift',     delay: '0.6s', rot: -8 },
-  { Icon: Settings,     top: '84%', left: '50%', size: 80, anim: 'app-anim-spin-rev',  delay: '0s',   rot: 0 },
-  { Icon: Boxes,        top: '4%',  left: '58%', size: 60, anim: 'app-anim-float',     delay: '1.6s', rot: 8 },
-  { Icon: Gauge,        top: '48%', left: '93%', size: 52, anim: 'app-anim-drift',     delay: '2.4s', rot: -6 },
+const BG_ICONS: { Icon: LucideIcon; top: string; left: string; size: number; anim: string; delay: string }[] = [
+  { Icon: Layers,       top: '8%',  left: '2%',  size: 80,  anim: 'app-anim-float',    delay: '0s'   },
+  { Icon: Cog,          top: '12%', left: '91%', size: 110, anim: 'app-anim-spin',     delay: '0s'   },
+  { Icon: Factory,      top: '62%', left: '7%',  size: 90,  anim: 'app-anim-drift',    delay: '1.2s' },
+  { Icon: Droplet,      top: '76%', left: '85%', size: 56,  anim: 'app-anim-float',    delay: '2s'   },
+  { Icon: FlaskConical, top: '40%', left: '47%', size: 54,  anim: 'app-anim-drift',    delay: '0.6s' },
+  { Icon: Settings,     top: '82%', left: '51%', size: 78,  anim: 'app-anim-spin-rev', delay: '0s'   },
+  { Icon: Boxes,        top: '5%',  left: '60%', size: 60,  anim: 'app-anim-float',    delay: '1.6s' },
+  { Icon: Gauge,        top: '50%', left: '94%', size: 50,  anim: 'app-anim-drift',    delay: '2.4s' },
 ]
+
+// ── Image row: fills space when few cards, shows ‹ › arrows when overflowing ──
+function ImageRow({ items, brokenImgs, onBroken }: {
+  items: TabItem[]
+  brokenImgs: Set<string>
+  onBroken: (src: string) => void
+}) {
+  const rowRef = useRef<HTMLDivElement>(null)
+  const [canScrollLeft, setCanScrollLeft]   = useState(false)
+  const [canScrollRight, setCanScrollRight] = useState(false)
+
+  function checkScroll() {
+    const el = rowRef.current
+    if (!el) return
+    setCanScrollLeft(el.scrollLeft > 4)
+    setCanScrollRight(el.scrollLeft < el.scrollWidth - el.clientWidth - 4)
+  }
+
+  useEffect(() => {
+    const el = rowRef.current
+    if (!el) return
+    checkScroll()
+    const ro = new ResizeObserver(checkScroll)
+    ro.observe(el)
+    el.addEventListener('scroll', checkScroll, { passive: true })
+    return () => { ro.disconnect(); el.removeEventListener('scroll', checkScroll) }
+  }, [items])
+
+  function scrollBy(dir: 1 | -1) {
+    const el = rowRef.current
+    if (!el) return
+    const cardW = el.querySelector('a')?.offsetWidth ?? 280
+    el.scrollBy({ left: dir * (cardW + 12), behavior: 'smooth' })
+  }
+
+  const CARD_H = 'clamp(260px, 32vw, 380px)'
+
+  return (
+    <div className="relative">
+      {/* Arrow: scroll left */}
+      <button
+        onClick={() => scrollBy(-1)}
+        disabled={!canScrollLeft}
+        className="absolute left-0 top-1/2 z-10 w-9 h-9 rounded-full flex items-center justify-center shadow-md transition-all duration-200 disabled:opacity-0 disabled:pointer-events-none cursor-pointer"
+        style={{ background: 'var(--background)', border: '1px solid var(--border)', color: 'var(--foreground)', transform: 'translateX(-50%) translateY(-50%)' }}
+      >
+        <ChevronLeft size={16} />
+      </button>
+
+      {/* Scrollable row */}
+      <div
+        ref={rowRef}
+        className="flex gap-3 overflow-x-auto scrollbar-none pb-2 -mr-4 sm:-mr-8 lg:-mr-14 pr-4 sm:pr-8 lg:pr-14"
+      >
+        {items.map((item, i) => (
+          <Link
+            key={item.label}
+            to={item.href}
+            className="tab-card-in group relative overflow-hidden rounded-xl"
+            style={{
+              flex: '1 1 0%',
+              minWidth: '220px',
+              height: CARD_H,
+              animationDelay: `${i * 80}ms`,
+            }}
+          >
+            <img
+              src={item.img}
+              alt={item.label}
+              className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+              onError={() => onBroken(item.img)}
+            />
+            <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/10 to-transparent" />
+            <div className="absolute inset-0 opacity-0 group-hover:opacity-20 transition-opacity duration-500" style={{ background: item.accent }} />
+            <div className="absolute bottom-0 left-0 right-0 p-4 flex items-end justify-between">
+              <div>
+                <span className="block h-0.5 mb-2.5 rounded-full w-0 group-hover:w-8 transition-all duration-300" style={{ background: item.accent }} />
+                <span className="font-display block text-white font-semibold tracking-tight" style={{ fontSize: 'clamp(13px, 1.6vw, 19px)' }}>
+                  {item.label}
+                </span>
+              </div>
+              {!brokenImgs.has(item.img) && (
+                <span
+                  className="w-8 h-8 rounded-full flex items-center justify-center text-white translate-y-2 opacity-0 group-hover:opacity-100 group-hover:translate-y-0 transition-all duration-300 flex-shrink-0"
+                  style={{ background: item.accent }}
+                >
+                  <ArrowUpRight size={14} />
+                </span>
+              )}
+            </div>
+          </Link>
+        ))}
+      </div>
+
+      {/* Arrow: scroll right */}
+      <button
+        onClick={() => scrollBy(1)}
+        disabled={!canScrollRight}
+        className="absolute right-0 top-1/2 z-10 w-9 h-9 rounded-full flex items-center justify-center shadow-md transition-all duration-200 disabled:opacity-0 disabled:pointer-events-none cursor-pointer"
+        style={{ background: 'var(--background)', border: '1px solid var(--border)', color: 'var(--foreground)', transform: 'translateX(50%) translateY(-50%)' }}
+      >
+        <ChevronRight size={16} />
+      </button>
+    </div>
+  )
+}
+
+// Each tab gets this many vh of scroll distance while the section is pinned
+const SCROLL_PER_TAB = 85
 
 export default function ApplicationTabs() {
   const [active, setActive] = useState(0)
-  const [animKey, setAnimKey] = useState(0)
-  const btnRefs = useRef<(HTMLButtonElement | null)[]>([])
+  const [brokenImgs, setBrokenImgs] = useState<Set<string>>(new Set())
+  const [containerH, setContainerH] = useState<number | undefined>(undefined)
+  const [pinned, setPinned] = useState(false)   // sticky-scroll only on larger screens
+  const sectionRef = useRef<HTMLElement>(null)
+  const panelRefs  = useRef<(HTMLDivElement | null)[]>([])
 
-  function switchTab(i: number) {
-    if (i === active) return
-    setActive(i)
-    setAnimKey(k => k + 1)
+  function markBroken(src: string) {
+    setBrokenImgs(prev => new Set(prev).add(src))
   }
 
   const tab = TABS[active]
 
-  return (
-    <section className="relative w-full overflow-hidden" style={{ background: 'var(--surface)' }}>
+  // Enable pinning only where there's room (desktop / tablet landscape)
+  useEffect(() => {
+    const mq = window.matchMedia('(min-width: 1024px)')
+    const update = () => setPinned(mq.matches)
+    update()
+    mq.addEventListener('change', update)
+    return () => mq.removeEventListener('change', update)
+  }, [])
 
-      {/* ── Animated icon background ──────────────────────────── */}
-      <div className="absolute inset-0 z-0" aria-hidden>
-        {/* Accent glow that shifts with the active tab */}
+  // Tab pills / arrows / dots → scroll to that tab's slot (or just set when not pinned)
+  function goTo(i: number) {
+    const clamped = Math.max(0, Math.min(i, TABS.length - 1))
+    const el = sectionRef.current
+    if (pinned && el) {
+      const total = el.offsetHeight - window.innerHeight
+      const progress = TABS.length > 1 ? clamped / (TABS.length - 1) : 0
+      const rectTop = el.getBoundingClientRect().top + window.scrollY
+      window.scrollTo({ top: rectTop + progress * total, behavior: 'smooth' })
+    } else {
+      setActive(clamped)
+    }
+  }
+
+  // Fit the container to the active panel's height (panels are stacked absolutely)
+  useLayoutEffect(() => {
+    function measure() {
+      const el = panelRefs.current[active]
+      if (el) setContainerH(el.offsetHeight)
+    }
+    measure()
+    const el = panelRefs.current[active]
+    const ro = new ResizeObserver(measure)
+    if (el) ro.observe(el)
+    window.addEventListener('resize', measure)
+    return () => { ro.disconnect(); window.removeEventListener('resize', measure) }
+  }, [active])
+
+  // While pinned, derive the active tab from how far we've scrolled through the section
+  useEffect(() => {
+    if (!pinned) return
+    function onScroll() {
+      const el = sectionRef.current
+      if (!el) return
+      const total = el.offsetHeight - window.innerHeight
+      if (total <= 0) return
+      const scrolled = Math.min(Math.max(-el.getBoundingClientRect().top, 0), total)
+      const progress = scrolled / total
+      const idx = Math.round(progress * (TABS.length - 1))
+      setActive(Math.max(0, Math.min(idx, TABS.length - 1)))
+    }
+    window.addEventListener('scroll', onScroll, { passive: true })
+    onScroll()
+    return () => window.removeEventListener('scroll', onScroll)
+  }, [pinned])
+
+  return (
+    <section
+      ref={sectionRef}
+      className="relative w-full"
+      style={{ height: pinned ? `${100 + (TABS.length - 1) * SCROLL_PER_TAB}vh` : undefined }}
+    >
+    <div
+      className={`relative w-full overflow-hidden ${pinned ? 'sticky top-0 h-screen flex flex-col justify-center' : ''}`}
+      style={{ background: 'var(--surface)' }}
+    >
+
+      {/* ── Animated icon background ─── */}
+      <div className="absolute inset-0 z-0 pointer-events-none" aria-hidden>
         <div
           className="absolute -top-1/4 -right-1/4 w-[60%] h-[120%] rounded-full transition-all duration-700"
           style={{ background: `radial-gradient(circle, ${tab.glow} 0%, transparent 65%)`, opacity: 0.18, filter: 'blur(40px)' }}
@@ -128,15 +299,7 @@ export default function ApplicationTabs() {
             <span
               key={i}
               className={`app-bg-icon ${b.anim}`}
-              style={{
-                top: b.top,
-                left: b.left,
-                animationDelay: b.delay,
-                color: tab.accent,
-                opacity: 0.08,
-                transition: 'color 0.7s ease',
-                ['--rot' as string]: `${b.rot}deg`,
-              } as React.CSSProperties}
+              style={{ top: b.top, left: b.left, animationDelay: b.delay, color: tab.accent, opacity: 0.08, transition: 'color 0.7s ease' } as React.CSSProperties}
             >
               <I size={b.size} />
             </span>
@@ -144,156 +307,140 @@ export default function ApplicationTabs() {
         })}
       </div>
 
-      {/* ── Content ───────────────────────────────────────────── */}
-      <div className="relative z-10 w-full px-4 sm:px-8 lg:px-14 py-12 lg:py-16">
-        <p className="font-display text-[11px] font-bold uppercase tracking-[0.3em] mb-7" style={{ color: 'var(--foreground-subtle)' }}>
+      {/* ── Header: eyebrow + tab pills + arrows ─── */}
+      <div className="relative z-10 px-4 sm:px-8 lg:px-14 pt-12 lg:pt-16 pb-6">
+        <p className="font-display text-[11px] font-bold uppercase tracking-[0.3em] mb-6" style={{ color: 'var(--foreground-subtle)' }}>
           Applications
         </p>
 
-        {/* ── Horizontal tab selector (one line) ── */}
-        <div className="flex gap-2.5 sm:gap-3 mb-9 overflow-x-auto pb-1 -mx-1 px-1">
-          {TABS.map((t, i) => {
-            const isActive = active === i
-            const Icon = t.icon
-            return (
-              <button
-                key={t.id}
-                ref={el => { btnRefs.current[i] = el }}
-                onClick={() => switchTab(i)}
-                className="group relative flex-1 min-w-[200px] flex items-center gap-3.5 rounded-xl text-left cursor-pointer outline-none transition-all duration-300 px-3.5 py-3"
-                    style={{
-                      background: isActive ? 'var(--surface)' : 'transparent',
-                      border: `1px solid ${isActive ? t.accent : 'var(--border)'}`,
-                      boxShadow: isActive ? `0 6px 20px ${t.glow}` : 'none',
-                    }}
+        <div className="flex items-center gap-3">
+          {/* Tab pills */}
+          <div className="flex flex-1 min-w-0 justify-between">
+            {TABS.map((t, i) => {
+              const isActive = active === i
+              const Icon = t.icon
+              return (
+                <button
+                  key={t.id}
+                  onClick={() => goTo(i)}
+                  className="relative flex-shrink-0 flex items-center gap-2.5 rounded-xl px-3.5 py-2.5 cursor-pointer outline-none transition-all duration-300"
+                  style={{
+                    background: isActive ? 'var(--background)' : 'transparent',
+                    border: `1px solid ${isActive ? t.accent : 'var(--border)'}`,
+                    boxShadow: isActive ? `0 4px 16px ${t.glow}` : 'none',
+                  }}
+                >
+                  <span
+                    className="flex-shrink-0 w-7 h-7 rounded-lg flex items-center justify-center transition-all duration-300"
+                    style={{ background: isActive ? t.accent : 'var(--surface)', border: isActive ? 'none' : '1px solid var(--border)' }}
                   >
-                    {/* Active accent bar */}
-                    <span
-                      className="absolute left-0 top-1/2 -translate-y-1/2 w-1 rounded-r-full transition-all duration-300"
-                      style={{ height: isActive ? '60%' : '0%', background: t.accent }}
-                    />
-                    <span
-                      className="flex-shrink-0 w-10 h-10 rounded-lg flex items-center justify-center transition-all duration-300"
-                      style={{
-                        background: isActive ? t.accent : 'var(--background)',
-                        border: isActive ? 'none' : '1px solid var(--border)',
-                      }}
-                    >
-                      <Icon
-                        size={18}
-                        style={{ color: isActive ? '#fff' : 'var(--foreground-subtle)' }}
-                      />
-                    </span>
-                    <span className="min-w-0">
-                      <span
-                        className="font-display block font-semibold leading-tight tracking-tight"
-                        style={{ fontSize: '15.5px', color: 'var(--foreground)' }}
-                      >
-                        {t.label}
-                      </span>
-                      <span
-                        className="block text-[11.5px] leading-tight mt-0.5 truncate"
-                        style={{ color: isActive ? t.accent : 'var(--foreground-subtle)' }}
-                      >
-                        {t.sublabel}
-                      </span>
-                    </span>
-                  </button>
-            )
-          })}
+                    <Icon size={14} style={{ color: isActive ? '#fff' : 'var(--foreground-subtle)' }} />
+                  </span>
+                  <span className="font-display font-semibold whitespace-nowrap" style={{ fontSize: '14px', color: isActive ? 'var(--foreground)' : 'var(--foreground-muted)' }}>
+                    {t.label}
+                  </span>
+                  {isActive && (
+                    <span className="hidden sm:block text-[11px]" style={{ color: t.accent }}>{t.sublabel}</span>
+                  )}
+                </button>
+              )
+            })}
+          </div>
+
+          {/* Prev / Next arrows */}
+          <div className="flex gap-1.5 flex-shrink-0">
+            <button
+              onClick={() => goTo(Math.max(0, active - 1))}
+              disabled={active === 0}
+              className="w-9 h-9 rounded-full flex items-center justify-center transition-all duration-200 disabled:opacity-30 cursor-pointer"
+              style={{ border: '1px solid var(--border)', background: 'var(--background)', color: 'var(--foreground)' }}
+            >
+              <ChevronLeft size={16} />
+            </button>
+            <button
+              onClick={() => goTo(Math.min(TABS.length - 1, active + 1))}
+              disabled={active === TABS.length - 1}
+              className="w-9 h-9 rounded-full flex items-center justify-center transition-all duration-200 disabled:opacity-30 cursor-pointer"
+              style={{ border: '1px solid var(--border)', background: 'var(--background)', color: 'var(--foreground)' }}
+            >
+              <ChevronRight size={16} />
+            </button>
+          </div>
         </div>
 
-        {/* ── Two columns: text content + images ── */}
-        <div className="grid grid-cols-1 lg:grid-cols-[minmax(0,38%)_minmax(0,1fr)] gap-8 lg:gap-12 items-start">
-
-          {/* ════ LEFT — text content ════ */}
-          <div className="lg:sticky lg:top-24">
-            {/* Heading + description */}
-            <h2
-              key={`h-${active}`}
-              className="font-display tab-desc-in font-bold leading-[1.05]"
-              style={{ fontSize: 'clamp(28px, 3.6vw, 44px)', letterSpacing: '-0.03em', color: 'var(--foreground)' }}
-            >
-              {tab.heading}
-            </h2>
-            <p
-              key={`d-${active}`}
-              className="tab-desc-in mt-4 text-[14px] leading-relaxed"
-              style={{ animationDelay: '60ms', color: 'var(--foreground-muted)' }}
-            >
-              {tab.description}
-            </p>
-
-            <Link
-              to={tab.viewMore}
-              className="font-display inline-flex items-center gap-2 text-[13px] font-semibold tracking-wide mt-6 group"
-              style={{ color: 'var(--brand)' }}
-            >
-              View All
-              <span
-                className="w-7 h-7 rounded-full flex items-center justify-center transition-all duration-300 group-hover:scale-110"
-                style={{ border: '1.5px solid var(--brand)', color: 'var(--brand)' }}
-              >
-                <ArrowUpRight size={13} />
-              </span>
-            </Link>
-          </div>
-
-          {/* ════ RIGHT — image cards ════ */}
-          <div
-            key={`grid-${animKey}`}
-            className="grid grid-cols-1 sm:grid-cols-2 gap-3"
-          >
-            {tab.items.map((item, i) => (
-              <Link
-                key={item.label}
-                to={item.href}
-                className="tab-card-in group relative block overflow-hidden rounded-xl"
-                style={{
-                  height: 'clamp(180px, 22vw, 250px)',
-                  animationDelay: `${i * 90}ms`,
-                }}
-              >
-                <img
-                  src={item.img}
-                  alt={item.label}
-                  className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 ease-[cubic-bezier(0.25,0.46,0.45,0.94)] group-hover:scale-110"
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/75 via-black/15 to-transparent" />
-                <div
-                  className="absolute inset-0 opacity-0 group-hover:opacity-25 transition-opacity duration-500"
-                  style={{ background: item.accent }}
-                />
-                <span
-                  className="absolute top-4 right-4 font-black leading-none select-none"
-                  style={{ fontSize: 'clamp(52px, 8vw, 96px)', color: 'rgba(255,255,255,0.06)', letterSpacing: '-0.04em' }}
-                >
-                  {String(i + 1).padStart(2, '0')}
-                </span>
-                <div className="absolute bottom-0 left-0 right-0 p-5 flex items-end justify-between">
-                  <div>
-                    <span
-                      className="block h-0.5 mb-3 rounded-full w-0 group-hover:w-9 transition-all duration-300"
-                      style={{ background: item.accent }}
-                    />
-                    <span className="font-display block text-white font-semibold tracking-tight" style={{ fontSize: 'clamp(15px, 1.8vw, 21px)' }}>
-                      {item.label}
-                    </span>
-                  </div>
-                  <span
-                    className="w-9 h-9 rounded-full flex items-center justify-center text-white translate-y-2 opacity-0 group-hover:opacity-100 group-hover:translate-y-0 transition-all duration-300"
-                    style={{ background: item.accent }}
-                  >
-                    <ArrowUpRight size={16} />
-                  </span>
-                </div>
-              </Link>
-            ))}
-          </div>
-
+        {/* Progress dots */}
+        <div className="flex gap-1.5 mt-4">
+          {TABS.map((t, i) => (
+            <button
+              key={t.id}
+              onClick={() => goTo(i)}
+              className="h-1 rounded-full transition-all duration-400 cursor-pointer"
+              style={{
+                width: active === i ? '28px' : '8px',
+                background: active === i ? t.accent : 'var(--border)',
+              }}
+            />
+          ))}
         </div>
       </div>
 
+      {/* ── Vertical slide panels (scroll down → next comes up) ─── */}
+      <div
+        className="relative z-10 transition-[height] duration-500 ease-[cubic-bezier(0.22,1,0.36,1)]"
+        style={{ height: containerH }}
+      >
+        {TABS.map((t, ti) => {
+          const offset = ti - active            // <0 = passed (exit up), 0 = active, >0 = upcoming (waiting below)
+          return (
+            <div
+              key={t.id}
+              ref={el => { panelRefs.current[ti] = el }}
+              className="absolute top-0 left-0 right-0 px-4 sm:px-8 lg:px-14 pb-14 transition-all duration-[600ms] ease-[cubic-bezier(0.22,1,0.36,1)]"
+              style={{
+                transform: offset === 0 ? 'translateY(0)' : offset < 0 ? 'translateY(-48px)' : 'translateY(48px)',
+                opacity: offset === 0 ? 1 : 0,
+                pointerEvents: offset === 0 ? 'auto' : 'none',
+              }}
+            >
+              {/* Two-column: text left, images right */}
+              <div className="grid grid-cols-1 lg:grid-cols-[minmax(0,34%)_minmax(0,1fr)] gap-8 lg:gap-10 items-center">
+
+                {/* LEFT — text */}
+                <div>
+                  <h2
+                    className="font-display font-bold leading-[1.05]"
+                    style={{ fontSize: 'clamp(28px, 3.6vw, 44px)', letterSpacing: '-0.03em', color: 'var(--foreground)' }}
+                  >
+                    {t.heading}
+                  </h2>
+                  <p className="mt-4 text-[14px] leading-relaxed" style={{ color: 'var(--foreground-muted)' }}>
+                    {t.description}
+                  </p>
+                  <Link
+                    to={t.viewMore}
+                    className="font-display inline-flex items-center gap-2 text-[13px] font-semibold tracking-wide mt-6 group"
+                    style={{ color: 'var(--brand)' }}
+                  >
+                    View All
+                    <span
+                      className="w-7 h-7 rounded-full flex items-center justify-center transition-all duration-300 group-hover:scale-110"
+                      style={{ border: '1.5px solid var(--brand)', color: 'var(--brand)' }}
+                    >
+                      <ArrowUpRight size={13} />
+                    </span>
+                  </Link>
+                </div>
+
+                {/* RIGHT — image cards: fill space when few, arrows when overflowing */}
+                <ImageRow items={t.items} brokenImgs={brokenImgs} onBroken={markBroken} />
+
+              </div>
+            </div>
+          )
+        })}
+      </div>
+
+    </div>
     </section>
   )
 }
