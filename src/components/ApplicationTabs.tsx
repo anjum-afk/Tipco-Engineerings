@@ -313,37 +313,41 @@ export default function ApplicationTabs() {
           Applications
         </p>
 
-        {/* Full-width equal-division tab bar (apollo-style) */}
-        <div
-          className="flex w-full overflow-hidden"
-          style={{ borderTop: '1px solid var(--border)', borderBottom: '1px solid var(--border)' }}
-        >
-          {TABS.map((t, i) => {
-            const isActive = active === i
-            const Icon = t.icon
-            return (
-              <button
-                key={t.id}
-                onClick={() => goTo(i)}
-                className="flex-1 flex items-center justify-center gap-2.5 py-4 px-3 cursor-pointer transition-all duration-300 outline-none"
-                style={{
-                  background: isActive ? t.accent : 'var(--surface)',
-                  borderRight: i < TABS.length - 1 ? '1px solid var(--border)' : 'none',
-                }}
-              >
-                <Icon
-                  size={15}
-                  style={{ color: isActive ? '#fff' : 'var(--foreground-subtle)', flexShrink: 0 }}
-                />
-                <span
-                  className="font-bold uppercase tracking-[0.18em] whitespace-nowrap"
-                  style={{ fontSize: '11px', color: isActive ? '#fff' : 'var(--foreground-muted)' }}
+        {/* Segmented tab bar — contained width, gap between options, gradient bg */}
+        <div className="px-4 sm:px-8 lg:px-14">
+          <div
+            className="flex gap-2 p-1.5 rounded-2xl"
+            style={{
+              background: 'linear-gradient(135deg, rgba(20,184,166,0.08) 0%, rgba(124,58,237,0.05) 50%, rgba(249,115,22,0.08) 100%)',
+              border: '1px solid var(--border)',
+            }}
+          >
+            {TABS.map((t, i) => {
+              const isActive = active === i
+              const Icon = t.icon
+              return (
+                <button
+                  key={t.id}
+                  onClick={() => goTo(i)}
+                  className="flex-1 flex items-center justify-center gap-2 py-3 px-4 rounded-xl cursor-pointer transition-all duration-300 outline-none"
+                  style={{
+                    background: isActive
+                      ? `linear-gradient(135deg, ${t.accent} 0%, ${t.accent}bb 100%)`
+                      : 'transparent',
+                    boxShadow: isActive ? `0 4px 14px ${t.glow}` : 'none',
+                  }}
                 >
-                  {t.label}
-                </span>
-              </button>
-            )
-          })}
+                  <Icon size={14} style={{ color: isActive ? '#fff' : 'var(--foreground-subtle)', flexShrink: 0 }} />
+                  <span
+                    className="font-bold uppercase tracking-[0.16em] whitespace-nowrap"
+                    style={{ fontSize: '11px', color: isActive ? '#fff' : 'var(--foreground-muted)' }}
+                  >
+                    {t.label}
+                  </span>
+                </button>
+              )
+            })}
+          </div>
         </div>
       </div>
 
