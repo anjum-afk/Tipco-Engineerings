@@ -114,11 +114,11 @@ export default function ApplicationTabs() {
   const tab = TABS[active]
 
   return (
-    <section className="w-full overflow-hidden" style={{ background: '#0f172a' }}>
+    <section className="w-full overflow-hidden" style={{ background: 'var(--surface)' }}>
 
       {/* ── Slim tab selector bar ─────────────────────────────── */}
       <div className="w-full px-4 sm:px-8 lg:px-14 pt-10 pb-6">
-        <p className="text-[10.5px] font-bold uppercase tracking-[0.25em] mb-5" style={{ color: 'rgba(255,255,255,0.4)' }}>
+        <p className="text-[10.5px] font-bold uppercase tracking-[0.25em] mb-5" style={{ color: 'var(--foreground-subtle)' }}>
           Applications
         </p>
 
@@ -134,8 +134,8 @@ export default function ApplicationTabs() {
                 className="relative flex-1 overflow-hidden cursor-pointer outline-none rounded-xl"
                 style={{
                   height: '52px',
-                  background: isActive ? 'transparent' : 'rgba(255,255,255,0.06)',
-                  border: isActive ? 'none' : '1px solid rgba(255,255,255,0.1)',
+                  background: isActive ? 'transparent' : 'var(--background)',
+                  border: isActive ? 'none' : '1px solid var(--border)',
                   boxShadow: isActive ? `0 4px 24px ${t.glow}, 0 2px 8px rgba(0,0,0,0.2)` : 'none',
                   transition: 'box-shadow 0.4s ease, background 0.3s ease',
                 }}
@@ -178,15 +178,15 @@ export default function ApplicationTabs() {
                 >
                   <span
                     className="text-[10px] font-bold tracking-widest hidden sm:block"
-                    style={{ color: isActive ? 'rgba(255,255,255,0.5)' : 'rgba(255,255,255,0.3)' }}
+                    style={{ color: isActive ? 'rgba(255,255,255,0.5)' : 'var(--foreground-subtle)' }}
                   >
                     {t.num}
                   </span>
                   <span
-                    className="font-bold text-white whitespace-nowrap"
+                    className="font-bold whitespace-nowrap"
                     style={{
                       fontSize: 'clamp(12px, 1.5vw, 14.5px)',
-                      opacity: isActive ? 1 : 0.55,
+                      color: isActive ? '#fff' : 'var(--foreground)',
                       letterSpacing: '0.01em',
                     }}
                   >
@@ -253,7 +253,7 @@ export default function ApplicationTabs() {
         className={`grid gap-3 px-4 sm:px-8 lg:px-14 pb-10 ${
           tab.cols === 2 ? 'grid-cols-1 sm:grid-cols-2' : 'grid-cols-2 lg:grid-cols-4'
         }`}
-        style={{ background: '#0f172a' }}
+        style={{ background: 'var(--surface)' }}
       >
         {tab.items.map((item, i) => (
           <Link

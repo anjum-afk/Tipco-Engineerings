@@ -33,7 +33,8 @@ interface Row {
 interface Col {
   heading: string
   rows: Row[]
-  sidebarPinned?: boolean  // pin rows as sub-links in the sidebar
+  sidebarPinned?: boolean   // pin rows as sub-links in the sidebar
+  sidebarDivider?: boolean  // render as a non-interactive section label
 }
 
 interface FooterLink { label: string; to: string }
@@ -73,10 +74,19 @@ const SOLUTIONS_COLS: Col[] = [
   },
   {
     heading: 'Start Here',
-    sidebarPinned: true,
+    sidebarDivider: true,
+    rows: [],
+  },
+  {
+    heading: 'Talk to an engineer',
+    rows: [
+      { icon: Wrench, label: 'Talk to an engineer', sub: "Tell us your raw material and target particle size — we'll recommend the right machine.", to: '/contact-us' },
+    ],
+  },
+  {
+    heading: 'Try before you buy',
     rows: [
       { icon: FlaskConical, label: 'Try before you buy', sub: 'Free lab trial on your actual product — book a session with our engineers.', to: '/contact-us' },
-      { icon: Wrench, label: 'Talk to an engineer', sub: "Tell us your raw material and target particle size — we'll recommend the right machine.", to: '/contact-us', gray: true },
     ],
   },
 ]
@@ -277,51 +287,40 @@ function TwoPanelMegaPanel({
         <div className="w-[210px] flex-shrink-0 border-r py-5" style={{ borderColor: 'var(--border)' }}>
           {cols.map(col => (
             <div key={col.heading}>
-              <button
-                onMouseEnter={e => {
-                  setActiveCategory(col.heading)
-                  if (activeCategory !== col.heading) {
-                    e.currentTarget.style.color = 'var(--brand)'
-                    e.currentTarget.style.background = 'var(--surface)'
-                  }
-                }}
-                onClick={() => setActiveCategory(col.heading)}
-                className="w-full text-left px-6 py-2.5 text-[13.5px] font-medium transition-colors cursor-pointer border-l-2"
-                style={activeCategory === col.heading
-                  ? { borderLeftColor: 'var(--brand)', color: 'var(--brand)', background: 'var(--surface)' }
-                  : { borderColor: 'transparent', color: 'var(--foreground-muted)', background: 'transparent' }}
-                onMouseLeave={e => {
-                  if (activeCategory !== col.heading) {
-                    e.currentTarget.style.color = 'var(--foreground-muted)'
-                    e.currentTarget.style.background = 'transparent'
-                  }
-                }}
-              >
-                {col.heading}
-              </button>
-
-              {/* Pinned sub-links shown directly in sidebar */}
-              {col.sidebarPinned && col.rows.map(row => (
-                <Link
-                  key={row.label}
-                  to={row.to}
-                  className="flex items-center gap-2 pl-8 pr-4 py-2 text-[12px] transition-colors"
-                  style={{ color: 'var(--foreground-subtle)', borderLeft: '2px solid transparent' }}
-                  onMouseEnter={e => {
-                    e.currentTarget.style.color = 'var(--brand)'
-                    e.currentTarget.style.borderLeftColor = 'var(--brand)'
-                    e.currentTarget.style.background = 'var(--surface)'
-                  }}
-                  onMouseLeave={e => {
-                    e.currentTarget.style.color = 'var(--foreground-subtle)'
-                    e.currentTarget.style.borderLeftColor = 'transparent'
-                    e.currentTarget.style.background = 'transparent'
-                  }}
-                >
-                  <row.icon size={12} />
-                  {row.label}
-                </Link>
-              ))}
+              {col.sidebarDivider
+                ? (
+                  <div
+                    className="px-6 pt-4 pb-1 text-[10px] font-bold uppercase tracking-[0.18em]"
+                    style={{ color: 'var(--foreground-subtle)' }}
+                  >
+                    {col.heading}
+                  </div>
+                )
+                : (
+                  <button
+                    onMouseEnter={e => {
+                      setActiveCategory(col.heading)
+                      if (activeCategory !== col.heading) {
+                        e.currentTarget.style.color = 'var(--brand)'
+                        e.currentTarget.style.background = 'var(--surface)'
+                      }
+                    }}
+                    onClick={() => setActiveCategory(col.heading)}
+                    className="w-full text-left px-6 py-2.5 text-[13.5px] font-medium transition-colors cursor-pointer border-l-2"
+                    style={activeCategory === col.heading
+                      ? { borderLeftColor: 'var(--brand)', color: 'var(--brand)', background: 'var(--surface)' }
+                      : { borderColor: 'transparent', color: 'var(--foreground-muted)', background: 'transparent' }}
+                    onMouseLeave={e => {
+                      if (activeCategory !== col.heading) {
+                        e.currentTarget.style.color = 'var(--foreground-muted)'
+                        e.currentTarget.style.background = 'transparent'
+                      }
+                    }}
+                  >
+                    {col.heading}
+                  </button>
+                )
+              }
             </div>
           ))}
         </div>

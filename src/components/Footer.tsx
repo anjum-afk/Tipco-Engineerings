@@ -64,8 +64,10 @@ export default function Footer() {
             <div className="flex flex-wrap gap-2">
               {SOCIAL_LINKS.map(({ href, d, label, color }) => (
                 <a key={label} href={href} target="_blank" rel="noopener noreferrer" aria-label={label}
-                   className="w-9 h-9 rounded-full flex items-center justify-center text-white transition-all hover:scale-110 hover:brightness-110 shadow-sm"
-                   style={{ background: color }}>
+                   className="w-9 h-9 rounded-full flex items-center justify-center text-white transition-all hover:scale-110 shadow-sm group"
+                   style={{ background: 'rgba(255,255,255,0.08)' }}
+                   onMouseEnter={e => { (e.currentTarget as HTMLElement).style.background = color }}
+                   onMouseLeave={e => { (e.currentTarget as HTMLElement).style.background = 'rgba(255,255,255,0.08)' }}>
                   <svg viewBox="0 0 24 24" className="w-4 h-4 fill-current"><path d={d} /></svg>
                 </a>
               ))}
@@ -110,7 +112,7 @@ export default function Footer() {
                 <a href="mailto:mail@tipcoengineering.com" className="hover:text-white transition-colors break-all">mail@tipcoengineering.com</a>
               </li>
               <li className="flex gap-2 items-center">
-                <svg viewBox="0 0 24 24" className="w-4 h-4 flex-shrink-0 fill-current" style={{ color: '#25D366' }}>
+                <svg viewBox="0 0 24 24" width="16" height="16" className="flex-shrink-0" style={{ fill: '#25D366' }}>
                   <path d={WA_ICON} />
                 </svg>
                 <a href="https://api.whatsapp.com/send/?phone=+918826176988" target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors">
