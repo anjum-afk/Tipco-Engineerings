@@ -558,7 +558,7 @@ function FsSearch({ onClose }: { onClose: () => void }) {
   }
 
   return (
-    <div className="relative px-8 md:px-12 mt-5" style={{ zIndex: 200 }}>
+    <div className="relative px-6 sm:px-8 md:px-12 mt-5" style={{ zIndex: 200 }}>
       <div
         className="flex items-center gap-3 rounded-2xl px-4"
         style={{
@@ -587,7 +587,7 @@ function FsSearch({ onClose }: { onClose: () => void }) {
 
       {results.length > 0 && (
         <div
-          className="absolute left-8 right-8 md:left-12 md:right-12 top-[calc(100%+8px)] rounded-2xl overflow-hidden shadow-2xl"
+          className="absolute left-6 right-6 sm:left-8 sm:right-8 md:left-12 md:right-12 top-[calc(100%+8px)] rounded-2xl overflow-hidden shadow-2xl"
           style={{ background: 'rgba(255,255,255,0.97)', border: '1px solid rgba(0,120,114,0.12)' }}
         >
           {results.map((r, i) => {
@@ -633,7 +633,6 @@ function FullscreenMenu({
   const [activeKey, setActiveKey] = useState<string | null>(null)
   const navigate = useNavigate()
   const activeEntry = NAV.find(n => n.key === activeKey) ?? null
-  const previewRows = activeEntry?.cols?.flatMap(c => c.rows).slice(0, 6) ?? []
 
   // Reset selection when menu closes
   useEffect(() => {
@@ -790,12 +789,12 @@ function FullscreenMenu({
       {/* ── Main content ────────────────────────────── */}
       {/* onMouseLeave on the whole area clears selection when mouse exits both columns */}
       <div
-        className="relative z-10 flex h-[calc(100vh-160px)] px-8 md:px-12 pt-4 pb-8 gap-10"
+        className="relative z-10 flex h-[calc(100dvh-150px)] px-6 sm:px-8 lg:px-12 pt-2 pb-8 gap-6 lg:gap-12"
         onMouseLeave={() => setActiveKey(null)}
       >
 
         {/* Left: nav items */}
-        <div className="flex flex-col justify-center gap-1 flex-shrink-0 overflow-y-auto" style={{ minWidth: '260px' }}>
+        <div className="flex flex-col justify-start md:justify-center gap-0.5 w-full md:w-[260px] lg:w-[300px] md:flex-shrink-0 overflow-y-auto pb-24 md:pb-0">
           {NAV.map((entry, i) => (
             <div
               key={entry.key}
@@ -852,33 +851,43 @@ function FullscreenMenu({
                 )}
               </button>
 
-              {/* Mobile inline sub-items — only below lg where right panel is hidden */}
+              {/* Mobile inline sub-items — grouped by category; below md where the preview panel is hidden */}
               {activeKey === entry.key && entry.cols && (
-                <div className="lg:hidden pb-2 pl-1">
-                  {entry.cols.slice(0, 2).flatMap(col => col.rows).slice(0, 5).map(row => (
-                    <Link
-                      key={row.label}
-                      to={row.to}
-                      onClick={onClose}
-                      className="flex items-center gap-2.5 py-2 text-[13px] font-medium"
-                      style={{ color: 'rgba(255,255,255,0.72)' }}
-                      onMouseEnter={e => (e.currentTarget.style.color = '#fff')}
-                      onMouseLeave={e => (e.currentTarget.style.color = 'rgba(255,255,255,0.72)')}
-                    >
-                      <span className="flex-shrink-0 opacity-70"><row.icon size={13} /></span>
-                      {row.label}
-                    </Link>
+                <div className="md:hidden pb-3 pl-1">
+                  {entry.cols.filter(c => !c.startHere).map(col => (
+                    <div key={col.heading} className="mb-3">
+                      <p className="text-[10px] font-bold uppercase tracking-[0.18em] mb-1" style={{ color: 'rgba(255,255,255,0.45)' }}>
+                        {col.heading}
+                      </p>
+                      {col.rows.map(row => (
+                        <Link
+                          key={row.label}
+                          to={row.to}
+                          onClick={onClose}
+                          className="flex items-center gap-2.5 py-1.5 text-[13.5px] font-medium"
+                          style={{ color: 'rgba(255,255,255,0.78)' }}
+                          onMouseEnter={e => (e.currentTarget.style.color = '#fff')}
+                          onMouseLeave={e => (e.currentTarget.style.color = 'rgba(255,255,255,0.78)')}
+                        >
+                          <span className="flex-shrink-0 opacity-70"><row.icon size={14} /></span>
+                          {row.label}
+                          {row.badge && (
+                            <span className="text-[8.5px] font-bold px-1.5 py-px rounded" style={{ background: 'rgba(255,255,255,0.2)', color: '#fff' }}>
+                              {row.badge}
+                            </span>
+                          )}
+                        </Link>
+                      ))}
+                    </div>
                   ))}
                   {entry.footerLeft && (
                     <Link
                       to={entry.footerLeft.to}
                       onClick={onClose}
-                      className="inline-flex items-center gap-1 text-[12px] font-semibold mt-1"
-                      style={{ color: 'rgba(255,255,255,0.5)' }}
-                      onMouseEnter={e => (e.currentTarget.style.color = 'rgba(255,255,255,0.85)')}
-                      onMouseLeave={e => (e.currentTarget.style.color = 'rgba(255,255,255,0.5)')}
+                      className="inline-flex items-center gap-1.5 text-[12.5px] font-semibold mt-1"
+                      style={{ color: '#fff' }}
                     >
-                      {entry.footerLeft.label}
+                      {entry.footerLeft.label} <ArrowUpRight size={13} />
                     </Link>
                   )}
                 </div>
@@ -901,67 +910,71 @@ function FullscreenMenu({
 
         </div>
 
-        {/* Right: preview panel (tablet + desktop where right panel is visible) */}
-        <div className="hidden lg:flex flex-col justify-center flex-1 pl-10 border-l border-white/10">
+        {/* Right: preview panel — tablet & desktop (md and up) */}
+        <div className={`hidden md:flex flex-col flex-1 pl-8 lg:pl-12 border-l border-white/10 overflow-y-auto ${activeEntry?.cols ? 'justify-start pt-2 pb-24' : 'justify-center'}`}>
           {activeEntry && activeEntry.cols ? (
             <div key={activeKey}>
-              <div
-                className="text-[11px] font-bold uppercase tracking-[0.2em] mb-6 fs-sub-item"
-                style={{ color: 'rgba(255,255,255,0.5)' }}
-              >
-                {activeEntry.label}
-              </div>
-              <div className="grid grid-cols-2 gap-3">
-                {previewRows.map((row, i) => (
-                  <Link
-                    key={row.label}
-                    to={row.to}
-                    onClick={onClose}
-                    className="fs-sub-item group flex items-start gap-3 rounded-xl p-3.5 transition-all"
-                    style={{
-                      background: 'rgba(255,255,255,0.06)',
-                      border: '1px solid rgba(255,255,255,0.1)',
-                      animationDelay: `${i * 45}ms`,
-                    }}
-                    onMouseEnter={e => {
-                      e.currentTarget.style.background = 'rgba(255,255,255,0.12)'
-                      e.currentTarget.style.borderColor = 'rgba(255,255,255,0.25)'
-                    }}
-                    onMouseLeave={e => {
-                      e.currentTarget.style.background = 'rgba(255,255,255,0.06)'
-                      e.currentTarget.style.borderColor = 'rgba(255,255,255,0.1)'
-                    }}
+              {activeEntry.cols.filter(c => !c.startHere).map((col, ci) => (
+                <div key={col.heading} className="mb-6 last:mb-0">
+                  <div
+                    className="text-[11px] font-bold uppercase tracking-[0.2em] mb-3 fs-sub-item"
+                    style={{ color: 'rgba(255,255,255,0.5)', animationDelay: `${ci * 60}ms` }}
                   >
-                    <div className="mt-0.5 flex-shrink-0">
-                      <row.icon size={15} className="text-white opacity-60" />
-                    </div>
-                    <div>
-                      <div className="text-[13px] font-semibold text-white leading-tight mb-1 flex items-center gap-1.5">
-                        {row.label}
-                        {row.badge && (
-                          <span className="text-[9px] font-bold px-1.5 py-px rounded" style={{ background: 'rgba(255,255,255,0.2)', color: '#fff' }}>
-                            {row.badge}
-                          </span>
-                        )}
-                      </div>
-                      <div className="text-[11.5px] leading-snug" style={{ color: 'rgba(255,255,255,0.55)' }}>
-                        {row.sub}
-                      </div>
-                    </div>
-                  </Link>
-                ))}
-              </div>
+                    {col.heading}
+                  </div>
+                  <div className="grid grid-cols-1 lg:grid-cols-2 gap-2.5">
+                    {col.rows.map((row, i) => (
+                      <Link
+                        key={row.label}
+                        to={row.to}
+                        onClick={onClose}
+                        className="fs-sub-item group flex items-start gap-3 rounded-xl p-3 transition-all"
+                        style={{
+                          background: 'rgba(255,255,255,0.06)',
+                          border: '1px solid rgba(255,255,255,0.1)',
+                          animationDelay: `${ci * 60 + i * 35}ms`,
+                        }}
+                        onMouseEnter={e => {
+                          e.currentTarget.style.background = 'rgba(255,255,255,0.12)'
+                          e.currentTarget.style.borderColor = 'rgba(255,255,255,0.25)'
+                        }}
+                        onMouseLeave={e => {
+                          e.currentTarget.style.background = 'rgba(255,255,255,0.06)'
+                          e.currentTarget.style.borderColor = 'rgba(255,255,255,0.1)'
+                        }}
+                      >
+                        <div className="mt-0.5 flex-shrink-0">
+                          <row.icon size={15} className="text-white opacity-60" />
+                        </div>
+                        <div>
+                          <div className="text-[13px] font-semibold text-white leading-tight mb-0.5 flex items-center gap-1.5">
+                            {row.label}
+                            {row.badge && (
+                              <span className="text-[9px] font-bold px-1.5 py-px rounded" style={{ background: 'rgba(255,255,255,0.2)', color: '#fff' }}>
+                                {row.badge}
+                              </span>
+                            )}
+                          </div>
+                          <div className="text-[11.5px] leading-snug" style={{ color: 'rgba(255,255,255,0.55)' }}>
+                            {row.sub}
+                          </div>
+                        </div>
+                      </Link>
+                    ))}
+                  </div>
+                </div>
+              ))}
               {activeEntry.footerLeft && (
-                <div className="mt-5 fs-sub-item" style={{ animationDelay: `${previewRows.length * 45}ms` }}>
+                <div className="mt-2 fs-sub-item">
                   <Link
                     to={activeEntry.footerLeft.to}
                     onClick={onClose}
-                    className="text-[13px] font-semibold"
-                    style={{ color: 'rgba(255,255,255,0.7)' }}
+                    className="inline-flex items-center gap-1.5 text-[13px] font-semibold"
+                    style={{ color: 'rgba(255,255,255,0.8)' }}
                     onMouseEnter={e => (e.currentTarget.style.color = '#fff')}
-                    onMouseLeave={e => (e.currentTarget.style.color = 'rgba(255,255,255,0.7)')}
+                    onMouseLeave={e => (e.currentTarget.style.color = 'rgba(255,255,255,0.8)')}
                   >
-                    {activeEntry.footerLeft.label}
+                    {activeEntry.footerLeft.label} <ArrowUpRight size={14} />
                   </Link>
                 </div>
               )}
@@ -1001,6 +1014,7 @@ function FullscreenMenu({
         className="absolute bottom-0 left-0 right-0 z-10 fs-nav-item"
         style={{
           borderTop: '1px solid rgba(255,255,255,0.1)',
+          background: 'var(--brand)',
           animationDelay: isOpen ? `${(NAV.length + 1) * 70 + 80}ms` : '0ms',
         }}
       >

@@ -1,6 +1,9 @@
 import { useState, useRef } from 'react'
 import { Link } from 'react-router-dom'
-import { ArrowUpRight, Factory, Cog, Layers } from 'lucide-react'
+import {
+  ArrowUpRight, Factory, Cog, Layers,
+  Droplet, FlaskConical, Settings, Boxes, Gauge,
+} from 'lucide-react'
 import type { ComponentType } from 'react'
 
 type LucideIcon = ComponentType<{ size?: number; className?: string; style?: React.CSSProperties }>
@@ -15,17 +18,12 @@ interface TabItem {
 interface Tab {
   id: string
   label: string
-  num: string
   sublabel: string
   icon: LucideIcon
   heading: string
   description: string
   items: TabItem[]
   viewMore: string
-  cols: number
-  bgImg: string          // tab card background image
-  overlay: string        // active overlay gradient
-  overlayInactive: string // inactive overlay (darker/desaturated)
   glow: string
   accent: string         // active accent colour for badge/icon
 }
@@ -34,7 +32,6 @@ const TABS: Tab[] = [
   {
     id: 'industry',
     label: 'Industry',
-    num: '01',
     sublabel: 'Paint · Pharma · Chemical · Ink',
     icon: Layers,
     heading: 'Industries We Serve',
@@ -47,17 +44,12 @@ const TABS: Tab[] = [
       { label: 'Ink',      img: '/img/applicationimg/ink-industry.jpg',       href: '/application/ink',      accent: '#8b5cf6' },
     ],
     viewMore: '/application/industry',
-    cols: 4,
-    bgImg: '/img/applicationimg/paint-industry.jpg',
-    overlay: 'linear-gradient(160deg, rgba(8,80,72,0.72) 0%, rgba(14,116,144,0.55) 100%)',
-    overlayInactive: 'linear-gradient(160deg, rgba(0,0,0,0.78) 0%, rgba(0,0,0,0.62) 100%)',
     glow: 'rgba(20,184,166,0.5)',
     accent: '#14b8a6',
   },
   {
     id: 'process',
     label: 'Process',
-    num: '02',
     sublabel: 'Mixing · Milling · Dispersing',
     icon: Cog,
     heading: 'Manufacturing Processes',
@@ -68,17 +60,12 @@ const TABS: Tab[] = [
       { label: 'Milling', img: '/img/applicationimg/milling.png',  href: '/application/milling', accent: '#ef4444' },
     ],
     viewMore: '/application/process',
-    cols: 2,
-    bgImg: '/img/applicationimg/mixing.jpg',
-    overlay: 'linear-gradient(160deg, rgba(49,46,129,0.75) 0%, rgba(109,40,217,0.55) 100%)',
-    overlayInactive: 'linear-gradient(160deg, rgba(0,0,0,0.78) 0%, rgba(0,0,0,0.62) 100%)',
     glow: 'rgba(124,58,237,0.5)',
     accent: '#7c3aed',
   },
   {
     id: 'production',
     label: 'Production Setup',
-    num: '03',
     sublabel: 'Paint · Ink · Chemical · Powder',
     icon: Factory,
     heading: 'Complete Production Lines',
@@ -91,13 +78,21 @@ const TABS: Tab[] = [
       { label: 'Powder Production',   img: '/img/applicationimg/powder-production.jpg',   href: '/application/powder-production',   accent: '#f59e0b' },
     ],
     viewMore: '/application/production-setup',
-    cols: 4,
-    bgImg: '/img/applicationimg/paint-production.jpg',
-    overlay: 'linear-gradient(160deg, rgba(120,53,15,0.78) 0%, rgba(194,65,12,0.58) 100%)',
-    overlayInactive: 'linear-gradient(160deg, rgba(0,0,0,0.78) 0%, rgba(0,0,0,0.62) 100%)',
     glow: 'rgba(249,115,22,0.5)',
     accent: '#f97316',
   },
+]
+
+// Floating background icons — industry / process / production motifs
+const BG_ICONS: { Icon: LucideIcon; top: string; left: string; size: number; anim: string; delay: string; rot: number }[] = [
+  { Icon: Layers,       top: '6%',  left: '3%',  size: 78, anim: 'app-anim-float',     delay: '0s',   rot: -12 },
+  { Icon: Cog,          top: '14%', left: '90%', size: 104, anim: 'app-anim-spin',     delay: '0s',   rot: 0 },
+  { Icon: Factory,      top: '60%', left: '8%',  size: 92, anim: 'app-anim-drift',     delay: '1.2s', rot: 6 },
+  { Icon: Droplet,      top: '78%', left: '84%', size: 58, anim: 'app-anim-float',     delay: '2s',   rot: 10 },
+  { Icon: FlaskConical, top: '38%', left: '46%', size: 56, anim: 'app-anim-drift',     delay: '0.6s', rot: -8 },
+  { Icon: Settings,     top: '84%', left: '50%', size: 80, anim: 'app-anim-spin-rev',  delay: '0s',   rot: 0 },
+  { Icon: Boxes,        top: '4%',  left: '58%', size: 60, anim: 'app-anim-float',     delay: '1.6s', rot: 8 },
+  { Icon: Gauge,        top: '48%', left: '93%', size: 52, anim: 'app-anim-drift',     delay: '2.4s', rot: -6 },
 ]
 
 export default function ApplicationTabs() {
@@ -114,196 +109,189 @@ export default function ApplicationTabs() {
   const tab = TABS[active]
 
   return (
-    <section className="w-full overflow-hidden" style={{ background: 'var(--surface)' }}>
+    <section className="relative w-full overflow-hidden" style={{ background: 'var(--surface)' }}>
 
-      {/* ── Slim tab selector bar ─────────────────────────────── */}
-      <div className="w-full px-4 sm:px-8 lg:px-14 pt-10 pb-6">
-        <p className="text-[10.5px] font-bold uppercase tracking-[0.25em] mb-5" style={{ color: 'var(--foreground-subtle)' }}>
+      {/* ── Animated icon background ──────────────────────────── */}
+      <div className="absolute inset-0 z-0" aria-hidden>
+        {/* Accent glow that shifts with the active tab */}
+        <div
+          className="absolute -top-1/4 -right-1/4 w-[60%] h-[120%] rounded-full transition-all duration-700"
+          style={{ background: `radial-gradient(circle, ${tab.glow} 0%, transparent 65%)`, opacity: 0.18, filter: 'blur(40px)' }}
+        />
+        <div
+          className="absolute -bottom-1/4 -left-1/4 w-[55%] h-[110%] rounded-full transition-all duration-700"
+          style={{ background: `radial-gradient(circle, ${tab.glow} 0%, transparent 65%)`, opacity: 0.12, filter: 'blur(50px)' }}
+        />
+        {BG_ICONS.map((b, i) => {
+          const I = b.Icon
+          return (
+            <span
+              key={i}
+              className={`app-bg-icon ${b.anim}`}
+              style={{
+                top: b.top,
+                left: b.left,
+                animationDelay: b.delay,
+                color: tab.accent,
+                opacity: 0.08,
+                transition: 'color 0.7s ease',
+                ['--rot' as string]: `${b.rot}deg`,
+              } as React.CSSProperties}
+            >
+              <I size={b.size} />
+            </span>
+          )
+        })}
+      </div>
+
+      {/* ── Content ───────────────────────────────────────────── */}
+      <div className="relative z-10 w-full px-4 sm:px-8 lg:px-14 py-12 lg:py-16">
+        <p className="font-display text-[11px] font-bold uppercase tracking-[0.3em] mb-7" style={{ color: 'var(--foreground-subtle)' }}>
           Applications
         </p>
 
-        {/* Tab strip — full width, slim buttons */}
-        <div className="flex gap-2 sm:gap-3">
+        {/* ── Horizontal tab selector (one line) ── */}
+        <div className="flex gap-2.5 sm:gap-3 mb-9 overflow-x-auto pb-1 -mx-1 px-1">
           {TABS.map((t, i) => {
             const isActive = active === i
+            const Icon = t.icon
             return (
               <button
                 key={t.id}
                 ref={el => { btnRefs.current[i] = el }}
                 onClick={() => switchTab(i)}
-                className="relative flex-1 overflow-hidden cursor-pointer outline-none rounded-xl"
-                style={{
-                  height: '52px',
-                  background: isActive ? 'transparent' : 'var(--background)',
-                  border: isActive ? 'none' : '1px solid var(--border)',
-                  boxShadow: isActive ? `0 4px 24px ${t.glow}, 0 2px 8px rgba(0,0,0,0.2)` : 'none',
-                  transition: 'box-shadow 0.4s ease, background 0.3s ease',
-                }}
-              >
-                {/* Background image (visible only on active) */}
-                <img
-                  src={t.bgImg}
-                  alt=""
-                  aria-hidden
-                  className="absolute inset-0 w-full h-full object-cover transition-all duration-500"
-                  style={{
-                    opacity: isActive ? 1 : 0,
-                    transform: isActive ? 'scale(1.08)' : 'scale(1)',
-                    filter: 'brightness(0.55)',
-                  }}
-                />
-
-                {/* Colour overlay on active */}
-                {isActive && (
-                  <div
-                    className="absolute inset-0"
-                    style={{ background: t.overlay, opacity: 0.85 }}
-                  />
-                )}
-
-                {/* Shimmer on active */}
-                {isActive && (
-                  <span
-                    className="tab-btn-shimmer absolute inset-0 pointer-events-none"
+                className="group relative flex-1 min-w-[200px] flex items-center gap-3.5 rounded-xl text-left cursor-pointer outline-none transition-all duration-300 px-3.5 py-3"
                     style={{
-                      background: 'linear-gradient(90deg,transparent 0%,rgba(255,255,255,0.14) 50%,transparent 100%)',
-                      backgroundSize: '200% auto',
-                    }}
-                  />
-                )}
-
-                {/* Label */}
-                <span
-                  className="relative z-10 flex items-center justify-center gap-2 h-full px-3"
-                >
-                  <span
-                    className="text-[10px] font-bold tracking-widest hidden sm:block"
-                    style={{ color: isActive ? 'rgba(255,255,255,0.5)' : 'var(--foreground-subtle)' }}
-                  >
-                    {t.num}
-                  </span>
-                  <span
-                    className="font-bold whitespace-nowrap"
-                    style={{
-                      fontSize: 'clamp(12px, 1.5vw, 14.5px)',
-                      color: isActive ? '#fff' : 'var(--foreground)',
-                      letterSpacing: '0.01em',
+                      background: isActive ? 'var(--surface)' : 'transparent',
+                      border: `1px solid ${isActive ? t.accent : 'var(--border)'}`,
+                      boxShadow: isActive ? `0 6px 20px ${t.glow}` : 'none',
                     }}
                   >
-                    {t.label}
-                  </span>
-                </span>
-
-                {/* Active bottom accent line */}
-                <span
-                  className="absolute bottom-0 left-0 right-0 h-0.5 transition-transform duration-400 origin-left"
-                  style={{
-                    background: t.accent,
-                    transform: isActive ? 'scaleX(1)' : 'scaleX(0)',
-                  }}
-                />
-              </button>
+                    {/* Active accent bar */}
+                    <span
+                      className="absolute left-0 top-1/2 -translate-y-1/2 w-1 rounded-r-full transition-all duration-300"
+                      style={{ height: isActive ? '60%' : '0%', background: t.accent }}
+                    />
+                    <span
+                      className="flex-shrink-0 w-10 h-10 rounded-lg flex items-center justify-center transition-all duration-300"
+                      style={{
+                        background: isActive ? t.accent : 'var(--background)',
+                        border: isActive ? 'none' : '1px solid var(--border)',
+                      }}
+                    >
+                      <Icon
+                        size={18}
+                        style={{ color: isActive ? '#fff' : 'var(--foreground-subtle)' }}
+                      />
+                    </span>
+                    <span className="min-w-0">
+                      <span
+                        className="font-display block font-semibold leading-tight tracking-tight"
+                        style={{ fontSize: '15.5px', color: 'var(--foreground)' }}
+                      >
+                        {t.label}
+                      </span>
+                      <span
+                        className="block text-[11.5px] leading-tight mt-0.5 truncate"
+                        style={{ color: isActive ? t.accent : 'var(--foreground-subtle)' }}
+                      >
+                        {t.sublabel}
+                      </span>
+                    </span>
+                  </button>
             )
           })}
         </div>
-      </div>
 
-      {/* ── Heading + description (light section) ─────────────── */}
-      <div className="w-full px-4 sm:px-8 lg:px-14 pt-10 pb-8" style={{ background: 'var(--background)' }}>
-        <div className="flex flex-col sm:flex-row sm:items-end sm:justify-between gap-4">
-          <h2
-            key={`h-${active}`}
-            className="tab-desc-in font-black leading-tight"
-            style={{
-              fontSize: 'clamp(26px, 4vw, 50px)',
-              letterSpacing: '-0.025em',
-              color: 'var(--foreground)',
-            }}
-          >
-            {tab.heading}
-          </h2>
+        {/* ── Two columns: text content + images ── */}
+        <div className="grid grid-cols-1 lg:grid-cols-[minmax(0,38%)_minmax(0,1fr)] gap-8 lg:gap-12 items-start">
 
-          <Link
-            to={tab.viewMore}
-            className="inline-flex items-center gap-2 text-[13px] font-bold flex-shrink-0 whitespace-nowrap group"
-            style={{ color: 'var(--brand)' }}
-          >
-            View All
-            <span
-              className="w-7 h-7 rounded-full flex items-center justify-center transition-all duration-300 group-hover:scale-110"
-              style={{ border: '1.5px solid var(--brand)', color: 'var(--brand)' }}
+          {/* ════ LEFT — text content ════ */}
+          <div className="lg:sticky lg:top-24">
+            {/* Heading + description */}
+            <h2
+              key={`h-${active}`}
+              className="font-display tab-desc-in font-bold leading-[1.05]"
+              style={{ fontSize: 'clamp(28px, 3.6vw, 44px)', letterSpacing: '-0.03em', color: 'var(--foreground)' }}
             >
-              <ArrowUpRight size={13} />
-            </span>
-          </Link>
-        </div>
-
-        <p
-          key={`d-${active}`}
-          className="tab-desc-in mt-4 text-[14.5px] leading-relaxed max-w-3xl"
-          style={{ animationDelay: '60ms', color: 'var(--foreground-muted)' }}
-        >
-          {tab.description}
-        </p>
-      </div>
-
-      {/* ── Full-width image grid ──────────────────────────────── */}
-      <div
-        key={`grid-${animKey}`}
-        className={`grid gap-3 px-4 sm:px-8 lg:px-14 pb-10 ${
-          tab.cols === 2 ? 'grid-cols-1 sm:grid-cols-2' : 'grid-cols-2 lg:grid-cols-4'
-        }`}
-        style={{ background: 'var(--surface)' }}
-      >
-        {tab.items.map((item, i) => (
-          <Link
-            key={item.label}
-            to={item.href}
-            className="tab-card-in group relative block overflow-hidden rounded-xl"
-            style={{
-              height: 'clamp(160px, 18vw, 260px)',
-              animationDelay: `${i * 90}ms`,
-            }}
-          >
-            <img
-              src={item.img}
-              alt={item.label}
-              className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 ease-[cubic-bezier(0.25,0.46,0.45,0.94)] group-hover:scale-110"
-            />
-            <div className="absolute inset-0 bg-gradient-to-t from-black/75 via-black/15 to-transparent" />
-            <div
-              className="absolute inset-0 opacity-0 group-hover:opacity-25 transition-opacity duration-500"
-              style={{ background: item.accent }}
-            />
-            <span
-              className="absolute top-4 right-4 font-black leading-none select-none"
-              style={{
-                fontSize: 'clamp(52px, 9vw, 110px)',
-                color: 'rgba(255,255,255,0.06)',
-                letterSpacing: '-0.04em',
-              }}
+              {tab.heading}
+            </h2>
+            <p
+              key={`d-${active}`}
+              className="tab-desc-in mt-4 text-[14px] leading-relaxed"
+              style={{ animationDelay: '60ms', color: 'var(--foreground-muted)' }}
             >
-              {String(i + 1).padStart(2, '0')}
-            </span>
-            <div className="absolute bottom-0 left-0 right-0 p-5 flex items-end justify-between">
-              <div>
-                <span
-                  className="block h-0.5 mb-3 rounded-full w-0 group-hover:w-9 transition-all duration-300"
+              {tab.description}
+            </p>
+
+            <Link
+              to={tab.viewMore}
+              className="font-display inline-flex items-center gap-2 text-[13px] font-semibold tracking-wide mt-6 group"
+              style={{ color: 'var(--brand)' }}
+            >
+              View All
+              <span
+                className="w-7 h-7 rounded-full flex items-center justify-center transition-all duration-300 group-hover:scale-110"
+                style={{ border: '1.5px solid var(--brand)', color: 'var(--brand)' }}
+              >
+                <ArrowUpRight size={13} />
+              </span>
+            </Link>
+          </div>
+
+          {/* ════ RIGHT — image cards ════ */}
+          <div
+            key={`grid-${animKey}`}
+            className="grid grid-cols-1 sm:grid-cols-2 gap-3"
+          >
+            {tab.items.map((item, i) => (
+              <Link
+                key={item.label}
+                to={item.href}
+                className="tab-card-in group relative block overflow-hidden rounded-xl"
+                style={{
+                  height: 'clamp(180px, 22vw, 250px)',
+                  animationDelay: `${i * 90}ms`,
+                }}
+              >
+                <img
+                  src={item.img}
+                  alt={item.label}
+                  className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 ease-[cubic-bezier(0.25,0.46,0.45,0.94)] group-hover:scale-110"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/75 via-black/15 to-transparent" />
+                <div
+                  className="absolute inset-0 opacity-0 group-hover:opacity-25 transition-opacity duration-500"
                   style={{ background: item.accent }}
                 />
-                <span className="block text-white font-bold" style={{ fontSize: 'clamp(14px, 1.8vw, 20px)' }}>
-                  {item.label}
+                <span
+                  className="absolute top-4 right-4 font-black leading-none select-none"
+                  style={{ fontSize: 'clamp(52px, 8vw, 96px)', color: 'rgba(255,255,255,0.06)', letterSpacing: '-0.04em' }}
+                >
+                  {String(i + 1).padStart(2, '0')}
                 </span>
-              </div>
-              <span
-                className="w-9 h-9 rounded-full flex items-center justify-center text-white translate-y-2 opacity-0 group-hover:opacity-100 group-hover:translate-y-0 transition-all duration-300"
-                style={{ background: item.accent }}
-              >
-                <ArrowUpRight size={16} />
-              </span>
-            </div>
-          </Link>
-        ))}
+                <div className="absolute bottom-0 left-0 right-0 p-5 flex items-end justify-between">
+                  <div>
+                    <span
+                      className="block h-0.5 mb-3 rounded-full w-0 group-hover:w-9 transition-all duration-300"
+                      style={{ background: item.accent }}
+                    />
+                    <span className="font-display block text-white font-semibold tracking-tight" style={{ fontSize: 'clamp(15px, 1.8vw, 21px)' }}>
+                      {item.label}
+                    </span>
+                  </div>
+                  <span
+                    className="w-9 h-9 rounded-full flex items-center justify-center text-white translate-y-2 opacity-0 group-hover:opacity-100 group-hover:translate-y-0 transition-all duration-300"
+                    style={{ background: item.accent }}
+                  >
+                    <ArrowUpRight size={16} />
+                  </span>
+                </div>
+              </Link>
+            ))}
+          </div>
+
+        </div>
       </div>
 
     </section>

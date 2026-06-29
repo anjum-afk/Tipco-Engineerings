@@ -105,6 +105,7 @@
 
   /* ── Typography ──────────────────────────────── */
   --font-sans: 'Open Sans', system-ui, -apple-system, sans-serif;
+  --font-display: 'Space Grotesk', 'Open Sans', system-ui, sans-serif;
 
   /* ── Spacing base ────────────────────────────── */
   --space-1:  4px;

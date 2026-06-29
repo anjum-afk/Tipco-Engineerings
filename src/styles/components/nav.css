@@ -64,6 +64,54 @@
   animation: tabDotSpin 8s linear infinite;
 }
 
+/* ── Display font helper ───────────────────────────────────────────────── */
+
+.font-display {
+  font-family: var(--font-display);
+  font-feature-settings: 'ss01', 'ss02';
+}
+
+/* ── Applications animated background icons ────────────────────────────── */
+
+@keyframes appFloat {
+  0%, 100% { transform: translateY(0) rotate(var(--rot, 0deg)); }
+  50%      { transform: translateY(-26px) rotate(var(--rot, 0deg)); }
+}
+
+@keyframes appDrift {
+  0%   { transform: translate(0, 0) rotate(0deg); }
+  33%  { transform: translate(18px, -22px) rotate(8deg); }
+  66%  { transform: translate(-14px, 14px) rotate(-6deg); }
+  100% { transform: translate(0, 0) rotate(0deg); }
+}
+
+@keyframes appSpinSlow {
+  from { transform: rotate(0deg); }
+  to   { transform: rotate(360deg); }
+}
+
+@keyframes appSpinReverse {
+  from { transform: rotate(0deg); }
+  to   { transform: rotate(-360deg); }
+}
+
+.app-bg-icon {
+  position: absolute;
+  pointer-events: none;
+  will-change: transform;
+}
+
+.app-anim-float   { animation: appFloat 9s ease-in-out infinite; }
+.app-anim-drift   { animation: appDrift 14s ease-in-out infinite; }
+.app-anim-spin    { animation: appSpinSlow 26s linear infinite; }
+.app-anim-spin-rev{ animation: appSpinReverse 32s linear infinite; }
+
+@media (prefers-reduced-motion: reduce) {
+  .app-anim-float, .app-anim-drift, .app-anim-spin, .app-anim-spin-rev {
+    animation: none;
+  }
+}
+
 /* ── Fullscreen menu animations ─────────────────────────────────────────── */
 
 @keyframes fsNavItemIn {
