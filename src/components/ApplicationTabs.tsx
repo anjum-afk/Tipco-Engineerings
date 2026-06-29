@@ -153,8 +153,8 @@ function ImageRow({ items, brokenImgs, onBroken }: {
             to={item.href}
             className="tab-card-in group relative overflow-hidden rounded-xl"
             style={{
-              flex: '1 1 0%',
-              minWidth: '220px',
+              flex: '1 1 auto',
+              minWidth: '340px',
               height: CARD_H,
               animationDelay: `${i * 80}ms`,
             }}
@@ -307,80 +307,43 @@ export default function ApplicationTabs() {
         })}
       </div>
 
-      {/* ── Header: eyebrow + tab pills + arrows ─── */}
-      <div className="relative z-10 px-4 sm:px-8 lg:px-14 pt-12 lg:pt-16 pb-6">
-        <p className="font-display text-[11px] font-bold uppercase tracking-[0.3em] mb-6" style={{ color: 'var(--foreground-subtle)' }}>
+      {/* ── Header: eyebrow + full-width tab bar ─── */}
+      <div className="relative z-10 pt-12 lg:pt-16 pb-6">
+        <p className="font-display text-[11px] font-bold uppercase tracking-[0.3em] mb-5 px-4 sm:px-8 lg:px-14" style={{ color: 'var(--foreground-subtle)' }}>
           Applications
         </p>
 
-        <div className="flex items-center gap-3">
-          {/* Tab pills */}
-          <div className="flex flex-1 min-w-0 justify-between">
-            {TABS.map((t, i) => {
-              const isActive = active === i
-              const Icon = t.icon
-              return (
-                <button
-                  key={t.id}
-                  onClick={() => goTo(i)}
-                  className="relative flex-shrink-0 flex items-center gap-2.5 rounded-xl px-3.5 py-2.5 cursor-pointer outline-none transition-all duration-300"
-                  style={{
-                    background: isActive ? 'var(--background)' : 'transparent',
-                    border: `1px solid ${isActive ? t.accent : 'var(--border)'}`,
-                    boxShadow: isActive ? `0 4px 16px ${t.glow}` : 'none',
-                  }}
+        {/* Full-width equal-division tab bar (apollo-style) */}
+        <div
+          className="flex w-full overflow-hidden"
+          style={{ borderTop: '1px solid var(--border)', borderBottom: '1px solid var(--border)' }}
+        >
+          {TABS.map((t, i) => {
+            const isActive = active === i
+            const Icon = t.icon
+            return (
+              <button
+                key={t.id}
+                onClick={() => goTo(i)}
+                className="flex-1 flex items-center justify-center gap-2.5 py-4 px-3 cursor-pointer transition-all duration-300 outline-none"
+                style={{
+                  background: isActive ? t.accent : 'var(--surface)',
+                  borderRight: i < TABS.length - 1 ? '1px solid var(--border)' : 'none',
+                }}
+              >
+                <Icon
+                  size={15}
+                  style={{ color: isActive ? '#fff' : 'var(--foreground-subtle)', flexShrink: 0 }}
+                />
+                <span
+                  className="font-bold uppercase tracking-[0.18em] whitespace-nowrap"
+                  style={{ fontSize: '11px', color: isActive ? '#fff' : 'var(--foreground-muted)' }}
                 >
-                  <span
-                    className="flex-shrink-0 w-7 h-7 rounded-lg flex items-center justify-center transition-all duration-300"
-                    style={{ background: isActive ? t.accent : 'var(--surface)', border: isActive ? 'none' : '1px solid var(--border)' }}
-                  >
-                    <Icon size={14} style={{ color: isActive ? '#fff' : 'var(--foreground-subtle)' }} />
-                  </span>
-                  <span className="font-display font-semibold whitespace-nowrap" style={{ fontSize: '14px', color: isActive ? 'var(--foreground)' : 'var(--foreground-muted)' }}>
-                    {t.label}
-                  </span>
-                  {isActive && (
-                    <span className="hidden sm:block text-[11px]" style={{ color: t.accent }}>{t.sublabel}</span>
-                  )}
-                </button>
-              )
-            })}
-          </div>
-
-          {/* Prev / Next arrows */}
-          <div className="flex gap-1.5 flex-shrink-0">
-            <button
-              onClick={() => goTo(Math.max(0, active - 1))}
-              disabled={active === 0}
-              className="w-9 h-9 rounded-full flex items-center justify-center transition-all duration-200 disabled:opacity-30 cursor-pointer"
-              style={{ border: '1px solid var(--border)', background: 'var(--background)', color: 'var(--foreground)' }}
-            >
-              <ChevronLeft size={16} />
-            </button>
-            <button
-              onClick={() => goTo(Math.min(TABS.length - 1, active + 1))}
-              disabled={active === TABS.length - 1}
-              className="w-9 h-9 rounded-full flex items-center justify-center transition-all duration-200 disabled:opacity-30 cursor-pointer"
-              style={{ border: '1px solid var(--border)', background: 'var(--background)', color: 'var(--foreground)' }}
-            >
-              <ChevronRight size={16} />
-            </button>
-          </div>
-        </div>
-
-        {/* Progress dots */}
-        <div className="flex gap-1.5 mt-4">
-          {TABS.map((t, i) => (
-            <button
-              key={t.id}
-              onClick={() => goTo(i)}
-              className="h-1 rounded-full transition-all duration-400 cursor-pointer"
-              style={{
-                width: active === i ? '28px' : '8px',
-                background: active === i ? t.accent : 'var(--border)',
-              }}
-            />
-          ))}
+                  {t.label}
+                </span>
+              </button>
+            )
+          })}
         </div>
       </div>
 
@@ -395,7 +358,7 @@ export default function ApplicationTabs() {
             <div
               key={t.id}
               ref={el => { panelRefs.current[ti] = el }}
-              className="absolute top-0 left-0 right-0 px-4 sm:px-8 lg:px-14 pb-14 transition-all duration-[600ms] ease-[cubic-bezier(0.22,1,0.36,1)]"
+              className="absolute top-0 left-0 right-0 px-4 sm:px-8 lg:px-14 pt-2 pb-14 transition-all duration-[600ms] ease-[cubic-bezier(0.22,1,0.36,1)]"
               style={{
                 transform: offset === 0 ? 'translateY(0)' : offset < 0 ? 'translateY(-48px)' : 'translateY(48px)',
                 opacity: offset === 0 ? 1 : 0,
