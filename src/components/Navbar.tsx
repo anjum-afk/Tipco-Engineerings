@@ -307,15 +307,13 @@ function TwoPanelMegaPanel({
           <div
             className="grid gap-2.5 flex-1 content-start"
             style={{
-              gridTemplateColumns: activeCol.rows.length === 1
+              gridTemplateColumns: activeCol.rows.length <= 2
                 ? '1fr'
-                : activeCol.rows.length === 2
-                  ? '1fr 1fr'
-                  : activeCol.rows.length === 3
-                    ? '1fr 1fr 1fr'
-                    : activeCol.rows.length === 4
-                      ? '1fr 1fr'
-                      : '1fr 1fr 1fr',
+                : activeCol.rows.length === 3
+                  ? '1fr 1fr 1fr'
+                  : activeCol.rows.length === 4
+                    ? '1fr 1fr'
+                    : '1fr 1fr 1fr',
             }}
           >
             {activeCol.rows.map(row => (

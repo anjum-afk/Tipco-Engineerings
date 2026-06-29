@@ -250,17 +250,18 @@ export default function ApplicationTabs() {
       {/* ── Full-width image grid ──────────────────────────────── */}
       <div
         key={`grid-${animKey}`}
-        className={`grid gap-1 ${
+        className={`grid gap-3 px-4 sm:px-8 lg:px-14 pb-10 ${
           tab.cols === 2 ? 'grid-cols-1 sm:grid-cols-2' : 'grid-cols-2 lg:grid-cols-4'
         }`}
+        style={{ background: '#0f172a' }}
       >
         {tab.items.map((item, i) => (
           <Link
             key={item.label}
             to={item.href}
-            className="tab-card-in group relative block overflow-hidden"
+            className="tab-card-in group relative block overflow-hidden rounded-xl"
             style={{
-              height: 'clamp(240px, 30vw, 400px)',
+              height: 'clamp(160px, 18vw, 260px)',
               animationDelay: `${i * 90}ms`,
             }}
           >
