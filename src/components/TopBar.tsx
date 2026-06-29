@@ -15,7 +15,7 @@ export default function TopBar() {
           {SOCIALS.map(s => (
             <a key={s.label} href={s.href} target="_blank" rel="noopener noreferrer"
                className="hover:text-green-300 transition-colors" aria-label={s.label}>
-              <svg viewBox="0 0 24 24" className="w-4 h-4 fill-current"><path d={s.path} /></svg>
+              <svg viewBox="0 0 24 24" className="w-4 h-4 fill-current"><path d={s.path} fillRule="evenodd" /></svg>
             </a>
           ))}
           <a href="mailto:mail@tipcoengineering.com" target="_blank" rel="noopener noreferrer"

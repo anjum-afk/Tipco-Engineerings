@@ -68,7 +68,7 @@ export default function Footer() {
                    style={{ background: 'rgba(255,255,255,0.08)' }}
                    onMouseEnter={e => { (e.currentTarget as HTMLElement).style.background = color }}
                    onMouseLeave={e => { (e.currentTarget as HTMLElement).style.background = 'rgba(255,255,255,0.08)' }}>
-                  <svg viewBox="0 0 24 24" className="w-4 h-4 fill-current"><path d={d} /></svg>
+                  <svg viewBox="0 0 24 24" className="w-4 h-4 fill-current"><path d={d} fillRule="evenodd" /></svg>
                 </a>
               ))}
             </div>
@@ -113,7 +113,7 @@ export default function Footer() {
               </li>
               <li className="flex gap-2 items-center">
                 <svg viewBox="0 0 24 24" width="16" height="16" className="flex-shrink-0" style={{ fill: '#25D366' }}>
-                  <path d={WA_ICON} />
+                  <path d={WA_ICON} fillRule="evenodd" />
                 </svg>
                 <a href="https://api.whatsapp.com/send/?phone=+918826176988" target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors">
                   +91 88261 76988 <span className="text-gray-500">(WhatsApp)</span>

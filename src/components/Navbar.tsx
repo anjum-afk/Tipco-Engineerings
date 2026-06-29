@@ -963,7 +963,7 @@ function FullscreenMenu({
                 onMouseEnter={e => (e.currentTarget.style.background = 'rgba(255,255,255,0.25)')}
                 onMouseLeave={e => (e.currentTarget.style.background = 'rgba(255,255,255,0.12)')}
               >
-                <svg viewBox="0 0 24 24" className="w-3 h-3 fill-current"><path d={d} /></svg>
+                <svg viewBox="0 0 24 24" className="w-3 h-3 fill-current"><path d={d} fillRule="evenodd" /></svg>
               </a>
             ))}
           </div>
