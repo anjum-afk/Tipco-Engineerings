@@ -35,6 +35,8 @@ interface Col {
   rows: Row[]
   sidebarPinned?: boolean   // pin rows as sub-links in the sidebar
   sidebarDivider?: boolean  // render as a non-interactive section label
+  sidebarCard?: boolean     // wrap heading + pinned links in a styled card box
+  headingTo?: string        // makes the heading a clickable link
 }
 
 interface FooterLink { label: string; to: string }
@@ -74,19 +76,12 @@ const SOLUTIONS_COLS: Col[] = [
   },
   {
     heading: 'Start Here',
-    sidebarDivider: true,
-    rows: [],
-  },
-  {
-    heading: 'Talk to an engineer',
-    rows: [
-      { icon: Wrench, label: 'Talk to an engineer', sub: "Tell us your raw material and target particle size — we'll recommend the right machine.", to: '/contact-us' },
-    ],
-  },
-  {
-    heading: 'Try before you buy',
+    headingTo: '/contact-us',
+    sidebarPinned: true,
+    sidebarCard: true,
     rows: [
       { icon: FlaskConical, label: 'Try before you buy', sub: 'Free lab trial on your actual product — book a session with our engineers.', to: '/contact-us' },
+      { icon: Wrench, label: 'Talk to an engineer', sub: "Tell us your raw material and target particle size — we'll recommend the right machine.", to: '/contact-us' },
     ],
   },
 ]
@@ -285,44 +280,82 @@ function TwoPanelMegaPanel({
     >
       <div className="max-w-[1280px] mx-auto flex" style={{ minHeight: '260px' }}>
         <div className="w-[210px] flex-shrink-0 border-r py-5" style={{ borderColor: 'var(--border)' }}>
-          {cols.map(col => (
-            <div key={col.heading}>
-              {col.sidebarDivider
-                ? (
-                  <div
-                    className="px-6 pt-4 pb-1 text-[10px] font-bold uppercase tracking-[0.18em]"
-                    style={{ color: 'var(--foreground-subtle)' }}
-                  >
-                    {col.heading}
-                  </div>
-                )
-                : (
-                  <button
-                    onMouseEnter={e => {
-                      setActiveCategory(col.heading)
-                      if (activeCategory !== col.heading) {
-                        e.currentTarget.style.color = 'var(--brand)'
-                        e.currentTarget.style.background = 'var(--surface)'
-                      }
-                    }}
-                    onClick={() => setActiveCategory(col.heading)}
-                    className="w-full text-left px-6 py-2.5 text-[13.5px] font-medium transition-colors cursor-pointer border-l-2"
-                    style={activeCategory === col.heading
-                      ? { borderLeftColor: 'var(--brand)', color: 'var(--brand)', background: 'var(--surface)' }
-                      : { borderColor: 'transparent', color: 'var(--foreground-muted)', background: 'transparent' }}
-                    onMouseLeave={e => {
-                      if (activeCategory !== col.heading) {
-                        e.currentTarget.style.color = 'var(--foreground-muted)'
-                        e.currentTarget.style.background = 'transparent'
-                      }
-                    }}
-                  >
-                    {col.heading}
-                  </button>
-                )
-              }
-            </div>
-          ))}
+          {cols.map(col => {
+            const isActive = activeCategory === col.heading
+
+            const headingEl = col.sidebarDivider ? (
+              <div className="px-6 pt-4 pb-1 text-[10px] font-bold uppercase tracking-[0.18em]" style={{ color: 'var(--foreground-subtle)' }}>
+                {col.heading}
+              </div>
+            ) : col.headingTo ? (
+              <Link
+                to={col.headingTo}
+                onMouseEnter={() => setActiveCategory(col.heading)}
+                className="flex w-full items-center px-4 py-2.5 text-[13px] font-bold transition-colors border-l-2"
+                style={isActive
+                  ? { borderLeftColor: 'var(--brand)', color: 'var(--brand)', background: 'rgba(0,0,0,0.04)' }
+                  : { borderLeftColor: 'transparent', color: 'var(--foreground)', background: 'transparent' }}
+              >
+                {col.heading}
+              </Link>
+            ) : (
+              <button
+                onMouseEnter={e => {
+                  setActiveCategory(col.heading)
+                  if (!isActive) {
+                    e.currentTarget.style.color = 'var(--brand)'
+                    e.currentTarget.style.background = 'var(--surface)'
+                  }
+                }}
+                onClick={() => setActiveCategory(col.heading)}
+                className="w-full text-left px-6 py-2.5 text-[13.5px] font-medium transition-colors cursor-pointer border-l-2"
+                style={isActive
+                  ? { borderLeftColor: 'var(--brand)', color: 'var(--brand)', background: 'var(--surface)' }
+                  : { borderColor: 'transparent', color: 'var(--foreground-muted)', background: 'transparent' }}
+                onMouseLeave={e => {
+                  if (!isActive) {
+                    e.currentTarget.style.color = 'var(--foreground-muted)'
+                    e.currentTarget.style.background = 'transparent'
+                  }
+                }}
+              >
+                {col.heading}
+              </button>
+            )
+
+            const subLinks = col.sidebarPinned ? col.rows.map(row => (
+              <Link
+                key={row.label}
+                to={row.to}
+                className="flex items-center gap-2 pl-5 pr-4 py-1.5 text-[12px] transition-colors border-l-2"
+                style={{ color: 'var(--foreground-subtle)', borderLeftColor: 'transparent' }}
+                onMouseEnter={e => {
+                  e.currentTarget.style.color = 'var(--brand)'
+                  e.currentTarget.style.borderLeftColor = 'var(--brand)'
+                  e.currentTarget.style.background = 'rgba(0,0,0,0.04)'
+                }}
+                onMouseLeave={e => {
+                  e.currentTarget.style.color = 'var(--foreground-subtle)'
+                  e.currentTarget.style.borderLeftColor = 'transparent'
+                  e.currentTarget.style.background = 'transparent'
+                }}
+              >
+                <row.icon size={12} />
+                {row.label}
+              </Link>
+            )) : null
+
+            return col.sidebarCard ? (
+              <div key={col.heading} className="mx-3 mt-3 rounded-xl overflow-hidden border" style={{ borderColor: 'var(--border)' }}>
+                {headingEl}
+                {subLinks}
+              </div>
+            ) : (
+              <div key={col.heading}>
+                {headingEl}
+              </div>
+            )
+          })}
         </div>
 
         <div className="flex-1 px-8 py-6 flex flex-col">
@@ -789,28 +822,6 @@ function FullscreenMenu({
             </div>
           ))}
 
-          {/* CTA */}
-          <div
-            className="fs-nav-item mt-6"
-            style={{ animationDelay: isOpen ? `${NAV.length * 70 + 80}ms` : '0ms' }}
-          >
-            <Link
-              to="/contact-us"
-              onClick={onClose}
-              className="inline-flex items-center gap-2 px-5 py-3 rounded-xl font-semibold text-[14px] transition-all"
-              style={{
-                background: 'rgba(255,255,255,0.18)',
-                color: '#fff',
-                border: '1.5px solid rgba(255,255,255,0.35)',
-                backdropFilter: 'blur(4px)',
-              }}
-              onMouseEnter={e => (e.currentTarget.style.background = 'rgba(255,255,255,0.28)')}
-              onMouseLeave={e => (e.currentTarget.style.background = 'rgba(255,255,255,0.18)')}
-            >
-              Get a quote
-              <ArrowUpRight size={14} />
-            </Link>
-          </div>
         </div>
 
         {/* Right: preview panel (tablet + desktop where right panel is visible) */}
