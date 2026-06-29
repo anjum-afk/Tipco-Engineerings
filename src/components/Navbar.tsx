@@ -37,6 +37,7 @@ interface Col {
   sidebarDivider?: boolean  // render as a non-interactive section label
   sidebarCard?: boolean     // wrap heading + pinned links in a styled card box
   headingTo?: string        // makes the heading a clickable link
+  startHere?: boolean       // render content panel in the "Start Here" design
 }
 
 interface FooterLink { label: string; to: string }
@@ -79,9 +80,10 @@ const SOLUTIONS_COLS: Col[] = [
     headingTo: '/contact-us',
     sidebarPinned: true,
     sidebarCard: true,
+    startHere: true,
     rows: [
       { icon: FlaskConical, label: 'Try before you buy', sub: 'Free lab trial on your actual product — book a session with our engineers.', to: '/contact-us' },
-      { icon: Wrench, label: 'Talk to an engineer', sub: "Tell us your raw material and target particle size — we'll recommend the right machine.", to: '/contact-us' },
+      { icon: Wrench, label: 'Talk to an engineer', sub: "Tell us your raw material and the particle size you need — our engineers will recommend the right machine.", to: '/contact-us' },
     ],
   },
 ]
@@ -362,47 +364,102 @@ function TwoPanelMegaPanel({
           <div className="text-[10.5px] font-semibold uppercase tracking-widest mb-4" style={{ color: 'var(--foreground-subtle)' }}>
             {activeCol.heading}
           </div>
-          <div
-            className="grid gap-2.5 flex-1 content-start"
-            style={{
-              gridTemplateColumns: activeCol.rows.length <= 2
-                ? '1fr'
-                : activeCol.rows.length === 3
-                  ? '1fr 1fr 1fr'
-                  : activeCol.rows.length === 4
-                    ? '1fr 1fr'
-                    : '1fr 1fr 1fr',
-            }}
-          >
-            {activeCol.rows.map(row => (
+
+          {activeCol.startHere ? (() => {
+            const TryIcon = activeCol.rows[0].icon
+            const row0 = activeCol.rows[0]
+            const row1 = activeCol.rows[1]
+            return (
+            /* ── START HERE custom panel ── */
+            <div className="flex flex-col gap-0">
+              {/* Try before you buy */}
               <Link
-                key={row.label}
-                to={row.to}
-                className="group block rounded-lg px-4 py-3.5 transition-all"
-                style={{ border: '1px solid transparent' }}
-                onMouseEnter={e => {
-                  e.currentTarget.style.borderColor = 'var(--brand)'
-                  e.currentTarget.style.background = 'var(--surface)'
-                  e.currentTarget.style.boxShadow = '0 1px 4px rgba(0,0,0,0.07)'
-                }}
-                onMouseLeave={e => {
-                  e.currentTarget.style.borderColor = 'transparent'
-                  e.currentTarget.style.background = 'transparent'
-                  e.currentTarget.style.boxShadow = 'none'
-                }}
+                to={row0.to}
+                className="group flex items-start gap-4 px-4 py-3.5 rounded-xl transition-all"
+                onMouseEnter={e => { e.currentTarget.style.background = 'var(--surface)' }}
+                onMouseLeave={e => { e.currentTarget.style.background = 'transparent' }}
               >
-                <div className="text-[13.5px] font-semibold group-hover:text-brand mb-1 leading-tight flex items-center gap-1.5" style={{ color: 'var(--foreground)' }}>
-                  {row.label}
-                  {row.badge && (
-                    <span className="text-[9px] font-bold px-1.5 py-px rounded" style={{ background: 'var(--brand-light)', color: 'var(--brand)' }}>
-                      {row.badge}
-                    </span>
-                  )}
+                <div
+                  className="w-12 h-12 rounded-lg flex-shrink-0 flex items-center justify-center"
+                  style={{ background: 'var(--brand-light)' }}
+                >
+                  <TryIcon size={20} className="text-brand" />
                 </div>
-                <div className="text-[11.5px] leading-snug" style={{ color: 'var(--foreground-muted)' }}>{row.sub}</div>
+                <div>
+                  <div className="text-[14px] font-semibold mb-1 group-hover:text-brand transition-colors" style={{ color: 'var(--foreground)' }}>
+                    {row0.label}
+                  </div>
+                  <div className="text-[12px] leading-snug" style={{ color: 'var(--foreground-muted)' }}>
+                    {row0.sub}
+                  </div>
+                </div>
               </Link>
-            ))}
-          </div>
+
+              {/* Divider */}
+              <div className="mx-4 my-3" style={{ borderTop: '1px solid var(--border)' }} />
+
+              {/* Talk to an engineer */}
+              <div className="px-4 pb-2">
+                <div className="text-[12px] font-semibold mb-1.5" style={{ color: 'var(--foreground-subtle)' }}>
+                  Not sure which process?
+                </div>
+                <div className="text-[12px] leading-relaxed mb-3" style={{ color: 'var(--foreground-muted)' }}>
+                  {row1.sub}
+                </div>
+                <Link
+                  to={row1.to}
+                  className="inline-flex items-center gap-1.5 text-[13px] font-bold transition-all hover:gap-2.5"
+                  style={{ color: 'var(--brand)' }}
+                >
+                  Talk to an engineer <ArrowUpRight size={14} />
+                </Link>
+              </div>
+            </div>
+            )
+          })() : (
+            /* ── Generic card grid ── */
+            <div
+              className="grid gap-2.5 flex-1 content-start"
+              style={{
+                gridTemplateColumns: activeCol.rows.length <= 2
+                  ? '1fr'
+                  : activeCol.rows.length === 3
+                    ? '1fr 1fr 1fr'
+                    : activeCol.rows.length === 4
+                      ? '1fr 1fr'
+                      : '1fr 1fr 1fr',
+              }}
+            >
+              {activeCol.rows.map(row => (
+                <Link
+                  key={row.label}
+                  to={row.to}
+                  className="group block rounded-lg px-4 py-3.5 transition-all"
+                  style={{ border: '1px solid transparent' }}
+                  onMouseEnter={e => {
+                    e.currentTarget.style.borderColor = 'var(--brand)'
+                    e.currentTarget.style.background = 'var(--surface)'
+                    e.currentTarget.style.boxShadow = '0 1px 4px rgba(0,0,0,0.07)'
+                  }}
+                  onMouseLeave={e => {
+                    e.currentTarget.style.borderColor = 'transparent'
+                    e.currentTarget.style.background = 'transparent'
+                    e.currentTarget.style.boxShadow = 'none'
+                  }}
+                >
+                  <div className="text-[13.5px] font-semibold group-hover:text-brand mb-1 leading-tight flex items-center gap-1.5" style={{ color: 'var(--foreground)' }}>
+                    {row.label}
+                    {row.badge && (
+                      <span className="text-[9px] font-bold px-1.5 py-px rounded" style={{ background: 'var(--brand-light)', color: 'var(--brand)' }}>
+                        {row.badge}
+                      </span>
+                    )}
+                  </div>
+                  <div className="text-[11.5px] leading-snug" style={{ color: 'var(--foreground-muted)' }}>{row.sub}</div>
+                </Link>
+              ))}
+            </div>
+          )}
 
           {(entry.footerLeft || entry.footerRight) && (
             <div className="mt-5 pt-4 flex items-center justify-between" style={{ borderTop: '1px solid var(--border)' }}>
