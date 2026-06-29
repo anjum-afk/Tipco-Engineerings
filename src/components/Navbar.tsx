@@ -33,6 +33,7 @@ interface Row {
 interface Col {
   heading: string
   rows: Row[]
+  sidebarPinned?: boolean  // pin rows as sub-links in the sidebar
 }
 
 interface FooterLink { label: string; to: string }
@@ -72,6 +73,7 @@ const SOLUTIONS_COLS: Col[] = [
   },
   {
     heading: 'Start Here',
+    sidebarPinned: true,
     rows: [
       { icon: FlaskConical, label: 'Try before you buy', sub: 'Free lab trial on your actual product — book a session with our engineers.', to: '/contact-us' },
       { icon: Wrench, label: 'Talk to an engineer', sub: "Tell us your raw material and target particle size — we'll recommend the right machine.", to: '/contact-us', gray: true },
@@ -274,29 +276,53 @@ function TwoPanelMegaPanel({
       <div className="max-w-[1280px] mx-auto flex" style={{ minHeight: '260px' }}>
         <div className="w-[210px] flex-shrink-0 border-r py-5" style={{ borderColor: 'var(--border)' }}>
           {cols.map(col => (
-            <button
-              key={col.heading}
-              onMouseEnter={e => {
-                setActiveCategory(col.heading)
-                if (activeCategory !== col.heading) {
-                  e.currentTarget.style.color = 'var(--brand)'
-                  e.currentTarget.style.background = 'var(--surface)'
-                }
-              }}
-              onClick={() => setActiveCategory(col.heading)}
-              className="w-full text-left px-6 py-2.5 text-[13.5px] font-medium transition-colors cursor-pointer border-l-2"
-              style={activeCategory === col.heading
-                ? { borderLeftColor: 'var(--brand)', color: 'var(--brand)', background: 'var(--surface)' }
-                : { borderColor: 'transparent', color: 'var(--foreground-muted)', background: 'transparent' }}
-              onMouseLeave={e => {
-                if (activeCategory !== col.heading) {
-                  e.currentTarget.style.color = 'var(--foreground-muted)'
-                  e.currentTarget.style.background = 'transparent'
-                }
-              }}
-            >
-              {col.heading}
-            </button>
+            <div key={col.heading}>
+              <button
+                onMouseEnter={e => {
+                  setActiveCategory(col.heading)
+                  if (activeCategory !== col.heading) {
+                    e.currentTarget.style.color = 'var(--brand)'
+                    e.currentTarget.style.background = 'var(--surface)'
+                  }
+                }}
+                onClick={() => setActiveCategory(col.heading)}
+                className="w-full text-left px-6 py-2.5 text-[13.5px] font-medium transition-colors cursor-pointer border-l-2"
+                style={activeCategory === col.heading
+                  ? { borderLeftColor: 'var(--brand)', color: 'var(--brand)', background: 'var(--surface)' }
+                  : { borderColor: 'transparent', color: 'var(--foreground-muted)', background: 'transparent' }}
+                onMouseLeave={e => {
+                  if (activeCategory !== col.heading) {
+                    e.currentTarget.style.color = 'var(--foreground-muted)'
+                    e.currentTarget.style.background = 'transparent'
+                  }
+                }}
+              >
+                {col.heading}
+              </button>
+
+              {/* Pinned sub-links shown directly in sidebar */}
+              {col.sidebarPinned && col.rows.map(row => (
+                <Link
+                  key={row.label}
+                  to={row.to}
+                  className="flex items-center gap-2 pl-8 pr-4 py-2 text-[12px] transition-colors"
+                  style={{ color: 'var(--foreground-subtle)', borderLeft: '2px solid transparent' }}
+                  onMouseEnter={e => {
+                    e.currentTarget.style.color = 'var(--brand)'
+                    e.currentTarget.style.borderLeftColor = 'var(--brand)'
+                    e.currentTarget.style.background = 'var(--surface)'
+                  }}
+                  onMouseLeave={e => {
+                    e.currentTarget.style.color = 'var(--foreground-subtle)'
+                    e.currentTarget.style.borderLeftColor = 'transparent'
+                    e.currentTarget.style.background = 'transparent'
+                  }}
+                >
+                  <row.icon size={12} />
+                  {row.label}
+                </Link>
+              ))}
+            </div>
           ))}
         </div>
 
