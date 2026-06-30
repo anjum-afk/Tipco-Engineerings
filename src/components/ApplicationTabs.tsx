@@ -1,12 +1,6 @@
 import { useState, useRef, useEffect, useLayoutEffect } from 'react'
 import { Link } from 'react-router-dom'
-import {
-  ArrowUpRight, Factory, Cog, Layers,
-  Droplet, FlaskConical, Settings, Boxes, Gauge, ChevronLeft, ChevronRight,
-} from 'lucide-react'
-import type { ComponentType } from 'react'
-
-type LucideIcon = ComponentType<{ size?: number; className?: string; style?: React.CSSProperties }>
+import { ArrowUpRight, ChevronLeft, ChevronRight } from 'lucide-react'
 
 interface TabItem {
   label: string
@@ -19,7 +13,6 @@ interface Tab {
   id: string
   label: string
   sublabel: string
-  icon: LucideIcon
   heading: string
   description: string
   items: TabItem[]
@@ -33,7 +26,6 @@ const TABS: Tab[] = [
     id: 'industry',
     label: 'Industry',
     sublabel: 'Paint · Pharma · Chemical · Ink',
-    icon: Layers,
     heading: 'Industries We Serve',
     description:
       'With over 35 years of experience in industrial machine manufacturing, Tipco Engineering high-end products are designed for long life and minimum maintenance — covering Paint, Pharma, Chemicals, and Pesticide industries.',
@@ -51,7 +43,6 @@ const TABS: Tab[] = [
     id: 'process',
     label: 'Process',
     sublabel: 'Mixing · Milling · Dispersing',
-    icon: Cog,
     heading: 'Manufacturing Processes',
     description:
       'Tipco Engineering offers reliable solutions for paint, ink, glue, gel, and many other applications. Our expertise in assembly line balancing prevents production disruptions and keeps your throughput optimal.',
@@ -67,7 +58,6 @@ const TABS: Tab[] = [
     id: 'production',
     label: 'Production Setup',
     sublabel: 'Paint · Ink · Chemical · Powder',
-    icon: Factory,
     heading: 'Complete Production Lines',
     description:
       'From individual machines to complete production lines — Tipco Engineering leads in automated production line technology, supplying fully integrated systems across industries worldwide.',
@@ -83,16 +73,6 @@ const TABS: Tab[] = [
   },
 ]
 
-const BG_ICONS: { Icon: LucideIcon; top: string; left: string; size: number; anim: string; delay: string }[] = [
-  { Icon: Layers,       top: '8%',  left: '2%',  size: 80,  anim: 'app-anim-float',    delay: '0s'   },
-  { Icon: Cog,          top: '12%', left: '91%', size: 110, anim: 'app-anim-spin',     delay: '0s'   },
-  { Icon: Factory,      top: '62%', left: '7%',  size: 90,  anim: 'app-anim-drift',    delay: '1.2s' },
-  { Icon: Droplet,      top: '76%', left: '85%', size: 56,  anim: 'app-anim-float',    delay: '2s'   },
-  { Icon: FlaskConical, top: '40%', left: '47%', size: 54,  anim: 'app-anim-drift',    delay: '0.6s' },
-  { Icon: Settings,     top: '82%', left: '51%', size: 78,  anim: 'app-anim-spin-rev', delay: '0s'   },
-  { Icon: Boxes,        top: '5%',  left: '60%', size: 60,  anim: 'app-anim-float',    delay: '1.6s' },
-  { Icon: Gauge,        top: '50%', left: '94%', size: 50,  anim: 'app-anim-drift',    delay: '2.4s' },
-]
 
 // ── Image row: fills space when few cards, shows ‹ › arrows when overflowing ──
 function ImageRow({ items, brokenImgs, onBroken }: {
@@ -275,7 +255,7 @@ export default function ApplicationTabs() {
   return (
     <section
       ref={sectionRef}
-      className="relative w-full"
+      className="relative w-full overflow-x-hidden"
       style={{ height: pinned ? `${100 + (TABS.length - 1) * SCROLL_PER_TAB}vh` : undefined }}
     >
     <div
@@ -283,28 +263,16 @@ export default function ApplicationTabs() {
       style={{ background: 'var(--surface)' }}
     >
 
-      {/* ── Animated icon background ─── */}
+      {/* ── Subtle gradient background ─── */}
       <div className="absolute inset-0 z-0 pointer-events-none" aria-hidden>
         <div
           className="absolute -top-1/4 -right-1/4 w-[60%] h-[120%] rounded-full transition-all duration-700"
-          style={{ background: `radial-gradient(circle, ${tab.glow} 0%, transparent 65%)`, opacity: 0.18, filter: 'blur(40px)' }}
+          style={{ background: `radial-gradient(circle, ${tab.glow} 0%, transparent 65%)`, opacity: 0.12, filter: 'blur(40px)' }}
         />
         <div
           className="absolute -bottom-1/4 -left-1/4 w-[55%] h-[110%] rounded-full transition-all duration-700"
-          style={{ background: `radial-gradient(circle, ${tab.glow} 0%, transparent 65%)`, opacity: 0.12, filter: 'blur(50px)' }}
+          style={{ background: `radial-gradient(circle, ${tab.glow} 0%, transparent 65%)`, opacity: 0.08, filter: 'blur(50px)' }}
         />
-        {BG_ICONS.map((b, i) => {
-          const I = b.Icon
-          return (
-            <span
-              key={i}
-              className={`app-bg-icon ${b.anim}`}
-              style={{ top: b.top, left: b.left, animationDelay: b.delay, color: tab.accent, opacity: 0.08, transition: 'color 0.7s ease' } as React.CSSProperties}
-            >
-              <I size={b.size} />
-            </span>
-          )
-        })}
       </div>
 
       {/* ── Header: eyebrow + full-width tab bar ─── */}
@@ -313,10 +281,10 @@ export default function ApplicationTabs() {
           Applications
         </p>
 
-        {/* Segmented tab bar — contained width, gap between options, gradient bg */}
+        {/* Segmented tab bar — responsive, gap between options, gradient bg */}
         <div className="px-4 sm:px-8 lg:px-14">
           <div
-            className="flex gap-2 p-1.5 rounded-2xl"
+            className="flex gap-1 sm:gap-2 p-1 sm:p-1.5 rounded-xl sm:rounded-2xl"
             style={{
               background: 'linear-gradient(135deg, rgba(20,184,166,0.08) 0%, rgba(124,58,237,0.05) 50%, rgba(249,115,22,0.08) 100%)',
               border: '1px solid var(--border)',
@@ -324,12 +292,11 @@ export default function ApplicationTabs() {
           >
             {TABS.map((t, i) => {
               const isActive = active === i
-              const Icon = t.icon
               return (
                 <button
                   key={t.id}
                   onClick={() => goTo(i)}
-                  className="flex-1 flex items-center justify-center gap-2 py-3 px-4 rounded-xl cursor-pointer transition-all duration-300 outline-none"
+                  className="flex-1 flex items-center justify-center py-2.5 sm:py-3 px-1.5 sm:px-4 rounded-lg sm:rounded-xl cursor-pointer transition-all duration-300 outline-none"
                   style={{
                     background: isActive
                       ? `linear-gradient(135deg, ${t.accent} 0%, ${t.accent}bb 100%)`
@@ -337,10 +304,13 @@ export default function ApplicationTabs() {
                     boxShadow: isActive ? `0 4px 14px ${t.glow}` : 'none',
                   }}
                 >
-                  <Icon size={14} style={{ color: isActive ? '#fff' : 'var(--foreground-subtle)', flexShrink: 0 }} />
                   <span
-                    className="font-bold uppercase tracking-[0.16em] whitespace-nowrap"
-                    style={{ fontSize: '11px', color: isActive ? '#fff' : 'var(--foreground-muted)' }}
+                    className="font-bold uppercase whitespace-nowrap"
+                    style={{
+                      fontSize: 'clamp(8.5px, 2.4vw, 11px)',
+                      letterSpacing: 'clamp(0.04em, 0.4vw, 0.16em)',
+                      color: isActive ? '#fff' : 'var(--foreground-muted)',
+                    }}
                   >
                     {t.label}
                   </span>
@@ -362,7 +332,7 @@ export default function ApplicationTabs() {
             <div
               key={t.id}
               ref={el => { panelRefs.current[ti] = el }}
-              className="absolute top-0 left-0 right-0 px-4 sm:px-8 lg:px-14 pt-2 pb-14 transition-all duration-[600ms] ease-[cubic-bezier(0.22,1,0.36,1)]"
+              className="absolute top-0 left-0 right-0 px-4 sm:px-8 lg:px-14 pt-2 pb-8 sm:pb-12 lg:pb-14 transition-all duration-[600ms] ease-[cubic-bezier(0.22,1,0.36,1)]"
               style={{
                 transform: offset === 0 ? 'translateY(0)' : offset < 0 ? 'translateY(-48px)' : 'translateY(48px)',
                 opacity: offset === 0 ? 1 : 0,
@@ -370,13 +340,13 @@ export default function ApplicationTabs() {
               }}
             >
               {/* Two-column: text left, images right */}
-              <div className="grid grid-cols-1 lg:grid-cols-[minmax(0,34%)_minmax(0,1fr)] gap-8 lg:gap-10 items-center">
+              <div className="grid grid-cols-1 lg:grid-cols-[minmax(0,34%)_minmax(0,1fr)] gap-5 sm:gap-8 lg:gap-10 items-start lg:items-center">
 
                 {/* LEFT — text */}
                 <div>
                   <h2
                     className="font-display font-bold leading-[1.05]"
-                    style={{ fontSize: 'clamp(28px, 3.6vw, 44px)', letterSpacing: '-0.03em', color: 'var(--foreground)' }}
+                    style={{ fontSize: 'clamp(22px, 3.6vw, 44px)', letterSpacing: '-0.03em', color: 'var(--foreground)' }}
                   >
                     {t.heading}
                   </h2>
