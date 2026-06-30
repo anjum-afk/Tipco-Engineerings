@@ -255,7 +255,7 @@ export default function ApplicationTabs() {
   return (
     <section
       ref={sectionRef}
-      className="relative w-full overflow-x-hidden"
+      className="relative w-full"
       style={{ height: pinned ? `${100 + (TABS.length - 1) * SCROLL_PER_TAB}vh` : undefined }}
     >
     <div
