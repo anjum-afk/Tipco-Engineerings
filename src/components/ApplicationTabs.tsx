@@ -74,19 +74,23 @@ const TABS: Tab[] = [
 ]
 
 
-// ── Image row: fills space when few cards, shows ‹ › arrows when overflowing ──
+// ── Image row: all cards sized to fill 2-up; extras scroll ──
 function ImageRow({ items, brokenImgs, onBroken }: {
   items: TabItem[]
   brokenImgs: Set<string>
   onBroken: (src: string) => void
 }) {
   const rowRef = useRef<HTMLDivElement>(null)
-  const [canScrollLeft, setCanScrollLeft]   = useState(false)
+  const [canScrollLeft,  setCanScrollLeft]  = useState(false)
   const [canScrollRight, setCanScrollRight] = useState(false)
+  const [cardW, setCardW] = useState(340)
 
-  function checkScroll() {
+  function update() {
     const el = rowRef.current
     if (!el) return
+    // Size every card so exactly 2 fill the row (same as Process tab)
+    const w = Math.floor((el.offsetWidth - 12) / 2)
+    setCardW(Math.max(w, 200))
     setCanScrollLeft(el.scrollLeft > 4)
     setCanScrollRight(el.scrollLeft < el.scrollWidth - el.clientWidth - 4)
   }
@@ -94,17 +98,16 @@ function ImageRow({ items, brokenImgs, onBroken }: {
   useEffect(() => {
     const el = rowRef.current
     if (!el) return
-    checkScroll()
-    const ro = new ResizeObserver(checkScroll)
+    update()
+    const ro = new ResizeObserver(update)
     ro.observe(el)
-    el.addEventListener('scroll', checkScroll, { passive: true })
-    return () => { ro.disconnect(); el.removeEventListener('scroll', checkScroll) }
+    el.addEventListener('scroll', update, { passive: true })
+    return () => { ro.disconnect(); el.removeEventListener('scroll', update) }
   }, [items])
 
   function scrollBy(dir: 1 | -1) {
     const el = rowRef.current
     if (!el) return
-    const cardW = el.querySelector('a')?.offsetWidth ?? 280
     el.scrollBy({ left: dir * (cardW + 12), behavior: 'smooth' })
   }
 
@@ -133,8 +136,8 @@ function ImageRow({ items, brokenImgs, onBroken }: {
             to={item.href}
             className="tab-card-in group relative overflow-hidden rounded-xl"
             style={{
-              flex: '1 1 auto',
-              minWidth: '340px',
+              flex: '0 0 auto',
+              width: `${cardW}px`,
               height: CARD_H,
               animationDelay: `${i * 80}ms`,
             }}
