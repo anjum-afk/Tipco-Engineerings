@@ -30,10 +30,34 @@ function Field({
 
 function EnquiryDrawer({ open, onClose }: { open: boolean; onClose: () => void }) {
   const [submitted, setSubmitted] = useState(false)
+  const [sending, setSending] = useState(false)
+  const [error, setError] = useState('')
 
-  function handleSubmit(e: React.FormEvent) {
+  async function handleSubmit(e: React.SyntheticEvent) {
     e.preventDefault()
-    setSubmitted(true)
+    setSending(true)
+    setError('')
+    const fd = new FormData(e.target as HTMLFormElement)
+    const data = {
+      name:    fd.get('name') as string,
+      email:   fd.get('email') as string,
+      phone:   fd.get('phone') as string,
+      company: fd.get('company') as string,
+      message: fd.get('message') as string,
+    }
+    try {
+      const res = await fetch(`${import.meta.env.VITE_STRAPI_URL}/api/enquiries`, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ data }),
+      })
+      if (!res.ok) throw new Error(`${res.status}`)
+      setSubmitted(true)
+    } catch {
+      setError('Could not send. Please call us directly.')
+    } finally {
+      setSending(false)
+    }
   }
 
   return (
@@ -70,8 +94,11 @@ function EnquiryDrawer({ open, onClose }: { open: boolean; onClose: () => void }
               <Field icon={Phone} label="Phone Number" name="phone" type="tel" required />
               <Field icon={Building2} label="Company / Organisation" name="company" />
               <Field icon={MessageSquare} label="Message / Enquiry" name="message" textarea required />
-              <button type="submit" className="w-full py-3 rounded-lg text-sm font-bold text-white flex items-center justify-center gap-2 transition-opacity hover:opacity-90" style={{ background: 'var(--brand)' }}>
-                <Send size={15} /> Send Enquiry
+              {error && <p className="text-xs font-medium text-red-600 text-center">{error}</p>}
+              <button type="submit" disabled={sending}
+                className="w-full py-3 rounded-lg text-sm font-bold text-white flex items-center justify-center gap-2 transition-opacity hover:opacity-90 disabled:opacity-60 disabled:cursor-not-allowed"
+                style={{ background: 'var(--brand)' }}>
+                <Send size={15} /> {sending ? 'Sending…' : 'Send Enquiry'}
               </button>
               <p className="text-[11px] text-gray-400 text-center">
                 By submitting you agree to our <a href="/privacy-policy" className="underline hover:text-gray-600">Privacy Policy</a>.
@@ -280,7 +307,7 @@ export default function FloatingButtons() {
       <button
         onClick={() => setChatOpen(true)}
         aria-label="Chat with AI assistant"
-        className="fixed z-[400] bottom-6 left-6 flex items-center gap-2.5 px-4 py-3 rounded-2xl shadow-lg text-white text-sm font-semibold transition-all hover:scale-105 hover:shadow-xl"
+        className="fixed z-[400] bottom-6 right-6 flex items-center gap-2.5 px-4 py-3 rounded-2xl shadow-lg text-white text-sm font-semibold transition-all hover:scale-105 hover:shadow-xl"
         style={{ background: 'var(--brand)' }}
       >
         <Bot size={18} />

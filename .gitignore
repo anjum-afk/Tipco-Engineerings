@@ -1,3 +1,11 @@
+.env
+.env.local
+
+# Local dev tooling with hardcoded credentials — never commit
+scripts/cpanel-login.js
+cpanel-dashboard.png
+filemanager.png
+
 # Logs
 logs
 *.log

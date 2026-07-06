@@ -10,10 +10,9 @@ import {
   Users, Briefcase, ShieldCheck, Award, Mail,
   BarChart3, TrendingUp, HelpCircle, Scale, FileCheck,
   Layers, Atom, ArrowLeftRight, Microscope, Search,
-  Phone, Sun, Moon,
+  Phone,
 } from 'lucide-react'
 import { SOCIAL_LINKS, CONTACT } from '../data/site'
-import { useDarkMode } from '../hooks/useDarkMode'
 
 const LOGO = '/img/logo/tipco-logo.png'
 
@@ -1104,7 +1103,7 @@ const SEARCH_INDEX: SearchEntry[] = [
 ]
 
 const KIND_BADGE: Record<SearchEntry['kind'], { bg: string; text: string }> = {
-  product:  { bg: '#e6f4f3', text: '#007872' },
+  product:  { bg: '#e6f4f3', text: '#186B6D' },
   solution: { bg: '#eef6ff', text: '#1d6fbb' },
   resource: { bg: '#f3f4f6', text: '#4b5563' },
   page:     { bg: '#f9fafb', text: '#6b7280' },
@@ -1215,6 +1214,7 @@ function NavSearch({ onFocus }: { onFocus?: () => void }) {
           onClick={expand}
           className="flex-shrink-0 w-9 h-full flex items-center justify-center"
           aria-label="Search"
+          title="Search products, solutions…"
           style={{ color: open ? 'var(--brand)' : 'var(--foreground-muted)' }}
         >
           <Search size={15} />
@@ -1295,42 +1295,6 @@ function NavSearch({ onFocus }: { onFocus?: () => void }) {
   )
 }
 
-// ── Dark / Light mode toggle ──────────────────────────────────────────────────
-
-function NavThemeToggle() {
-  const { isDark, toggle } = useDarkMode()
-
-  return (
-    <button
-      onClick={toggle}
-      title={isDark ? 'Switch to light mode' : 'Switch to dark mode'}
-      aria-label={isDark ? 'Switch to light mode' : 'Switch to dark mode'}
-      className="flex items-center justify-center w-9 h-9 rounded-xl transition-all duration-300 relative overflow-hidden"
-      style={{ background: 'var(--surface)', color: 'var(--foreground-muted)' }}
-      onMouseEnter={e => { e.currentTarget.style.background = 'var(--surface-raised)'; e.currentTarget.style.color = 'var(--foreground)' }}
-      onMouseLeave={e => { e.currentTarget.style.background = 'var(--surface)'; e.currentTarget.style.color = 'var(--foreground-muted)' }}
-    >
-      {/* Sun icon — shown in dark mode (click to go light) */}
-      <Sun
-        size={15}
-        className="absolute transition-all duration-300"
-        style={{
-          opacity: isDark ? 1 : 0,
-          transform: isDark ? 'rotate(0deg) scale(1)' : 'rotate(90deg) scale(0.5)',
-        }}
-      />
-      {/* Moon icon — shown in light mode (click to go dark) */}
-      <Moon
-        size={15}
-        className="absolute transition-all duration-300"
-        style={{
-          opacity: isDark ? 0 : 1,
-          transform: isDark ? 'rotate(-90deg) scale(0.5)' : 'rotate(0deg) scale(1)',
-        }}
-      />
-    </button>
-  )
-}
 
 // ── Main Navbar ───────────────────────────────────────────────────────────────
 
@@ -1426,12 +1390,19 @@ export default function Navbar() {
           </nav>
 
           {/* Right side */}
-          <div className="flex items-center gap-1">
+          <div className="flex items-center gap-2">
             {/* Expandable search — desktop only */}
             <NavSearch onFocus={() => setActive(null)} />
 
-            {/* Dark / Light toggle */}
-            <NavThemeToggle />
+            {/* Get a Quote CTA — desktop only */}
+            <Link
+              to="/contact"
+              className="hidden xl:inline-flex items-center gap-2 px-4 py-2 rounded-xl text-sm font-semibold text-white transition-opacity hover:opacity-90 whitespace-nowrap"
+              style={{ background: 'var(--brand)' }}
+            >
+              <Phone size={13} />
+              Get a Quote
+            </Link>
 
             {/* Fullscreen menu button — shown below xl (1280px) */}
             <button

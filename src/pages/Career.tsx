@@ -33,7 +33,7 @@ export default function Career() {
         <div className="max-w-[1280px] mx-auto px-6 max-w-4xl">
           <div className="bg-gray-50 border border-gray-200 rounded-xl p-6 md:p-8">
             <div className="flex flex-wrap items-center gap-4 mb-6 pb-6 border-b border-gray-200">
-              <div className="w-12 h-12 rounded-lg flex items-center justify-center text-white" style={{ background: '#007872' }}>
+              <div className="w-12 h-12 rounded-lg flex items-center justify-center text-white" style={{ background: '#186B6D' }}>
                 <Briefcase size={22} />
               </div>
               <div className="flex-1">

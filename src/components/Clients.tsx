@@ -12,16 +12,13 @@ function Logo({ c }: { c: { id: number } }) {
   const ext = c.id >= 16 ? 'png' : 'jpg'
   return (
     <div
-      className="flex-shrink-0 flex items-center justify-center mx-5"
-      style={{ width: '130px', height: '56px' }}
+      className="flex-shrink-0 flex items-center justify-center mx-7"
+      style={{ width: '180px', height: '84px' }}
     >
       <img
         src={`https://tipcoengineering.com/public/uploads/client-${c.id}.${ext}`}
         alt={`Client ${c.id}`}
-        className="max-h-10 max-w-[110px] w-auto object-contain"
-        style={{ filter: 'grayscale(1) opacity(0.55)', transition: 'filter 0.3s' }}
-        onMouseEnter={e => { (e.currentTarget as HTMLImageElement).style.filter = 'grayscale(0) opacity(1)' }}
-        onMouseLeave={e => { (e.currentTarget as HTMLImageElement).style.filter = 'grayscale(1) opacity(0.55)' }}
+        className="max-h-16 max-w-[160px] w-auto object-contain transition-transform duration-300 hover:scale-105"
         loading="lazy"
       />
     </div>

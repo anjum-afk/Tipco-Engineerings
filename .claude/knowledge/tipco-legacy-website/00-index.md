@@ -18,6 +18,10 @@ Auditor role: Senior Frontend Architect
 | [09-design-system.md](09-design-system.md) | Design system analysis and component inventory |
 | [10-questions.md](10-questions.md) | Questions to ask the existing dev team |
 | [11-onboarding-plan.md](11-onboarding-plan.md) | 30-day onboarding plan |
+| [12-content-inventory.md](12-content-inventory.md) | **Content audit master index** — full live-site content/asset inventory (30 Jun 2026) |
+| [13-product-catalog.md](13-product-catalog.md) | Every product, spec table, and brochure-link finding |
+| [14-blog-and-resources.md](14-blog-and-resources.md) | Blog (~115 posts), catalogue, video/photo galleries |
+| [15-trust-and-media.md](15-trust-and-media.md) | Clients, certifications, events, testimonials, company pages |
 
 ## Top 5 things to know on day one
 

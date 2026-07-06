@@ -56,20 +56,20 @@ function WorldMap({ activeOffice, onPinClick }: { activeOffice: number; onPinCli
         return (
           <g key={office.id} onClick={() => onPinClick(i)} style={{ cursor: 'pointer' }}>
             {active && (
-              <circle cx={px} cy={py} r={14} fill="none" stroke="#007872" strokeWidth={1.5} opacity={0.3}>
+              <circle cx={px} cy={py} r={14} fill="none" stroke="#186B6D" strokeWidth={1.5} opacity={0.3}>
                 <animate attributeName="r" values="8;20;8" dur="2s" repeatCount="indefinite" />
                 <animate attributeName="opacity" values="0.4;0;0.4" dur="2s" repeatCount="indefinite" />
               </circle>
             )}
             <path
               d={`M${px},${py} C${px-7},${py-8} ${px-7},${py-22} ${px},${py-26} C${px+7},${py-22} ${px+7},${py-8} ${px},${py}Z`}
-              fill={active ? '#007872' : '#2d4a4a'}
+              fill={active ? '#186B6D' : '#2d4a4a'}
               stroke="#fff"
               strokeWidth={1.2}
             />
             <circle cx={px} cy={py - 18} r={3.5} fill="#fff" />
-            <rect x={px - 28} y={py - 44} width={56} height={16} rx={4} fill={active ? '#007872' : '#2d4a4a'} />
-            <polygon points={`${px-5},${py-28} ${px+5},${py-28} ${px},${py-22}`} fill={active ? '#007872' : '#2d4a4a'} />
+            <rect x={px - 28} y={py - 44} width={56} height={16} rx={4} fill={active ? '#186B6D' : '#2d4a4a'} />
+            <polygon points={`${px-5},${py-28} ${px+5},${py-28} ${px},${py-22}`} fill={active ? '#186B6D' : '#2d4a4a'} />
             <text x={px} y={py-32} textAnchor="middle" fill="#fff" fontSize={8} fontWeight="700" fontFamily="system-ui,sans-serif">
               {office.city}
             </text>
@@ -109,10 +109,31 @@ function MapEmbed({ office }: { office: typeof OFFICES[number] }) {
 export default function ContactUs() {
   const [activeOffice, setActiveOffice] = useState(0)
   const [sent, setSent] = useState(false)
+  const [sending, setSending] = useState(false)
+  const [error, setError] = useState('')
   const [form, setForm] = useState({ name: '', email: '', phone: '', company: '', message: '' })
 
   const set = (k: string) => (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) =>
     setForm(f => ({ ...f, [k]: e.target.value }))
+
+  async function handleSubmit(e: React.SyntheticEvent) {
+    e.preventDefault()
+    setSending(true)
+    setError('')
+    try {
+      const res = await fetch(`${import.meta.env.VITE_STRAPI_URL}/api/enquiries`, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ data: form }),
+      })
+      if (!res.ok) throw new Error(`${res.status}`)
+      setSent(true)
+    } catch {
+      setError('Could not send your message. Please try again or call us directly.')
+    } finally {
+      setSending(false)
+    }
+  }
 
   return (
     <main>
@@ -200,7 +221,7 @@ export default function ContactUs() {
                   </button>
                 </div>
               ) : (
-                <form className="space-y-4" onSubmit={e => { e.preventDefault(); setSent(true) }}>
+                <form className="space-y-4" onSubmit={handleSubmit}>
                   <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                     <div>
                       <label className="block text-xs font-semibold uppercase tracking-wide mb-1.5" style={{ color: 'var(--foreground-muted)' }}>Full Name *</label>
@@ -233,8 +254,13 @@ export default function ContactUs() {
                       </div>
                     </div>
                   </div>
-                  <button type="submit" className="flex items-center justify-center gap-2 w-full py-3 rounded-xl text-white font-semibold text-sm hover:opacity-90 transition-opacity" style={{ background: 'var(--brand)' }}>
-                    <Send size={15} /> Send Message
+                  {error && (
+                    <p className="text-sm font-medium" style={{ color: '#dc2626' }}>{error}</p>
+                  )}
+                  <button type="submit" disabled={sending}
+                    className="flex items-center justify-center gap-2 w-full py-3 rounded-xl text-white font-semibold text-sm hover:opacity-90 transition-opacity disabled:opacity-60 disabled:cursor-not-allowed"
+                    style={{ background: 'var(--brand)' }}>
+                    <Send size={15} /> {sending ? 'Sending…' : 'Send Message'}
                   </button>
                 </form>
               )}

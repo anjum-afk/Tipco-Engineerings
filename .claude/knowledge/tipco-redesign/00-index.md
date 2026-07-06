@@ -15,6 +15,8 @@ Role: Senior Product Designer
 | [06-sitemap.md](06-sitemap.md) | New sitemap (211 → 52 URLs), full 301 redirect map, industry page spec |
 | [07-navigation.md](07-navigation.md) | Desktop + mobile nav structure, mega menu, footer, what to remove |
 | [08-user-flows.md](08-user-flows.md) | 5 key user journeys with design requirements per flow |
+| [09-design-system-tokens.md](09-design-system-tokens.md) | Design system tokens — color, type, spacing |
+| [10-content-map.md](10-content-map.md) | **Page → persona → industry → content-block map** + build priority + content to produce |
 
 ## Quick Reference — Top 5 Things to Know
 

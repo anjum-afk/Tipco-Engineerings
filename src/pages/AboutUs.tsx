@@ -82,7 +82,7 @@ export default function AboutUs() {
         <div className="max-w-[1280px] mx-auto px-6 grid md:grid-cols-2 gap-8">
           <div className="bg-white rounded-xl p-8 border border-gray-200">
             <h3 className="text-xl font-bold text-gray-800 mb-3">Our Vision</h3>
-            <div className="h-1 w-10 rounded mb-4" style={{ background: '#007872' }} />
+            <div className="h-1 w-10 rounded mb-4" style={{ background: '#186B6D' }} />
             <p className="text-gray-600 text-sm leading-relaxed">
               To be India's most trusted partner in mixing and milling technology — delivering proven,
               cost-effective process equipment that powers self-reliant manufacturing across industries.
@@ -90,7 +90,7 @@ export default function AboutUs() {
           </div>
           <div className="bg-white rounded-xl p-8 border border-gray-200">
             <h3 className="text-xl font-bold text-gray-800 mb-3">Our Mission</h3>
-            <div className="h-1 w-10 rounded mb-4" style={{ background: '#007872' }} />
+            <div className="h-1 w-10 rounded mb-4" style={{ background: '#186B6D' }} />
             <p className="text-gray-600 text-sm leading-relaxed">
               To engineer reliable machines tailored to each client's requirement, back them with prompt
               after-sales support and readily available spares, and guarantee hassle-free production from day

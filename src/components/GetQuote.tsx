@@ -1,129 +1,164 @@
 import { useState } from 'react'
-import { Send } from 'lucide-react'
+import { CONTACT } from '../data/site'
+
+const INFO_LINES = [
+  { label: 'Phone', value: CONTACT.tollFree },
+  { label: 'Email', value: CONTACT.email },
+  { label: 'Works', value: CONTACT.address },
+  { label: 'Hours', value: 'Mon–Sat, 9:30–18:30 IST' },
+]
 
 export default function GetQuote() {
-  const [form, setForm] = useState({ name: '', email: '', company: '', phone: '', message: '' })
+  const [form, setForm] = useState({ name: '', company: '', email: '', phone: '', details: '' })
+  const [submitted, setSubmitted] = useState(false)
 
-  const set = (k: string) => (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) =>
+  const set = (k: keyof typeof form) => (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) =>
     setForm(f => ({ ...f, [k]: e.target.value }))
 
+  function handleSubmit(e: React.FormEvent) {
+    e.preventDefault()
+    setSubmitted(true)
+  }
+
   return (
-    <section
-      id="get-quote"
-      className="py-16 sm:py-20"
-      style={{ background: 'var(--background)' }}
-    >
-      <div className="max-w-[1280px] mx-auto px-4 sm:px-6">
+    <section id="get-quote" className="relative overflow-hidden text-white" style={{ minHeight: '620px' }}>
+      {/* Full-bleed background — spans 100% of the page width, not just the container */}
+      <div
+        className="absolute inset-0"
+        style={{ background: 'linear-gradient(115deg, #08181a 0%, #0f2b2c 45%, #143a3b 100%)' }}
+      />
 
-        {/* Header */}
-        <div className="text-center mb-10 sm:mb-12">
-          <p
-            className="text-[11px] font-bold uppercase tracking-[0.22em] mb-3"
-            style={{ color: 'var(--brand)' }}
-          >
-            Get in Touch
-          </p>
-          <h2
-            className="font-black leading-tight mb-3"
-            style={{ fontSize: 'clamp(24px, 4vw, 44px)', letterSpacing: '-0.025em', color: 'var(--foreground)' }}
-          >
-            Request a Quote
-          </h2>
-          <div className="flex justify-center mb-4">
-            <span className="block h-1 w-10 rounded-full" style={{ background: 'var(--brand)' }} />
+      {/* Soft glow behind the machine */}
+      <div
+        className="absolute -right-[10%] top-1/2 -translate-y-1/2 w-[70%] h-[140%] rounded-full pointer-events-none"
+        style={{ background: 'radial-gradient(circle, rgba(24,107,109,0.55) 0%, transparent 65%)', filter: 'blur(20px)' }}
+      />
+
+      {/* Product shot — framed in its own light card, since the source photo has a solid white
+          background (not a transparent cutout) and would show as a white box on the dark backdrop */}
+      <div
+        className="absolute right-10 bottom-10 w-[38%] max-w-[420px] rounded-2xl overflow-hidden pointer-events-none hidden md:block"
+        style={{ background: '#fff', boxShadow: '0 30px 60px rgba(0,0,0,0.45)' }}
+      >
+        <img
+          src="https://tipcoengineering.com/public/productwork/Dyno%20Mill.png"
+          alt="Tipco Dyno Mill"
+          className="w-full h-full object-contain p-6"
+        />
+      </div>
+
+      {/* Scrim — dark enough on the left for text, clear enough on the right to see the machine behind the card */}
+      <div
+        className="absolute inset-0 pointer-events-none"
+        style={{
+          background:
+            'linear-gradient(100deg, rgba(8,24,26,0.85) 0%, rgba(8,24,26,0.5) 40%, rgba(8,24,26,0.1) 62%, rgba(8,24,26,0) 78%)',
+        }}
+      />
+
+      {/* Content — kept at the same contained width as the rest of the page */}
+      <div className="relative z-[1] max-w-[1280px] mx-auto px-4 sm:px-6 py-16 sm:py-20 lg:py-24">
+        <div className="flex flex-col lg:flex-row lg:items-center gap-10" style={{ minHeight: '420px' }}>
+
+          {/* LEFT — headline, description, contact lines */}
+          <div className="flex flex-col justify-between flex-1" style={{ minHeight: '420px' }}>
+            <div>
+              <h3
+                className="font-display font-black leading-[1.2] mb-4"
+                style={{ fontSize: 'clamp(24px, 2.8vw, 34px)', letterSpacing: '-0.01em', maxWidth: '420px', color: '#fff' }}
+              >
+                Tell us what you're building — we'll tell you what it takes to make it.
+              </h3>
+              <p className="text-[14.5px] leading-relaxed" style={{ color: 'rgba(255,255,255,0.8)', maxWidth: '420px' }}>
+                Attach a drawing if you have one. If not, describe the part and we'll follow up with questions.
+              </p>
+            </div>
+
+            <div className="flex flex-col gap-2 text-[13.5px] mt-10 lg:mt-0" style={{ color: 'rgba(255,255,255,0.85)' }}>
+              {INFO_LINES.map(line => (
+                <div key={line.label} className="flex gap-3">
+                  <b className="flex-shrink-0" style={{ width: '64px', color: '#fff' }}>{line.label}</b>
+                  <span>{line.value}</span>
+                </div>
+              ))}
+            </div>
           </div>
-          <p className="text-sm max-w-md mx-auto" style={{ color: 'var(--foreground-muted)' }}>
-            Tell us about your process and we'll recommend the right machine for you — free of charge.
-          </p>
-        </div>
 
-        {/* Form card */}
-        <div
-          className="max-w-2xl mx-auto rounded-2xl p-6 sm:p-8"
-          style={{
-            background: 'var(--surface)',
-            border: '1px solid var(--border)',
-            boxShadow: 'var(--shadow-lg)',
-          }}
-        >
-          <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-            <div className="flex flex-col gap-1.5">
-              <label className="text-[12px] font-semibold" style={{ color: 'var(--foreground-muted)' }}>Full Name *</label>
-              <input className="form-input" placeholder="e.g. Rajesh Sharma" value={form.name} onChange={set('name')} />
+          {/* RIGHT — floating form card */}
+          <div
+            className="w-full lg:w-[420px] flex-shrink-0 rounded-2xl p-7 sm:p-8"
+            style={{ background: 'var(--background)', boxShadow: '0 24px 60px rgba(0,0,0,0.35)' }}
+          >
+            <div
+              className="flex items-center justify-between text-[10.5px] font-bold uppercase tracking-[0.08em] pb-4 mb-5"
+              style={{ color: 'var(--foreground-subtle)', borderBottom: '1px solid var(--border)' }}
+            >
+              <span>Quote Request</span>
+              <span>Form TE-QT-01</span>
             </div>
-            <div className="flex flex-col gap-1.5">
-              <label className="text-[12px] font-semibold" style={{ color: 'var(--foreground-muted)' }}>Email Address *</label>
-              <input className="form-input" type="email" placeholder="you@company.com" value={form.email} onChange={set('email')} />
-            </div>
-            <div className="flex flex-col gap-1.5">
-              <label className="text-[12px] font-semibold" style={{ color: 'var(--foreground-muted)' }}>Company Name</label>
-              <input className="form-input" placeholder="Your company" value={form.company} onChange={set('company')} />
-            </div>
-            <div className="flex flex-col gap-1.5">
-              <label className="text-[12px] font-semibold" style={{ color: 'var(--foreground-muted)' }}>Phone Number *</label>
-              <div className="flex gap-2">
-                <select
-                  className="form-input w-24 flex-shrink-0 pr-1"
-                  onChange={set('phone')}
-                  style={{ paddingRight: '4px' }}
+
+            <form onSubmit={handleSubmit}>
+              {[
+                { key: 'name' as const, label: 'Name', type: 'text', placeholder: 'Your full name', required: true },
+                { key: 'company' as const, label: 'Company', type: 'text', placeholder: 'Company name', required: false },
+                { key: 'email' as const, label: 'Email', type: 'email', placeholder: 'you@company.com', required: true },
+                { key: 'phone' as const, label: 'Phone / WhatsApp', type: 'tel', placeholder: '+91 98xxx xxxxx', required: true },
+              ].map(f => (
+                <div className="mb-5" key={f.key}>
+                  <label
+                    htmlFor={f.key}
+                    className="block text-[11px] font-semibold uppercase tracking-[0.05em] mb-2"
+                    style={{ color: 'var(--foreground-subtle)' }}
+                  >
+                    {f.label}
+                  </label>
+                  <input
+                    id={f.key}
+                    type={f.type}
+                    required={f.required}
+                    placeholder={f.placeholder}
+                    value={form[f.key]}
+                    onChange={set(f.key)}
+                    className="w-full bg-transparent text-[14.5px] py-2 outline-none transition-colors"
+                    style={{ borderBottom: '1px solid var(--border)', color: 'var(--foreground)' }}
+                    onFocus={e => { e.currentTarget.style.borderBottomColor = 'var(--brand)' }}
+                    onBlur={e => { e.currentTarget.style.borderBottomColor = 'var(--border)' }}
+                  />
+                </div>
+              ))}
+
+              <div className="mb-6">
+                <label
+                  htmlFor="details"
+                  className="block text-[11px] font-semibold uppercase tracking-[0.05em] mb-2"
+                  style={{ color: 'var(--foreground-subtle)' }}
                 >
-                  <option value="+91">🇮🇳 +91</option>
-                  <option value="+1">🇺🇸 +1</option>
-                  <option value="+44">🇬🇧 +44</option>
-                  <option value="+971">🇦🇪 +971</option>
-                  <option value="+966">🇸🇦 +966</option>
-                </select>
-                <input
-                  className="form-input flex-1"
-                  type="tel"
-                  placeholder="98765 43210"
-                  value={form.phone}
-                  onChange={set('phone')}
+                  Machine &amp; Application
+                </label>
+                <textarea
+                  id="details"
+                  rows={3}
+                  placeholder="Machine type, material to process, batch size, target fineness..."
+                  value={form.details}
+                  onChange={set('details')}
+                  className="w-full bg-transparent text-[14.5px] py-2 outline-none resize-y transition-colors"
+                  style={{ borderBottom: '1px solid var(--border)', color: 'var(--foreground)' }}
+                  onFocus={e => { e.currentTarget.style.borderBottomColor = 'var(--brand)' }}
+                  onBlur={e => { e.currentTarget.style.borderBottomColor = 'var(--border)' }}
                 />
               </div>
-            </div>
+
+              <button
+                type="submit"
+                className="w-full inline-flex items-center justify-center gap-2 rounded-[10px] px-6 py-3 text-sm font-semibold text-white transition-all duration-150 hover:-translate-y-px"
+                style={{ background: 'var(--brand)', boxShadow: '0 1px 2px rgba(0,0,0,0.08)' }}
+              >
+                {submitted ? 'Request Sent ✓' : 'Request Quote →'}
+              </button>
+            </form>
           </div>
 
-          <div className="flex flex-col gap-1.5 mt-4">
-            <label className="text-[12px] font-semibold" style={{ color: 'var(--foreground-muted)' }}>Message / Requirements</label>
-            <textarea
-              className="form-input resize-none"
-              rows={4}
-              placeholder="Describe your application, material, required output, etc."
-              value={form.message}
-              onChange={set('message')}
-            />
-          </div>
-
-          {/* reCAPTCHA mock */}
-          <div
-            className="mt-4 p-3 rounded-lg flex items-center gap-3 w-full max-w-[300px]"
-            style={{ border: '1px solid var(--border)', background: 'var(--background)' }}
-          >
-            <input type="checkbox" id="robot" className="w-4 h-4 cursor-pointer accent-[color:var(--brand)]" />
-            <label htmlFor="robot" className="text-sm cursor-pointer" style={{ color: 'var(--foreground-muted)' }}>
-              I'm not a robot
-            </label>
-            <div className="ml-auto text-right leading-tight">
-              <div className="text-[11px] font-bold" style={{ color: 'var(--foreground-muted)' }}>reCAPTCHA</div>
-              <div className="text-[10px]" style={{ color: 'var(--foreground-subtle)' }}>Privacy · Terms</div>
-            </div>
-          </div>
-
-          <button
-            type="button"
-            className="w-full mt-6 py-3.5 rounded-xl text-[14px] font-bold text-white flex items-center
-                       justify-center gap-2 transition-all duration-300 hover:scale-[1.02] active:scale-[0.98]"
-            style={{
-              background: 'linear-gradient(135deg, var(--brand) 0%, #0ea5e9 100%)',
-              boxShadow: '0 4px 20px rgba(0,120,114,0.4)',
-            }}
-          >
-            <Send size={15} />
-            Send Request
-          </button>
         </div>
-
       </div>
     </section>
   )

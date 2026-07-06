@@ -25,7 +25,7 @@ export default function Service() {
           <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
             {SERVICES.map(s => (
               <div key={s.title} className="bg-gray-50 border border-gray-200 rounded-xl p-6 text-center">
-                <div className="w-14 h-14 rounded-full mx-auto mb-4 flex items-center justify-center text-white" style={{ background: '#007872' }}>
+                <div className="w-14 h-14 rounded-full mx-auto mb-4 flex items-center justify-center text-white" style={{ background: '#186B6D' }}>
                   {s.icon}
                 </div>
                 <h3 className="font-bold text-gray-800 mb-2">{s.title}</h3>
@@ -35,7 +35,7 @@ export default function Service() {
           </div>
 
           {/* Register for service CTA */}
-          <div className="mt-12 rounded-xl p-8 md:p-10 text-center text-white" style={{ background: 'linear-gradient(135deg,#004D49,#007872)' }}>
+          <div className="mt-12 rounded-xl p-8 md:p-10 text-center text-white" style={{ background: 'linear-gradient(135deg,#004D49,#186B6D)' }}>
             <h2 className="text-2xl font-bold mb-2">Register For Machine Service</h2>
             <p className="opacity-90 mb-6 text-sm">Already a Tipco customer? Register your machine for priority service support.</p>
             <Link to="/contact-us" className="btn btn-white px-8 py-2.5 text-sm">Register</Link>

@@ -29,7 +29,7 @@ export default function Blog() {
                   />
                 </div>
                 <div className="p-5 flex flex-col flex-1">
-                  <div className="flex items-center gap-1.5 text-xs font-semibold mb-2" style={{ color: '#007872' }}>
+                  <div className="flex items-center gap-1.5 text-xs font-semibold mb-2" style={{ color: '#186B6D' }}>
                     <Calendar size={14} />
                     {article.date}
                   </div>
@@ -38,7 +38,7 @@ export default function Blog() {
                   <Link
                     to={article.href}
                     className="mt-4 text-sm font-semibold inline-flex items-center gap-1 hover:underline"
-                    style={{ color: '#007872' }}
+                    style={{ color: '#186B6D' }}
                   >
                     Read More →
                   </Link>
