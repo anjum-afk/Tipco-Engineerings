@@ -32,7 +32,7 @@ export default function Hero() {
   return (
     <section
       className="relative overflow-hidden text-white flex items-center"
-      style={{ minHeight: '620px' }}
+      style={{ minHeight: 'clamp(420px, 78vh, 560px)' }}
       onMouseEnter={() => setPaused(true)}
       onMouseLeave={() => setPaused(false)}
     >
@@ -68,22 +68,22 @@ export default function Hero() {
       />
 
       {/* Content */}
-      <div className="relative z-[2] max-w-[1280px] mx-auto w-full" style={{ padding: '130px 32px 90px' }}>
+      <div className="relative z-[2] max-w-[1280px] mx-auto w-full" style={{ padding: 'clamp(56px, 9vh, 96px) 32px clamp(88px, 13vh, 130px)' }}>
         <div className="flex items-center gap-2.5 text-[12px] font-bold uppercase tracking-[0.14em]" style={{ color: MINT }}>
           <span className="inline-block w-[18px] h-px flex-shrink-0" style={{ background: MINT }} />
           Process Plants &amp; Machinery · Sonipat, Haryana
         </div>
 
         <h1
-          className="font-extrabold mt-[22px] mb-[22px]"
-          style={{ fontSize: 'clamp(36px, 4.8vw, 58px)', lineHeight: 1.08, letterSpacing: '-0.01em', maxWidth: '640px', color: '#fff' }}
+          className="font-extrabold mt-4 mb-4"
+          style={{ fontSize: 'clamp(28px, 4vw, 46px)', lineHeight: 1.1, letterSpacing: '-0.01em', maxWidth: '600px', color: '#fff' }}
         >
           Machines that <span style={{ color: MINT }}>mix, mill</span>
           <br />
           and <span style={{ color: MINT }}>hold up</span> on the floor.
         </h1>
 
-        <p className="mb-[34px]" style={{ fontSize: '16.5px', maxWidth: '480px', color: 'rgba(255,255,255,0.82)' }}>
+        <p className="mb-6" style={{ fontSize: '15px', maxWidth: '460px', color: 'rgba(255,255,255,0.82)' }}>
           Incorporated in 2021 to carry forward a 35-year manufacturing legacy, Tipco Engineering
           builds mixers, dispersers, homogenizers and mills for the Paint, Ink, Pharma and Chemical
           industries — designed with the customer's process first, not adapted to fit it.
@@ -108,7 +108,7 @@ export default function Hero() {
           </a>
         </div>
 
-        <div className="flex flex-wrap gap-7 mt-12">
+        <div className="flex flex-wrap gap-7 mt-8">
           {SPECS.map(s => (
             <div key={s.label}>
               <b className="block text-2xl font-semibold text-white">{s.value}</b>

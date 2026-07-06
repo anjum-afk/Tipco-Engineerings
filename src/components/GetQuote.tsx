@@ -22,37 +22,23 @@ export default function GetQuote() {
 
   return (
     <section id="get-quote" className="relative overflow-hidden text-white" style={{ minHeight: '620px' }}>
-      {/* Full-bleed background — spans 100% of the page width, not just the container */}
+      {/* Full-bleed background photo — spans 100% of the page width, not just the container */}
       <div
         className="absolute inset-0"
-        style={{ background: 'linear-gradient(115deg, #08181a 0%, #0f2b2c 45%, #143a3b 100%)' }}
+        style={{
+          backgroundImage: 'url(https://pixnio.com/free-images/2017/03/24/2017-03-24-09-19-52-1536x1024.jpg)',
+          backgroundSize: 'cover',
+          backgroundPosition: 'center',
+        }}
       />
 
-      {/* Soft glow behind the machine */}
-      <div
-        className="absolute -right-[10%] top-1/2 -translate-y-1/2 w-[70%] h-[140%] rounded-full pointer-events-none"
-        style={{ background: 'radial-gradient(circle, rgba(24,107,109,0.55) 0%, transparent 65%)', filter: 'blur(20px)' }}
-      />
-
-      {/* Product shot — framed in its own light card, since the source photo has a solid white
-          background (not a transparent cutout) and would show as a white box on the dark backdrop */}
-      <div
-        className="absolute right-10 bottom-10 w-[38%] max-w-[420px] rounded-2xl overflow-hidden pointer-events-none hidden md:block"
-        style={{ background: '#fff', boxShadow: '0 30px 60px rgba(0,0,0,0.45)' }}
-      >
-        <img
-          src="https://tipcoengineering.com/public/productwork/Dyno%20Mill.png"
-          alt="Tipco Dyno Mill"
-          className="w-full h-full object-contain p-6"
-        />
-      </div>
-
-      {/* Scrim — dark enough on the left for text, clear enough on the right to see the machine behind the card */}
+      {/* Scrim — dark enough on the left for text, clear enough on the right to see the photo behind the card;
+          tinted brand-teal so the black-and-white photo reads as part of the palette, not just grayscale */}
       <div
         className="absolute inset-0 pointer-events-none"
         style={{
           background:
-            'linear-gradient(100deg, rgba(8,24,26,0.85) 0%, rgba(8,24,26,0.5) 40%, rgba(8,24,26,0.1) 62%, rgba(8,24,26,0) 78%)',
+            'linear-gradient(100deg, rgba(8,24,26,0.94) 0%, rgba(10,40,42,0.75) 38%, rgba(16,60,62,0.35) 62%, rgba(16,60,62,0.12) 78%, rgba(16,60,62,0.1) 100%)',
         }}
       />
 

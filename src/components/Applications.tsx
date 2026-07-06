@@ -9,6 +9,7 @@ interface Group {
   key: string
   label: string
   items: CardItem[]
+  imageAspect?: string
 }
 
 const GROUPS: Group[] = [
@@ -23,14 +24,6 @@ const GROUPS: Group[] = [
     ],
   },
   {
-    key: 'process',
-    label: 'Process',
-    items: [
-      { category: 'Mixing', title: 'Sigma & Ribbon Mixers', description: 'High-viscosity and dry-powder mixing for pastes, putties and blends.', image: '/img/applicationimg/mixing.jpg' },
-      { category: 'Milling', title: 'Bead & Basket Mills', description: 'Wet grinding and fine dispersion down to sub-micron particle size.', image: '/img/applicationimg/milling.png' },
-    ],
-  },
-  {
     key: 'production',
     label: 'Production Setup',
     items: [
@@ -40,9 +33,18 @@ const GROUPS: Group[] = [
       { category: 'Powder Production', title: 'Powder Handling Systems', description: 'Dust-free powder induction and blending for dry-process lines.', image: '/img/applicationimg/powder-production.jpg' },
     ],
   },
+  {
+    key: 'process',
+    label: 'Process',
+    imageAspect: '21 / 9',
+    items: [
+      { category: 'Mixing', title: 'Sigma & Ribbon Mixers', description: 'High-viscosity and dry-powder mixing for pastes, putties and blends.', image: '/img/applicationimg/mixing.jpg' },
+      { category: 'Milling', title: 'Bead & Basket Mills', description: 'Wet grinding and fine dispersion down to sub-micron particle size.', image: '/img/applicationimg/milling.png' },
+    ],
+  },
 ]
 
-function Card({ item }: { item: CardItem }) {
+function Card({ item, imageAspect = '4 / 3' }: { item: CardItem; imageAspect?: string }) {
   return (
     <div
       className="group rounded-2xl overflow-hidden transition-all duration-200 hover:-translate-y-1"
@@ -50,7 +52,7 @@ function Card({ item }: { item: CardItem }) {
       onMouseEnter={e => { e.currentTarget.style.boxShadow = 'var(--shadow-lg)' }}
       onMouseLeave={e => { e.currentTarget.style.boxShadow = 'none' }}
     >
-      <div className="relative overflow-hidden" style={{ aspectRatio: '4 / 3', background: 'var(--surface)' }}>
+      <div className="relative overflow-hidden" style={{ aspectRatio: imageAspect, background: 'var(--surface)' }}>
         <img
           src={item.image}
           alt={item.category}
@@ -118,7 +120,7 @@ export default function Applications() {
                 }
               >
                 {group.items.map(item => (
-                  <Card key={item.category} item={item} />
+                  <Card key={item.category} item={item} imageAspect={group.imageAspect} />
                 ))}
               </div>
             </div>
