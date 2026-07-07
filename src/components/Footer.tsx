@@ -118,7 +118,7 @@ export default function Footer() {
   return (
     /* Light page background around the floating dark panel — like the reference */
     <footer
-      className="px-3 pb-6 pt-12 sm:px-4 md:pb-10 lg:px-6 lg:pt-24 max-md:pb-24"
+      className="overflow-x-clip px-3 pb-6 pt-12 sm:px-4 md:pb-10 lg:px-6 lg:pt-24 max-md:pb-24"
       style={{ background: 'var(--surface)' }}
     >
       {/* ───────── Dark rounded floating panel ───────── */}
@@ -247,7 +247,7 @@ export default function Footer() {
               </div>
 
               {/* columns — title-case semibold headings, plain grey links */}
-              <div className="mt-10 grid grid-cols-1 gap-10 sm:grid-cols-2 lg:mt-12 lg:grid-cols-3">
+              <div className="mt-10 grid grid-cols-1 gap-10 sm:grid-cols-2 lg:mt-12 xl:grid-cols-3">
                 {FOOTER.columns.map((col) => (
                   <div key={col.title}>
                     <h3 className="mb-5 text-[16.5px] font-semibold text-white">{col.title}</h3>
@@ -267,7 +267,7 @@ export default function Footer() {
                 ))}
 
                 {/* Latest News — 3×2 thumbnail grid */}
-                <div className="sm:col-span-2 lg:col-span-1">
+                <div className="sm:col-span-2 xl:col-span-1">
                   <h3 className="mb-5 text-[16.5px] font-semibold text-white">Latest News</h3>
                   <div className="grid max-w-[280px] grid-cols-3 gap-2.5">
                     {FOOTER.news.map((n) => (

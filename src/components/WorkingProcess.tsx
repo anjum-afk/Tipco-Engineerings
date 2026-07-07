@@ -55,7 +55,7 @@ function StepCard({ s }: { s: typeof STEPS[number] }) {
 
       {/* Step label */}
       <span
-        className="text-[10px] font-bold tracking-[0.2em] uppercase"
+        className="text-[11px] font-bold tracking-[0.2em] uppercase"
         style={{ color: 'var(--brand)' }}
       >
         Step {s.step}
@@ -140,7 +140,7 @@ export default function WorkingProcess() {
                   <s.icon size={22} strokeWidth={1.8} />
                 </div>
                 <div className="pt-1.5 min-w-0">
-                  <span className="text-[10px] font-bold tracking-[0.2em] uppercase" style={{ color: 'var(--brand)' }}>
+                  <span className="text-[11px] font-bold tracking-[0.2em] uppercase" style={{ color: 'var(--brand)' }}>
                     Step {s.step}
                   </span>
                   <h3 className="font-bold text-[15.5px] leading-snug text-white mt-1 mb-1.5">{s.label}</h3>

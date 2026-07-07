@@ -113,9 +113,10 @@ export default function Hero() {
           </a>
         </div>
 
-        <div className="grid grid-cols-2 gap-x-6 gap-y-5 mt-8 sm:flex sm:flex-wrap sm:gap-7">
+        {/* 2×2 stat grid through tablet — a single row collides with the fixed ENQUIRY tab below lg */}
+        <div className="grid grid-cols-2 gap-x-6 gap-y-5 mt-8 lg:flex lg:flex-wrap lg:gap-7">
           {SPECS.map(s => (
-            <div key={s.label} className="max-sm:border-l-2 max-sm:pl-3" style={{ borderColor: MINT }}>
+            <div key={s.label} className="max-lg:border-l-2 max-lg:pl-3" style={{ borderColor: MINT }}>
               <b className="block text-2xl font-semibold text-white">{s.value}</b>
               <span className="text-[11px] uppercase tracking-[0.06em]" style={{ color: 'rgba(255,255,255,0.65)' }}>
                 {s.label}
@@ -128,10 +129,12 @@ export default function Hero() {
       {/* Arrows */}
       {n > 1 && (
         <>
+          {/* side arrows only where there is real side gutter (container is 1280 + padding);
+              below ~1400px they overlap the copy / the fixed ENQUIRY tab */}
           <button
             onClick={prev}
             aria-label="Previous slide"
-            className="hidden md:flex absolute left-5 top-1/2 -translate-y-1/2 z-[3] w-11 h-11 rounded-full items-center justify-center text-white transition-all hover:scale-105"
+            className="hidden min-[1400px]:flex absolute left-5 top-1/2 -translate-y-1/2 z-[3] w-11 h-11 rounded-full items-center justify-center text-white transition-all hover:scale-105"
             style={{ background: 'rgba(255,255,255,0.14)', border: '1px solid rgba(255,255,255,0.3)', backdropFilter: 'blur(4px)' }}
           >
             <ChevronLeft size={20} />
@@ -139,22 +142,27 @@ export default function Hero() {
           <button
             onClick={next}
             aria-label="Next slide"
-            className="hidden md:flex absolute right-5 top-1/2 -translate-y-1/2 z-[3] w-11 h-11 rounded-full items-center justify-center text-white transition-all hover:scale-105"
+            className="hidden min-[1400px]:flex absolute right-5 top-1/2 -translate-y-1/2 z-[3] w-11 h-11 rounded-full items-center justify-center text-white transition-all hover:scale-105"
             style={{ background: 'rgba(255,255,255,0.14)', border: '1px solid rgba(255,255,255,0.3)', backdropFilter: 'blur(4px)' }}
           >
             <ChevronRight size={20} />
           </button>
 
           {/* Dots */}
-          <div className="absolute bottom-[22px] left-1/2 -translate-x-1/2 z-[3] flex gap-2">
+          <div className="absolute bottom-[14px] left-1/2 -translate-x-1/2 z-[3] flex">
             {SLIDES.map((slide, i) => (
               <button
                 key={slide.src}
                 onClick={() => setIndex(i)}
                 aria-label={`Go to slide ${i + 1}`}
-                className="h-2 rounded-full transition-all duration-200"
-                style={{ width: i === index ? '24px' : '8px', background: i === index ? '#fff' : 'rgba(255,255,255,0.4)' }}
-              />
+                className="flex items-center justify-center p-2"
+              >
+                {/* visual dot — button padding gives a ≥24px touch target */}
+                <span
+                  className="block h-2 rounded-full transition-all duration-200"
+                  style={{ width: i === index ? '24px' : '8px', background: i === index ? '#fff' : 'rgba(255,255,255,0.4)' }}
+                />
+              </button>
             ))}
           </div>
         </>
