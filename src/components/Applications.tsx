@@ -82,7 +82,7 @@ export default function Applications() {
 
         {/* Section head */}
         <div
-          className="flex flex-wrap items-end justify-between gap-6 pb-7 mb-12 sm:mb-16"
+          className="flex flex-wrap items-end justify-between gap-4 sm:gap-6 pb-6 mb-9 sm:mb-16"
           style={{ borderBottom: '1px solid var(--border)' }}
         >
           <div>
@@ -103,7 +103,7 @@ export default function Applications() {
         </div>
 
         {/* Groups */}
-        <div className="flex flex-col gap-12 sm:gap-16">
+        <div className="flex flex-col gap-10 sm:gap-16">
           {GROUPS.map(group => (
             <div key={group.key}>
               <h3

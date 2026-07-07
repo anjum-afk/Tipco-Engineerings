@@ -43,8 +43,7 @@ export default function NewsSection() {
           {/* Featured article */}
           <Link
             to={featured.href}
-            className="group relative block overflow-hidden rounded-2xl"
-            style={{ minHeight: '460px' }}
+            className="group relative block overflow-hidden rounded-2xl min-h-[340px] sm:min-h-[420px] lg:min-h-[460px]"
           >
             {/* Image */}
             <img

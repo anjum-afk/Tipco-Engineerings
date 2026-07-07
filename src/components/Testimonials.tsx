@@ -40,7 +40,7 @@ export default function Testimonials() {
 
   return (
     <section
-      className="py-20 relative overflow-hidden"
+      className="py-14 sm:py-20 relative overflow-hidden"
       style={{ background: 'linear-gradient(135deg, #0c1f1f 0%, #112929 60%, #0c1f1f 100%)' }}
     >
       {/* Subtle grid pattern — matches WorkingProcess */}
@@ -64,13 +64,13 @@ export default function Testimonials() {
       <div className="relative z-10 max-w-3xl mx-auto px-6 text-center">
 
         {/* Eyebrow */}
-        <p className="text-[11px] font-bold uppercase tracking-[0.3em] mb-8" style={{ color: 'var(--brand)' }}>
+        <p className="text-[11px] font-bold uppercase tracking-[0.3em] mb-6 sm:mb-8" style={{ color: 'var(--brand)' }}>
           Client Testimonials
         </p>
 
         {/* Quote icon */}
         <div
-          className="w-12 h-12 rounded-2xl flex items-center justify-center mx-auto mb-8"
+          className="w-12 h-12 rounded-2xl flex items-center justify-center mx-auto mb-6 sm:mb-8"
           style={{ background: 'var(--brand)' }}
         >
           <Quote size={20} className="text-white" />

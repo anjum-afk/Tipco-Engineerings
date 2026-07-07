@@ -9,7 +9,7 @@ export default function Layout() {
     <>
       <ScrollToTop />
       <Navbar />
-      <div className="pb-14 md:pb-0">
+      <div>
         <Outlet />
       </div>
       <Footer />

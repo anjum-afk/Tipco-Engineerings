@@ -11,15 +11,13 @@ const ROW2 = CLIENTS.slice(9)
 function Logo({ c }: { c: { id: number } }) {
   const ext = c.id >= 16 ? 'png' : 'jpg'
   return (
-    <div
-      className="flex-shrink-0 flex items-center justify-center mx-7"
-      style={{ width: '180px', height: '84px' }}
-    >
+    <div className="flex-shrink-0 flex items-center justify-center mx-4 sm:mx-7 w-[130px] h-[58px] sm:w-[180px] sm:h-[84px]">
       <img
         src={`https://tipcoengineering.com/public/uploads/client-${c.id}.${ext}`}
         alt={`Client ${c.id}`}
-        className="max-h-16 max-w-[160px] w-auto object-contain transition-transform duration-300 hover:scale-105"
+        className="max-h-11 sm:max-h-16 max-w-[110px] sm:max-w-[160px] w-auto object-contain transition-transform duration-300 hover:scale-105"
         loading="lazy"
+        onError={e => { const p = e.currentTarget.parentElement; if (p) p.style.display = 'none' }}
       />
     </div>
   )

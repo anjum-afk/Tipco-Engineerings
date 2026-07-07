@@ -284,11 +284,13 @@ export default function FloatingButtons() {
 
   return (
     <>
-      {/* Vertical ENQUIRY tab — all devices */}
+      {/* ── Desktop / tablet (md+): vertical ENQUIRY tab + floating chat pill ── */}
+
+      {/* Vertical ENQUIRY tab */}
       <button
         onClick={() => setEnquiryOpen(true)}
         aria-label="Open enquiry form"
-        className="fixed z-[400] flex items-center justify-center font-bold text-sm tracking-wide text-white shadow-md transition-colors cursor-pointer"
+        className="hidden md:flex fixed z-[400] items-center justify-center font-bold text-sm tracking-wide text-white shadow-md transition-colors cursor-pointer"
         style={{
           right: 0,
           top: '50%',
@@ -303,17 +305,52 @@ export default function FloatingButtons() {
         ENQUIRY
       </button>
 
-      {/* AI Chat floating button — bottom-left */}
+      {/* AI Chat floating button — bottom-right */}
       <button
         onClick={() => setChatOpen(true)}
         aria-label="Chat with AI assistant"
-        className="fixed z-[400] bottom-6 right-6 flex items-center gap-2.5 px-4 py-3 rounded-2xl shadow-lg text-white text-sm font-semibold transition-all hover:scale-105 hover:shadow-xl"
+        className="hidden md:flex fixed z-[400] bottom-6 right-6 items-center gap-2.5 px-4 py-3 rounded-2xl shadow-lg text-white text-sm font-semibold transition-all hover:scale-105 hover:shadow-xl"
         style={{ background: 'var(--brand)' }}
       >
         <Bot size={18} />
         <span>Chat with AI</span>
         <span className="w-2 h-2 rounded-full bg-green-300 flex-shrink-0" />
       </button>
+
+      {/* ── Mobile (<md): fixed bottom action bar — Call · Chat · Enquiry ── */}
+      <nav
+        aria-label="Quick actions"
+        className="md:hidden fixed bottom-0 inset-x-0 z-[400] flex bg-white border-t border-gray-200"
+        style={{ boxShadow: '0 -2px 14px rgba(0,0,0,0.09)', paddingBottom: 'env(safe-area-inset-bottom)' }}
+      >
+        <a
+          href="tel:18001020229"
+          className="flex-1 flex flex-col items-center justify-center gap-1 min-h-[58px] text-[11px] font-semibold active:bg-gray-50"
+          style={{ color: 'var(--foreground)' }}
+        >
+          <Phone size={19} style={{ color: 'var(--brand)' }} />
+          Call
+        </a>
+        <button
+          onClick={() => setChatOpen(true)}
+          className="flex-1 flex flex-col items-center justify-center gap-1 min-h-[58px] text-[11px] font-semibold border-x border-gray-100 active:bg-gray-50"
+          style={{ color: 'var(--foreground)' }}
+        >
+          <span className="relative">
+            <Bot size={19} style={{ color: 'var(--brand)' }} />
+            <span className="absolute -top-0.5 -right-0.5 w-1.5 h-1.5 rounded-full bg-green-400" />
+          </span>
+          Chat
+        </button>
+        <button
+          onClick={() => setEnquiryOpen(true)}
+          className="flex-1 flex flex-col items-center justify-center gap-1 min-h-[58px] text-[11px] font-bold text-white active:opacity-90"
+          style={{ background: 'var(--brand)' }}
+        >
+          <Send size={18} />
+          Enquiry
+        </button>
+      </nav>
 
       <EnquiryDrawer open={enquiryOpen} onClose={() => setEnquiryOpen(false)} />
       <AiChatDrawer open={chatOpen} onClose={() => setChatOpen(false)} />

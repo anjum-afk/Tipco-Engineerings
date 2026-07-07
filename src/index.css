@@ -1,4 +1,5 @@
 @import "tailwindcss";
+@import "tw-animate-css";
 @import "./styles/base.css";
 @import "./styles/typography.css";
 @import "./styles/components/button.css";
@@ -53,6 +54,13 @@
   --color-popover-foreground:   var(--foreground);
   --color-input:                var(--border);
   --color-ring:                 var(--brand);
+
+  /* ── Chart palette (shadcn charts / recharts) ── */
+  --color-chart-1: var(--chart-1);
+  --color-chart-2: var(--chart-2);
+  --color-chart-3: var(--chart-3);
+  --color-chart-4: var(--chart-4);
+  --color-chart-5: var(--chart-5);
 
   /* ── Typography ──────────────────────────────── */
   --font-family-sans: var(--font-sans);
@@ -119,6 +127,13 @@
   --space-16: 64px;
   --space-20: 80px;
   --space-24: 96px;
+
+  /* ── Chart palette (brand-cohesive series colors) ── */
+  --chart-1: #186b6d;   /* brand green */
+  --chart-2: #3fb0a9;   /* teal */
+  --chart-3: #f59e0b;   /* amber */
+  --chart-4: #2980b9;   /* info blue */
+  --chart-5: #e74c3c;   /* accent red */
 
   /* ── Border radius ───────────────────────────── */
   --radius: 6px;

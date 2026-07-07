@@ -21,7 +21,7 @@ export default function GetQuote() {
   }
 
   return (
-    <section id="get-quote" className="relative overflow-hidden text-white" style={{ minHeight: '620px' }}>
+    <section id="get-quote" className="relative overflow-hidden text-white lg:min-h-[620px]">
       {/* Full-bleed background photo — spans 100% of the page width, not just the container */}
       <div
         className="absolute inset-0"
@@ -44,10 +44,10 @@ export default function GetQuote() {
 
       {/* Content — kept at the same contained width as the rest of the page */}
       <div className="relative z-[1] max-w-[1280px] mx-auto px-4 sm:px-6 py-16 sm:py-20 lg:py-24">
-        <div className="flex flex-col lg:flex-row lg:items-center gap-10" style={{ minHeight: '420px' }}>
+        <div className="flex flex-col lg:flex-row lg:items-center gap-8 lg:gap-10 lg:min-h-[420px]">
 
           {/* LEFT — headline, description, contact lines */}
-          <div className="flex flex-col justify-between flex-1" style={{ minHeight: '420px' }}>
+          <div className="flex flex-col lg:justify-between flex-1 lg:min-h-[420px]">
             <div>
               <h3
                 className="font-display font-black leading-[1.2] mb-4"

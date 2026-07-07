@@ -116,11 +116,41 @@ export default function WorkingProcess() {
           ))}
         </div>
 
-        {/* Mobile / tablet: simple 1–2 col grid, no arrows */}
-        <div className="lg:hidden grid grid-cols-1 sm:grid-cols-2 gap-4 mt-10">
+        {/* Tablet (sm–lg): simple 2-col card grid, no arrows */}
+        <div className="hidden sm:grid lg:hidden grid-cols-2 gap-4 mt-10">
           {STEPS.map(s => (
             <StepCard key={s.step} s={s} />
           ))}
+        </div>
+
+        {/* Phone (<sm): compact vertical timeline — reads as a process, less scrolling */}
+        <div className="sm:hidden relative mt-9">
+          {/* connecting line, centered under the icon nodes */}
+          <span
+            className="absolute w-px top-4 bottom-4"
+            style={{ left: '27px', background: 'rgba(255,255,255,0.16)' }}
+          />
+          <div className="flex flex-col gap-7">
+            {STEPS.map(s => (
+              <div key={s.step} className="relative flex gap-4">
+                <div
+                  className="relative z-10 w-14 h-14 rounded-2xl flex items-center justify-center text-white flex-shrink-0"
+                  style={{ background: 'var(--brand)', boxShadow: '0 0 0 5px #0c1f1f' }}
+                >
+                  <s.icon size={22} strokeWidth={1.8} />
+                </div>
+                <div className="pt-1.5 min-w-0">
+                  <span className="text-[10px] font-bold tracking-[0.2em] uppercase" style={{ color: 'var(--brand)' }}>
+                    Step {s.step}
+                  </span>
+                  <h3 className="font-bold text-[15.5px] leading-snug text-white mt-1 mb-1.5">{s.label}</h3>
+                  <p className="text-[13px] leading-relaxed" style={{ color: 'rgba(255,255,255,0.55)' }}>
+                    {s.description}
+                  </p>
+                </div>
+              </div>
+            ))}
+          </div>
         </div>
       </div>
     </section>

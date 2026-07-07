@@ -67,8 +67,13 @@ export default function Hero() {
         }}
       />
 
+      {/* Mobile-only extra scrim — the angled desktop gradient fades to transparent on the
+          right, which leaves the CTA + stats sitting on the bright photo on a narrow screen.
+          This uniform layer keeps everything legible edge-to-edge on phones. */}
+      <div className="md:hidden absolute inset-0" style={{ background: 'linear-gradient(180deg, rgba(8,28,30,0.42) 0%, rgba(8,28,30,0.58) 100%)' }} />
+
       {/* Content */}
-      <div className="relative z-[2] max-w-[1280px] mx-auto w-full" style={{ padding: 'clamp(56px, 9vh, 96px) 32px clamp(88px, 13vh, 130px)' }}>
+      <div className="relative z-[2] max-w-[1280px] mx-auto w-full" style={{ padding: 'clamp(48px, 9vh, 96px) clamp(20px, 5vw, 32px) clamp(64px, 13vh, 130px)' }}>
         <div className="flex items-center gap-2.5 text-[12px] font-bold uppercase tracking-[0.14em]" style={{ color: MINT }}>
           <span className="inline-block w-[18px] h-px flex-shrink-0" style={{ background: MINT }} />
           Process Plants &amp; Machinery · Sonipat, Haryana
@@ -89,18 +94,18 @@ export default function Hero() {
           industries — designed with the customer's process first, not adapted to fit it.
         </p>
 
-        <div className="flex flex-wrap gap-4">
+        <div className="flex flex-col sm:flex-row sm:flex-wrap gap-3 sm:gap-4">
           <a
             href="#get-quote"
-            className="inline-flex items-center gap-2 rounded-[10px] px-[22px] py-[11px] text-sm font-semibold text-white transition-all duration-150 hover:-translate-y-px"
+            className="inline-flex w-full sm:w-auto justify-center sm:justify-start items-center gap-2 rounded-[10px] px-[22px] py-3 sm:py-[11px] text-sm font-semibold text-white transition-all duration-150 hover:-translate-y-px"
             style={{ background: 'var(--brand)', boxShadow: '0 1px 2px rgba(0,0,0,0.08)' }}
           >
             Get a Quote →
           </a>
           <a
             href="#applications"
-            className="inline-flex items-center gap-2 rounded-[10px] px-[22px] py-[11px] text-sm font-semibold text-white border transition-all duration-150 hover:bg-white"
-            style={{ borderColor: 'rgba(255,255,255,0.5)', background: 'transparent' }}
+            className="inline-flex w-full sm:w-auto justify-center sm:justify-start items-center gap-2 rounded-[10px] px-[22px] py-3 sm:py-[11px] text-sm font-semibold text-white border transition-all duration-150 hover:bg-white bg-white/12 backdrop-blur-sm sm:bg-transparent sm:backdrop-blur-none"
+            style={{ borderColor: 'rgba(255,255,255,0.5)' }}
             onMouseEnter={e => { e.currentTarget.style.color = 'var(--brand-hover)' }}
             onMouseLeave={e => { e.currentTarget.style.color = '#fff' }}
           >
@@ -108,9 +113,9 @@ export default function Hero() {
           </a>
         </div>
 
-        <div className="flex flex-wrap gap-7 mt-8">
+        <div className="grid grid-cols-2 gap-x-6 gap-y-5 mt-8 sm:flex sm:flex-wrap sm:gap-7">
           {SPECS.map(s => (
-            <div key={s.label}>
+            <div key={s.label} className="max-sm:border-l-2 max-sm:pl-3" style={{ borderColor: MINT }}>
               <b className="block text-2xl font-semibold text-white">{s.value}</b>
               <span className="text-[11px] uppercase tracking-[0.06em]" style={{ color: 'rgba(255,255,255,0.65)' }}>
                 {s.label}
