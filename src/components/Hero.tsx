@@ -169,9 +169,12 @@ export default function Hero() {
       )}
 
       {/* Wave divider — curves the hero into the section below instead of a hard edge */}
+      {/* bottom: -1px — at fractional device-pixel ratios (Windows 125% zoom etc.) the SVG's
+          bottom edge can round short of the section edge, exposing the dark hero bg as a
+          1px line; overhanging by 1px (clipped by overflow-hidden) closes the seam */}
       <svg
-        className="absolute bottom-0 left-0 w-full z-[1] pointer-events-none"
-        style={{ height: 'clamp(48px, 8vw, 110px)', display: 'block' }}
+        className="absolute left-0 w-full z-[1] pointer-events-none"
+        style={{ height: 'calc(clamp(48px, 8vw, 110px) + 1px)', bottom: '-1px', display: 'block' }}
         viewBox="0 0 1440 100"
         preserveAspectRatio="none"
         aria-hidden="true"

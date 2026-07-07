@@ -1,11 +1,9 @@
-import { Star, Search, ArrowRight } from 'lucide-react'
+import { Star, ArrowRight } from 'lucide-react'
 
 // ─────────────────────────────────────────────────────────────────────────────
 // Config — swap photos / testimonials here (or pass as props). Content-agnostic.
 // ─────────────────────────────────────────────────────────────────────────────
-const CREAM = '#f5f3ef'
-const YELLOW = '#f4c430'
-const PINK = '#e91e8c'
+const YELLOW = '#f4c430' // star fill — gold reads as "rating" universally
 
 export interface Photo {
   src: string
@@ -126,71 +124,25 @@ function Avatar({ name, src, size = 40, color = '#186B6D' }: { name: string; src
   )
 }
 
-// ── ProfileBadge ─────────────────────────────────────────────────────────────
-function ProfileBadge({ name, role }: { name: string; role: string }) {
-  return (
-    <div className="inline-flex items-center gap-3 rounded-full bg-white py-2 pl-2 pr-3 shadow-sm">
-      <Avatar name={name} size={38} color="#186B6D" />
-      <div className="leading-tight">
-        <p className="text-[13px] font-bold text-gray-900">{name}</p>
-        <p className="flex items-center gap-1 text-[11px] text-gray-500">
-          <span className="inline-block h-1.5 w-1.5 rounded-full bg-green-500" />
-          {role}
-        </p>
-      </div>
-      <button
-        type="button"
-        className="ml-1 rounded-full px-3.5 py-1.5 text-[11px] font-bold text-white transition-transform hover:-translate-y-px"
-        style={{ background: '#151515' }}
-      >
-        Follow
-      </button>
-    </div>
-  )
-}
-
 // ── PhotoDeck (desktop, 13-slot composition) + PhotoGrid (mobile) ───────────
 function PhotoDeck({ photos }: { photos: Photo[] }) {
   return (
-    <>
-      {/* Desktop: 13 photos in one continuous composition — the array is
-          longer than the unique photo set, so photos repeat to fill every slot. */}
-      <div className="relative mx-auto hidden md:block" style={{ height: STAGE_H, width: STAGE_W }}>
-        {ARC.map((pos, i) => {
-          const p = photos[i % photos.length]
-          return (
-            <div
-              key={i}
-              className="absolute rounded-md bg-white p-1 shadow-md ring-1 ring-black/5"
-              style={{ left: pos.left, top: pos.top, width: CARD_W }}
-            >
-              <img src={p.src} alt={p.alt} loading="lazy" className="w-full rounded-sm object-cover" style={{ height: CARD_H }} />
-            </div>
-          )
-        })}
-      </div>
-
-      {/* Mobile: simple 2-column grid */}
-      <div className="grid grid-cols-2 gap-3 md:hidden">
-        {photos.map(p => (
-          <div key={p.src} className="overflow-hidden rounded-xl bg-white p-1 shadow-md">
-            <img src={p.src} alt={p.alt} loading="lazy" className="w-full rounded-lg object-cover" style={{ aspectRatio: '1 / 1' }} />
+    /* 13 photos in one continuous composition — the array is longer than the
+       unique photo set, so photos repeat to fill every slot. */
+    <div className="relative mx-auto" style={{ height: STAGE_H, width: STAGE_W }}>
+      {ARC.map((pos, i) => {
+        const p = photos[i % photos.length]
+        return (
+          <div
+            key={i}
+            className="absolute rounded-md bg-white p-1 shadow-md ring-1 ring-black/5"
+            style={{ left: pos.left, top: pos.top, width: CARD_W }}
+          >
+            <img src={p.src} alt={p.alt} loading="lazy" className="w-full rounded-sm object-cover" style={{ height: CARD_H }} />
           </div>
-        ))}
-      </div>
-    </>
-  )
-}
-
-// ── SectionHeading ───────────────────────────────────────────────────────────
-function SectionHeading({ children }: { children: React.ReactNode }) {
-  return (
-    <h2
-      className="font-display font-black uppercase text-gray-900"
-      style={{ fontSize: 'clamp(28px, 4.4vw, 52px)', lineHeight: 1.04, letterSpacing: '-0.01em' }}
-    >
-      {children}
-    </h2>
+        )
+      })}
+    </div>
   )
 }
 
@@ -227,8 +179,8 @@ function CTAButton({ label, href = '#' }: { label: string; href?: string }) {
   return (
     <a
       href={href}
-      className="inline-flex items-center gap-2 rounded-full px-7 py-3 text-sm font-bold text-black transition-transform hover:-translate-y-0.5"
-      style={{ background: YELLOW, boxShadow: '0 8px 20px rgba(244,196,48,0.35)' }}
+      className="inline-flex items-center gap-2 rounded-full px-7 py-3 text-sm font-bold text-white transition-transform hover:-translate-y-0.5"
+      style={{ background: 'var(--brand)', boxShadow: '0 8px 20px rgba(24,107,109,0.35)' }}
     >
       {label}
       <ArrowRight size={16} />
@@ -240,8 +192,6 @@ function CTAButton({ label, href = '#' }: { label: string; href?: string }) {
 interface Props {
   photos?: Photo[]
   testimonials?: Testimonial[]
-  profileName?: string
-  profileRole?: string
   heading?: React.ReactNode
   ctaLabel?: string
   ctaHref?: string
@@ -250,34 +200,27 @@ interface Props {
 export default function TestimonialsSection({
   photos = DEFAULT_PHOTOS,
   testimonials = DEFAULT_TESTIMONIALS,
-  profileName = 'Tipco Engineering',
-  profileRole = 'Trusted since 1985',
   heading = 'See what our clients say about us',
   ctaLabel = 'See All Client Feedback',
   ctaHref = '/client',
 }: Props) {
   return (
-    <section className="overflow-hidden py-16 sm:py-20 lg:py-24" style={{ background: CREAM }}>
+    /* md+ only — the mobile design for this section is TBD */
+    <section className="hidden overflow-hidden py-16 sm:py-20 md:block lg:py-24" style={{ background: 'var(--surface)' }}>
       <div className="mx-auto max-w-[1200px] px-4 sm:px-6">
 
-        {/* Top row: profile badge (left) + pink search (right) */}
-        <div className="mb-8 flex items-center justify-between gap-4">
-          <ProfileBadge name={profileName} role={profileRole} />
-          <button
-            type="button"
-            aria-label="Search client feedback"
-            className="flex h-11 w-11 flex-shrink-0 items-center justify-center rounded-full text-white transition-transform hover:scale-105"
-            style={{ background: PINK, boxShadow: '0 8px 18px rgba(233,30,140,0.4)' }}
-          >
-            <Search size={18} />
-          </button>
-        </div>
-
-        {/* 13-photo composition */}
-        <PhotoDeck photos={photos} />
-
-        <div className="mt-6 text-center">
-          <SectionHeading>{heading}</SectionHeading>
+        {/* 13-photo composition — the heading sits INSIDE the composition,
+            in the free zone between the two bottom photo clusters */}
+        <div className="relative">
+          <PhotoDeck photos={photos} />
+          <div className="absolute inset-x-0 z-10 flex justify-center" style={{ top: 250 }}>
+            <h2
+              className="font-display text-center font-black uppercase text-gray-900"
+              style={{ fontSize: 'clamp(28px, 3.2vw, 44px)', lineHeight: 1.08, letterSpacing: '-0.01em', maxWidth: 600 }}
+            >
+              {heading}
+            </h2>
+          </div>
         </div>
 
         <div className="mt-10 grid grid-cols-1 gap-5 md:grid-cols-3">

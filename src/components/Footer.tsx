@@ -67,12 +67,13 @@ const reveal = {
 
 // Card hangs on the pin: drops in, then one pendulum swing (left↔right) that settles.
 // Pivot = the pin at top-center (transformOrigin '50% 0'). Replays on each scroll into view.
+// NOTE: transform-only (no opacity fade) — animating opacity around the translucent card
+// makes Chromium paint the area black until the animation settles.
 const cardSwing = {
-  initial: { opacity: 0, y: -36, rotate: -7 },
-  whileInView: { opacity: 1, y: 0, rotate: [-7, 5.5, -3.5, 2, -1, 0] },
+  initial: { y: -36, rotate: -7 },
+  whileInView: { y: 0, rotate: [-7, 5.5, -3.5, 2, -1, 0] },
   viewport: { once: false, margin: '-60px' },
   transition: {
-    opacity: { duration: 0.45, ease: 'easeOut' as const },
     y: { duration: 0.55, ease: [0.22, 1, 0.36, 1] as const },
     rotate: { duration: 2.4, ease: 'easeInOut' as const, times: [0, 0.22, 0.45, 0.66, 0.84, 1] },
   },
@@ -167,11 +168,10 @@ export default function Footer() {
               <div
                 className="relative text-white"
                 style={{
-                  /* dark-green glass — strong contrast against the light panel */
+                  /* dark-green, slightly translucent. No backdrop-filter: combined with the
+                     entry animation it makes Chromium flash the card area black. */
                   background:
-                    'linear-gradient(140deg, rgba(16,77,79,0.88) 0%, rgba(10,58,60,0.82) 50%, rgba(6,42,44,0.9) 100%)',
-                  backdropFilter: 'blur(16px) saturate(1.25)',
-                  WebkitBackdropFilter: 'blur(16px) saturate(1.25)',
+                    'linear-gradient(140deg, rgba(16,77,79,0.92) 0%, rgba(10,58,60,0.88) 50%, rgba(6,42,44,0.94) 100%)',
                   clipPath:
                     'polygon(0 0, calc(100% - var(--fold)) 0, 100% var(--fold), 100% 100%, 0 100%)',
                   boxShadow: 'inset 0 0 0 1.5px rgba(255,255,255,0.6)',
@@ -202,8 +202,6 @@ export default function Footer() {
                   height: 'var(--fold)',
                   clipPath: 'polygon(0 0, 100% 100%, 0 100%)',
                   background: 'linear-gradient(135deg, rgba(10,58,60,0.95), rgba(6,42,44,0.97))',
-                  backdropFilter: 'blur(10px)',
-                  WebkitBackdropFilter: 'blur(10px)',
                   filter: 'drop-shadow(-3px 3px 6px rgba(0,0,0,0.4))',
                 }}
               />
@@ -294,13 +292,13 @@ export default function Footer() {
           </div>
 
           {/* ───── Bottom row — inside the panel, like the reference ───── */}
-          <div className="mt-12 flex flex-col items-center justify-between gap-3 border-t border-[#186B6D]/20 pt-5 text-xs text-gray-600 md:flex-row md:pr-44">
+          <div className="mt-12 flex flex-col items-center justify-between gap-3 border-t border-white/15 pt-5 text-xs text-white/65 md:flex-row md:pr-44">
             <span>
               © {new Date().getFullYear()} Tipco Engineering India Pvt. Ltd. — All rights reserved.
             </span>
             <div className="flex flex-wrap justify-center gap-x-6 gap-y-1">
               {FOOTER.legal.map((l) => (
-                <Link key={l.href} to={l.href} className="transition-colors hover:text-[#186B6D]">
+                <Link key={l.href} to={l.href} className="transition-colors hover:text-white">
                   {l.label}
                 </Link>
               ))}

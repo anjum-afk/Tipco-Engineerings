@@ -1,4 +1,6 @@
 import { ClipboardList, Compass, Cog, PackageCheck, ChevronRight } from 'lucide-react'
+import type { LucideIcon } from 'lucide-react'
+import { motion, useReducedMotion } from 'motion/react'
 import SectionHeader from './SectionHeader'
 
 const STEPS = [
@@ -28,29 +30,42 @@ const STEPS = [
   },
 ]
 
-function StepCard({ s }: { s: typeof STEPS[number] }) {
+// Icon-only animation, powered by Motion (framer-motion). The card/background stays static.
+// Outer span = hover reaction (fired by the card's whileHover). Inner span = gentle idle float.
+function AnimatedIcon({ icon: Icon, size, delay }: { icon: LucideIcon; size: number; delay: number }) {
+  const reduceMotion = useReducedMotion()
   return (
-    <div
-      className="group relative flex-1 rounded-2xl px-5 py-8 flex flex-col items-center text-center gap-3 overflow-hidden transition-all duration-300 hover:-translate-y-2"
-      style={{
-        background: 'rgba(255,255,255,0.05)',
-        border: '1px solid rgba(255,255,255,0.10)',
-      }}
+    <motion.span
+      className="inline-flex"
+      variants={{ hover: { scale: 1.18, rotate: 8 } }}
+      transition={{ type: 'spring', stiffness: 300, damping: 14 }}
     >
-      {/* Watermark number */}
-      <span
-        className="absolute top-2 right-3 font-black select-none pointer-events-none leading-none"
-        style={{ fontSize: '64px', color: 'var(--brand)', opacity: 0.08, letterSpacing: '-0.04em' }}
+      <motion.span
+        className="inline-flex"
+        animate={reduceMotion ? undefined : { y: [0, -4, 0], rotate: [0, -4, 0] }}
+        transition={{ duration: 3, ease: 'easeInOut', repeat: Infinity, delay }}
       >
-        {s.step}
-      </span>
+        <Icon size={size} strokeWidth={1.8} />
+      </motion.span>
+    </motion.span>
+  )
+}
 
+function StepCard({ s, i }: { s: typeof STEPS[number]; i: number }) {
+  const reduceMotion = useReducedMotion()
+  return (
+    <motion.div
+      className="relative flex-1 rounded-2xl px-5 py-8 flex flex-col items-center text-center gap-3 overflow-hidden border border-white/10 bg-white/[0.09] transition-[background-color,border-color,box-shadow] duration-300 hover:bg-white/[0.14] hover:border-white/20 hover:shadow-2xl hover:shadow-black/30"
+      whileHover={reduceMotion ? undefined : 'hover'}
+      variants={{ hover: { y: -6 } }}
+      transition={{ type: 'spring', stiffness: 300, damping: 22 }}
+    >
       {/* Icon */}
       <div
-        className="w-14 h-14 rounded-2xl flex items-center justify-center text-white flex-shrink-0 mt-2 transition-transform duration-300 group-hover:scale-110"
+        className="w-14 h-14 rounded-2xl flex items-center justify-center text-white flex-shrink-0 mt-2"
         style={{ background: 'var(--brand)' }}
       >
-        <s.icon size={24} strokeWidth={1.8} />
+        <AnimatedIcon icon={s.icon} size={24} delay={i * 0.25} />
       </div>
 
       {/* Step label */}
@@ -68,13 +83,7 @@ function StepCard({ s }: { s: typeof STEPS[number] }) {
       <p className="text-[13px] leading-relaxed" style={{ color: 'rgba(255,255,255,0.5)' }}>
         {s.description}
       </p>
-
-      {/* Hover bottom accent */}
-      <span
-        className="absolute bottom-0 left-0 right-0 h-[3px] scale-x-0 group-hover:scale-x-100 transition-transform duration-300 origin-left rounded-b-2xl"
-        style={{ background: 'var(--brand)' }}
-      />
-    </div>
+    </motion.div>
   )
 }
 
@@ -106,7 +115,7 @@ export default function WorkingProcess() {
         <div className="hidden lg:flex items-stretch gap-0 mt-12">
           {STEPS.map((s, i) => (
             <div key={s.step} className="flex items-stretch flex-1 min-w-0">
-              <StepCard s={s} />
+              <StepCard s={s} i={i} />
               {i < STEPS.length - 1 && (
                 <div className="flex-shrink-0 flex items-center justify-center w-8">
                   <ChevronRight size={20} style={{ color: 'var(--brand)', opacity: 0.45 }} />
@@ -118,8 +127,8 @@ export default function WorkingProcess() {
 
         {/* Tablet (sm–lg): simple 2-col card grid, no arrows */}
         <div className="hidden sm:grid lg:hidden grid-cols-2 gap-4 mt-10">
-          {STEPS.map(s => (
-            <StepCard key={s.step} s={s} />
+          {STEPS.map((s, i) => (
+            <StepCard key={s.step} s={s} i={i} />
           ))}
         </div>
 
@@ -131,13 +140,13 @@ export default function WorkingProcess() {
             style={{ left: '27px', background: 'rgba(255,255,255,0.16)' }}
           />
           <div className="flex flex-col gap-7">
-            {STEPS.map(s => (
+            {STEPS.map((s, i) => (
               <div key={s.step} className="relative flex gap-4">
                 <div
                   className="relative z-10 w-14 h-14 rounded-2xl flex items-center justify-center text-white flex-shrink-0"
                   style={{ background: 'var(--brand)', boxShadow: '0 0 0 5px #0c1f1f' }}
                 >
-                  <s.icon size={22} strokeWidth={1.8} />
+                  <AnimatedIcon icon={s.icon} size={22} delay={i * 0.25} />
                 </div>
                 <div className="pt-1.5 min-w-0">
                   <span className="text-[11px] font-bold tracking-[0.2em] uppercase" style={{ color: 'var(--brand)' }}>
