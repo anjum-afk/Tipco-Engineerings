@@ -17,6 +17,8 @@ Role: Senior Product Designer
 | [08-user-flows.md](08-user-flows.md) | 5 key user journeys with design requirements per flow |
 | [09-design-system-tokens.md](09-design-system-tokens.md) | Design system tokens — color, type, spacing |
 | [10-content-map.md](10-content-map.md) | **Page → persona → industry → content-block map** + build priority + content to produce |
+| [11-landing-page-marketing-audit.md](11-landing-page-marketing-audit.md) | Homepage marketing audit (8 Jul 2026) — broken CTAs, dead quote form, mobile-hidden testimonials, priority fix order |
+| [12-marketing-glossary.md](12-marketing-glossary.md) | Plain-English glossary of marketing-audit terms, written for a non-marketer reader |
 
 ## Quick Reference — Top 5 Things to Know
 
