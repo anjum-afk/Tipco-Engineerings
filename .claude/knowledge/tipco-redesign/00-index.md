@@ -19,6 +19,8 @@ Role: Senior Product Designer
 | [10-content-map.md](10-content-map.md) | **Page → persona → industry → content-block map** + build priority + content to produce |
 | [11-landing-page-marketing-audit.md](11-landing-page-marketing-audit.md) | Homepage marketing audit (8 Jul 2026) — broken CTAs, dead quote form, mobile-hidden testimonials, priority fix order |
 | [12-marketing-glossary.md](12-marketing-glossary.md) | Plain-English glossary of marketing-audit terms, written for a non-marketer reader |
+| [13-senior-uiux-design-audit-2026-07-09.md](13-senior-uiux-design-audit-2026-07-09.md) | Live-build UI/UX audit (9 Jul 2026, screenshot + network-log backed) — reproduces doc 11's critical bugs live, adds visual/heuristic findings, analytics/SEO/trust gaps |
+| [14-seo-audit-gap-analysis-2026-07-09.md](14-seo-audit-gap-analysis-2026-07-09.md) | SEO audit vs. the legacy PHP site — the redesign regressed on sitemap/canonical/meta-description/OG that legacy already had; priority fix order |
 
 ## Quick Reference — Top 5 Things to Know
 
