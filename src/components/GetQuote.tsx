@@ -21,7 +21,7 @@ export default function GetQuote() {
   }
 
   return (
-    <section id="get-quote" className="relative overflow-hidden text-white lg:min-h-[620px]">
+    <section id="get-quote" className="relative overflow-hidden text-white">
       {/* Full-bleed background photo — spans 100% of the page width, not just the container */}
       <div
         className="absolute inset-0"
@@ -43,11 +43,11 @@ export default function GetQuote() {
       />
 
       {/* Content — kept at the same contained width as the rest of the page */}
-      <div className="relative z-[1] max-w-[1280px] mx-auto px-4 sm:px-6 py-16 sm:py-20 lg:py-24">
-        <div className="flex flex-col lg:flex-row lg:items-center gap-8 lg:gap-10 lg:min-h-[420px]">
+      <div className="relative z-[1] max-w-[1280px] mx-auto px-4 sm:px-6 py-10 sm:py-14 lg:py-16">
+        <div className="flex flex-col lg:flex-row lg:items-center gap-8 lg:gap-10">
 
           {/* LEFT — headline, description, contact lines */}
-          <div className="flex flex-col lg:justify-between flex-1 lg:min-h-[420px]">
+          <div className="flex flex-col lg:justify-between flex-1">
             <div>
               <h3
                 className="font-display font-black leading-[1.2] mb-4"
@@ -72,11 +72,11 @@ export default function GetQuote() {
 
           {/* RIGHT — floating form card */}
           <div
-            className="w-full lg:w-[420px] flex-shrink-0 rounded-2xl p-7 sm:p-8"
+            className="w-full lg:w-[420px] flex-shrink-0 rounded-2xl p-6 sm:p-7"
             style={{ background: 'var(--background)', boxShadow: '0 24px 60px rgba(0,0,0,0.35)' }}
           >
             <div
-              className="flex items-center justify-between text-[10.5px] font-bold uppercase tracking-[0.08em] pb-4 mb-5"
+              className="flex items-center justify-between text-[10.5px] font-bold uppercase tracking-[0.08em] pb-3 mb-4"
               style={{ color: 'var(--foreground-subtle)', borderBottom: '1px solid var(--border)' }}
             >
               <span>Quote Request</span>
@@ -90,7 +90,7 @@ export default function GetQuote() {
                 { key: 'email' as const, label: 'Email', type: 'email', placeholder: 'you@company.com', required: true },
                 { key: 'phone' as const, label: 'Phone / WhatsApp', type: 'tel', placeholder: '+91 98xxx xxxxx', required: true },
               ].map(f => (
-                <div className="mb-5" key={f.key}>
+                <div className="mb-3.5" key={f.key}>
                   <label
                     htmlFor={f.key}
                     className="block text-[11px] font-semibold uppercase tracking-[0.05em] mb-2"
@@ -113,7 +113,7 @@ export default function GetQuote() {
                 </div>
               ))}
 
-              <div className="mb-6">
+              <div className="mb-4">
                 <label
                   htmlFor="details"
                   className="block text-[11px] font-semibold uppercase tracking-[0.05em] mb-2"
@@ -123,7 +123,7 @@ export default function GetQuote() {
                 </label>
                 <textarea
                   id="details"
-                  rows={3}
+                  rows={2}
                   placeholder="Machine type, material to process, batch size, target fineness..."
                   value={form.details}
                   onChange={set('details')}

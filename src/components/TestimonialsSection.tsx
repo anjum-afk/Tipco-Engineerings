@@ -149,7 +149,7 @@ function PhotoDeck({ photos }: { photos: Photo[] }) {
 // ── StarRating ───────────────────────────────────────────────────────────────
 function StarRating({ rating }: { rating: number }) {
   return (
-    <div className="flex gap-0.5" aria-label={`${rating} out of 5 stars`}>
+    <div className="flex justify-center gap-0.5" aria-label={`${rating} out of 5 stars`}>
       {Array.from({ length: 5 }).map((_, i) => (
         <Star key={i} size={16} strokeWidth={0} fill={i < rating ? YELLOW : '#d8d3ca'} />
       ))}
@@ -160,10 +160,10 @@ function StarRating({ rating }: { rating: number }) {
 // ── TestimonialCard ──────────────────────────────────────────────────────────
 function TestimonialCard({ quote, name, company, rating, avatar, avatarColor }: Testimonial) {
   return (
-    <div className="flex h-full flex-col rounded-2xl bg-white p-6 shadow-sm ring-1 ring-black/5">
+    <div className="flex h-full flex-col items-center rounded-2xl bg-white p-6 text-center shadow-sm ring-1 ring-black/5">
       <StarRating rating={rating} />
       <p className="mt-3 flex-1 text-[14.5px] italic leading-relaxed text-gray-700">“{quote}”</p>
-      <div className="mt-5 flex items-center gap-3">
+      <div className="mt-5 flex flex-col items-center gap-2">
         <Avatar name={name} src={avatar} size={40} color={avatarColor} />
         <div className="leading-tight">
           <p className="text-[13px] font-bold uppercase tracking-wide text-gray-900">{name}</p>
@@ -213,10 +213,10 @@ export default function TestimonialsSection({
             in the free zone between the two bottom photo clusters */}
         <div className="relative">
           <PhotoDeck photos={photos} />
-          <div className="absolute inset-x-0 z-10 flex justify-center" style={{ top: 250 }}>
+          <div className="absolute inset-x-0 z-10 flex justify-center px-4" style={{ top: 250 }}>
             <h2
-              className="font-display text-center font-black uppercase text-gray-900"
-              style={{ fontSize: 'clamp(28px, 3.2vw, 44px)', lineHeight: 1.08, letterSpacing: '-0.01em', maxWidth: 600 }}
+              className="font-display whitespace-nowrap text-center font-black uppercase text-gray-900"
+              style={{ fontSize: 'clamp(16px, 1.8vw, 30px)', lineHeight: 1.08, letterSpacing: '-0.01em' }}
             >
               {heading}
             </h2>
