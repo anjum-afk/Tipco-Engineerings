@@ -1,5 +1,48 @@
 # SEO Audit
 
+## How SEO is implemented (code-level mechanism)
+
+The legacy site is server-rendered PHP (CodeIgniter 3), so all SEO tags are emitted server-side. There are **five moving parts**:
+
+**1. Per-page meta tags — database-driven (the one genuinely good part).**
+All `<title>` / `<meta description>` / `<meta keywords>` are emitted from a single file, `site/app/views/view_header.php`, via a large `if/elseif` chain keyed on the current page (`$class_name` / URI segment). Each branch pulls that page's meta from its own DB table and echoes it, e.g. (view_header.php:112-120):
+```php
+if($class_name == 'home') {
+    echo '<meta name="description" content="'.$page_home['meta_description'].'">';
+    echo '<meta name="keywords" content="'.$page_home['meta_keyword'].'">';
+    echo '<title>'.$page_home['title'].'</title>';
+}
+```
+Source tables: `tbl_page_home`, `tbl_page_about`, `tbl_portfolio` (products), `tbl_page_news`, `tbl_page_service`, etc. — all editable from the admin at **`/backend/admin/Page`**. This "editable per-page meta from an admin panel" is the pattern worth keeping (the new CMS gives it cleanly).
+- **Caveat:** several secondary pages skip the DB and hardcode non-unique titles — `<title>All Products</title>`, `<title>Our Clients</title>`, `<title>Our Career</title>`, `<title>All Category</title>` (view_header.php:214,252,368,404). No keyword targeting, identical every visit.
+- The `meta keywords` tag is still populated on every page — ignored by search engines for 10+ years; pure overhead.
+
+**2. Canonical tag — present but broken (view_header.php:104).**
+```php
+echo '<link rel="canonical" href="'.base_url().$segment_1.'/'.$segment_2.'">';
+```
+It echoes the *raw requested URL* back at itself on every page instead of pointing at one normalized authoritative URL — so trailing-slash/case/query-string variants each canonicalize to themselves. This is the root cause of the URL-duplication problem below. Also interpolates URI segments into an `href` with no escaping.
+
+**3. Sitemap — a dynamic PHP generator, not a static file.**
+`sitemap.xml` is rewritten to `site/sitemap.php` via `.htaccess`. It opens its **own raw `mysqli` connection** (bypasses CodeIgniter, has a committed placeholder password string and no error handling — emits a PHP error into the XML if the DB fails), prints a hardcoded list of static URLs, then loops the DB for product/category, event, and career URLs. Defects:
+- Submits utility pages `/login`, `/register`, `/reset` to Google (sitemap.php:33-43,153-156).
+- **Every** `<url>` hardcodes `priority=1.00` and a frozen `lastmod=2023-10-31` — the "last modified" never changes, training crawlers to distrust it.
+- **Missing content types:** news articles, single services, testimonials, investors, and team pages are never enumerated (though each has its own meta fields).
+
+**4. robots.txt — allows crawling but polluted.**
+Correctly `Allow: /` and lists the sitemaps, but carries leftover **SEO-spam-hack** `Disallow` lines with absolute-URL paths (e.g. `Disallow: /https://tipcoengineering.com/chanel-hair-clips-105779.html`) that match nothing (inert junk), and mis-declares `llms.txt` as a `sitemap:` directive. Also does not disallow `/backend/admin/`.
+
+**5. Structured data & social cards — almost entirely absent.**
+- **JSON-LD: none anywhere** (no Organization/Product/BreadcrumbList/FAQPage) — forfeits all rich results.
+- **Open Graph:** exists on the **news single-item view only** (view_header.php:444-452); product/service/event/about/contact pages have none — shared links render with no card.
+- **Twitter Cards:** none.
+
+**Set up correctly:** SEO-friendly URLs (CI routing), Google Search Console verification tag (view_header.php:10), `www`→apex 301 in `.htaccess`. The separate WordPress **`/blog`** handles its own SEO well via **Yoast SEO 26.5**.
+
+**One-line summary:** a solid DB-driven per-page meta system sitting on top of a broken canonical, a low-quality auto-generated sitemap, a spam-polluted robots.txt, and zero structured data / social cards. For the redesign: keep the editable-per-page-meta idea (via the CMS); rebuild canonical, sitemap, JSON-LD, OG tags, and alt text from scratch. Full file:line detail in `D:\legecy-website\.claude\knowledge\seo-audit.md`.
+
+---
+
 ## Meta tags (homepage)
 
 | Tag | Value | Status |
