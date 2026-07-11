@@ -34,9 +34,25 @@ Every other product ranks lower in demand OR intent. Priority order:
 
 ---
 
+## Plain-English summary (for stakeholders)
+
+A page makes leads only when it hits **all four** boxes. The Bead Mill / Dyno Mill page is the only one that does:
+1. 🔍 **Lots of people search for it** — most-searched of all Tipco machines.
+2. 🛒 **They're ready to buy** — they search "price / manufacturer / buy," not "what is."
+3. 💰 **Worth good money** — ₹3–5.5 L/unit, flagship product.
+4. 📈 **Already near the top** — page 1 for "dyno mill."
+
+**Medium fish vs whales:** Bead Mill page = steady flow of medium leads. Paint Manufacturing Plant page = few leads but each a whale (₹40 L–1.5 Cr). Do the bead mill page first, add the paint-plant page second.
+
+## ⚠️ Also fix internal content cannibalization (new, 11 Jul 2026)
+
+Beyond the duplicate-URL problem, there is **content-level** self-competition: `dyno-mill`, `bead-mill`, `vertical-bead-mill`, `horizontal-bead-mill` are four separate pages for what is essentially the **same machine**, so they split each other's ranking signal in the SERP. **Recommendation: consolidate into one strong "Bead Mill (Dyno Mill)" page** (differentiate vertical/horizontal only by orientation/application, canonical + internal links pointing at the primary). One powerful page beats four weak ones — highest-leverage single change for lead flow. Tracked in [07 → keyword map](07-seo-implementation-backlog.md).
+
+---
+
 ## ⚠️ Two problems actively suppressing this page
 
-1. **Self-competition (duplicate URLs).** The same product resolves at many URLs with no canonical — `/mill-series/dyno-mill`, `/paint/dyno-mill`, `/pharma/dyno-mill`, `/ink/dyno-mill`, `/milling/dyno-mill`, `/*-production/dyno-mill` … Google splits ranking signals across all of them. See [04-seo.md → URL duplication](../tipco-legacy-website/04-seo.md). **Fix:** pick ONE canonical URL, add `rel=canonical` on every application-context variant, cross-link them.
+1. **Self-competition (duplicate URLs). ✅ FIXED in commit 23c4116 — resolveSeo() now emits one canonical /<categorySlug>/<slug> per product, collapsing all variants below.** The same product resolves at many URLs with no canonical — `/mill-series/dyno-mill`, `/paint/dyno-mill`, `/pharma/dyno-mill`, `/ink/dyno-mill`, `/milling/dyno-mill`, `/*-production/dyno-mill` … Google splits ranking signals across all of them. See [04-seo.md → URL duplication](../tipco-legacy-website/04-seo.md). **Fix:** pick ONE canonical URL, add `rel=canonical` on every application-context variant, cross-link them.
 2. **Legacy-domain cannibalization.** `tipco.co.in` (old site) ranks for the *same* keywords and competes with `tipcoengineering.com`. Two owned domains fighting each other. **Fix:** choose the primary domain and 301-redirect legacy product pages to the new ones (passes existing authority — a big free boost).
 
 ---
