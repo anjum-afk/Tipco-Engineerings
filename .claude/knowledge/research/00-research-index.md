@@ -17,6 +17,7 @@ Last updated: 11 July 2026
 | [04-business-and-ipo-profile.md](04-business-and-ipo-profile.md) | Tipco as a BSE-SME listed company — IPO, financials, shareholding, growth story |
 | [06-lead-gen-seo-priority.md](06-lead-gen-seo-priority.md) | **Which page to SEO first for leads** — Bead Mill/Dyno Mill verdict, self-competition + legacy-domain issues, action plan, and the React build's SEO-infra gaps |
 | [07-seo-implementation-backlog.md](07-seo-implementation-backlog.md) | **SEO running checklist** — what shipped (canonical URLs, prerender/SSG, per-page meta, sitemap/robots in commit `23c4116`) and what remains (JSON-LD, H1/alt, content, blog migration, legacy 301s) |
+| [08-legacy-tipco-co-in-seo-audit.md](08-legacy-tipco-co-in-seo-audit.md) | **Legacy tipco.co.in SEO audit** — IndiaMART/Weblink.In microsite that out-ranks the new site for "dyno mill"; strong titles/H1/content, missing schema/OG/alt; 47-URL sitemap for the 301 map |
 
 ---
 
