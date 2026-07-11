@@ -2,7 +2,7 @@
 
 **Purpose:** Single entry point to all research gathered for the Tipco project. New research goes in this `research/` folder; existing topical research stays in its group and is linked below.
 
-Last updated: 30 June 2026
+Last updated: 11 July 2026
 
 ---
 
@@ -15,6 +15,7 @@ Last updated: 30 June 2026
 | [05-buyer-personas-deep-dive.md](05-buyer-personas-deep-dive.md) | **Deep dive** — buying committee, decision-criteria weighting, pharma qualification, discovery channels, fears/objections |
 | [03-industry-analysis.md](03-industry-analysis.md) | Industries Tipco serves + market sizes, growth, and the "Paint War" capacity tailwind |
 | [04-business-and-ipo-profile.md](04-business-and-ipo-profile.md) | Tipco as a BSE-SME listed company — IPO, financials, shareholding, growth story |
+| [06-lead-gen-seo-priority.md](06-lead-gen-seo-priority.md) | **Which page to SEO first for leads** — Bead Mill/Dyno Mill verdict, self-competition + legacy-domain issues, action plan, and the React build's SEO-infra gaps |
 
 ---
 
