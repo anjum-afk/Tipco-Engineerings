@@ -48,3 +48,34 @@ Related: [06-lead-gen-seo-priority.md](06-lead-gen-seo-priority.md) · [../tipco
 ## ⛔ Deferred — hosting side, not React (explicitly skipped)
 
 - [ ] **Legacy `tipco.co.in` → 301 redirects** to `tipcoengineering.com`. `.htaccess`/server task on the legacy host; transfers the old domain's ranking equity and ends self-cannibalization. Generate the old→new URL map when ready. *(see [06](06-lead-gen-seo-priority.md) §2)*
+
+---
+
+## 🧭 Beyond on-page — what actually decides whether we rank
+
+The work above makes pages *eligible* to rank (crawlable, canonical, unique tags = ~40% of SEO). These items decide whether they *actually* rank:
+
+### Measure first (blind without it)
+- [ ] **Google Search Console** — verify the new domain, submit `sitemap.xml`, watch Indexing/Coverage to confirm the prerendered pages get indexed.
+- [ ] **Bing Webmaster Tools** — feeds Bing + ChatGPT search.
+- [ ] **GA4** — pick ONE authoritative property (legacy had two IDs); install on the new site.
+- [ ] **Conversion tracking** — track "Get Quote" submits + WhatsApp clicks as GA4 events. The goal is leads, not traffic.
+
+### Performance = ranking factor
+- [ ] **Code-split the 930 KB JS bundle** (Vite warns >500 KB). Route-level `lazy()`, and lazy-load recharts / d3 worldmap / GSAP. Slow mobile LCP hurts rankings and kills the "we're faster than competitors" edge.
+
+### Internal keyword cannibalization
+- [ ] **Keyword map for the mill pages** — `dyno-mill`, `bead-mill`, `vertical-bead-mill`, `horizontal-bead-mill` all target the same query and split each other's signal. Pick one primary per cluster, differentiate the rest (orientation/application), interlink with clear anchors.
+
+### Off-page / authority (the real reason Wahal wins)
+- [ ] **Use the IPO** — BSE-listed (Apr 2026); press releases + financial media + filings are high-authority backlinks no competitor has.
+- [ ] **Directory listings** (IndiaMART / TradeIndia / Justdial) pointing at the new domain.
+- [ ] Legacy `tipco.co.in` 301s (above) = biggest single link-equity win.
+
+### Local SEO (physical manufacturer)
+- [ ] **Google Business Profile** for the Sonipat facility + `LocalBusiness` schema.
+- [ ] **NAP consistency** (Name/Address/Phone) across site, GBP, and all directories.
+
+### Decisions owed
+- [ ] **`.in` geo-targeting** — `hreflang`/geo signals vs an actual `.in` domain? (Second domain splits equity unless canonicalized; `hreflang` alone needs no second domain.) Decide deliberately.
+- [ ] **Blog migration** — 301 the Yoast-optimized WordPress blog to real per-article pages, or strand its equity.
