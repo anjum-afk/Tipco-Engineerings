@@ -37,12 +37,12 @@ const CATEGORIES: Category[] = [
     viewAllLabel: 'View All Lab Machines',
     viewAllTo: '/application/laboratory-machines',
     products: [
-      { name: 'Lab Attritor Mill',         desc: 'Compact attritor mill for R&D-scale batch milling and fine dispersion.',           to: '/lab-machines/lab-attritor-mill' },
-      { name: 'Lab Basket Mill',           desc: 'Small-batch in-tank basket mill for laboratory formulation development.',           to: '/lab-machines/lab-basket-mill' },
-      { name: 'Lab High Speed Disperser',  desc: 'Lab-scale high-shear disperser for pigment wetting and particle testing.',         to: '/lab-machines/lab-high-speed-disperser' },
+      { name: 'Lab Attritor Mill',         desc: 'Compact attritor mill for R&D-scale batch milling and fine dispersion.',           to: '/laboratory-machines/lab-attritor-mill' },
+      { name: 'Lab Basket Mill',           desc: 'Small-batch in-tank basket mill for laboratory formulation development.',           to: '/laboratory-machines/lab-basket-mill' },
+      { name: 'Lab High Speed Disperser',  desc: 'Lab-scale high-shear disperser for pigment wetting and particle testing.',         to: '/laboratory-machines/lab-high-speed-disperser' },
       { name: 'Lab Ribbon Blender',        desc: 'Benchtop ribbon blender for dry powder and granule blending applications.',        to: '/laboratory-machines/lab-ribbon-blender' },
-      { name: 'Lab Sigma Mixer',           desc: 'Heavy-duty sigma blade mixer for high-viscosity laboratory batches.',              to: '/lab-machines/lab-sigma-mixer-machine' },
-      { name: 'Lab Mixer',                 desc: 'Versatile benchtop mixer suitable for general laboratory mixing tasks.',           to: '/lab-machines/lab-mixer' },
+      { name: 'Lab Sigma Mixer',           desc: 'Heavy-duty sigma blade mixer for high-viscosity laboratory batches.',              to: '/laboratory-machines/lab-sigma-mixer-machine' },
+      { name: 'Lab Mixer',                 desc: 'Versatile benchtop mixer suitable for general laboratory mixing tasks.',           to: '/laboratory-machines/lab-mixer' },
     ],
   },
   {

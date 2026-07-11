@@ -121,9 +121,9 @@ const PRODUCTS_COLS: Col[] = [
   {
     heading: 'Lab & Production',
     rows: [
-      { icon: Microscope, label: 'Lab bead mill', sub: 'R&D scale, 0.1–5L', to: '/lab-machines/lab-attritor-mill', gray: true },
-      { icon: FlaskConical, label: 'Lab disperser', sub: 'Pilot batch testing', to: '/lab-machines/lab-high-speed-disperser', gray: true },
-      { icon: Layers, label: 'Lab basket mill', sub: 'Small batch R&D', to: '/lab-machines/lab-basket-mill', gray: true },
+      { icon: Microscope, label: 'Lab bead mill', sub: 'R&D scale, 0.1–5L', to: '/laboratory-machines/lab-attritor-mill', gray: true },
+      { icon: FlaskConical, label: 'Lab disperser', sub: 'Pilot batch testing', to: '/laboratory-machines/lab-high-speed-disperser', gray: true },
+      { icon: Layers, label: 'Lab basket mill', sub: 'Small batch R&D', to: '/laboratory-machines/lab-basket-mill', gray: true },
       { icon: Factory, label: 'Paint production line', sub: 'End-to-end turnkey setup', to: '/production-line/paint-production-line-setup' },
       { icon: Printer, label: 'Ink production line', sub: 'Pigment to packaged ink', to: '/production-line/ink-production-line' },
     ],

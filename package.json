@@ -5,7 +5,10 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "build": "tsc -b && vite build",
+    "build": "tsc -b && vite build && npm run build:server && npm run prerender",
+    "build:client": "tsc -b && vite build",
+    "build:server": "vite build --ssr src/entry-server.tsx --outDir dist-server",
+    "prerender": "node scripts/prerender.mjs",
     "lint": "oxlint",
     "format": "prettier --write \"src/**/*.{ts,tsx,css}\"",
     "format:check": "prettier --check \"src/**/*.{ts,tsx,css}\"",
