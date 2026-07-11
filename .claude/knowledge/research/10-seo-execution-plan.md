@@ -14,6 +14,20 @@ Crawlability + canonical + per-page meta + sitemap + robots. Pages are now *elig
 
 ---
 
+## 🚨 Phase 0.5 — Fix lead capture (BEFORE more SEO) — *deferred 11 Jul 2026, top-priority resume point*
+**Goal:** stop throwing away leads. SEO drives buyers to forms that currently discard every enquiry. Full detail: [11-new-site-audit.md](11-new-site-audit.md).
+| Task | Type | Success metric |
+|---|---|---|
+| Wire homepage **GetQuote** + **ProductPage** forms → Strapi `/api/enquiries` (the endpoint ContactUs already uses) | Code | Test enquiry lands in Strapi |
+| Add **GA4 + conversion events** (quote submit, WhatsApp, call) | Setup | Lead events fire |
+| Verify **`VITE_STRAPI_URL`** is set in production | Deploy | ContactUs form succeeds live |
+| Add **WhatsApp fallback CTA** on the forms | Code | Lead reaches Tipco even if backend fails |
+| Self-host the GetQuote hero image (currently hotlinked from pixnio.com) | Code | No external image dependency |
+
+**Exit criteria:** every lead form delivers to Strapi + fires a GA4 event; no fake "Request Sent ✓".
+
+---
+
 ## 🔴 Phase 1 — Deploy & Measure (Week 1) — *do first, we're blind without it*
 **Goal:** confirm the foundation works in production and start seeing data.
 | Task | Type | Success metric |

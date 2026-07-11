@@ -1,5 +1,12 @@
 # ▶ NEXT STEPS — Tipco Redesign (resume here)
 
+> 🚨 **TOP PRIORITY (deferred 11 Jul 2026, user asked to be reminded):** the new site's lead
+> forms are **fake** — the homepage **Get Quote** and the **product-page enquiry** form (on the
+> Bead Mill / Dyno Mill page) show "Request Sent ✓" but **send nothing**. No analytics either.
+> A Strapi backend already exists (Contact Us uses it). Do **Phase 0.5** before any more SEO.
+> Full detail + fix list: [research/11-new-site-audit.md](research/11-new-site-audit.md) and
+> [research/10-seo-execution-plan.md](research/10-seo-execution-plan.md) (Phase 0.5).
+
 _Set 30 Jun 2026. You asked to be reminded to continue this (target: Wed 1 Jul, morning)._
 
 ## Pick up the Tipco Engineering website redesign.

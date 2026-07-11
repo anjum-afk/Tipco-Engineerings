@@ -20,6 +20,7 @@ Last updated: 11 July 2026
 | [08-legacy-tipco-co-in-seo-audit.md](08-legacy-tipco-co-in-seo-audit.md) | **Legacy tipco.co.in SEO audit** — IndiaMART/Weblink.In microsite that out-ranks the new site for "dyno mill"; strong titles/H1/content, missing schema/OG/alt; 47-URL sitemap for the 301 map |
 | [09-marketing-for-lead-gen.md](09-marketing-for-lead-gen.md) | **Marketing → converting website** — the site's mid/late-funnel job, the 6 visitor→lead mechanics (contact, CTA, lead magnet, trust, TCO, fear-killing), and missing pieces (USP, lead-response speed, paid ads, nurture, reviews, tracking) |
 | [10-seo-execution-plan.md](10-seo-execution-plan.md) | **SEO execution roadmap** — sequenced phases (deploy+measure → money page → schema → speed → authority → content), each with tasks, owner-type, and success metric |
+| [11-new-site-audit.md](11-new-site-audit.md) | ⚠️ **New-site audit (DEFERRED, top-priority resume)** — lead forms are fake (GetQuote + ProductPage discard every lead), no analytics, empty stub pages; Phase 0.5 fix list. Strapi backend already exists |
 
 ---
 
